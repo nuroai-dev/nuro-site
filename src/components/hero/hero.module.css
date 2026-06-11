@@ -153,3 +153,44 @@
   height: 100%;
   border: 0;
 }
+
+/* ── Mobile (operator mobile pass 2026-06-12) ───────────────── */
+
+@media (max-width: 920px) {
+  .hero {
+    padding: 130px 22px 56px;
+  }
+
+  .media {
+    margin-top: 44px;
+    padding: 6px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* IBM Plex Sans runs wider than Inter Tight — lower floor so
+     "neurodivergent" cannot overflow a 360px viewport. */
+  .title {
+    font-size: clamp(36px, 11.5vw, 46px);
+  }
+
+  .sub {
+    margin-top: 22px;
+  }
+
+  .ctaRow {
+    margin-top: 28px;
+  }
+
+  /* Thumb-first: full-width primary CTA on phones. */
+  .cta {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .play {
+    width: 56px;
+    height: 56px;
+  }
+}

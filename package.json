@@ -22,6 +22,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9",
     "eslint-config-next": "^15",
+    "playwright-core": "^1.60.0",
     "postcss": "^8.4.0",
     "prettier": "^3.8.4",
     "tailwindcss": "^4.0.0",

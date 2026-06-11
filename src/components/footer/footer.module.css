@@ -78,6 +78,16 @@
   color: var(--night-dim);
 }
 
+/* Touch targets ≥44px on touch-width viewports (adapt skill). */
+@media (max-width: 920px) {
+  .social {
+    flex: none;
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 0 22px;
@@ -86,5 +96,6 @@
   .row {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
   }
 }

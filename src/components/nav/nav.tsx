@@ -32,6 +32,7 @@ const SCROLL_THRESHOLD_PX = 24;
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const ticking = useRef(false);
 
   useEffect(() => {
@@ -50,6 +51,16 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Mobile menu: close on Escape, restore focus-free simple toggle.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0 });
   };
@@ -60,15 +71,31 @@ export default function Nav() {
       data-scrolled={scrolled ? "true" : undefined}
     >
       <nav className={styles.inner} aria-label="Main">
-        <ul className={styles.links}>
-          {LEFT_LINKS.map((link) => (
-            <li key={link.href}>
-              <a className={styles.link} href={link.href}>
-                {link.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.left}>
+          <button
+            type="button"
+            className={styles.burger}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span className={styles.burgerBox} data-open={menuOpen || undefined}>
+              <span className={styles.burgerLine} />
+              <span className={styles.burgerLine} />
+            </span>
+          </button>
+
+          <ul className={styles.links}>
+            {LEFT_LINKS.map((link) => (
+              <li key={link.href}>
+                <a className={styles.link} href={link.href}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <button
           type="button"
@@ -109,6 +136,36 @@ export default function Nav() {
           </a>
         </div>
       </nav>
+
+      <div
+        id="mobile-menu"
+        className={styles.menu}
+        data-open={menuOpen || undefined}
+        hidden={!menuOpen}
+      >
+        <ul className={styles.menuList}>
+          {LEFT_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                className={styles.menuLink}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li>
+            <a
+              className={styles.menuLink}
+              href="#waitlist"
+              onClick={() => setMenuOpen(false)}
+            >
+              Join waitlist
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }

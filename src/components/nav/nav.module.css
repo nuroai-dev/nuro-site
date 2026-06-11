@@ -34,7 +34,92 @@
   gap: 16px;
 }
 
-/* ── Left: smooth-scroll links (hidden ≤920px) ─────────────────────────── */
+/* ── Left: hamburger (mobile) + smooth-scroll links (desktop) ──────────── */
+.left {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger — hidden on desktop, 44px touch target on mobile. */
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: -10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.burgerBox {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 14px;
+}
+
+.burgerLine {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition:
+    transform 260ms var(--ease),
+    top 260ms var(--ease);
+}
+
+.burgerLine:nth-child(1) {
+  top: 2px;
+}
+
+.burgerLine:nth-child(2) {
+  top: 10px;
+}
+
+.burgerBox[data-open] .burgerLine:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.burgerBox[data-open] .burgerLine:nth-child(2) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+/* Mobile menu panel — frosted, under the fixed bar. Desktop: never shown. */
+.menu {
+  display: none;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding: 8px 22px 18px;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hair);
+}
+
+.menuList li:last-child .menuLink {
+  border-bottom: 0;
+  font-weight: 600;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -62,6 +147,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   padding: 4px;
   border: 0;
   background: none;
@@ -140,8 +227,34 @@
     display: none;
   }
 
+  .burger {
+    display: inline-flex;
+  }
+
   .inner {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     padding-inline: 22px;
+  }
+
+  /* Frosted dropdown panel under the bar (matches scrolled-nav glass). */
+  .menu[data-open] {
+    display: block;
+    background: color-mix(in srgb, var(--bg) 94%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 12px 32px -16px rgba(22, 22, 28, 0.18);
+    border-bottom: 1px solid var(--hair);
+  }
+
+  /* Touch targets ≥44px (adapt skill); flex:none beats flex-shrink. */
+  .social {
+    flex: none;
+    width: 44px;
+    height: 44px;
+  }
+
+  .cta {
+    flex: none;
+    padding: 12px 18px;
   }
 }

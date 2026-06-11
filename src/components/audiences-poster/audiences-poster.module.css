@@ -283,6 +283,19 @@
   }
 
   .panel {
-    min-height: 480px;
+    min-height: 440px;
+    padding: 30px 24px;
+  }
+
+  .closing {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* Thumb-first: full-width header CTA on phones. */
+  .cta {
+    width: 100%;
+    justify-content: center;
   }
 }

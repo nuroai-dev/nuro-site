@@ -179,5 +179,14 @@
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 28px 22px;
+  }
+
+  .cardElevated {
+    padding: 32px 24px;
   }
 }
