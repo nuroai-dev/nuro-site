@@ -330,6 +330,29 @@ p {
 }
 
 /* ============================================================
+   Reveal — blur-up scroll entrance state (SPEC §5.1, driven by <Reveal>).
+   Resting state (no JS) is visible; the hidden state is gated on
+   html[data-js] so no-JS users never see opacity:0, and the SSR HTML
+   carries NO inline opacity so content is sharp before hydration.
+   ============================================================ */
+html[data-js] [data-reveal]:not([data-shown]) {
+  opacity: 0;
+}
+
+[data-reveal][data-shown] {
+  /* `both` fill keeps the blurred from-frame during a stagger delay and the
+     sharp to-frame after the entrance completes. */
+  animation: revealIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform, filter;
+}
+
+/* Aurora — pause blob drift while the field is scrolled out of view
+   (<Aurora> toggles data-paused via IntersectionObserver). */
+[data-aurora-root][data-paused="true"] [data-aurora-blob] {
+  animation-play-state: paused !important;
+}
+
+/* ============================================================
    Reduced motion — globally neutralize reveals, blob drift, and
    gradient drift. Content must be fully visible and sharp.
    ============================================================ */
@@ -340,5 +363,13 @@ p {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  /* Even with JS running, never leave below-fold reveal content hidden or
+     animating — it must be visible and sharp. Same specificity as the
+     hidden-gate rule, declared later + !important, so it wins. */
+  html[data-js] [data-reveal] {
+    opacity: 1 !important;
+    animation: none !important;
   }
 }
