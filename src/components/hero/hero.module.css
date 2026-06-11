@@ -1,301 +1,92 @@
-/* ─── Nuro hero ──────────────────────────────────────────────────────────── */
+/* ============================================================
+   Hero — SPEC §4 layout (port of ~/nuro-website-design .hero)
+   with the SPEC §5.3 holo-drift CTA. Keyframes (holo-drift,
+   aurora-*) and the .holo-text / .focusable utilities are
+   global (src/app/globals.css); this module only lays out the
+   section and styles its private pieces.
+   ============================================================ */
 
 .hero {
   position: relative;
-  width: 100%;
-  height: 100dvh;
-  /* No overflow clip — lets the holographic orbs bleed into section 2
-     for a seamless edge. The motes canvas, grain, and prism are each
-     sized to their own bounds so they stay contained. */
-  background: var(--bg);
-  isolation: isolate;
-}
-
-.svgDefs {
-  position: absolute;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-}
-
-/* ─── Holographic orbs ──────────────────────────────────────────────────── */
-
-.orbs {
-  position: absolute;
-  inset: -10% -10% -30% -10%;
-  z-index: 0;
-  /* Fade the bottom of the orb layer so the bleed into section 2 is
-     gradual rather than a sharp blob. The mask is applied to the
-     orbs container — each orb reads through this mask, so even heavily
-     blurred orbB dissolves naturally as it enters the next section. */
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, 0.6) 78%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0, 0, 0, 0.6) 78%, transparent 100%);
-}
-
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.85;
-  will-change: transform, border-radius;
-  mix-blend-mode: multiply;
-  /* Push x/y set by JS per-orb based on cursor proximity.
-     Default to 0 so the CSS still computes before JS mounts. */
-  --push-x: 0px;
-  --push-y: 0px;
-  transform: translate3d(var(--push-x), var(--push-y), 0);
-  transition: opacity 600ms var(--ease);
-}
-
-/* Big lavender/sky orb — top-left, slow morph + rotation */
-.orbA {
-  width: 72vmax;
-  height: 72vmax;
-  top: -18vmax;
-  left: -14vmax;
-  background:
-    radial-gradient(circle at 30% 30%, var(--holo-1) 0%, transparent 55%),
-    radial-gradient(circle at 70% 60%, var(--holo-2) 0%, transparent 60%);
-  animation: morphA 22s var(--ease) infinite, driftA 40s linear infinite;
-}
-
-/* Rose + pink orb — lower-right, opposite direction */
-.orbB {
-  width: 64vmax;
-  height: 64vmax;
-  bottom: -20vmax;
-  right: -16vmax;
-  background:
-    radial-gradient(circle at 40% 40%, var(--holo-3) 0%, transparent 55%),
-    radial-gradient(circle at 70% 70%, var(--holo-4) 0%, transparent 60%);
-  animation: morphB 26s var(--ease) infinite, driftB 48s linear infinite;
-}
-
-/* Peach accent — center-ish, faster breathing */
-.orbC {
-  width: 42vmax;
-  height: 42vmax;
-  top: 30vh;
-  left: 50%;
-  /* Original left:50% means we need -50% in transform to center the orb.
-     We merge that centering offset with the JS-driven push. */
-  transform: translate3d(calc(var(--push-x) - 50%), var(--push-y), 0);
-  background: radial-gradient(circle at 50% 50%, var(--holo-5) 0%, var(--holo-3) 45%, transparent 70%);
-  animation: morphC 18s var(--ease) infinite, breatheC 9s ease-in-out infinite;
-  opacity: 0.7;
-}
-
-@keyframes morphA {
-  0%,
-  100% {
-    border-radius: 62% 38% 54% 46% / 48% 58% 42% 52%;
-  }
-  25% {
-    border-radius: 44% 56% 66% 34% / 58% 44% 56% 42%;
-  }
-  50% {
-    border-radius: 58% 42% 38% 62% / 52% 62% 38% 48%;
-  }
-  75% {
-    border-radius: 38% 62% 48% 52% / 62% 36% 64% 38%;
-  }
-}
-
-@keyframes morphB {
-  0%,
-  100% {
-    border-radius: 52% 48% 40% 60% / 56% 38% 62% 44%;
-  }
-  33% {
-    border-radius: 40% 60% 58% 42% / 48% 56% 44% 52%;
-  }
-  66% {
-    border-radius: 64% 36% 52% 48% / 38% 58% 42% 62%;
-  }
-}
-
-@keyframes morphC {
-  0%,
-  100% {
-    border-radius: 48% 52% 58% 42% / 60% 42% 58% 40%;
-  }
-  50% {
-    border-radius: 58% 42% 42% 58% / 40% 58% 42% 60%;
-  }
-}
-
-@keyframes driftA {
-  to {
-    rotate: 360deg;
-  }
-}
-
-@keyframes driftB {
-  to {
-    rotate: -360deg;
-  }
-}
-
-@keyframes breatheC {
-  0%,
-  100% {
-    scale: 1;
-    opacity: 0.7;
-  }
-  50% {
-    scale: 1.08;
-    opacity: 0.85;
-  }
-}
-
-/* ─── Motes canvas — drifting pastel specks ─────────────────────────────── */
-
-.motes {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  /* GPU-composited blur — makes the motes feel like drifting light
-     diffused through fabric, not distinct dots. */
-  filter: blur(18px) saturate(1.1);
-}
-
-/* ─── Prism cursor — iridescent glass disc ──────────────────────────────── */
-
-.prism {
-  position: fixed;
-  z-index: 3;
-  pointer-events: none;
-  --prism-x: 50vw;
-  --prism-y: 50vh;
-  --prism-opacity: 0;
-  width: 24px;
-  height: 24px;
-  left: var(--prism-x);
-  top: var(--prism-y);
-  transform: translate(-50%, -50%);
-  opacity: var(--prism-opacity);
-  transition: opacity 120ms linear;
-  will-change: transform, opacity;
-}
-
-.prismRing {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.3),
-    0 0 20px rgba(255, 255, 255, 0.15);
-}
-
-/* Core no longer used — hidden to avoid empty rendering */
-.prismCore {
-  display: none;
-}
-
-/* ─── Film grain layer — breaks up banding ──────────────────────────────── */
-
-.grain {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  filter: url(#grain);
-  opacity: 0.35;
-  mix-blend-mode: overlay;
-}
-
-/* ─── Content ───────────────────────────────────────────────────────────── */
-
-.content {
-  position: relative;
-  z-index: 4;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding: 0 24px;
   text-align: center;
-  gap: 28px;
+  padding: 150px 24px 70px;
+  overflow: hidden;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--f-sans);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink-3);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 8px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  opacity: 0;
-  animation: fadeUp 900ms var(--ease) 180ms forwards;
+/* Content sits above the absolutely-positioned <Aurora> field. */
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--holo-2);
-  box-shadow: 0 0 8px var(--holo-2);
-  animation: pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.7;
-    scale: 1;
-  }
-  50% {
-    opacity: 1;
-    scale: 1.25;
-  }
-}
-
-.headline {
-  font-family: var(--f-display);
-  font-weight: 500;
-  font-size: clamp(44px, 7.5vw, 104px);
-  line-height: 1.02;
+.title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(46px, 7.5vw, 92px);
+  line-height: 1;
   letter-spacing: -0.035em;
   color: var(--ink);
   margin: 0;
-  max-width: 18ch;
-  opacity: 0;
-  animation: fadeUp 1100ms var(--ease) 320ms forwards;
 }
 
-.shimmer {
-  background: linear-gradient(
-    120deg,
-    var(--holo-1) 0%,
-    var(--holo-2) 30%,
-    var(--holo-3) 55%,
-    var(--holo-4) 75%,
-    var(--holo-5) 100%
-  );
-  background-size: 220% 220%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: shimmer 8s ease-in-out infinite;
-  font-style: italic;
-  font-weight: 400;
+.sub {
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 580px;
+  margin: 28px auto 0;
 }
 
-@keyframes shimmer {
+.ctaRow {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Primary CTA — holo-drift gradient + --shadow-holo (SPEC §5.3):
+   hover lifts -1px with shadow bloom (transform 160ms ease-out,
+   shadow 320ms var(--ease)); active presses to scale(.97). */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  background: var(--holo-linear);
+  background-size: 200% 200%;
+  animation: holo-drift 14s ease-in-out infinite;
+  box-shadow: var(--shadow-holo);
+  transition:
+    transform 160ms ease-out,
+    box-shadow 320ms var(--ease);
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 48px rgba(167, 199, 255, 0.45),
+    0 6px 18px rgba(232, 191, 230, 0.35);
+}
+
+.cta:active {
+  transform: scale(0.97);
+}
+
+@keyframes holo-drift {
   0%,
   100% {
     background-position: 0% 50%;
@@ -305,77 +96,77 @@
   }
 }
 
-.sub {
-  font-family: var(--f-sans);
-  font-size: clamp(16px, 1.4vw, 19px);
-  line-height: 1.5;
-  color: var(--ink-2);
-  max-width: 44ch;
+/* ============================================================
+   Demo video — white media card wrapping the click-to-play
+   facade (thumbnail sizing from the design's .hero-media).
+   ============================================================ */
+
+.media {
+  position: relative;
+  width: min(820px, 92vw);
+  margin: 64px auto 0;
+  border-radius: 20px;
+  background: var(--surface);
+  padding: 8px;
+  box-shadow:
+    0 40px 90px -36px rgba(60, 50, 90, 0.42),
+    0 0 0 1px rgba(22, 22, 28, 0.05);
+}
+
+/* Shared 16:9 frame for both facade (button) and iframe states. */
+.frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+
+/* Button reset for the facade state. */
+.facade {
+  border: none;
+  padding: 0;
   margin: 0;
-  opacity: 0;
-  animation: fadeUp 1100ms var(--ease) 480ms forwards;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
-.ctaRow {
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-  opacity: 0;
-  animation: fadeUp 1100ms var(--ease) 620ms forwards;
+.thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.ctaPrimary,
-.ctaGhost {
-  display: inline-flex;
+/* Centered play disc; scales 1.07 on hover/focus (SPEC §4). */
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--f-sans);
-  font-weight: 500;
-  font-size: 15px;
-  padding: 14px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  transition:
-    transform 240ms var(--ease),
-    box-shadow 240ms var(--ease),
-    background 240ms var(--ease);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s var(--ease);
 }
 
-.ctaPrimary {
-  background: var(--ink);
-  color: var(--bg);
-  box-shadow:
-    0 1px 2px rgba(23, 23, 28, 0.12),
-    0 8px 24px rgba(23, 23, 28, 0.14);
+.facade:hover .play,
+.facade:focus-visible .play {
+  transform: translate(-50%, -50%) scale(1.07);
 }
 
-.ctaPrimary:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 1px 2px rgba(23, 23, 28, 0.16),
-    0 14px 32px rgba(23, 23, 28, 0.2);
-}
-
-.ctaGhost {
-  color: var(--ink-2);
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.ctaGhost:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: translateY(-1px);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.player {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
