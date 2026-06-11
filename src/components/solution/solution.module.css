@@ -78,11 +78,9 @@
   flex-direction: column;
   gap: 22px;
   padding: 34px 32px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgb(221 218 255);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--r-l);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 /* With-Nuro elevation: holo gradient border + soft outer glow + tint
