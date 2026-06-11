@@ -85,7 +85,9 @@
 .media {
   position: relative;
   width: min(1100px, 92vw);
-  margin: 64px auto 0;
+  /* Wider than the 920px .inner column — symmetric negative inline
+     margins keep it centered instead of overflowing right. */
+  margin: 64px calc((100% - min(1100px, 92vw)) / 2) 0;
   border-radius: 20px;
   background: var(--surface);
   padding: 8px;
