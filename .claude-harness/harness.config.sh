@@ -65,7 +65,7 @@ HARNESS_PREFLIGHT_AGENT_MODEL="haiku"
 
 # Independent reviewer: a DIFFERENT vendor, via its own CLI (unaffected by any
 # Claude auth change). The prompt is appended as the last argument.
-HARNESS_CODEX_CMD="codex exec --full-auto"
+HARNESS_CODEX_CMD="$HOME/.nvm/versions/node/v20.19.4/bin/codex exec --full-auto"
 HARNESS_REVIEW_MAX_ITERS=3
 
 # ── Wave runner ──────────────────────────────────────────────────────────────
