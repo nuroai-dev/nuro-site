@@ -362,6 +362,17 @@ html[data-js] [data-reveal]:not([data-shown]) {
   will-change: opacity, transform, filter;
 }
 
+/* Eager reveal (SPEC §6 N-14) — above-fold hero content must start its
+   entrance at first paint, not after hydration + IntersectionObserver, so
+   the LCP element is never held at opacity 0 waiting for JS. The animation
+   shorthand is IDENTICAL to the [data-shown] rule above: when hydration
+   later sets data-shown, the computed animation is unchanged and the
+   entrance does not restart. The animation's keyframed opacity overrides
+   the opacity:0 hidden-gate above for the pre-hydration frames. */
+html[data-js] [data-reveal][data-reveal-eager]:not([data-shown]) {
+  animation: revealIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* Aurora — pause blob drift while the field is scrolled out of view
    (<Aurora> toggles data-paused via IntersectionObserver). */
 [data-aurora-root][data-paused="true"] [data-aurora-blob] {

@@ -21,6 +21,13 @@ import {
  * page — dozens of observers would be wasteful. No-JS users and engines
  * without IntersectionObserver see sharp, static content (we reveal
  * immediately in that case).
+ *
+ * `eager` (N-14, above-fold hero only): the entrance is started by CSS alone
+ * at first paint (`[data-reveal-eager]` rule in globals.css) instead of
+ * waiting for hydration + IntersectionObserver, so the hero LCP is never
+ * delayed by JS. The JS path still runs to set `data-shown` (the computed
+ * animation is identical, so it does not restart) and to release
+ * `will-change` after the entrance completes.
  */
 
 type RevealCallback = () => void;
@@ -53,6 +60,12 @@ export type RevealProps = {
   as?: ElementType;
   /** Stagger in seconds, applied as animationDelay. */
   delay?: number;
+  /**
+   * Start the entrance at first paint via CSS (no JS needed). Use ONLY for
+   * above-fold content (hero) so the LCP element is never held hidden
+   * waiting for hydration (SPEC §6 N-14).
+   */
+  eager?: boolean;
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;
@@ -61,6 +74,7 @@ export type RevealProps = {
 export function Reveal({
   as,
   delay = 0,
+  eager = false,
   className,
   style,
   children,
@@ -77,9 +91,14 @@ export function Reveal({
       node.dataset.shown = "1";
       // Release the promoted GPU layer once the entrance has finished so we
       // don't keep dozens of layers alive; mirrors the ~/nuro reveal logic.
-      window.setTimeout(() => {
-        node.style.willChange = "auto";
-      }, 1200);
+      // Delay-aware (N-14): a staggered item finishes at delay + 0.9s, so a
+      // fixed timer could drop the layer mid-animation.
+      window.setTimeout(
+        () => {
+          node.style.willChange = "auto";
+        },
+        delay * 1000 + 1200,
+      );
     };
 
     const io = getObserver();
@@ -96,7 +115,7 @@ export function Reveal({
       io.unobserve(node);
       callbacks.delete(node);
     };
-  }, []);
+  }, [delay]);
 
   return (
     <Tag
@@ -104,6 +123,7 @@ export function Reveal({
         nodeRef.current = node;
       }}
       data-reveal=""
+      data-reveal-eager={eager ? "" : undefined}
       className={className}
       style={delay > 0 ? { ...style, animationDelay: `${delay}s` } : style}
       {...rest}

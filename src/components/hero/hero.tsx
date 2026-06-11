@@ -13,26 +13,28 @@ import styles from "./hero.module.css";
  * the CTA uses the holo-drift gradient treatment from SPEC §5.3.
  *
  * Entrances stagger per SPEC §5.1: H1 at 0, lead +0.08s, CTA +0.16s,
- * media card +0.24s.
+ * media card +0.24s. All four are `eager` (SPEC §6 N-14): above-fold
+ * content starts its entrance at first paint via CSS so the LCP is never
+ * delayed by hydration.
  */
 export default function Hero() {
   return (
     <section className={styles.hero} id="hero">
       <Aurora variant="hero" />
       <div className={styles.inner}>
-        <Reveal as="h1" className={styles.title}>
+        <Reveal as="h1" eager className={styles.title}>
           The missing tool for
           <br />
           <span className="holo-text">neurodivergent</span>
           <br />
           students.
         </Reveal>
-        <Reveal as="p" delay={0.08} className={styles.sub}>
+        <Reveal as="p" eager delay={0.08} className={styles.sub}>
           Learning that finally works for the 1 in 6, bringing teachers,
           students and parents together so no child falls through the cracks
           again.
         </Reveal>
-        <Reveal delay={0.16} className={styles.ctaRow}>
+        <Reveal eager delay={0.16} className={styles.ctaRow}>
           <a href="#waitlist" className={`${styles.cta} focusable`}>
             Join the waiting list
             <svg
@@ -50,7 +52,7 @@ export default function Hero() {
             </svg>
           </a>
         </Reveal>
-        <Reveal delay={0.24}>
+        <Reveal eager delay={0.24}>
           <VideoFacade />
         </Reveal>
       </div>
