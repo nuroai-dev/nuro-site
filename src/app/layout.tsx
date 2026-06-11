@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { IBM_Plex_Sans, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const interTight = Inter_Tight({
+/* Headline trial 2026-06-12: IBM Plex Sans replaces Inter Tight for display.
+   Plex caps at weight 700 — 800 usages render at 700. */
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-inter-tight",
+  variable: "--font-plex-sans",
 });
 
 const inter = Inter({
@@ -71,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${interTight.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${ibmPlexSans.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         {/* Runs before paint: marks JS as available so the reveal motion (N-02)

@@ -38,7 +38,7 @@
   /* Fonts — values supplied at runtime by next/font (Layer 3, layout.tsx),
      fallbacks here keep utilities resolvable before the font CSS loads. */
   --font-display:
-    var(--font-inter-tight), "Inter Tight", -apple-system, system-ui, sans-serif;
+    var(--font-plex-sans), "IBM Plex Sans", -apple-system, system-ui, sans-serif;
   --font-sans: var(--font-inter), "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
 
