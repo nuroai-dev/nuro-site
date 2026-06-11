@@ -23,13 +23,12 @@ export default function Footer() {
         <Reveal className={styles.row}>
           <div className={styles.brand}>
             <Image
-              src="/logo-pastel.png"
-              alt=""
-              width={34}
-              height={34}
+              src="/brand/logo-footer.svg"
+              alt="Nuro"
+              width={125}
+              height={36}
               className={styles.logo}
             />
-            <span className={styles.wordmark}>Nuro</span>
           </div>
 
           <div className={styles.socials}>
