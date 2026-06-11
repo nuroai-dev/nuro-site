@@ -9,7 +9,7 @@
 
 .section {
   position: relative;
-  padding: 118px 24px;
+  padding: 118px 40px; /* SPEC §3.4 — 118px vertical, 40px container x desktop */
   overflow: hidden;
   background: var(--bg);
   text-align: center;
@@ -227,7 +227,9 @@
   margin: 8px 0 0;
   font-size: 13px;
   font-weight: 500;
-  color: #c46a8a;
+  /* Darker stop of the #c46a8a error family — #c46a8a itself is 3.6:1 on the
+     white card (fails AA for 13px text); #a14e6f is 5.5:1 (SPEC §6 N-15). */
+  color: #a14e6f;
 }
 
 /* ── Submit + privacy ───────────────────────────────────────── */
@@ -292,7 +294,7 @@
 
 .alertTitle {
   font-weight: 600;
-  color: #c46a8a;
+  color: #a14e6f; /* AA on the alert tint; #c46a8a border stays (non-text) */
 }
 
 /* Visually-hidden live region (always mounted for aria-live). */
@@ -306,6 +308,13 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ── Single 920px breakpoint (SPEC §3.4) ────────────────────── */
+@media (max-width: 920px) {
+  .section {
+    padding: 80px 22px; /* 80px section vertical, 22px container x mobile */
+  }
 }
 
 @media (max-width: 560px) {

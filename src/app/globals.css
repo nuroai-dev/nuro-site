@@ -322,6 +322,18 @@ p {
   animation: holo-drift 8s ease-in-out infinite;
 }
 
+/* Accessible fallback (SPEC §6 N-15) — engines without background-clip:text
+   support would otherwise render transparent (invisible) text. Fall back to
+   solid inherited ink: full contrast on cream, night-text on night surfaces. */
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .holo-text {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: inherit;
+    animation: none;
+  }
+}
+
 /* Focusable holo aura — accessibility-as-aesthetic (SPEC §5.3, from ~/nuro).
    `:has(:focus-visible)` lets wrapper elements (Input/Textarea) show the aura
    when an inner control is keyboard-focused; self-focusable elements match via
