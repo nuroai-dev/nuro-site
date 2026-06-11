@@ -1,0 +1,170 @@
+/* ─── Market shifts section ─────────────────────────────────────────────── */
+
+.section {
+  position: relative;
+  padding: clamp(80px, 12vw, 160px) 24px;
+  /* No background — the body's cream base shows through. This lets the
+     hero's orbs bleed all the way into this section with zero edge. */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Headline ──────────────────────────────────────────────────────────── */
+
+.headline {
+  font-family: var(--f-fustat);
+  font-weight: 500;
+  font-size: clamp(44px, 6.6vw, 96px);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+  color: var(--ink);
+  margin: 0 auto clamp(48px, 7vw, 88px) auto;
+  max-width: 22ch;
+  text-align: center;
+}
+
+.shimmer {
+  background: linear-gradient(
+    120deg,
+    var(--holo-1) 0%,
+    var(--holo-2) 30%,
+    var(--holo-3) 55%,
+    var(--holo-4) 80%,
+    var(--holo-5) 100%
+  );
+  background-size: 220% 220%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shift 10s ease-in-out infinite;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@keyframes shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ─── Cards grid ────────────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 32px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 1px 2px rgba(23, 23, 28, 0.04),
+    0 18px 48px rgba(23, 23, 28, 0.06);
+  overflow: hidden;
+  transition:
+    transform 320ms var(--ease),
+    box-shadow 320ms var(--ease),
+    border-color 320ms var(--ease);
+}
+
+/* Accent corner glow — uses each card's holo tint */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  right: -25%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, var(--tint) 0%, transparent 65%);
+  opacity: 0.55;
+  filter: blur(30px);
+  pointer-events: none;
+  transition: opacity 320ms var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(23, 23, 28, 0.14);
+  box-shadow:
+    0 1px 2px rgba(23, 23, 28, 0.05),
+    0 22px 56px rgba(23, 23, 28, 0.09);
+}
+
+.card:hover::before {
+  opacity: 0.75;
+}
+
+@media (min-width: 720px) {
+  .card {
+    padding: 40px;
+  }
+}
+
+/* ─── Card content ──────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--f-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  font-family: var(--f-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 16px 0;
+}
+
+.label {
+  font-family: var(--f-fustat);
+  font-weight: 500;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0 0 16px 0;
+  max-width: 24ch;
+}
+
+.body {
+  font-family: var(--f-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0;
+  max-width: 46ch;
+}
