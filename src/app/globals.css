@@ -1,34 +1,172 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-:root {
-  /* Base */
-  --bg: #FAF7F2;
-  --bg-2: #F3EFE8;
-  --bg-3: #ECE7DE;
-  --surface: #FFFFFF;
-  --ink: #17171C;
-  --ink-2: #3A3A42;
-  --ink-3: #6B6B75;
-  --ink-4: #9B9BA3;
-  --line: rgba(23, 23, 28, 0.08);
+/* ============================================================
+   Layer 1 — Tailwind v4 @theme
+   Exposes the Nuro design tokens (SPEC §3) as utility-generating
+   custom properties (bg-bg, text-ink, rounded-lg, font-display,
+   shadow-holo, …). Single source of truth for every token value;
+   Layer 2 below mirrors these under the legacy names that ported
+   components reference verbatim.
+   ============================================================ */
+@theme {
+  /* Surfaces (light, cream — never pure white page bg) */
+  --color-bg: #faf7f2;
+  --color-bg-2: #f4efe8;
+  --color-surface: #ffffff;
 
-  /* Holographic stops (sky → lavender → rose → pink → peach) */
-  --holo-1: #A7C7FF;
-  --holo-2: #C9B8FF;
-  --holo-3: #E8BFE6;
-  --holo-4: #FFC9E3;
-  --holo-5: #FFD9C2;
+  /* Ink */
+  --color-ink: #16161c;
+  --color-ink-2: #3a3f45;
+  --color-ink-3: #6b7177;
 
-  /* Motion */
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  /* Hairlines (exposed as colors so border-* utilities generate) */
+  --color-hair: rgba(22, 22, 28, 0.08);
+  --color-hair-2: rgba(22, 22, 28, 0.14);
 
-  /* Type */
-  --f-display: 'Inter Tight', 'Inter', -apple-system, system-ui, sans-serif;
-  --f-sans: 'Inter', -apple-system, system-ui, sans-serif;
-  --f-fustat: 'Fustat', 'Inter', -apple-system, system-ui, sans-serif;
+  /* Holographic stops (the brand) */
+  --color-holo-1: #a7c7ff; /* sky */
+  --color-holo-2: #c9b8ff; /* lavender */
+  --color-holo-3: #e8bfe6; /* mauve */
+  --color-holo-4: #ffc9e3; /* pink */
+  --color-holo-5: #ffd9c2; /* peach */
+
+  /* Dark band + footer */
+  --color-night: #08080d;
+  --color-night-2: #0e0e16;
+  --color-night-text: #f4f3f7;
+
+  /* Fonts — values supplied at runtime by next/font (Layer 3, layout.tsx),
+     fallbacks here keep utilities resolvable before the font CSS loads. */
+  --font-display:
+    var(--font-inter-tight), "Inter Tight", -apple-system, system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Inter", -apple-system, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  /* Radii scale (SPEC §3.4 — 12px inputs/small buttons, 22–26px cards,
+     999px pills; intermediate steps from the ~/nuro scale) */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 22px;
+  --radius-xl: 26px;
+
+  /* Motion easing */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1); /* default — soft spring exit */
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1); /* overshoot, sparing use */
+
+  /* Gradient CTA shadow */
+  --shadow-holo:
+    0 12px 40px rgba(167, 199, 255, 0.35), 0 4px 14px rgba(232, 191, 230, 0.25);
 }
 
+/* ============================================================
+   Layer 2 — Legacy aliases + supplementary tokens
+   Mirrors the SPEC §3 variable names that ported components
+   reference by raw var(--name). Values resolve to the @theme
+   tokens above so there is one source of truth.
+   ============================================================ */
+:root {
+  /* Surfaces */
+  --bg: var(--color-bg);
+  --bg-2: var(--color-bg-2);
+  --surface: var(--color-surface);
+
+  /* Ink */
+  --ink: var(--color-ink);
+  --ink-2: var(--color-ink-2);
+  --ink-3: var(--color-ink-3);
+  --ink-faint: rgba(22, 22, 28, 0.5);
+
+  /* Hairlines (legacy --line is the skeleton's name for --hair) */
+  --hair: var(--color-hair);
+  --hair-2: var(--color-hair-2);
+  --line: var(--color-hair);
+  --line-2: var(--color-hair-2);
+
+  /* Dark band + footer */
+  --night: var(--color-night);
+  --night-2: var(--color-night-2);
+  --night-3: #14141f;
+  --night-card: rgba(255, 255, 255, 0.045);
+  --night-hair: rgba(255, 255, 255, 0.09);
+  --night-text: var(--color-night-text);
+  --night-dim: rgba(244, 243, 247, 0.62);
+  --night-faint: rgba(244, 243, 247, 0.38);
+
+  /* Holographic stops */
+  --holo-1: var(--color-holo-1);
+  --holo-2: var(--color-holo-2);
+  --holo-3: var(--color-holo-3);
+  --holo-4: var(--color-holo-4);
+  --holo-5: var(--color-holo-5);
+
+  /* Holographic gradients (5-stop brand linear + conic/radial fields) */
+  --holo-linear: linear-gradient(
+    120deg,
+    var(--holo-1) 0%,
+    var(--holo-2) 32%,
+    var(--holo-3) 58%,
+    var(--holo-4) 80%,
+    var(--holo-5) 100%
+  );
+  --holo-conic: conic-gradient(
+    from 200deg at 50% 50%,
+    var(--holo-1),
+    var(--holo-2),
+    var(--holo-3),
+    var(--holo-4),
+    var(--holo-5),
+    var(--holo-1)
+  );
+  --holo-radial:
+    radial-gradient(ellipse at 20% 20%, var(--holo-1), transparent 55%),
+    radial-gradient(ellipse at 80% 30%, var(--holo-3), transparent 60%),
+    radial-gradient(ellipse at 60% 85%, var(--holo-4), transparent 60%),
+    radial-gradient(ellipse at 10% 80%, var(--holo-5), transparent 55%);
+
+  /* Aurora blob tints (heavily blurred drift field) */
+  --blob-blue: #9cc0ff;
+  --blob-purple: #baa4ff;
+  --blob-violet: #c9aaff;
+  --blob-pink: #ffb6d9;
+  --blob-magenta: #f891ff;
+  --blob-peach: #ffd9c2;
+
+  /* Motion durations */
+  --dur-fast: 180ms;
+  --dur: 320ms;
+  --dur-slow: 620ms;
+
+  /* Note: --ease / --ease-spring / --shadow-holo are emitted to :root by the
+     @theme block above, so raw var(--ease) ports already resolve here. */
+
+  /* Soft ink shadows (gradient CTAs use --shadow-holo) */
+  --shadow-s:
+    0 1px 2px rgba(23, 23, 28, 0.04), 0 2px 6px rgba(23, 23, 28, 0.04);
+  --shadow-m:
+    0 1px 2px rgba(23, 23, 28, 0.04), 0 8px 24px rgba(23, 23, 28, 0.06);
+  --shadow-l:
+    0 2px 4px rgba(23, 23, 28, 0.05), 0 24px 56px rgba(23, 23, 28, 0.1);
+
+  /* Radii aliases */
+  --r-xs: var(--radius-xs);
+  --r-s: var(--radius-sm);
+  --r-m: var(--radius-md);
+  --r-l: var(--radius-lg);
+  --r-xl: var(--radius-xl);
+  --r-full: 999px;
+
+  /* Font aliases consumed by ported component modules. --f-fustat is a
+     compatibility alias (the skeleton's stray Fustat is removed) → sans. */
+  --f-display: var(--font-display);
+  --f-sans: var(--font-sans);
+  --f-mono: var(--font-mono);
+  --f-fustat: var(--font-sans);
+}
+
+/* ============================================================
+   Global element baselines
+   ============================================================ */
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -39,15 +177,162 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
+  background: var(--bg); /* #FAF7F2 — cream, never pure white */
   color: var(--ink);
-  font-family: var(--f-sans);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
 }
 
 body {
   min-height: 100dvh;
+  overflow-x: hidden;
 }
 
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+::selection {
+  background: var(--holo-2);
+  color: var(--ink);
+}
+
+/* ============================================================
+   Keyframes
+   ============================================================ */
+
+/* Holographic gradient drift — text, buttons, accents (SPEC §5.3) */
+@keyframes holo-drift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Aurora blob drift — translate + scale only, GPU-composited (SPEC §5.2).
+   Durations are staggered per blob by the <Aurora> component (N-02). */
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(6%, 4%) scale(1.1);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-5%, 6%) scale(1.15);
+  }
+}
+@keyframes aurora-c {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(4%, -6%) scale(1.1);
+  }
+}
+@keyframes aurora-d {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-6%, -4%) scale(1.2);
+  }
+}
+
+/* Blur scroll reveal — signature site motion (SPEC §5.1).
+   Resting state is VISIBLE; <Reveal> (N-02) layers this one-shot entrance
+   on intersect. Blur resolves at 60% so it clears before the translate ends. */
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    filter: blur(9px);
+  }
+  60% {
+    filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
+/* ============================================================
+   Holographic utilities
+   ============================================================ */
+
+/* Gradient text — the holo words in H1/H2s and stat numerals (SPEC §5.3) */
+.holo-text {
+  background: var(--holo-linear);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: holo-drift 8s ease-in-out infinite;
+}
+
+/* Focusable holo aura — accessibility-as-aesthetic (SPEC §5.3, from ~/nuro).
+   `:has(:focus-visible)` lets wrapper elements (Input/Textarea) show the aura
+   when an inner control is keyboard-focused; self-focusable elements match via
+   `:focus-visible`. */
+.focusable {
+  position: relative;
+  outline: none;
+}
+.focusable:focus-visible::after,
+.focusable:has(:focus-visible)::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: var(--holo-linear);
+  background-size: 200% 200%;
+  animation: holo-drift 4s ease-in-out infinite;
+  z-index: -1;
+  padding: 2px;
+  filter: blur(6px);
+  opacity: 0.8;
+}
+
+/* ============================================================
+   Reduced motion — globally neutralize reveals, blob drift, and
+   gradient drift. Content must be fully visible and sharp.
+   ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
