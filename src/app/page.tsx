@@ -3,7 +3,6 @@ import Hero from "@/components/hero/hero";
 import Problem from "@/components/problem/problem";
 import BusinessCase from "@/components/business-case/business-case";
 import Solution from "@/components/solution/solution";
-import Audiences from "@/components/audiences/audiences";
 import AudiencesPoster from "@/components/audiences-poster/audiences-poster";
 import Waitlist from "@/components/waitlist/waitlist";
 import Footer from "@/components/footer/footer";
@@ -23,7 +22,6 @@ export default function Page() {
         <Problem />
         <BusinessCase />
         <Solution />
-        <Audiences />
         <AudiencesPoster />
         <Waitlist />
       </main>

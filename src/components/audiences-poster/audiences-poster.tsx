@@ -62,9 +62,12 @@ const TONE_CLASS: Record<Panel["tone"], string> = {
   pink: styles.tonePink,
 };
 
+const CLOSING =
+  "By automating support, Nuro doesn't just save time, it prevents the lifetime societal cost of student dropouts due to lack of bandwidth.";
+
 export default function AudiencesPoster() {
   return (
-    <section className={styles.section}>
+    <section id="audience" className={styles.section}>
       <div className={styles.container}>
         <Reveal className={styles.header}>
           <h2 className={styles.heading}>
@@ -100,6 +103,10 @@ export default function AudiencesPoster() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal as="p" className={styles.closing} delay={0.24}>
+          {CLOSING}
+        </Reveal>
       </div>
     </section>
   );

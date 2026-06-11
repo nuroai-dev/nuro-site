@@ -4,11 +4,29 @@
    Wider container than the 1160px sections so the panels read large. */
 
 .section {
+  position: relative;
+  overflow: hidden;
   padding: 118px 0;
-  background: var(--bg);
+  background: #5d55b8;
+}
+
+/* Whisper of depth — lighter wash top-center (deck slide treatment). */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    80% 60% at 50% 0%,
+    rgba(255, 255, 255, 0.07),
+    transparent 70%
+  );
 }
 
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 40px;
@@ -29,12 +47,12 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.08;
-  color: var(--ink);
+  color: #ffffff;
   margin: 0;
 }
 
 .headingMuted {
-  color: #b6aee6;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .cta {
@@ -114,9 +132,11 @@
   );
 }
 
-/* Tone: indigo (Teachers) — deep deck-indigo, white text, blue bloom. */
+/* Tone: indigo (Teachers) — darker than the band so it separates,
+   white hairline for edge definition. */
 .toneIndigo {
-  background: linear-gradient(180deg, #4a4396 0%, #5d55b8 100%);
+  background: linear-gradient(180deg, #3e3880 0%, #534ca8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
 }
 
@@ -217,6 +237,17 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 14px -6px rgba(28, 22, 80, 0.35);
+}
+
+/* Closing paragraph below the grid (verbatim SPEC §4 copy). */
+.closing {
+  text-align: center;
+  max-width: 720px;
+  margin: 92px auto 0;
+  font-size: clamp(17px, 1.7vw, 21px);
+  line-height: 1.6;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 /* ── Single 920px breakpoint (SPEC §3.4) ────────────────────── */
