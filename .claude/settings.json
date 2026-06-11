@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jonathanolsen/claude-harness/bin/hook-guard-bash.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jonathanolsen/claude-harness/bin/hook-protect-gates.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
