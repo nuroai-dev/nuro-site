@@ -1,0 +1,321 @@
+/* ============================================================
+   Waitlist section — SPEC §4 Waitlist (card N-09).
+   Aurora background behind a frosted form card; 12px field radii,
+   holo focus rings via global .focusable, selected chips tinted
+   with the holo gradient + gradient checkmark. Error styling on
+   the #c46a8a family. Keyframes and .holo-text / .focusable are
+   global (src/app/globals.css).
+   ============================================================ */
+
+.section {
+  position: relative;
+  padding: 118px 24px;
+  overflow: hidden;
+  background: var(--bg);
+  text-align: center;
+}
+
+/* Content above the absolutely-positioned <Aurora> field. */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ── Header (type scale per SPEC §3.3) ──────────────────────── */
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0;
+}
+
+.heading {
+  margin: 20px 0 0;
+  font-size: clamp(34px, 4.6vw, 62px);
+  letter-spacing: -0.032em;
+  line-height: 1.02;
+  color: var(--ink);
+}
+
+.subLead {
+  margin: 24px auto 0;
+  max-width: 560px;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+/* ── Form card ──────────────────────────────────────────────── */
+
+.formCard {
+  margin-top: 48px;
+  padding: 38px 34px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.field {
+  margin-bottom: 26px;
+}
+
+.label,
+.legend {
+  display: block;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.helper {
+  margin: -4px 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+/* ── Text inputs (12px radii, holo aura on focus) ───────────── */
+
+.inputWrap {
+  display: block;
+  border-radius: 12px;
+}
+
+.input,
+.textarea {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.55;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--ink-3);
+}
+
+.input:disabled,
+.textarea:disabled {
+  opacity: 0.64;
+  cursor: not-allowed;
+}
+
+/* ── Choice chips (radios + checkboxes) ─────────────────────── */
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.chipGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  background: var(--bg);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    border-color 0.2s var(--ease),
+    background 0.2s var(--ease);
+}
+
+/* Selected chip — soft holo-gradient tint (SPEC §5.3 palette). */
+.chip[data-checked] {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--holo-linear) border-box;
+  box-shadow: var(--shadow-holo);
+}
+
+.chip:has(.chipInput:disabled) {
+  opacity: 0.64;
+  cursor: not-allowed;
+}
+
+/* Native input stays focusable for the keyboard flow but is invisible;
+   the chip's .focusable aura tracks it via :has(:focus-visible). */
+.chipInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chipBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border: 1px solid var(--hair);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.chip[data-checked] .chipBox {
+  border-color: transparent;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.chipLabel {
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+
+.chip[data-checked] .chipLabel {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* ── Error styling — #c46a8a family (card N-09) ─────────────── */
+
+.field[data-invalid] .input,
+.field[data-invalid] .textarea {
+  border-color: #c46a8a;
+  background: rgba(196, 106, 138, 0.06);
+}
+
+.field[data-invalid] .chip {
+  border-color: rgba(196, 106, 138, 0.55);
+}
+
+.fieldError {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #c46a8a;
+}
+
+/* ── Submit + privacy ───────────────────────────────────────── */
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 24px;
+  font: inherit;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--holo-linear);
+  background-size: 200% 200%;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  animation: holo-drift 8s ease-in-out infinite;
+  transition: opacity 0.2s var(--ease);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.privacy {
+  margin: 14px 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: var(--ink-3);
+}
+
+/* ── Status states ──────────────────────────────────────────── */
+
+.success {
+  padding: 26px 8px;
+  text-align: center;
+}
+
+.successText {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.alert {
+  margin-top: 18px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(196, 106, 138, 0.45);
+  background: rgba(196, 106, 138, 0.08);
+  color: #a14e6f;
+}
+
+.alertTitle {
+  font-weight: 600;
+  color: #c46a8a;
+}
+
+/* Visually-hidden live region (always mounted for aria-live). */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .formCard {
+    padding: 28px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .submit {
+    animation: none;
+  }
+}
