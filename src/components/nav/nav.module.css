@@ -120,6 +120,14 @@
   font-weight: 600;
 }
 
+/* Socials live in the menu on mobile — bottom-right of the panel. */
+.menuSocials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 0 16px 14px;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -244,6 +252,12 @@
     backdrop-filter: blur(14px);
     box-shadow: 0 12px 32px -16px rgba(22, 22, 28, 0.18);
     border-bottom: 1px solid var(--hair);
+  }
+
+  /* Socials leave the bar (cramped the right side, pushed the logo
+     off-center) — they render inside the menu panel instead. */
+  .actions .social {
+    display: none;
   }
 
   /* Touch targets ≥44px (adapt skill); flex:none beats flex-shrink. */

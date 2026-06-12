@@ -51,14 +51,27 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Mobile menu: close on Escape, restore focus-free simple toggle.
+  // Mobile menu: Escape or a tap outside the header closes it.
+  const headerRef = useRef<HTMLElement>(null);
   useEffect(() => {
     if (!menuOpen) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMenuOpen(false);
     };
+    const onPointer = (e: PointerEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(e.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointer);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointer);
+    };
   }, [menuOpen]);
 
   const scrollToTop = () => {
@@ -67,6 +80,7 @@ export default function Nav() {
 
   return (
     <header
+      ref={headerRef}
       className={styles.nav}
       data-scrolled={scrolled ? "true" : undefined}
     >
@@ -165,6 +179,27 @@ export default function Nav() {
             </a>
           </li>
         </ul>
+
+        <div className={styles.menuSocials}>
+          <a
+            className={styles.social}
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nuro on Instagram"
+          >
+            <InstagramIcon />
+          </a>
+          <a
+            className={styles.social}
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nuro on LinkedIn"
+          >
+            <LinkedInIcon />
+          </a>
+        </div>
       </div>
     </header>
   );

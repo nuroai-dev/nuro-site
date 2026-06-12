@@ -188,5 +188,8 @@
 
   .cardElevated {
     padding: 32px 24px;
+    /* Mobile motion budget: drifting the border gradient repaints the
+       whole card every frame — static on phones. */
+    animation: none;
   }
 }

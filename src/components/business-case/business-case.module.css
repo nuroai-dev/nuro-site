@@ -172,4 +172,9 @@
   .card {
     padding: 38px 30px 32px;
   }
+
+  /* Mobile motion budget: large blurred glow stays static on phones. */
+  .cardGlow {
+    animation: none;
+  }
 }

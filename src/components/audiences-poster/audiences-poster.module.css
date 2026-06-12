@@ -287,6 +287,23 @@
     padding: 30px 24px;
   }
 
+  /* Mobile motion budget: full-section background-position animation
+     repaints a huge area every frame — static gradients on phones. */
+  .section::before {
+    animation: none;
+    background-size: 100% 100%;
+  }
+
+  .panel::after {
+    animation: none;
+    filter: blur(40px);
+  }
+
+  /* 13ch cap forces awkward two-word rows on narrow panels. */
+  .headline {
+    max-width: none;
+  }
+
   .closing {
     margin-top: 56px;
   }
