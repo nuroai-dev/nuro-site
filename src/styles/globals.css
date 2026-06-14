@@ -392,31 +392,24 @@ html[data-js] [data-reveal][data-reveal-eager]:not([data-shown]) {
 }
 
 /* ============================================================
-   Mobile motion budget (≤920px). Phone GPUs choke on two things
-   here: animated blur() during reveals and huge blurred layers
-   drifting forever. Keep the motion language (fade + rise) but
-   drop the expensive parts: no blur in the reveal keyframe,
-   shorter duration, blobs static at half the blur radius.
+   Mobile motion budget (≤920px). On phones the scroll-reveal does more
+   harm than good: each block is hidden (opacity:0) until you scroll to it,
+   so on a slower phone it reads as content "loading in" late, and the
+   blur-up stutters on weaker phone GPUs. So on mobile we skip the reveal
+   entirely — every block is visible and sharp from the first paint. The
+   blur-up + staggered fade stays the desktop signature. The aurora
+   background stays, just static (no perpetual blob drift to drain battery).
    ============================================================ */
-@keyframes revealInLite {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 16px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
 @media (max-width: 920px) {
-  [data-reveal][data-shown] {
-    animation: revealInLite 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-    will-change: opacity, transform;
-  }
-
-  html[data-js] [data-reveal][data-reveal-eager]:not([data-shown]) {
-    animation: revealInLite 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  /* Show every reveal block immediately, sharp, with no entrance animation.
+     !important beats the html[data-js] opacity:0 hidden-gate (which has no
+     !important) so nothing is ever stranded invisible while scrolling. */
+  html[data-js] [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+    will-change: auto;
   }
 
   /* Blobs: static, smaller blur — beats inline styles via !important. */
