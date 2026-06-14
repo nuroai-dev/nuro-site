@@ -1,0 +1,49 @@
+---
+/**
+ * <Reveal> — the signature blur-up scroll entrance (SPEC §5.1).
+ *
+ * Resting state is VISIBLE (globals.css). When JS is available the
+ * `html[data-js] [data-reveal]:not([data-shown])` rule hides the element
+ * until the motion runtime (src/scripts/motion.ts) sees it intersect and
+ * sets `data-shown`, which layers the one-shot `revealIn` animation.
+ *
+ * No-JS users and engines without IntersectionObserver see sharp, static
+ * content. `eager` (above-fold hero only) starts the entrance at first paint
+ * via CSS, so the hero LCP is never delayed by JS.
+ */
+interface Props {
+  /** Element/tag to render. Defaults to a div. */
+  as?: string;
+  /** Stagger in seconds, applied as animationDelay. */
+  delay?: number;
+  /** Start the entrance at first paint via CSS — above-fold content only. */
+  eager?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const {
+  as = "div",
+  delay = 0,
+  eager = false,
+  class: className,
+  ...rest
+}: Props = Astro.props;
+
+// `as` is a plain string (any HTML tag), so it carries no element-specific
+// attribute typing — cast so class/style/rest pass through cleanly.
+const Tag = as as any;
+
+const style = delay > 0 ? `animation-delay:${delay}s` : undefined;
+---
+
+<Tag
+  data-reveal
+  data-reveal-eager={eager ? "" : undefined}
+  data-reveal-delay={delay > 0 ? String(delay) : undefined}
+  class={className}
+  style={style}
+  {...rest}
+>
+  <slot />
+</Tag>

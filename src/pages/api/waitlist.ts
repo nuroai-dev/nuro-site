@@ -1,6 +1,9 @@
-import { NextResponse } from "next/server";
+import type { APIRoute } from "astro";
 
-import { saveWaitlistEntry, type WaitlistEntry } from "./save-waitlist-entry";
+import {
+  saveWaitlistEntry,
+  type WaitlistEntry,
+} from "@/lib/waitlist/save-waitlist-entry";
 
 /**
  * `POST /api/waitlist` (card N-12 — stub backend).
@@ -9,6 +12,9 @@ import { saveWaitlistEntry, type WaitlistEntry } from "./save-waitlist-entry";
  * 400 `{ ok: false, reason: "invalid" }` on bad input, 200 `{ ok: true }`
  * otherwise. Persistence is isolated behind `saveWaitlistEntry()`.
  */
+
+// This endpoint is dynamic (server-rendered output); never prerender it.
+export const prerender = false;
 
 /** Same pragmatic email check the waitlist form uses client-side. */
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,6 +25,13 @@ const MAX_ROLE = 100;
 const MAX_MESSAGE = 2000;
 const MAX_AGES = 10;
 const MAX_AGE_ITEM = 50;
+
+function json(body: unknown, status = 200): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
 
 function parseEntry(body: unknown): WaitlistEntry | null {
   if (typeof body !== "object" || body === null || Array.isArray(body)) {
@@ -61,25 +74,25 @@ function parseEntry(body: unknown): WaitlistEntry | null {
   };
 }
 
-export async function POST(request: Request): Promise<NextResponse> {
+export const POST: APIRoute = async ({ request }) => {
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ ok: false, reason: "invalid" }, { status: 400 });
+    return json({ ok: false, reason: "invalid" }, 400);
   }
 
   const entry = parseEntry(body);
   if (entry === null) {
-    return NextResponse.json({ ok: false, reason: "invalid" }, { status: 400 });
+    return json({ ok: false, reason: "invalid" }, 400);
   }
 
   try {
     await saveWaitlistEntry(entry);
   } catch (error) {
     console.error("[waitlist] saveWaitlistEntry failed", error);
-    return NextResponse.json({ ok: false }, { status: 500 });
+    return json({ ok: false }, 500);
   }
 
-  return NextResponse.json({ ok: true });
-}
+  return json({ ok: true });
+};

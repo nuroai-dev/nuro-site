@@ -1,0 +1,84 @@
+---
+/**
+ * Problem section (`#problem`) — SPEC §4 Problem.
+ *
+ * All copy is verbatim from the spec and present in the SSR HTML. Motion comes
+ * from the shared <Reveal> primitive; the three stat cards stagger at 0.08s
+ * steps. Stat numerals use per-card tinted (single-stop-shifted) holo
+ * gradients — blue / purple / pink.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./problem.module.css";
+
+type Stat = {
+  value: string;
+  tint: "blue" | "purple" | "pink";
+  body: string;
+  source: string;
+};
+
+const STATS: readonly Stat[] = [
+  {
+    value: "94%",
+    tint: "blue",
+    body: "of teachers say they do not have the right tools to support neurodivergent students.",
+    source: "Karolinska Institute, Emma Leifler (2022)",
+  },
+  {
+    value: "82%",
+    tint: "purple",
+    body: "of teachers say they do not have enough time to properly support students with additional needs.",
+    source: "Skolverket, 2018",
+  },
+  {
+    value: "51%",
+    tint: "pink",
+    body: "of schools admit that students with NDD diagnoses are NOT getting the support they are legally entitled to.",
+    source: "Lärarnas Riksförbund",
+  },
+];
+
+const TINT_CLASS: Record<Stat["tint"], string> = {
+  blue: styles.tintBlue,
+  purple: styles.tintPurple,
+  pink: styles.tintPink,
+};
+---
+
+<section id="problem" class={styles.section}>
+  <div class={styles.container}>
+    <Reveal class={styles.metaRow}>
+      <span class={styles.eyebrow}>The Problem</span>
+      <span class={styles.chip}>🇸🇪 Initial market, Sweden</span>
+    </Reveal>
+
+    <Reveal as="h2" class={styles.heading} delay={0.06}>
+      The system is failing our{" "}
+      <span class="holo-text">most vulnerable students.</span>
+    </Reveal>
+
+    <Reveal as="p" class={styles.subLead} delay={0.12}>
+      And it&apos;s costing <strong>EVERYONE</strong>, teachers, families and
+      schools.
+    </Reveal>
+
+    <Reveal as="p" class={styles.subDetail} delay={0.18}>
+      225,000+ neurodivergent students in Sweden have a legal right to support
+      they are not receiving.
+    </Reveal>
+
+    <div class={styles.grid}>
+      {
+        STATS.map((stat, i) => (
+          <Reveal as="article" class={styles.card} delay={i * 0.08}>
+            <div class={`${styles.statValue} ${TINT_CLASS[stat.tint]}`}>
+              {stat.value}
+            </div>
+            <p class={styles.statBody}>{stat.body}</p>
+            <div class={styles.statSource}>{stat.source}</div>
+          </Reveal>
+        ))
+      }
+    </div>
+  </div>
+</section>

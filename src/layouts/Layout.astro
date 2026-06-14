@@ -1,0 +1,74 @@
+---
+/**
+ * Root layout — the <html> shell (SPEC §4 Meta, ported from the Next
+ * layout.tsx). Self-hosts the three font families via @fontsource (IBM Plex
+ * Sans for display, Inter for body, JetBrains Mono for eyebrows/meta), imports
+ * the global stylesheet once, sets metadata/OG, and loads the motion runtime.
+ *
+ * The tiny inline head script marks JS as available before paint so the reveal
+ * motion can gate its hidden initial state on [data-js]; no-JS users never see
+ * the hidden state and content stays sharp and visible.
+ */
+import "@fontsource/ibm-plex-sans/400.css";
+import "@fontsource/ibm-plex-sans/500.css";
+import "@fontsource/ibm-plex-sans/600.css";
+import "@fontsource/ibm-plex-sans/700.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/jetbrains-mono/600.css";
+import "@/styles/globals.css";
+
+const SITE_URL = "https://nuroai.dev";
+const TITLE = "Nuro — Inclusive Education for Swedish Schools";
+const DESCRIPTION =
+  "Nuro helps Swedish schools support neurodiverse students with ADHD, Autism, and Dyslexia. AI-powered lesson adaptation that meets Skollagen requirements.";
+const OG_IMAGE = `${SITE_URL}/og.png`;
+const CANONICAL = `${SITE_URL}/`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="canonical" href={CANONICAL} />
+
+    <title>{TITLE}</title>
+    <meta name="description" content={DESCRIPTION} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={CANONICAL} />
+    <meta property="og:site_name" content="Nuro" />
+    <meta property="og:title" content={TITLE} />
+    <meta property="og:description" content={DESCRIPTION} />
+    <meta property="og:image" content={OG_IMAGE} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Nuro — The missing tool for neurodivergent students."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={TITLE} />
+    <meta name="twitter:description" content={DESCRIPTION} />
+    <meta name="twitter:image" content={OG_IMAGE} />
+
+    {/* Runs before paint: marks JS as available so the reveal motion gates
+        its hidden initial state on [data-js]. */}
+    <script is:inline>
+      document.documentElement.dataset.js = "1";
+    </script>
+  </head>
+  <body>
+    <slot />
+    <script>
+      import "@/scripts/motion";
+    </script>
+  </body>
+</html>

@@ -201,6 +201,13 @@
   height: 14px;
 }
 
+/* The gradient checkmark is always in the DOM (one per chip); it only shows
+   once the chip is selected. Mirrors the Next version, which rendered the
+   check conditionally on the checked state. */
+.chip:not([data-checked]) .checkIcon {
+  display: none;
+}
+
 .chipLabel {
   font-size: 14.5px;
   color: var(--ink-2);

@@ -1,0 +1,31 @@
+---
+/**
+ * Full-page assembly (SPEC §6 N-11): sections composed in spec order —
+ * Nav, Hero, Problem, Business case, Solution, Audiences, Waitlist, Footer.
+ * Anchor ids (#problem, #business-case, #features, #waitlist) live inside
+ * each section; the fixed-nav scroll offset (scroll-margin-top) is defined
+ * once in globals.css.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Hero from "@/components/hero/Hero.astro";
+import Problem from "@/components/problem/Problem.astro";
+import BusinessCase from "@/components/business-case/BusinessCase.astro";
+import Solution from "@/components/solution/Solution.astro";
+import AudiencesPoster from "@/components/audiences-poster/AudiencesPoster.astro";
+import Waitlist from "@/components/waitlist/Waitlist.astro";
+import Footer from "@/components/footer/Footer.astro";
+---
+
+<Layout>
+  <Nav />
+  <main>
+    <Hero />
+    <Problem />
+    <BusinessCase />
+    <Solution />
+    <AudiencesPoster />
+    <Waitlist />
+  </main>
+  <Footer />
+</Layout>

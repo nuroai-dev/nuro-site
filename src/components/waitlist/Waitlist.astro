@@ -1,0 +1,441 @@
+---
+/**
+ * Waitlist section (`#waitlist`) — SPEC §4 Waitlist (cards N-09 / N-12).
+ *
+ * Aurora background + header copy + the full form are in the SSR HTML. The
+ * client script below adds validation (email format, role required), the
+ * choice-chip selection state, and the submit flow against POST /api/waitlist
+ * with the contract `{ email, role, student_ages, message }` → `{ ok: true }`
+ * (HTTP 409 or `reason: "duplicate"` → duplicate state, anything else →
+ * error). A persistent role="status" live region announces each state change.
+ *
+ * Every label, placeholder, helper and status string comes from copy.ts
+ * (single source of truth) — VERBATIM per the spec.
+ */
+import Aurora from "@/components/motion/Aurora.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./waitlist.module.css";
+import {
+  AGE_OPTIONS,
+  AGES_HELPER,
+  AGES_LABEL,
+  EMAIL_INVALID_ERROR,
+  EMAIL_LABEL,
+  EMAIL_PLACEHOLDER,
+  MESSAGE_LABEL,
+  MESSAGE_MAX_LENGTH,
+  MESSAGE_PLACEHOLDER,
+  PRIVACY_NOTE,
+  ROLE_LABEL,
+  ROLE_OPTIONS,
+  ROLE_REQUIRED_ERROR,
+  SUBMIT_IDLE,
+  SUCCESS_MESSAGE,
+  WAITLIST_EYEBROW,
+  WAITLIST_HEADING_GRADIENT,
+  WAITLIST_HEADING_POST,
+  WAITLIST_HEADING_PRE,
+  WAITLIST_SUB,
+} from "./copy";
+
+const AGES_HELPER_ID = "waitlist-ages-helper";
+
+// 5-stop holo gradient (SPEC §5.3 palette) for the selected-chip checkmark.
+const CHECK_STOPS = [
+  { offset: "0%", color: "var(--holo-1)" },
+  { offset: "32%", color: "var(--holo-2)" },
+  { offset: "58%", color: "var(--holo-3)" },
+  { offset: "80%", color: "var(--holo-4)" },
+  { offset: "100%", color: "var(--holo-5)" },
+];
+---
+
+<section class={styles.section} id="waitlist">
+  <Aurora variant="waitlist" />
+  <div class={styles.container}>
+    <Reveal as="p" class={styles.eyebrow}>{WAITLIST_EYEBROW}</Reveal>
+    <Reveal as="h2" delay={0.08} class={styles.heading}>
+      {WAITLIST_HEADING_PRE}
+      <span class="holo-text">{WAITLIST_HEADING_GRADIENT}</span>
+      {WAITLIST_HEADING_POST}
+    </Reveal>
+    <Reveal as="p" delay={0.16} class={styles.subLead}>{WAITLIST_SUB}</Reveal>
+
+    <Reveal delay={0.24}>
+      <div class={styles.formCard}>
+        <form id="waitlist-form" novalidate>
+          {/* Email */}
+          <div class={styles.field} data-email-field>
+            <label class={styles.label} for="waitlist-email">
+              {EMAIL_LABEL}
+            </label>
+            <span class={`${styles.inputWrap} focusable`}>
+              <input
+                id="waitlist-email"
+                class={styles.input}
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder={EMAIL_PLACEHOLDER}
+              />
+            </span>
+            <p class={styles.fieldError} id="waitlist-email-error" hidden>
+              {EMAIL_INVALID_ERROR}
+            </p>
+          </div>
+
+          {/* Role (required) */}
+          <div class={styles.field} data-role-field>
+            <fieldset class={styles.fieldset}>
+              <legend class={styles.legend}>{ROLE_LABEL}</legend>
+              <div class={styles.chipGroup} role="presentation">
+                {
+                  ROLE_OPTIONS.map((option, i) => {
+                    const gradId = `wl-role-check-${i}`;
+                    return (
+                      <label class={`${styles.chip} focusable`}>
+                        <input
+                          class={styles.chipInput}
+                          type="radio"
+                          name="role"
+                          value={option}
+                        />
+                        <span class={styles.chipBox} aria-hidden="true">
+                          <svg class={styles.checkIcon} viewBox="0 0 16 16">
+                            <defs>
+                              <linearGradient
+                                id={gradId}
+                                x1="0"
+                                y1="0"
+                                x2="16"
+                                y2="16"
+                              >
+                                {CHECK_STOPS.map((s) => (
+                                  <stop offset={s.offset} stop-color={s.color} />
+                                ))}
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M3 8.5l3.2 3.2L13 5"
+                              fill="none"
+                              stroke={`url(#${gradId})`}
+                              stroke-width="2.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class={styles.chipLabel}>{option}</span>
+                      </label>
+                    );
+                  })
+                }
+              </div>
+            </fieldset>
+            <p class={styles.fieldError} id="waitlist-role-error" hidden>
+              {ROLE_REQUIRED_ERROR}
+            </p>
+          </div>
+
+          {/* Student ages (optional, multi-select) */}
+          <div class={styles.field}>
+            <fieldset class={styles.fieldset} aria-describedby={AGES_HELPER_ID}>
+              <legend class={styles.legend}>{AGES_LABEL}</legend>
+              <p class={styles.helper} id={AGES_HELPER_ID}>{AGES_HELPER}</p>
+              <div class={styles.chipGroup} role="presentation">
+                {
+                  AGE_OPTIONS.map((option, i) => {
+                    const gradId = `wl-age-check-${i}`;
+                    return (
+                      <label class={`${styles.chip} focusable`}>
+                        <input
+                          class={styles.chipInput}
+                          type="checkbox"
+                          name="student_ages"
+                          value={option}
+                        />
+                        <span class={styles.chipBox} aria-hidden="true">
+                          <svg class={styles.checkIcon} viewBox="0 0 16 16">
+                            <defs>
+                              <linearGradient
+                                id={gradId}
+                                x1="0"
+                                y1="0"
+                                x2="16"
+                                y2="16"
+                              >
+                                {CHECK_STOPS.map((s) => (
+                                  <stop offset={s.offset} stop-color={s.color} />
+                                ))}
+                              </linearGradient>
+                            </defs>
+                            <path
+                              d="M3 8.5l3.2 3.2L13 5"
+                              fill="none"
+                              stroke={`url(#${gradId})`}
+                              stroke-width="2.4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class={styles.chipLabel}>{option}</span>
+                      </label>
+                    );
+                  })
+                }
+              </div>
+            </fieldset>
+          </div>
+
+          {/* Message (optional) */}
+          <div class={styles.field}>
+            <label class={styles.label} for="waitlist-message">
+              {MESSAGE_LABEL}
+            </label>
+            <span class={`${styles.inputWrap} focusable`}>
+              <textarea
+                id="waitlist-message"
+                class={styles.textarea}
+                name="message"
+                rows="4"
+                maxlength={MESSAGE_MAX_LENGTH}
+                placeholder={MESSAGE_PLACEHOLDER}></textarea>
+            </span>
+          </div>
+
+          <button class={`${styles.submit} focusable`} type="submit" data-submit>
+            {SUBMIT_IDLE}
+          </button>
+          <p class={styles.privacy}>{PRIVACY_NOTE}</p>
+        </form>
+
+        <div class={styles.success} data-success hidden>
+          <p class={styles.successText}>{SUCCESS_MESSAGE}</p>
+        </div>
+
+        <div class={styles.alert} data-alert hidden>
+          <strong class={styles.alertTitle} data-alert-title></strong>
+          <span data-alert-body></span>
+        </div>
+
+        <p class={styles.srOnly} role="status" aria-live="polite" data-live></p>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
+<script>
+  import {
+    DUPLICATE_BODY,
+    DUPLICATE_TITLE,
+    ERROR_BODY,
+    ERROR_TITLE,
+    SUBMIT_IDLE,
+    SUBMIT_LOADING,
+    SUCCESS_MESSAGE,
+    WAITLIST_ENDPOINT,
+    type WaitlistPayload,
+  } from "./copy";
+
+  type Status = "idle" | "submitting" | "success" | "duplicate" | "error";
+
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const form = document.getElementById("waitlist-form") as HTMLFormElement | null;
+  if (form) {
+    const emailField = form.querySelector<HTMLElement>("[data-email-field]");
+    const roleField = form.querySelector<HTMLElement>("[data-role-field]");
+    const emailInput = form.querySelector<HTMLInputElement>("#waitlist-email")!;
+    const emailError = form.querySelector<HTMLElement>("#waitlist-email-error")!;
+    const roleError = form.querySelector<HTMLElement>("#waitlist-role-error")!;
+    const messageInput =
+      form.querySelector<HTMLTextAreaElement>("#waitlist-message")!;
+    const submitBtn = form.querySelector<HTMLButtonElement>("[data-submit]")!;
+    const roleInputs = Array.from(
+      form.querySelectorAll<HTMLInputElement>('input[name="role"]'),
+    );
+    const ageInputs = Array.from(
+      form.querySelectorAll<HTMLInputElement>('input[name="student_ages"]'),
+    );
+
+    const card = form.parentElement!;
+    const successBox = card.querySelector<HTMLElement>("[data-success]")!;
+    const alertBox = card.querySelector<HTMLElement>("[data-alert]")!;
+    const alertTitle = card.querySelector<HTMLElement>("[data-alert-title]")!;
+    const alertBody = card.querySelector<HTMLElement>("[data-alert-body]")!;
+    const live = card.querySelector<HTMLElement>("[data-live]")!;
+
+    let status: Status = "idle";
+
+    const LIVE_TEXT: Record<Status, string> = {
+      idle: "",
+      submitting: SUBMIT_LOADING,
+      success: SUCCESS_MESSAGE,
+      duplicate: `${DUPLICATE_TITLE} ${DUPLICATE_BODY}`,
+      error: `${ERROR_TITLE}. ${ERROR_BODY}`,
+    };
+
+    const setLive = () => {
+      live.textContent = LIVE_TEXT[status];
+    };
+
+    const hideAlert = () => {
+      alertBox.hidden = true;
+      alertBox.removeAttribute("data-kind");
+    };
+
+    const showAlert = (kind: "duplicate" | "error") => {
+      alertTitle.textContent =
+        kind === "duplicate" ? DUPLICATE_TITLE : ERROR_TITLE;
+      alertBody.textContent = kind === "duplicate" ? DUPLICATE_BODY : ERROR_BODY;
+      alertBox.setAttribute("data-kind", kind);
+      alertBox.hidden = false;
+    };
+
+    const resetServerStatus = () => {
+      if (status === "duplicate" || status === "error") {
+        status = "idle";
+        hideAlert();
+        setLive();
+      }
+    };
+
+    const setEmailError = (bad: boolean) => {
+      if (bad) {
+        emailField?.setAttribute("data-invalid", "");
+        emailError.hidden = false;
+        emailInput.setAttribute("aria-invalid", "true");
+        emailInput.setAttribute("aria-describedby", "waitlist-email-error");
+      } else {
+        emailField?.removeAttribute("data-invalid");
+        emailError.hidden = true;
+        emailInput.removeAttribute("aria-invalid");
+        emailInput.removeAttribute("aria-describedby");
+      }
+    };
+
+    const setRoleError = (bad: boolean) => {
+      if (bad) {
+        roleField?.setAttribute("data-invalid", "");
+        roleError.hidden = false;
+        for (const r of roleInputs) {
+          r.setAttribute("aria-describedby", "waitlist-role-error");
+          r.setAttribute("aria-invalid", "true");
+        }
+      } else {
+        roleField?.removeAttribute("data-invalid");
+        roleError.hidden = true;
+        for (const r of roleInputs) {
+          r.removeAttribute("aria-describedby");
+          r.removeAttribute("aria-invalid");
+        }
+      }
+    };
+
+    const syncChips = (inputs: HTMLInputElement[]) => {
+      for (const input of inputs) {
+        const chip = input.closest<HTMLElement>("label");
+        if (!chip) continue;
+        if (input.checked) chip.setAttribute("data-checked", "true");
+        else chip.removeAttribute("data-checked");
+      }
+    };
+
+    const setBusy = (busy: boolean) => {
+      submitBtn.disabled = busy;
+      submitBtn.textContent = busy ? SUBMIT_LOADING : SUBMIT_IDLE;
+      emailInput.disabled = busy;
+      messageInput.disabled = busy;
+      for (const r of [...roleInputs, ...ageInputs]) r.disabled = busy;
+    };
+
+    // ── Wiring ─────────────────────────────────────────────────────────
+    emailInput.addEventListener("input", () => {
+      setEmailError(false);
+      resetServerStatus();
+    });
+
+    messageInput.addEventListener("input", resetServerStatus);
+
+    for (const r of roleInputs) {
+      r.addEventListener("change", () => {
+        syncChips(roleInputs);
+        setRoleError(false);
+        resetServerStatus();
+      });
+    }
+
+    for (const c of ageInputs) {
+      c.addEventListener("change", () => {
+        syncChips(ageInputs);
+        resetServerStatus();
+      });
+    }
+
+    async function submitWaitlist(payload: WaitlistPayload): Promise<Status> {
+      try {
+        const res = await fetch(WAITLIST_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (res.status === 409) return "duplicate";
+        if (!res.ok) return "error";
+        const data = (await res.json()) as { ok: boolean; reason?: string };
+        if (data.ok) return "success";
+        return data.reason === "duplicate" ? "duplicate" : "error";
+      } catch {
+        return "error";
+      }
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (status === "submitting") return;
+      resetServerStatus();
+
+      const email = emailInput.value.trim();
+      const role = roleInputs.find((r) => r.checked)?.value ?? null;
+      const badEmail = !EMAIL_RE.test(email);
+      const badRole = role === null;
+
+      setEmailError(badEmail);
+      setRoleError(badRole);
+
+      if (badEmail) {
+        emailInput.focus();
+        return;
+      }
+      if (badRole) {
+        roleInputs[0]?.focus();
+        return;
+      }
+
+      status = "submitting";
+      setBusy(true);
+      setLive();
+
+      const ages = ageInputs.filter((c) => c.checked).map((c) => c.value);
+      status = await submitWaitlist({
+        email,
+        role: role as string,
+        student_ages: ages,
+        message: messageInput.value,
+      });
+
+      setBusy(false);
+      setLive();
+
+      if (status === "success") {
+        form.hidden = true;
+        successBox.hidden = false;
+        hideAlert();
+      } else if (status === "duplicate") {
+        showAlert("duplicate");
+      } else {
+        showAlert("error");
+      }
+    });
+  }
+</script>

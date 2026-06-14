@@ -1,0 +1,108 @@
+---
+/**
+ * Audiences poster section — editorial three-panel exploration of the three
+ * audiences (Students / Teachers / Parents). Small eyebrow, large display
+ * headline, atmospheric gradient filling each panel, product chip anchored
+ * bottom. All visuals are CSS gradients — no images. Panels reveal with a
+ * stagger and lift slightly on hover.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./audiences-poster.module.css";
+
+type Panel = {
+  eyebrow: string;
+  headline: string;
+  bullets: readonly string[];
+  chip: string;
+  tone: "light" | "indigo" | "pink";
+};
+
+const PANELS: readonly Panel[] = [
+  {
+    eyebrow: "For Students",
+    headline: "Learning that works with your brain.",
+    bullets: [
+      "24/7 personalized support",
+      "Zero overwhelm",
+      "Research-backed structure",
+    ],
+    chip: "▶ Start first block",
+    tone: "light",
+  },
+  {
+    eyebrow: "For Teachers",
+    headline: "Every student seen. No extra hours.",
+    bullets: [
+      "Automated adaptation",
+      "Saves 40+ hours per month",
+      "Easier documentation and follow-up",
+    ],
+    chip: "Focus score 72",
+    tone: "indigo",
+  },
+  {
+    eyebrow: "For Parents",
+    headline: "Know how your child is really doing.",
+    bullets: [
+      "Real-time progress feed",
+      "Auto-compliance documentation",
+      "Direct connection with teachers",
+    ],
+    chip: "93% of focus blocks completed",
+    tone: "pink",
+  },
+];
+
+const TONE_CLASS: Record<Panel["tone"], string> = {
+  light: styles.toneLight,
+  indigo: styles.toneIndigo,
+  pink: styles.tonePink,
+};
+
+const CLOSING =
+  "By automating support, Nuro doesn't just save time, it prevents the lifetime societal cost of student dropouts due to lack of bandwidth.";
+---
+
+<section id="audience" class={styles.section}>
+  <div class={styles.container}>
+    <Reveal class={styles.header}>
+      <h2 class={styles.heading}>
+        One platform.
+        <br />
+        <span class={styles.headingMuted}>Three experiences.</span>
+      </h2>
+      <a class={styles.cta} href="#waitlist">
+        Join waitlist <span aria-hidden="true">→</span>
+      </a>
+    </Reveal>
+
+    <div class={styles.grid}>
+      {
+        PANELS.map((panel, i) => (
+          <Reveal
+            class={`${styles.panel} ${TONE_CLASS[panel.tone]}`}
+            delay={i * 0.08}
+          >
+            <div class={styles.panelTop}>
+              <div class={styles.eyebrow}>{panel.eyebrow}</div>
+              <h3 class={styles.headline}>{panel.headline}</h3>
+            </div>
+
+            <div class={styles.panelBottom}>
+              <ul class={styles.bullets}>
+                {panel.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+              <span class={styles.chip}>{panel.chip}</span>
+            </div>
+          </Reveal>
+        ))
+      }
+    </div>
+
+    <Reveal as="p" class={styles.closing} delay={0.24}>
+      {CLOSING}
+    </Reveal>
+  </div>
+</section>

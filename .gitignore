@@ -1,5 +1,9 @@
 node_modules/
-.next/
+
+# Astro build output + generated types
+dist/
+.astro/
+
 *.tsbuildinfo
 .env*
 !.env.example

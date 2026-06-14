@@ -1,0 +1,56 @@
+---
+/**
+ * Business case section (`#business-case`) — SPEC §4 Business case.
+ *
+ * All copy is verbatim from the spec and present in the SSR HTML. Two-column
+ * layout (text left, 15M SEK stat card right) collapsing to one column at the
+ * single 920px breakpoint. The stat card carries the SPEC §5.3 treatments: a
+ * drifting gradient numeral, a soft holographic <Aurora variant="card">
+ * overlay, and a blurred card glow rendered as a pointer-events-none span
+ * stacked behind the card surface.
+ */
+import Aurora from "@/components/motion/Aurora.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./business-case.module.css";
+---
+
+<section id="business-case" class={styles.section}>
+  <div class={styles.container}>
+    <div class={styles.grid}>
+      <div>
+        <Reveal class={styles.eyebrow}>The Business Case</Reveal>
+
+        <Reveal as="h2" class={styles.heading} delay={0.06}>
+          This isn&apos;t just the right thing to do.
+        </Reveal>
+
+        <Reveal as="p" class={styles.subLead} delay={0.12}>
+          It&apos;s the smartest investment a school can make.
+        </Reveal>
+
+        <Reveal as="p" class={styles.body} delay={0.18}>
+          When students with special needs don&apos;t get timely support, they
+          become school refusers. Schools then face spiralling costs: specialist
+          programs, home tuition, social services and eventually welfare
+          dependency. Nuro is a preventative intervention that pays for itself
+          many times over.
+        </Reveal>
+      </div>
+
+      <Reveal class={styles.cardWrap} delay={0.16}>
+        <span aria-hidden="true" class={styles.cardGlow}></span>
+        <article class={styles.card}>
+          <Aurora variant="card" />
+          <div class={styles.cardContent}>
+            <div class={styles.statValue}>15M SEK</div>
+            <p class={styles.statBody}>
+              estimated lifetime societal cost of one student dropping out due to
+              lack of support.
+            </p>
+            <div class={styles.statSource}>Skandia Stiftelse</div>
+          </div>
+        </article>
+      </Reveal>
+    </div>
+  </div>
+</section>

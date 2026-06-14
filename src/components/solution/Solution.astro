@@ -1,0 +1,112 @@
+---
+/**
+ * Solution section (`#features`) — SPEC §4 Solution.
+ *
+ * All copy is verbatim from the spec and present in the SSR HTML. Two-column
+ * before/after comparison — "Before Nuro" (X icons) vs "With Nuro" (gradient
+ * check icons, soft holo tint overlay + glow). Collapses to one column at the
+ * single 920px breakpoint.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./solution.module.css";
+
+const BEFORE_ITEMS: readonly string[] = [
+  "Individual strengths go unseen, individual needs go unmet.",
+  "Lessons follow one rigid format that doesn't fit everyone.",
+  "Teachers firefight instead of adapting support.",
+  "Parents are left guessing how their child is really doing.",
+  "Help arrives late, generic, or not at all.",
+];
+
+const AFTER_ITEMS: readonly string[] = [
+  "Every student gets a profile built around their strengths and needs.",
+  "Lessons are auto-adapted into clear, structured steps each child can follow.",
+  "Teachers deliver targeted help without extra planning hours.",
+  "Parents see exactly how their child is progressing, in real time.",
+];
+---
+
+<section id="features" class={styles.section}>
+  <div class={styles.container}>
+    <Reveal as="span" class={styles.eyebrow}>The Solution</Reveal>
+
+    <Reveal as="h2" class={styles.heading} delay={0.06}>One platform.</Reveal>
+
+    <Reveal as="p" class={styles.subLead} delay={0.12}>
+      For every person who cares about the child.
+    </Reveal>
+
+    <div class={styles.grid}>
+      <Reveal as="article" class={styles.card} delay={0.08}>
+        <h3 class={styles.cardTitle}>Before Nuro</h3>
+        <ul class={styles.list}>
+          {
+            BEFORE_ITEMS.map((item) => (
+              <li class={styles.item}>
+                <svg
+                  class={styles.icon}
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 4l8 8M12 4l-8 8"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </Reveal>
+
+      <Reveal
+        as="article"
+        class={`${styles.card} ${styles.cardElevated}`}
+        delay={0.16}
+      >
+        <h3 class={styles.cardTitle}>With Nuro</h3>
+        <ul class={styles.list}>
+          {
+            AFTER_ITEMS.map((item) => (
+              <li class={`${styles.item} ${styles.itemCheck}`}>
+                <svg
+                  class={styles.icon}
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <linearGradient
+                      id="solution-check-grad"
+                      x1="2"
+                      y1="3"
+                      x2="14"
+                      y2="13"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0" stop-color="#6f9bff" />
+                      <stop offset="0.5" stop-color="#9d86ff" />
+                      <stop offset="1" stop-color="#ff7eb8" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M3 8.5l3.4 3.4L13 4.5"
+                    stroke="url(#solution-check-grad)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </Reveal>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,124 @@
+---
+/**
+ * <Aurora> — ambient holographic background: four soft, heavily-blurred
+ * blobs that drift on GPU-composited transforms (SPEC §5.2). Ported from
+ * `~/nuro/components/brand/aurora.tsx`.
+ *
+ * The motion runtime (src/scripts/motion.ts) pauses the drift via data-paused
+ * while the field is scrolled out of view. Must be placed inside a
+ * `position: relative; overflow: hidden` parent: the root is absolutely
+ * positioned and fills it. Consumers own that container.
+ */
+type Variant = "hero" | "waitlist" | "card";
+
+interface Props {
+  /** Surface preset controlling base intensity. Defaults to "hero". */
+  variant?: Variant;
+  /** Additional opacity multiplier, stacked on the variant. Defaults to 1. */
+  intensity?: number;
+  class?: string;
+}
+
+type Blob = {
+  width: string;
+  height: string;
+  left?: string;
+  right?: string;
+  top?: string;
+  bottom?: string;
+  color: string;
+  blur: number;
+  opacity: number;
+  animation: string;
+};
+
+const BLOBS: ReadonlyArray<Blob> = [
+  {
+    width: "60%",
+    height: "60%",
+    left: "-10%",
+    top: "-20%",
+    color: "rgba(167,199,255,0.7)",
+    blur: 60,
+    opacity: 0.9,
+    animation: "aurora-a 18s ease-in-out infinite",
+  },
+  {
+    width: "55%",
+    height: "55%",
+    right: "-10%",
+    top: "-10%",
+    color: "rgba(232,191,230,0.7)",
+    blur: 70,
+    opacity: 0.85,
+    animation: "aurora-b 22s ease-in-out infinite",
+  },
+  {
+    width: "65%",
+    height: "65%",
+    left: "30%",
+    bottom: "-20%",
+    color: "rgba(255,201,227,0.7)",
+    blur: 80,
+    opacity: 0.75,
+    animation: "aurora-c 26s ease-in-out infinite",
+  },
+  {
+    width: "40%",
+    height: "40%",
+    left: "10%",
+    bottom: "10%",
+    color: "rgba(255,217,194,0.6)",
+    blur: 60,
+    opacity: 0.7,
+    animation: "aurora-d 20s ease-in-out infinite",
+  },
+];
+
+const VARIANT_INTENSITY: Record<Variant, number> = {
+  hero: 1,
+  waitlist: 0.85,
+  card: 0.55,
+};
+
+const { variant = "hero", intensity = 1, class: className } = Astro.props;
+const mult = VARIANT_INTENSITY[variant];
+
+function blobStyle(blob: Blob): string {
+  const opacity = Math.min(1, blob.opacity * mult * intensity);
+  const parts: string[] = [
+    "position:absolute",
+    `width:${blob.width}`,
+    `height:${blob.height}`,
+  ];
+  if (blob.left !== undefined) parts.push(`left:${blob.left}`);
+  if (blob.right !== undefined) parts.push(`right:${blob.right}`);
+  if (blob.top !== undefined) parts.push(`top:${blob.top}`);
+  if (blob.bottom !== undefined) parts.push(`bottom:${blob.bottom}`);
+  parts.push(
+    `background:radial-gradient(closest-side, ${blob.color}, transparent)`,
+    `filter:blur(${blob.blur}px)`,
+    `opacity:${opacity}`,
+    `animation:${blob.animation}`,
+    "transform-origin:center",
+    "will-change:transform",
+  );
+  return parts.join(";");
+}
+---
+
+<div
+  aria-hidden="true"
+  data-aurora-root
+  data-paused="false"
+  class:list={[
+    "pointer-events-none",
+    "absolute",
+    "inset-0",
+    "z-0",
+    "overflow-hidden",
+    className,
+  ]}
+>
+  {BLOBS.map((blob) => <div data-aurora-blob style={blobStyle(blob)} />)}
+</div>

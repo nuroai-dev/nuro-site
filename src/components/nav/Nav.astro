@@ -1,0 +1,247 @@
+---
+/**
+ * Fixed nav header (SPEC §4 Nav + §5.4 nav behavior).
+ *
+ * Transparent at the top of the page; once the user scrolls past 24px the
+ * header gains a frosted-glass treatment (color-mix bg + backdrop blur) and
+ * its padding tightens — both via the `data-scrolled` attribute toggled by
+ * the script below. Anchors are plain links; smooth scrolling comes from CSS
+ * `scroll-behavior: smooth` (globals.css), so navigation works without JS.
+ */
+import styles from "./nav.module.css";
+
+const LEFT_LINKS = [
+  { label: "The Problem", href: "#problem" },
+  { label: "Business Case", href: "#business-case" },
+  { label: "Solution", href: "#features" },
+] as const;
+
+const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
+const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
+
+const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "#waitlist" }];
+---
+
+<header class={styles.nav} data-nav>
+  <nav class={styles.inner} aria-label="Main">
+    <div class={styles.left}>
+      <button
+        type="button"
+        class={styles.burger}
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-burger
+      >
+        <span class={styles.burgerBox} data-burger-box>
+          <span class={styles.burgerLine}></span>
+          <span class={styles.burgerLine}></span>
+        </span>
+      </button>
+
+      <ul class={styles.links}>
+        {
+          LEFT_LINKS.map((link) => (
+            <li>
+              <a class={styles.link} href={link.href}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <button
+      type="button"
+      class={styles.logo}
+      data-logo
+      aria-label="Nuro — scroll to top"
+    >
+      <img src="/logo-symbol.png" alt="" width="34" height="34" />
+    </button>
+
+    <div class={styles.actions}>
+      <a
+        class={styles.social}
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Nuro on Instagram"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"></rect>
+          <circle cx="12" cy="12" r="4.4"></circle>
+          <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"
+          ></circle>
+        </svg>
+      </a>
+      <a
+        class={styles.social}
+        href={LINKEDIN_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Nuro on LinkedIn"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+          ></path>
+        </svg>
+      </a>
+      <a class={`${styles.cta} focusable`} href="#waitlist">Join waitlist</a>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class={styles.menu} hidden>
+    <ul class={styles.menuList}>
+      {
+        MENU_ITEMS.map((link, i) => (
+          <li class={styles.menuItem} style={`--i:${i}`}>
+            <a class={styles.menuLink} href={link.href} data-menu-link>
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div
+      class={`${styles.menuSocials} ${styles.menuItem}`}
+      style={`--i:${MENU_ITEMS.length}`}
+    >
+      <a
+        class={styles.social}
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Nuro on Instagram"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"></rect>
+          <circle cx="12" cy="12" r="4.4"></circle>
+          <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"
+          ></circle>
+        </svg>
+      </a>
+      <a
+        class={styles.social}
+        href={LINKEDIN_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Nuro on LinkedIn"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Nav behavior (SPEC §5.4): frosted-glass on scroll + full-screen mobile
+  // menu. The only client JS in the header.
+  const SCROLL_THRESHOLD_PX = 24;
+
+  const header = document.querySelector<HTMLElement>("[data-nav]");
+  const burger = document.querySelector<HTMLButtonElement>("[data-burger]");
+  const burgerBox = document.querySelector<HTMLElement>("[data-burger-box]");
+  const menu = document.getElementById("mobile-menu");
+  const logo = document.querySelector<HTMLButtonElement>("[data-logo]");
+
+  if (header) {
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      if (window.scrollY > SCROLL_THRESHOLD_PX) {
+        header.setAttribute("data-scrolled", "true");
+      } else {
+        header.removeAttribute("data-scrolled");
+      }
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  if (burger && menu) {
+    let open = false;
+    let prevOverflow = "";
+
+    const setOpen = (next: boolean) => {
+      open = next;
+      burger.setAttribute("aria-expanded", String(open));
+      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      if (open) {
+        burgerBox?.setAttribute("data-open", "");
+        menu.setAttribute("data-open", "");
+        menu.removeAttribute("hidden");
+        prevOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+      } else {
+        burgerBox?.removeAttribute("data-open");
+        menu.removeAttribute("data-open");
+        menu.setAttribute("hidden", "");
+        document.body.style.overflow = prevOverflow;
+      }
+    };
+
+    burger.addEventListener("click", () => setOpen(!open));
+
+    menu.querySelectorAll<HTMLAnchorElement>("[data-menu-link]").forEach((a) => {
+      a.addEventListener("click", () => setOpen(false));
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && open) setOpen(false);
+    });
+  }
+
+  logo?.addEventListener("click", () => {
+    window.scrollTo({ top: 0 });
+  });
+</script>
