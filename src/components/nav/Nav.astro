@@ -52,14 +52,9 @@ const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" 
       </ul>
     </div>
 
-    <button
-      type="button"
-      class={styles.logo}
-      data-logo
-      aria-label="Nuro — scroll to top"
-    >
+    <a class={styles.logo} href="/" aria-label="Nuro — home">
       <img src="/logo-symbol.png" alt="" width="34" height="34" />
-    </button>
+    </a>
 
     <div class={styles.actions}>
       <a
@@ -186,7 +181,6 @@ const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" 
   const burger = document.querySelector<HTMLButtonElement>("[data-burger]");
   const burgerBox = document.querySelector<HTMLElement>("[data-burger-box]");
   const menu = document.getElementById("mobile-menu");
-  const logo = document.querySelector<HTMLButtonElement>("[data-logo]");
 
   if (header) {
     let ticking = false;
@@ -240,8 +234,4 @@ const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" 
       if (e.key === "Escape" && open) setOpen(false);
     });
   }
-
-  logo?.addEventListener("click", () => {
-    window.scrollTo({ top: 0 });
-  });
 </script>
