@@ -84,74 +84,20 @@
 
 .media {
   position: relative;
-  width: min(1100px, 92vw);
-  /* Wider than the 920px .inner column — symmetric negative inline
-     margins keep it centered instead of overflowing right. */
-  margin: 64px calc((100% - min(1100px, 92vw)) / 2) 0;
-  border-radius: 20px;
-  background: var(--surface);
-  padding: 8px;
-  box-shadow:
-    0 40px 90px -36px rgba(60, 50, 90, 0.42),
-    0 0 0 1px rgba(22, 22, 28, 0.05);
+  /* Full width up to 1400px. Wider than the 920px .inner column — symmetric
+     negative inline margins keep it centered instead of overflowing right. */
+  width: min(1400px, 95vw);
+  max-width: 1400px;
+  margin: 64px calc((100% - min(1400px, 95vw)) / 2) 0;
 }
 
 /* Shared 16:9 frame for both facade (button) and iframe states. */
-.frame {
-  position: relative;
+/* Framed product screenshot filling the white media card. */
+.heroImage {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: auto;
   border-radius: 14px;
-  overflow: hidden;
-  background: var(--bg-2);
-}
-
-/* Button reset for the facade state. */
-.facade {
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  font: inherit;
-  color: inherit;
-}
-
-.thumb {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Centered play disc; scales 1.07 on hover/focus (SPEC §4). */
-.play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 66px;
-  height: 66px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.94);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s var(--ease);
-}
-
-.facade:hover .play,
-.facade:focus-visible .play {
-  transform: translate(-50%, -50%) scale(1.07);
-}
-
-.player {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 /* ── Mobile (operator mobile pass 2026-06-12) ───────────────── */
@@ -163,8 +109,6 @@
 
   .media {
     margin-top: 44px;
-    padding: 6px;
-    border-radius: 16px;
   }
 }
 
@@ -187,10 +131,5 @@
   .cta {
     width: 100%;
     justify-content: center;
-  }
-
-  .play {
-    width: 56px;
-    height: 56px;
   }
 }

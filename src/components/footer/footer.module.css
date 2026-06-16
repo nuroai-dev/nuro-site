@@ -1,101 +1,284 @@
-/* Footer — SPEC §4 Footer. Dark --night surface closing the page.
+/* Footer — light surface, multi-column. Structure adapted from the Pit
+   footer (column grid → giant outlined wordmark → credits bar), recolored to
+   the site's cream/ink tokens.
 
-   Contrast: wordmark uses --night-text (#f4f3f7 on #08080d ≫ AA);
-   the copyright line uses --night-dim (rgba .62 ≈ 9:1, passes AA).
-   Hairline separator uses --night-hair (decorative only). */
+   Contrast: column heads use --ink-3 (passes AA on cream); links rest at
+   --ink-3 and darken to --ink on hover; the big wordmark is a hairline
+   outline (decorative, aria-hidden). */
 
 .footer {
-  background: var(--night);
-  color: var(--night-text);
-  padding: 56px 0 44px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 42%);
+  border-top: 1px solid var(--hair);
+  padding-top: 80px;
+}
+
+/* Subtle holographic field — Nuro-palette blobs that drift diagonally behind
+   the columns + wordmark. Low-opacity radial gradients over the cream base;
+   the credits-bar backdrop blur softens it further. Sits at z-index 0; all
+   content is lifted to z-index 1. */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: -12% -6%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      38% 50% at 12% 24%,
+      rgba(156, 192, 255, 0.4),
+      transparent 70%
+    ),
+    radial-gradient(
+      34% 46% at 82% 16%,
+      rgba(186, 164, 255, 0.38),
+      transparent 70%
+    ),
+    radial-gradient(
+      42% 52% at 68% 88%,
+      rgba(255, 182, 217, 0.36),
+      transparent 70%
+    ),
+    radial-gradient(
+      34% 44% at 28% 92%,
+      rgba(255, 217, 194, 0.32),
+      transparent 72%
+    );
+  background-size: 180% 180%;
+  animation: footer-holo 30s ease-in-out infinite;
+}
+
+@keyframes footer-holo {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
 }
 
 .container {
-  max-width: 1160px;
+  position: relative;
+  z-index: 1;
+  max-width: 1152px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* Brand row: logo + wordmark left, social icons right. */
-.row {
+/* ── Columns ─────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.brandCol {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding-bottom: 26px;
-  border-bottom: 1px solid var(--night-hair);
+  flex-direction: column;
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  text-decoration: none;
+  width: fit-content;
 }
 
-/* Full lockup SVG (holo N mark + white wordmark), sized by height. */
-.logo {
+.brandLockup {
   display: block;
-  height: 36px;
+  height: 34px;
   width: auto;
 }
 
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.colHead {
+  margin: 0 0 16px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
 }
 
-.social {
+.colList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.colLink {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-sm);
-  color: var(--night-dim);
-  transition:
-    color 0.3s linear,
-    transform 160ms ease-out;
+  gap: 6px;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
 }
 
-.social:hover {
-  color: var(--night-text);
+.colLink:hover {
+  color: var(--ink);
 }
 
-.social:active {
-  transform: scale(0.97);
+.socialIcon {
+  flex: none;
+  opacity: 0.8;
 }
 
-.social:focus-visible {
-  outline: 2px solid var(--night-text);
-  outline-offset: 2px;
+/* ── Giant outlined wordmark + credits bar ───────────────────── */
+
+.bigWrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 72px;
+}
+
+/* Constrain the giant wordmark to the same container width as the columns. */
+.bigInner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.bigLogo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Credits bar sits in flow directly below the wordmark — its top hairline is
+   flush with the logo's cropped bottom edge. The whole bar (and the line)
+   fade out evenly at both ends via a horizontal mask, matching the line. */
+.creditsBar {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 22px 40px;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 18%,
+    #000 82%,
+    transparent 100%
+  );
+}
+
+/* Hairline flush with the logo's bottom; the bar's mask fades it at both ends
+   identically (so the line itself is a flat solid — the mask does the fade). */
+.creditsBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
 
 .copyright {
-  margin: 22px 0 0;
+  margin: 0;
   font-family: var(--font-sans);
-  font-size: 0.85rem;
-  color: var(--night-dim);
+  font-size: 12.5px;
+  color: var(--ink-3);
 }
 
-/* Touch targets ≥44px on touch-width viewports (adapt skill). */
+.swedish {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.flag {
+  border-radius: 2px;
+  flex: none;
+}
+
+.backToTop {
+  justify-self: end;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.backToTop:hover {
+  color: var(--ink);
+}
+
+/* ── Mobile ──────────────────────────────────────────────────── */
+
 @media (max-width: 920px) {
-  .social {
-    flex: none;
-    min-width: 44px;
-    width: 44px;
-    height: 44px;
+  .footer {
+    padding-top: 56px;
   }
-}
 
-@media (max-width: 600px) {
+  /* Mobile motion budget: the holo field stays, but static (no perpetual
+     full-surface repaint to drain phone GPUs / battery). */
+  .footer::before {
+    animation: none;
+    background-position: 50% 50%;
+  }
+
   .container {
     padding: 0 22px;
   }
 
-  .row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  /* Brand spans the row; the four columns sit two-up beneath it. */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+
+  .bigWrap {
+    margin-top: 48px;
+  }
+
+  .bigInner {
+    padding: 0 22px;
+  }
+
+  /* Stack the credits, recede the blur (cheaper on phones), keep it readable. */
+  .creditsBar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+    padding: 20px 22px;
+    text-align: center;
+  }
+
+  .backToTop {
+    justify-self: center;
   }
 }

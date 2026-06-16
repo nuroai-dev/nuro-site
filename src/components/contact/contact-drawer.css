@@ -1,0 +1,179 @@
+/* Contact drawer (Vaul) — floating bottom sheet, lifted off the bottom edge,
+   max-width 800px, centered. Uses the site's cream/ink tokens. */
+
+.cd-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(22, 22, 28, 0.45);
+}
+
+.cd-content {
+  position: fixed;
+  z-index: 91;
+  /* Lifted up from the bottom; inset from the sides on narrow screens, then
+     capped at 800px and centered via auto margins. */
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  margin-inline: auto;
+  max-width: 800px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #faf7f2);
+  border: 1px solid var(--hair, rgba(22, 22, 28, 0.08));
+  border-radius: 24px;
+  box-shadow: 0 -10px 48px rgba(22, 22, 28, 0.2);
+  outline: none;
+}
+
+/* Vaul renders a ::after "fill" below the content to cover overscroll drag;
+   on a floating drawer it shows as a bar under the sheet — hide it. */
+.cd-content::after {
+  opacity: 0;
+}
+
+.cd-grabber {
+  flex: none;
+  width: 44px;
+  height: 5px;
+  margin: 12px auto 0;
+  border-radius: 999px;
+  background: rgba(22, 22, 28, 0.18);
+}
+
+.cd-inner {
+  padding: 14px clamp(20px, 4vw, 40px) clamp(24px, 4vw, 40px);
+  overflow-y: auto;
+}
+
+.cd-title {
+  margin: 8px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.cd-lead {
+  margin: 8px 0 24px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-3);
+}
+
+.cd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cd-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cd-label {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+.cd-input,
+.cd-textarea {
+  font: inherit;
+  font-family: var(--font-sans);
+  /* 16px keeps iOS from zooming the field on focus. */
+  font-size: 16px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--hair, rgba(22, 22, 28, 0.08));
+  border-radius: 12px;
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.2s var(--ease, ease);
+}
+
+.cd-input::placeholder,
+.cd-textarea::placeholder {
+  color: var(--ink-4, #9b9ba3);
+}
+
+.cd-input:focus,
+.cd-textarea:focus {
+  border-color: var(--ink-3, #6b7177);
+}
+
+.cd-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.5;
+}
+
+.cd-field[data-invalid] .cd-input,
+.cd-field[data-invalid] .cd-textarea {
+  border-color: #c46a8a;
+  background: rgba(196, 106, 138, 0.06);
+}
+
+.cd-field-error {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #a14e6f;
+}
+
+.cd-submit {
+  margin-top: 4px;
+  height: 48px;
+  border: 0;
+  border-radius: 999px;
+  background: hsl(222 25% 8%);
+  color: hsl(40 33% 96%);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s var(--ease, ease);
+}
+
+.cd-submit:hover:not(:disabled) {
+  background: hsl(222 25% 8% / 0.9);
+}
+
+.cd-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.cd-error-banner {
+  margin: 4px 0 0;
+  font-size: 13px;
+  text-align: center;
+  color: #a14e6f;
+}
+
+.cd-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  padding: 16px 0 8px;
+}
+
+.cd-success .cd-submit {
+  margin-top: 20px;
+  padding-inline: 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cd-overlay,
+  .cd-content {
+    transition: none !important;
+  }
+}

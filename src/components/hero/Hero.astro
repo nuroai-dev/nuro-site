@@ -2,10 +2,8 @@
 /**
  * Hero — SPEC §4 "Hero (min 100vh, aurora background)".
  *
- * All copy is in the SSR HTML. The only interactive part is the click-to-play
- * YouTube facade: before the click the DOM holds only a static thumbnail and
- * a play button (no iframe, no YouTube JS); on click it swaps in the
- * privacy-enhanced youtube-nocookie embed with autoplay.
+ * All copy is in the SSR HTML. Below the copy sits a framed product
+ * screenshot of the Nuro dashboard.
  *
  * Entrances stagger per SPEC §5.1 (H1 0, lead +0.08s, CTA +0.16s, media
  * +0.24s) and are all `eager` (SPEC §6 N-14): above-fold content starts its
@@ -14,10 +12,6 @@
 import Aurora from "@/components/motion/Aurora.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./hero.module.css";
-
-const VIDEO_ID = "y2jKMmFu-E8";
-const THUMBNAIL_SRC = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
-const EMBED_SRC = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`;
 ---
 
 <section class={styles.hero} id="hero">
@@ -54,56 +48,14 @@ const EMBED_SRC = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1
     </Reveal>
     <Reveal eager delay={0.24}>
       <div class={styles.media}>
-        <button
-          type="button"
-          class={`${styles.frame} ${styles.facade} focusable`}
-          aria-label="Play Nuro demo video"
-          data-video-facade
-          data-embed={EMBED_SRC}
-          data-frame-class={styles.frame}
-          data-player-class={styles.player}
-        >
-          <img
-            class={styles.thumb}
-            src={THUMBNAIL_SRC}
-            alt="Nuro demo video thumbnail"
-          />
-          <span class={styles.play} aria-hidden="true">
-            <svg width="20" height="22" viewBox="0 0 20 22" fill="#16161c">
-              <path d="M0 0l20 11L0 22z"></path>
-            </svg>
-          </span>
-        </button>
+        <img
+          class={styles.heroImage}
+          src="/nuro-hero.png"
+          alt="The Nuro student dashboard — a calm daily view with focus blocks and quests."
+          width="2400"
+          height="1600"
+        />
       </div>
     </Reveal>
   </div>
 </section>
-
-<script>
-  // Click-to-play (SPEC §4 Hero): swap the facade button for the
-  // youtube-nocookie iframe only after an explicit user gesture, so no
-  // third-party code loads before the click.
-  const facade = document.querySelector<HTMLButtonElement>(
-    "[data-video-facade]",
-  );
-
-  facade?.addEventListener("click", () => {
-    const embed = facade.dataset.embed;
-    const frameClass = facade.dataset.frameClass ?? "";
-    const playerClass = facade.dataset.playerClass ?? "";
-    if (!embed) return;
-
-    const frame = document.createElement("div");
-    frame.className = frameClass;
-
-    const iframe = document.createElement("iframe");
-    iframe.className = playerClass;
-    iframe.src = embed;
-    iframe.title = "Nuro demo video";
-    iframe.allow = "autoplay; encrypted-media; picture-in-picture";
-    iframe.allowFullscreen = true;
-
-    frame.appendChild(iframe);
-    facade.replaceWith(frame);
-  });
-</script>

@@ -38,9 +38,13 @@
   /* Fonts — self-hosted via @fontsource (imported once in Layout.astro).
      Family names match the @fontsource packages: IBM Plex Sans (display),
      Inter (body), JetBrains Mono (eyebrows/meta). */
-  --font-display: "IBM Plex Sans", -apple-system, system-ui, sans-serif;
-  --font-sans: "Inter", -apple-system, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display:
+    "IBM Plex Sans Variable", "IBM Plex Sans", -apple-system, system-ui,
+    sans-serif;
+  --font-sans:
+    "Inter Variable", "Inter", -apple-system, system-ui, sans-serif;
+  --font-mono:
+    "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
 
   /* Radii scale (SPEC §3.4 — 12px inputs/small buttons, 22–26px cards,
      999px pills; intermediate steps from the ~/nuro scale) */

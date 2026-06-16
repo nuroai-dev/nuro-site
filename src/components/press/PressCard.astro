@@ -1,0 +1,72 @@
+---
+/**
+ * Press card — one external article. The whole card is a link that opens the
+ * source in a new tab. Shows a cover image (or branded fallback), the outlet
+ * + date, the TLDR headline, a short summary, and an external-link icon.
+ */
+import type { PressItem } from "@/data/press";
+import styles from "./press.module.css";
+
+interface Props {
+  item: PressItem;
+}
+
+const { item } = Astro.props;
+
+const dateLabel = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+}).format(new Date(item.date));
+---
+
+<a
+  class={styles.card}
+  href={item.url}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <div class={styles.media}>
+    {
+      item.image ? (
+        <img class={styles.image} src={item.image} alt="" loading="lazy" />
+      ) : (
+        <div class={styles.mediaFallback} aria-hidden="true">
+          <span class={styles.fallbackOutlet}>{item.outlet}</span>
+        </div>
+      )
+    }
+  </div>
+
+  <div class={styles.body}>
+    <div class={styles.meta}>
+      <span class={styles.outlet}>{item.outlet}</span>
+      <span class={styles.dot} aria-hidden="true">·</span>
+      <time class={styles.date} datetime={item.date}>{dateLabel}</time>
+    </div>
+
+    <h3 class={styles.title}>{item.title}</h3>
+    <p class={styles.tldr}>{item.tldr}</p>
+
+    <span class={styles.readMore}>
+      Read article
+      <svg
+        class={styles.extIcon}
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M15 3h6v6"></path>
+        <path d="M10 14 21 3"></path>
+        <path
+          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      </svg>
+    </span>
+  </div>
+</a>

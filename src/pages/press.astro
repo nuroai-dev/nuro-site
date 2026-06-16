@@ -1,0 +1,61 @@
+---
+/**
+ * Press page (/press) — external coverage of Nuro. Reads PRESS_ITEMS from
+ * src/data/press.ts: renders a card grid (newest first) or, while there's
+ * no coverage yet, an empty state.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import PressCard from "@/components/press/PressCard.astro";
+import { PRESS_ITEMS } from "@/data/press";
+import styles from "@/components/press/press.module.css";
+
+// Static page (server-output adapter stays for the API routes).
+export const prerender = true;
+
+const items = [...PRESS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<Layout
+  title="Press — Nuro"
+  description="News coverage and press about Nuro — inclusive education for Swedish schools."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Press</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Nuro in the news
+        </Reveal>
+        <Reveal as="p" eager delay={0.12} class={styles.lead}>
+          Coverage and conversations about how Nuro is helping schools support
+          every student. Each link opens the original article.
+        </Reveal>
+
+        {
+          items.length > 0 ? (
+            <div class={styles.grid}>
+              {items.map((item, i) => (
+                <Reveal delay={Math.min(i, 5) * 0.06}>
+                  <PressCard item={item} />
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <Reveal class={styles.empty} delay={0.18}>
+              <span class={styles.emptyTitle}>No press articles yet</span>
+              <p class={styles.emptyBody}>
+                We&rsquo;re just getting started. When outlets write about Nuro,
+                their articles will appear here.
+              </p>
+            </Reveal>
+          )
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

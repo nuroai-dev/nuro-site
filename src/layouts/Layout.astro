@@ -9,25 +9,39 @@
  * motion can gate its hidden initial state on [data-js]; no-JS users never see
  * the hidden state and content stays sharp and visible.
  */
-import "@fontsource/ibm-plex-sans/400.css";
-import "@fontsource/ibm-plex-sans/500.css";
-import "@fontsource/ibm-plex-sans/600.css";
-import "@fontsource/ibm-plex-sans/700.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/jetbrains-mono/400.css";
-import "@fontsource/jetbrains-mono/500.css";
-import "@fontsource/jetbrains-mono/600.css";
+// Variable fonts — one woff2 per family per subset (weight axis only) instead
+// of 11 static weight files × 7 subsets. The browser fetches just the latin /
+// latin-ext subsets it needs at runtime via unicode-range.
+import "@fontsource-variable/ibm-plex-sans/wght.css";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/jetbrains-mono/wght.css";
 import "@/styles/globals.css";
 
+// Hashed URLs for the two above-the-fold families' latin weight files, so we
+// can <link rel=preload> them — discovered with the HTML instead of only after
+// the CSS parses. Kills the fallback→webfont swap flash on the hero. (Same
+// source files the @font-face rules reference, so Vite dedupes to one asset.)
+import plexLatinHref from
+  "@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-wght-normal.woff2?url";
+import interLatinHref from
+  "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+
 const SITE_URL = "https://nuroai.dev";
-const TITLE = "Nuro — Inclusive Education for Swedish Schools";
-const DESCRIPTION =
+const DEFAULT_TITLE = "Nuro — Inclusive Education for Swedish Schools";
+const DEFAULT_DESCRIPTION =
   "Nuro helps Swedish schools support neurodiverse students with ADHD, Autism, and Dyslexia. AI-powered lesson adaptation that meets Skollagen requirements.";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = DEFAULT_TITLE, description = DEFAULT_DESCRIPTION } =
+  Astro.props;
+const TITLE = title;
+const DESCRIPTION = description;
 const OG_IMAGE = `${SITE_URL}/og.png`;
-const CANONICAL = `${SITE_URL}/`;
+const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
 ---
 
 <!doctype html>
@@ -37,6 +51,23 @@ const CANONICAL = `${SITE_URL}/`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="canonical" href={CANONICAL} />
+
+    {/* Preload the above-the-fold webfonts so the hero never swaps from the
+        system fallback (which would reflow the H1 mid blur-in). */}
+    <link
+      rel="preload"
+      href={plexLatinHref}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={interLatinHref}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <title>{TITLE}</title>
     <meta name="description" content={DESCRIPTION} />

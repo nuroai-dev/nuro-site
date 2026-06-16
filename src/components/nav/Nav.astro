@@ -11,15 +11,15 @@
 import styles from "./nav.module.css";
 
 const LEFT_LINKS = [
-  { label: "The Problem", href: "#problem" },
-  { label: "Business Case", href: "#business-case" },
-  { label: "Solution", href: "#features" },
+  { label: "The Problem", href: "/#problem" },
+  { label: "Business Case", href: "/#business-case" },
+  { label: "Solution", href: "/#features" },
 ] as const;
 
 const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
 const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
 
-const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "#waitlist" }];
+const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" }];
 ---
 
 <header class={styles.nav} data-nav>
@@ -107,7 +107,7 @@ const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "#waitlist" }
           ></path>
         </svg>
       </a>
-      <a class={`${styles.cta} focusable`} href="#waitlist">Join waitlist</a>
+      <a class={`${styles.cta} focusable`} href="/#waitlist">Join waitlist</a>
     </div>
   </nav>
 

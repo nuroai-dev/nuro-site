@@ -1,82 +1,179 @@
 ---
 /**
- * Footer — SPEC §4 Footer.
+ * Footer — light-mode, multi-column (structure adapted from the Pit footer,
+ * recolored to the site's light surface).
  *
- * Dark `--night` surface: pastel logo + "Nuro" wordmark lockup, Instagram +
- * LinkedIn icon links (same URLs as the nav), and the verbatim copyright line.
- * Both rows enter via the shared <Reveal> blur-up with a small stagger.
+ * Layout: brand lockup + four link columns (Product / Company / Social /
+ * Legal), then the giant outlined "Nuro" wordmark spanning the container,
+ * with the credits bar (© / Designed in Sweden / Back to top) floating over
+ * its lower edge behind a backdrop blur.
+ *
+ * Product links mirror the page sections; Company/Legal point at "#"
+ * placeholders until those pages exist.
  */
 import Reveal from "@/components/motion/Reveal.astro";
+import ContactDrawer from "@/components/contact/ContactDrawer.tsx";
 import styles from "./footer.module.css";
 
-const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
 const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
+const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
+
+type Icon = "linkedin" | "instagram";
+type Col = {
+  head: string;
+  links: {
+    label: string;
+    href: string;
+    external?: boolean;
+    icon?: Icon;
+    drawer?: boolean;
+  }[];
+};
+
+const COLUMNS: Col[] = [
+  {
+    head: "Product",
+    links: [
+      { label: "Problem", href: "/#problem" },
+      { label: "Business case", href: "/#business-case" },
+      { label: "Solution", href: "/#features" },
+      { label: "Join waitlist", href: "/#waitlist" },
+    ],
+  },
+  {
+    head: "Company",
+    links: [
+      { label: "About", href: "#" },
+      { label: "Press", href: "/press" },
+      { label: "Contact", href: "#contact", drawer: true },
+    ],
+  },
+  {
+    head: "Social",
+    links: [
+      { label: "LinkedIn", href: LINKEDIN_URL, external: true, icon: "linkedin" },
+      { label: "Instagram", href: INSTAGRAM_URL, external: true, icon: "instagram" },
+    ],
+  },
+  {
+    head: "Legal",
+    links: [
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+    ],
+  },
+];
 ---
 
 <footer class={styles.footer}>
-  <div class={styles.container}>
-    <Reveal class={styles.row}>
-      <div class={styles.brand}>
-        <img
-          src="/brand/logo-footer.svg"
-          alt="Nuro"
-          width="125"
-          height="36"
-          class={styles.logo}
-        />
-      </div>
-
-      <div class={styles.socials}>
-        <a
-          class={styles.social}
-          href={INSTAGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Nuro on Instagram"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <rect x="2.5" y="2.5" width="19" height="19" rx="5.2"></rect>
-            <circle cx="12" cy="12" r="4.4"></circle>
-            <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"
-            ></circle>
-          </svg>
-        </a>
-        <a
-          class={styles.social}
-          href={LINKEDIN_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Nuro on LinkedIn"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"
-            ></path>
-          </svg>
+  <Reveal class={styles.container}>
+    <div class={styles.grid}>
+      <div class={styles.brandCol}>
+        <a href="/#hero" class={styles.brand} aria-label="Nuro — back to top">
+          <img
+            src="/brand/nuro-lockup.svg"
+            alt="Nuro"
+            width="124"
+            height="36"
+            class={styles.brandLockup}
+          />
         </a>
       </div>
-    </Reveal>
 
-    <Reveal as="p" delay={0.08} class={styles.copyright}>
-      © 2026 Nuro. All rights reserved.
-    </Reveal>
+      {
+        COLUMNS.map((col) => (
+          <nav class={styles.col} aria-label={col.head}>
+            <h3 class={styles.colHead}>{col.head}</h3>
+            <ul class={styles.colList}>
+              {col.links.map((link) => (
+                <li>
+                  <a
+                    class={styles.colLink}
+                    href={link.href}
+                    data-contact-trigger={link.drawer ? "" : undefined}
+                    {...(link.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {link.icon === "linkedin" && (
+                      <svg
+                        class={styles.socialIcon}
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+                      </svg>
+                    )}
+                    {link.icon === "instagram" && (
+                      <svg
+                        class={styles.socialIcon}
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect x="2.5" y="2.5" width="19" height="19" rx="5.2" />
+                        <circle cx="12" cy="12" r="4.4" />
+                        <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none" />
+                      </svg>
+                    )}
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+  </Reveal>
+
+  {/* Giant outlined wordmark spanning the container; the credits bar floats
+      over its lower edge behind a backdrop blur. */}
+  <div class={styles.bigWrap}>
+    <div class={styles.bigInner}>
+      <img
+        src="/brand/nuro-outline.svg"
+        alt=""
+        width="1092"
+        height="279"
+        class={styles.bigLogo}
+      />
+    </div>
+
+    <div class={styles.creditsBar}>
+      <p class={styles.copyright}>© Nuro, 2026</p>
+
+      <p class={styles.swedish}>
+        <svg
+          width="16"
+          height="12"
+          viewBox="0 0 16 12"
+          xmlns="http://www.w3.org/2000/svg"
+          class={styles.flag}
+          aria-hidden="true"
+        >
+          <rect width="16" height="12" fill="#006AA7"></rect>
+          <rect x="5" width="2" height="12" fill="#FECC02"></rect>
+          <rect y="5" width="16" height="2" fill="#FECC02"></rect>
+        </svg>
+        Designed in Sweden
+      </p>
+
+      <a href="/#hero" class={styles.backToTop}>Back to top ↑</a>
+    </div>
   </div>
+
+  {/* Vaul contact drawer — opens when the "Contact" link (data-contact-trigger)
+      is clicked. The island renders nothing inline (Vaul portals on open), so
+      it hydrates on idle rather than on visibility (no box to observe). */}
+  <ContactDrawer client:load />
 </footer>

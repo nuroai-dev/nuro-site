@@ -15,6 +15,12 @@ import Solution from "@/components/solution/Solution.astro";
 import AudiencesPoster from "@/components/audiences-poster/AudiencesPoster.astro";
 import Waitlist from "@/components/waitlist/Waitlist.astro";
 import Footer from "@/components/footer/Footer.astro";
+
+// The marketing page is 100% static — prerender it to a cacheable HTML file
+// at build. The server adapter stays for the dynamic /api/waitlist route, so
+// the gate.json `node dist/server/entry.mjs` deploy contract is unchanged.
+// Removes the per-request SSR render → instant TTFB.
+export const prerender = true;
 ---
 
 <Layout>
