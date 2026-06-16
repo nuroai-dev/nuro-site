@@ -30,10 +30,6 @@ const items = [...PRESS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
         <Reveal as="h1" eager delay={0.06} class={styles.heading}>
           Nuro in the news
         </Reveal>
-        <Reveal as="p" eager delay={0.12} class={styles.lead}>
-          Coverage and conversations about how Nuro is helping schools support
-          every student. Each link opens the original article.
-        </Reveal>
 
         {
           items.length > 0 ? (
