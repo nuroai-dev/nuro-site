@@ -1,0 +1,124 @@
+---
+/**
+ * Privacy policy (/privacy).
+ *
+ * STARTER DRAFT — scoped to the marketing website (the waitlist + contact
+ * forms), written to reflect what the site actually collects. It is NOT legal
+ * advice and must be reviewed by counsel before it is relied on. The product's
+ * handling of student data is governed separately.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+
+export const prerender = true;
+---
+
+<Layout
+  title="Privacy Policy — Nuro"
+  description="How Nuro handles personal data collected through this website — what we collect, why, and the rights you have under the GDPR."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Legal</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Privacy Policy
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+          Working draft &middot; pending legal review &middot; last updated June 2026
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>
+            This policy explains how Nuro handles personal data collected
+            through this website &ndash; primarily the waitlist and contact
+            forms. We keep data collection to the minimum we need, and we never
+            sell your personal data.
+          </Reveal>
+
+          <h2>What we collect</h2>
+          <p>When you use this website, we may collect:</p>
+          <ul>
+            <li>
+              <strong>Waitlist details</strong> &ndash; your email address, the
+              role you select (parent/guardian, student, or teacher/school
+              staff), the student age ranges you choose, and any optional
+              message you write.
+            </li>
+            <li>
+              <strong>Contact messages</strong> &ndash; the name, email, and
+              message you send us through the contact form.
+            </li>
+            <li>
+              <strong>Technical data</strong> &ndash; basic server logs (such as
+              IP address and browser type) needed to operate and secure the
+              site.
+            </li>
+          </ul>
+
+          <h2>Why we use it and our legal basis</h2>
+          <ul>
+            <li>
+              To add you to the waitlist and keep you updated about Nuro &ndash;
+              on the basis of your <strong>consent</strong>, which you can
+              withdraw at any time.
+            </li>
+            <li>
+              To reply to your enquiries &ndash; on the basis of our
+              <strong>legitimate interest</strong> in responding to people who
+              contact us.
+            </li>
+            <li>
+              To keep the site secure and working &ndash; on the basis of our
+              legitimate interest in operating the service.
+            </li>
+          </ul>
+
+          <h2>Sharing</h2>
+          <p>
+            We use a small number of trusted service providers (for example,
+            email delivery and website hosting) who process data on our behalf
+            under appropriate agreements. We do not sell your data or share it
+            for advertising.
+          </p>
+
+          <h2>How long we keep it</h2>
+          <p>
+            We keep waitlist and contact data only as long as needed for the
+            purpose it was collected, or until you ask us to remove it.
+          </p>
+
+          <h2>Your rights</h2>
+          <p>
+            Under the GDPR you have the right to access, correct, or delete your
+            personal data, to object to or restrict its processing, to data
+            portability, and to withdraw consent at any time. You can also lodge
+            a complaint with the Swedish Authority for Privacy Protection (IMY).
+          </p>
+
+          <h2>Children&rsquo;s data</h2>
+          <p>
+            This website is intended for adults (parents, guardians, and school
+            staff). It does not knowingly collect personal data directly from
+            children. How Nuro&rsquo;s product handles student data is described
+            separately in the agreements with the schools and families that use
+            it.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            For any privacy question or to exercise your rights, email us at
+            <a href="mailto:hello@nuroai.dev">hello@nuroai.dev</a>. If you need
+            our formal company details for a request, contact us and we will
+            provide them.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

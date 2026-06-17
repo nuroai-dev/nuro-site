@@ -19,7 +19,16 @@ const LEFT_LINKS = [
 const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
 const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
 
-const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" }];
+// Mobile burger menu (desktop has no burger — it keeps the LEFT_LINKS bar).
+// The site menu the team asked for: About / Press / Contact / Career, plus the
+// waitlist CTA. Contact opens the shared ContactDrawer via data-contact-trigger.
+const MENU_ITEMS = [
+  { label: "About", href: "/about" },
+  { label: "Press", href: "/press" },
+  { label: "Contact", href: "#contact", drawer: true },
+  { label: "Career", href: "/career" },
+  { label: "Join waitlist", href: "/#waitlist" },
+];
 ---
 
 <header class={styles.nav} data-nav>
@@ -111,7 +120,12 @@ const MENU_ITEMS = [...LEFT_LINKS, { label: "Join waitlist", href: "/#waitlist" 
       {
         MENU_ITEMS.map((link, i) => (
           <li class={styles.menuItem} style={`--i:${i}`}>
-            <a class={styles.menuLink} href={link.href} data-menu-link>
+            <a
+              class={styles.menuLink}
+              href={link.href}
+              data-menu-link
+              data-contact-trigger={link.drawer ? "" : undefined}
+            >
               {link.label}
             </a>
           </li>
