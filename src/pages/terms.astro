@@ -1,0 +1,93 @@
+---
+/**
+ * Terms of use (/terms).
+ *
+ * STARTER DRAFT — covers use of the marketing website and the waitlist. It is
+ * NOT legal advice and must be reviewed by counsel before it is relied on.
+ * Terms for the Nuro product/service are agreed separately with customers.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+
+export const prerender = true;
+---
+
+<Layout
+  title="Terms of Use — Nuro"
+  description="The terms that apply to your use of the Nuro website and waitlist."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Legal</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Terms of Use
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+          Working draft &middot; pending legal review &middot; last updated June 2026
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>
+            These terms apply to your use of this website and the Nuro waitlist.
+            By using the site you agree to them. If you don&rsquo;t agree,
+            please don&rsquo;t use the site.
+          </Reveal>
+
+          <h2>Using this site</h2>
+          <p>
+            You may browse the site and join the waitlist for your own,
+            non-commercial use. Please don&rsquo;t misuse the site &ndash; for
+            example by attempting to disrupt it, access it without
+            authorization, or submit false or abusive information through the
+            forms.
+          </p>
+
+          <h2>The waitlist</h2>
+          <p>
+            Joining the waitlist registers your interest in Nuro. It is not a
+            purchase, a contract for the product, or a guarantee of access,
+            pricing, timing, or any specific feature. We may contact you with
+            updates about Nuro, and you can opt out at any time.
+          </p>
+
+          <h2>Intellectual property</h2>
+          <p>
+            The Nuro name, logo, content, and design on this site belong to Nuro
+            and may not be copied or reused without our permission.
+          </p>
+
+          <h2>No warranties</h2>
+          <p>
+            The site is provided &ldquo;as is&rdquo;. We work to keep it
+            accurate and available, but we don&rsquo;t guarantee it will always
+            be uninterrupted, error-free, or up to date.
+          </p>
+
+          <h2>Limitation of liability</h2>
+          <p>
+            To the extent permitted by law, Nuro is not liable for any indirect
+            or consequential loss arising from your use of this website.
+          </p>
+
+          <h2>Changes</h2>
+          <p>
+            We may update these terms from time to time. The current version
+            always lives on this page.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            Questions about these terms? Email us at
+            <a href="mailto:hello@nuroai.dev">hello@nuroai.dev</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

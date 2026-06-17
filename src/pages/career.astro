@@ -1,0 +1,61 @@
+---
+/**
+ * Career page (/career). No open roles posted yet — a short, warm
+ * "we're growing, get in touch" page with a Contact CTA that opens the
+ * shared ContactDrawer (data-contact-trigger).
+ *
+ * Copy is starter content — edit freely as hiring plans firm up.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+
+export const prerender = true;
+---
+
+<Layout
+  title="Career — Nuro"
+  description="Help us build the tool that gives every neurodivergent student the support the law promises them. Join the Nuro team."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Career</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Build the tool the system was missing
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>
+            We&rsquo;re a small team in Sweden on a big mission: make sure every
+            neurodivergent student gets the adapted support the law already says
+            they&rsquo;re entitled to &ndash; long before they fall through the
+            cracks.
+          </Reveal>
+
+          <Reveal as="p" delay={0.16}>
+            We don&rsquo;t have any open positions posted right now, but we
+            grow fast and we&rsquo;re always glad to meet people who care about
+            education, inclusion, and building things that matter. Engineers,
+            educators, designers, researchers &ndash; if that&rsquo;s you,
+            we&rsquo;d love to hear from you.
+          </Reveal>
+
+          <Reveal as="p" delay={0.2}>
+            Tell us who you are and how you&rsquo;d want to help.
+          </Reveal>
+
+          <Reveal delay={0.24}>
+            <button type="button" class={styles.cta} data-contact-trigger>
+              Get in touch
+            </button>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
