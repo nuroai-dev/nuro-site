@@ -1,0 +1,50 @@
+/* Logo strip below the hero — three partner logos, space-evenly, on the
+   cream surface that the other light sections use. */
+
+.section {
+  background: var(--bg);
+  padding: 52px 0;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+
+.row {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 32px 48px;
+}
+
+.logo {
+  width: auto;
+  object-fit: contain;
+  /* Subtle, lifts to full on hover — keeps the strip calm against the copy. */
+  opacity: 0.85;
+  transition: opacity 0.2s var(--ease);
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+@media (max-width: 920px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .row {
+    padding: 0 22px;
+    gap: 28px 36px;
+  }
+
+  /* Scale logos down a touch on phones so all three fit comfortably. */
+  .logo {
+    height: auto !important;
+    max-height: 34px;
+    max-width: 42vw;
+  }
+}

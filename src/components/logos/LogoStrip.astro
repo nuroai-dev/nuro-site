@@ -1,0 +1,31 @@
+---
+/**
+ * Logo strip — partner/credibility logos, shown as the section directly below
+ * the hero. The three logos sit space-evenly across the container on the cream
+ * surface, matching the other light sections.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./logo-strip.module.css";
+
+const LOGOS = [
+  { src: "/logos/google-for-startups.png", alt: "Google for Startups", h: 30 },
+  { src: "/logos/microsoft-for-startups.png", alt: "Microsoft for Startups", h: 26 },
+  { src: "/logos/di.png", alt: "Dagens industri", h: 46 },
+];
+---
+
+<section class={styles.section}>
+  <Reveal class={styles.row}>
+    {
+      LOGOS.map((logo) => (
+        <img
+          class={styles.logo}
+          src={logo.src}
+          alt={logo.alt}
+          style={`height:${logo.h}px`}
+          loading="lazy"
+        />
+      ))
+    }
+  </Reveal>
+</section>
