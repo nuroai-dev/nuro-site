@@ -1,0 +1,47 @@
+---
+/**
+ * Partners — a quiet "Supported by" strip just above the footer.
+ *
+ * Two transparent partner marks (Google for Startups, Microsoft for Startups)
+ * sit on the cream surface. The two logos have very different proportions —
+ * Google is a single-line wordmark, Microsoft is a stacked mark with an icon —
+ * so they're sized by optical weight (per-logo heights) rather than a shared
+ * height, and centered in a wrapping row. Enters with the shared Reveal.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./partners.module.css";
+
+const LOGOS = [
+  {
+    src: "/partners/google-for-startups.png",
+    alt: "Google for Startups",
+    className: "wordmark",
+  },
+  {
+    src: "/partners/microsoft-for-startups.png",
+    alt: "Microsoft for Startups",
+    className: "stacked",
+  },
+] as const;
+---
+
+<section class={styles.section} aria-label="Supported by">
+  <Reveal class={styles.inner}>
+    <p class={styles.eyebrow}>Supported by</p>
+    <ul class={styles.logos}>
+      {
+        LOGOS.map((logo) => (
+          <li class={styles.item}>
+            <img
+              class={`${styles.logo} ${styles[logo.className]}`}
+              src={logo.src}
+              alt={logo.alt}
+              loading="lazy"
+              decoding="async"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </Reveal>
+</section>
