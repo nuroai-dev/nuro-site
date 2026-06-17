@@ -37,12 +37,25 @@
   margin: 0;
 }
 
+/* Secondary line under the H1 — the product positioning, smaller than the
+   headline but larger than the supporting lead. Carries the holo "neurodivergent". */
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(24px, 3.2vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 760px;
+  margin: 22px auto 0;
+}
+
 .sub {
   font-size: clamp(17px, 1.6vw, 20px);
   line-height: 1.55;
   color: var(--ink-2);
   max-width: 580px;
-  margin: 28px auto 0;
+  margin: 24px auto 0;
 }
 
 .ctaRow {
@@ -119,8 +132,13 @@
     font-size: clamp(36px, 11.5vw, 46px);
   }
 
+  .tagline {
+    font-size: clamp(21px, 6.4vw, 28px);
+    margin-top: 18px;
+  }
+
   .sub {
-    margin-top: 22px;
+    margin-top: 18px;
   }
 
   .ctaRow {
