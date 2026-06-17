@@ -1,0 +1,86 @@
+/* ============================================================
+   Partners — "Supported by" strip above the footer. Light cream
+   surface; transparent logos sized by optical weight.
+   ============================================================ */
+
+.section {
+  padding: 90px 24px 100px;
+  text-align: center;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Eyebrow — JetBrains Mono 12px / 500 / 0.18em caps (site convention),
+   muted to --ink-3 for the light surface. */
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 36px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.logos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 8vw, 88px);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  width: auto;
+  /* Slight desaturation + softened opacity so the marks read as a quiet
+     endorsement row rather than competing with the brand color. Full
+     presence on hover/focus. */
+  opacity: 0.85;
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease;
+}
+
+.item:hover .logo {
+  opacity: 1;
+}
+
+/* Per-logo heights — balance a single-line wordmark against a stacked mark. */
+.wordmark {
+  height: 30px;
+}
+
+.stacked {
+  height: 60px;
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 72px 22px 80px;
+  }
+
+  .logos {
+    gap: 44px;
+  }
+
+  .wordmark {
+    height: 26px;
+  }
+
+  .stacked {
+    height: 52px;
+  }
+}
