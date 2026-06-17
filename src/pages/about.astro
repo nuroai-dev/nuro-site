@@ -1,0 +1,70 @@
+---
+/**
+ * About page (/about) — Nuro's mission statement. A single prose column on
+ * the cream surface, sharing the Nav/Footer shell with the rest of the site.
+ * Copy supplied verbatim by the team (English mission statement).
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/about/about.module.css";
+
+// Static page (the server adapter stays for the API routes).
+export const prerender = true;
+---
+
+<Layout
+  title="About — Nuro"
+  description="Nuro's mission: help every school give neurodivergent students the adapted support the law says they're entitled to — before they fall through the cracks."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>About</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Nuro mission statement
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>
+            The law says it clearly: every student has the right to adapted
+            support. But that&rsquo;s also where the system ends.
+          </Reveal>
+
+          <Reveal as="p" delay={0.16}>
+            Millions of neurodivergent students in schools where there&rsquo;s
+            no room for them. Where educators don&rsquo;t have the tools. Where
+            budgets are already exhausted. Where a student with ADHD, autism or
+            dyslexia &ndash; who just needed the right support at the right time
+            &ndash; so no one is at risk of becoming a school refuser.
+          </Reveal>
+
+          <Reveal as="p" delay={0.2} class={styles.lede}>
+            It&rsquo;s not a design issue. It&rsquo;s a system failure.
+          </Reveal>
+
+          <Reveal as="p" delay={0.24}>
+            We built Nuro to change that.
+          </Reveal>
+
+          <Reveal as="p" delay={0.28}>
+            We enable educators to see every individual student &ndash; to
+            provide the personalized support that the law says students are
+            entitled to. We catch students at risk of falling between the lines
+            long before they become homeschoolers. We help every student
+            develop their superpowers while supporting them with their
+            challenges.
+          </Reveal>
+
+          <Reveal as="p" delay={0.32} class={styles.closer}>
+            The law was right. The system only needed one tool &ndash; and now
+            it&rsquo;s here!
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
