@@ -42,6 +42,52 @@ const TITLE = title;
 const DESCRIPTION = description;
 const OG_IMAGE = `${SITE_URL}/og.png`;
 const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
+
+// Site-wide structured data (JSON-LD) — helps search engines and answer
+// engines (Google AI, ChatGPT, Perplexity) resolve Nuro as an entity. An
+// Organization + WebSite + SoftwareApplication graph, emitted on every page.
+const SOCIAL = [
+  "https://www.linkedin.com/company/nuroaidev/",
+  "https://www.instagram.com/nuroai.dev/",
+];
+const STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "Nuro",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+      description:
+        "Nuro helps Swedish schools support neurodivergent students with ADHD, autism, and dyslexia through AI-powered lesson adaptation.",
+      sameAs: SOCIAL,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Nuro",
+      description: DEFAULT_DESCRIPTION,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Nuro",
+      applicationCategory: "EducationalApplication",
+      operatingSystem: "Web",
+      url: SITE_URL,
+      description:
+        "An AI-powered platform that helps teachers see every student and give neurodivergent students the adapted support Skollagen entitles them to — catching those at risk before they fall through the cracks.",
+      audience: {
+        "@type": "EducationalAudience",
+        educationalRole: ["teacher", "student", "parent"],
+      },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -74,23 +120,36 @@ const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
     <title>{TITLE}</title>
     <meta name="description" content={DESCRIPTION} />
 
+    <meta name="theme-color" content="#FAF7F2" />
+
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content={CANONICAL} />
     <meta property="og:site_name" content="Nuro" />
     <meta property="og:title" content={TITLE} />
     <meta property="og:description" content={DESCRIPTION} />
     <meta property="og:image" content={OG_IMAGE} />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Nuro — The missing tool for neurodivergent students."
+      content="Nuro — Let's help schools stop breaking the law."
     />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={TITLE} />
     <meta name="twitter:description" content={DESCRIPTION} />
     <meta name="twitter:image" content={OG_IMAGE} />
+    <meta
+      name="twitter:image:alt"
+      content="Nuro — Let's help schools stop breaking the law."
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(STRUCTURED_DATA)}
+    />
 
     {/* Runs before paint: marks JS as available so the reveal motion gates
         its hidden initial state on [data-js]. */}
