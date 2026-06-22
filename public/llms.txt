@@ -1,0 +1,27 @@
+# Nuro
+
+> Nuro is an AI-powered education platform that helps Swedish schools give neurodivergent students — including those with ADHD, autism, and dyslexia — the adapted support they are legally entitled to under Skollagen (the Swedish Education Act). It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers (hemmasittare).
+
+## What Nuro does
+
+- **For teachers:** automated lesson adaptation and easier documentation, so every student is seen without hours of extra manual work.
+- **For students:** a learning experience that works with how their brain functions, broken into clear, structured steps.
+- **For parents:** a real-time view of how their child is actually doing.
+- **Compliance:** helps schools deliver and automatically document the adapted support (särskilt stöd) that Swedish law requires.
+
+## Key facts
+
+- Country / market: Sweden.
+- Audience: schools, teachers, students, and parents.
+- Supported needs: ADHD, autism, dyslexia, and other neurodivergent learning profiles.
+- Status: in active development; access is via the waitlist at https://nuroai.dev/#waitlist
+- Contact: hello@nuroai.dev
+
+## Pages
+
+- [Home](https://nuroai.dev/): the problem, the business case, the solution, and the three experiences (students, teachers, parents).
+- [About](https://nuroai.dev/about): Nuro's mission statement.
+- [Press](https://nuroai.dev/press): news and coverage.
+- [Career](https://nuroai.dev/career): join the team.
+- [Privacy](https://nuroai.dev/privacy): how the website handles personal data.
+- [Terms](https://nuroai.dev/terms): terms of use for the website and waitlist.

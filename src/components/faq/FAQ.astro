@@ -1,0 +1,88 @@
+---
+/**
+ * FAQ — a short Q&A block tuned for answer engines (AEO). Each question is a
+ * native <details> accordion (works without JS, fully crawlable), and the same
+ * Q&A drives a FAQPage JSON-LD block so search + answer engines can lift the
+ * answers directly. Visible text and schema text are sourced from one array,
+ * so they always match (a Google requirement for FAQ rich results).
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "./faq.module.css";
+
+const FAQS = [
+  {
+    q: "What is Nuro?",
+    a: "Nuro is an AI-powered platform that helps Swedish schools give neurodivergent students the adapted support they are legally entitled to. It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers.",
+  },
+  {
+    q: "How does Nuro help neurodivergent students?",
+    a: "Every student gets a profile built around their strengths and challenges, and lessons are auto-adapted into clear, structured steps they can follow. Nuro catches students who are struggling early and gives teachers the tools to support them without hours of extra manual work.",
+  },
+  {
+    q: "Does Nuro help schools meet Skollagen requirements?",
+    a: "Yes. Swedish law gives every student the right to adapted support. Nuro helps schools actually deliver that support, and documents it automatically, so the legal right becomes something students receive in practice rather than only on paper.",
+  },
+  {
+    q: "Who is Nuro for?",
+    a: "Teachers, students, and parents. Teachers get automated lesson adaptation and easier documentation, students get learning that works with their brain, and parents get a real-time view of how their child is doing.",
+  },
+  {
+    q: "Which needs does Nuro support?",
+    a: "Nuro is built for neurodivergent students, including those with ADHD, autism, and dyslexia, and any learner who needs a more adapted and structured way to learn.",
+  },
+  {
+    q: "Is Nuro available yet?",
+    a: "We are building Nuro now together with schools and families. Join the waitlist to be among the first to get access and to help shape the product.",
+  },
+];
+
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+
+<section class={styles.section} id="faq" aria-label="Frequently asked questions">
+  <div class={styles.container}>
+    <Reveal as="span" class={styles.eyebrow}>FAQ</Reveal>
+    <Reveal as="h2" delay={0.06} class={styles.heading}>
+      Questions, answered
+    </Reveal>
+
+    <div class={styles.list}>
+      {
+        FAQS.map((f, i) => (
+          <Reveal delay={0.1 + Math.min(i, 5) * 0.05}>
+            <details class={styles.item} name="faq">
+              <summary class={styles.summary}>
+                <span>{f.q}</span>
+                <svg
+                  class={styles.chevron}
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </summary>
+              <p class={styles.answer}>{f.a}</p>
+            </details>
+          </Reveal>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify(FAQ_SCHEMA)} />
