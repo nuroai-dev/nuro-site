@@ -9,7 +9,7 @@
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1152px;
   margin: 0 auto;
   padding: 0 40px;
   text-align: center;
@@ -46,7 +46,6 @@
 .photo {
   display: block;
   margin: 52px auto 0;
-  max-width: 440px;
 }
 
 .photo img {
