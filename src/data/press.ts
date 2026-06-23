@@ -30,5 +30,20 @@ export type PressItem = {
   image?: string;
 };
 
-/** No coverage yet — paste items here as they come in. */
-export const PRESS_ITEMS: PressItem[] = [];
+/** Coverage that mentions Nuro. Newest first (the page sorts by `date`). */
+export const PRESS_ITEMS: PressItem[] = [
+  {
+    outlet: "Dagens Industri",
+    title: "Nuro among the next wave of Swedish vertical-AI companies",
+    tldr: "Dagens Industri looks at the next wave of Swedish AI startups building deep, domain-specific verticals — with Nuro among the companies named.",
+    date: "2026-06-18",
+    url: "https://www.di.se/digital/har-ar-nasta-vag-av-svenska-ai-bolag-djupa-vertikaler/",
+  },
+  {
+    outlet: "Breakit",
+    title: "Nuro joins the new AI cohort at SSE Business Lab",
+    tldr: "Breakit covers the new, AI-heavy cohort entering Stockholm School of Economics' incubator SSE Business Lab — with Nuro among the companies.",
+    date: "2026-06-18",
+    url: "https://www.breakit.se/artikel/46679/ai-ai-och-ai-har-ar-bolagen-som-kommer-in-pa-sse-business-lab",
+  },
+];
