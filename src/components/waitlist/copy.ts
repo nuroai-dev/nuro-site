@@ -73,3 +73,73 @@ export type WaitlistResponse = {
 };
 
 export const WAITLIST_ENDPOINT = "/api/waitlist";
+
+/* ── Swedish + locale picker ─────────────────────────────────────────────
+ * The server-rendered strings come from getCopy(lang). The client <script>
+ * keeps importing the English consts above as a fallback, but reads the
+ * locale-correct submit/status strings from data-* attributes on the form. */
+import type { Lang } from "@/i18n/ui";
+
+export function getCopy(lang: Lang) {
+  if (lang === "sv") {
+    return {
+      eyebrow: "Låt oss bygga det här tillsammans",
+      headingPre: "Gå med i ",
+      headingGradient: "Nuros",
+      headingPost: " väntelista",
+      sub: "Vi bygger Nuro för skolor och familjer som bryr sig. Berätta lite om dig själv så håller vi dig uppdaterad.",
+      emailLabel: "E-post *",
+      emailPlaceholder: "du@exempel.se",
+      roleLabel: "Jag är... *",
+      roleOptions: ["Förälder eller vårdnadshavare", "Elev", "Lärare eller skolpersonal"],
+      agesLabel: "Hur gamla är dina elever/barn?",
+      agesHelper: "Välj alla som stämmer — kryssa flera om du har mer än ett barn.",
+      ageOptions: [
+        "6–9 år (F–3)",
+        "10–12 år (4–6)",
+        "13–15 år (7–9)",
+        "16–19 år (Gymnasiet)",
+        "Ej tillämpligt",
+      ],
+      messageLabel: "Något annat du vill att vi ska veta?",
+      messagePlaceholder:
+        "Berätta om din situation, vilka utmaningar du möter, eller vad du skulle vilja se i Nuro...",
+      submitIdle: "Gå med i väntelistan",
+      submitLoading: "Skickar...",
+      privacyNote: "Vi värnar om din integritet. Ingen spam, bara uppdateringar om Nuro.",
+      successMessage: "Du är med på Nuros väntelista! Vi hör av oss.",
+      duplicateTitle: "Redan med på listan!",
+      duplicateBody: "Den här e-posten finns redan på vår väntelista.",
+      errorTitle: "Något gick fel",
+      errorBody: "Försök igen senare.",
+      emailInvalidError: "Ange en giltig e-postadress.",
+      roleRequiredError: "Välj ett alternativ.",
+    };
+  }
+  return {
+    eyebrow: WAITLIST_EYEBROW,
+    headingPre: WAITLIST_HEADING_PRE,
+    headingGradient: WAITLIST_HEADING_GRADIENT,
+    headingPost: WAITLIST_HEADING_POST,
+    sub: WAITLIST_SUB,
+    emailLabel: EMAIL_LABEL,
+    emailPlaceholder: EMAIL_PLACEHOLDER,
+    roleLabel: ROLE_LABEL,
+    roleOptions: [...ROLE_OPTIONS],
+    agesLabel: AGES_LABEL,
+    agesHelper: AGES_HELPER,
+    ageOptions: [...AGE_OPTIONS],
+    messageLabel: MESSAGE_LABEL,
+    messagePlaceholder: MESSAGE_PLACEHOLDER,
+    submitIdle: SUBMIT_IDLE,
+    submitLoading: SUBMIT_LOADING,
+    privacyNote: PRIVACY_NOTE,
+    successMessage: SUCCESS_MESSAGE,
+    duplicateTitle: DUPLICATE_TITLE,
+    duplicateBody: DUPLICATE_BODY,
+    errorTitle: ERROR_TITLE,
+    errorBody: ERROR_BODY,
+    emailInvalidError: EMAIL_INVALID_ERROR,
+    roleRequiredError: ROLE_REQUIRED_ERROR,
+  };
+}

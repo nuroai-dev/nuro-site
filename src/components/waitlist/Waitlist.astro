@@ -15,28 +15,10 @@
 import Aurora from "@/components/motion/Aurora.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./waitlist.module.css";
-import {
-  AGE_OPTIONS,
-  AGES_HELPER,
-  AGES_LABEL,
-  EMAIL_INVALID_ERROR,
-  EMAIL_LABEL,
-  EMAIL_PLACEHOLDER,
-  MESSAGE_LABEL,
-  MESSAGE_MAX_LENGTH,
-  MESSAGE_PLACEHOLDER,
-  PRIVACY_NOTE,
-  ROLE_LABEL,
-  ROLE_OPTIONS,
-  ROLE_REQUIRED_ERROR,
-  SUBMIT_IDLE,
-  SUCCESS_MESSAGE,
-  WAITLIST_EYEBROW,
-  WAITLIST_HEADING_GRADIENT,
-  WAITLIST_HEADING_POST,
-  WAITLIST_HEADING_PRE,
-  WAITLIST_SUB,
-} from "./copy";
+import { getCopy, MESSAGE_MAX_LENGTH } from "./copy";
+import { getLang } from "@/i18n/ui";
+
+const c = getCopy(getLang(Astro.url));
 
 const AGES_HELPER_ID = "waitlist-ages-helper";
 
@@ -53,21 +35,31 @@ const CHECK_STOPS = [
 <section class={styles.section} id="waitlist">
   <Aurora variant="waitlist" />
   <div class={styles.container}>
-    <Reveal as="p" class={styles.eyebrow}>{WAITLIST_EYEBROW}</Reveal>
+    <Reveal as="p" class={styles.eyebrow}>{c.eyebrow}</Reveal>
     <Reveal as="h2" delay={0.08} class={styles.heading}>
-      {WAITLIST_HEADING_PRE}
-      <span class="holo-text">{WAITLIST_HEADING_GRADIENT}</span>
-      {WAITLIST_HEADING_POST}
+      {c.headingPre}
+      <span class="holo-text">{c.headingGradient}</span>
+      {c.headingPost}
     </Reveal>
-    <Reveal as="p" delay={0.16} class={styles.subLead}>{WAITLIST_SUB}</Reveal>
+    <Reveal as="p" delay={0.16} class={styles.subLead}>{c.sub}</Reveal>
 
     <Reveal delay={0.24}>
       <div class={styles.formCard}>
-        <form id="waitlist-form" novalidate>
+        <form
+          id="waitlist-form"
+          novalidate
+          data-t-idle={c.submitIdle}
+          data-t-loading={c.submitLoading}
+          data-t-success={c.successMessage}
+          data-t-dup-title={c.duplicateTitle}
+          data-t-dup-body={c.duplicateBody}
+          data-t-err-title={c.errorTitle}
+          data-t-err-body={c.errorBody}
+        >
           {/* Email */}
           <div class={styles.field} data-email-field>
             <label class={styles.label} for="waitlist-email">
-              {EMAIL_LABEL}
+              {c.emailLabel}
             </label>
             <span class={`${styles.inputWrap} focusable`}>
               <input
@@ -76,21 +68,21 @@ const CHECK_STOPS = [
                 type="email"
                 name="email"
                 autocomplete="email"
-                placeholder={EMAIL_PLACEHOLDER}
+                placeholder={c.emailPlaceholder}
               />
             </span>
             <p class={styles.fieldError} id="waitlist-email-error" hidden>
-              {EMAIL_INVALID_ERROR}
+              {c.emailInvalidError}
             </p>
           </div>
 
           {/* Role (required) */}
           <div class={styles.field} data-role-field>
             <fieldset class={styles.fieldset}>
-              <legend class={styles.legend}>{ROLE_LABEL}</legend>
+              <legend class={styles.legend}>{c.roleLabel}</legend>
               <div class={styles.chipGroup} role="presentation">
                 {
-                  ROLE_OPTIONS.map((option, i) => {
+                  c.roleOptions.map((option, i) => {
                     const gradId = `wl-role-check-${i}`;
                     return (
                       <label class={`${styles.chip} focusable`}>
@@ -133,18 +125,18 @@ const CHECK_STOPS = [
               </div>
             </fieldset>
             <p class={styles.fieldError} id="waitlist-role-error" hidden>
-              {ROLE_REQUIRED_ERROR}
+              {c.roleRequiredError}
             </p>
           </div>
 
           {/* Student ages (optional, multi-select) */}
           <div class={styles.field}>
             <fieldset class={styles.fieldset} aria-describedby={AGES_HELPER_ID}>
-              <legend class={styles.legend}>{AGES_LABEL}</legend>
-              <p class={styles.helper} id={AGES_HELPER_ID}>{AGES_HELPER}</p>
+              <legend class={styles.legend}>{c.agesLabel}</legend>
+              <p class={styles.helper} id={AGES_HELPER_ID}>{c.agesHelper}</p>
               <div class={styles.chipGroup} role="presentation">
                 {
-                  AGE_OPTIONS.map((option, i) => {
+                  c.ageOptions.map((option, i) => {
                     const gradId = `wl-age-check-${i}`;
                     return (
                       <label class={`${styles.chip} focusable`}>
@@ -191,7 +183,7 @@ const CHECK_STOPS = [
           {/* Message (optional) */}
           <div class={styles.field}>
             <label class={styles.label} for="waitlist-message">
-              {MESSAGE_LABEL}
+              {c.messageLabel}
             </label>
             <span class={`${styles.inputWrap} focusable`}>
               <textarea
@@ -200,18 +192,18 @@ const CHECK_STOPS = [
                 name="message"
                 rows="4"
                 maxlength={MESSAGE_MAX_LENGTH}
-                placeholder={MESSAGE_PLACEHOLDER}></textarea>
+                placeholder={c.messagePlaceholder}></textarea>
             </span>
           </div>
 
           <button class={`${styles.submit} focusable`} type="submit" data-submit>
-            {SUBMIT_IDLE}
+            {c.submitIdle}
           </button>
-          <p class={styles.privacy}>{PRIVACY_NOTE}</p>
+          <p class={styles.privacy}>{c.privacyNote}</p>
         </form>
 
         <div class={styles.success} data-success hidden>
-          <p class={styles.successText}>{SUCCESS_MESSAGE}</p>
+          <p class={styles.successText}>{c.successMessage}</p>
         </div>
 
         <div class={styles.alert} data-alert hidden>
@@ -244,6 +236,17 @@ const CHECK_STOPS = [
 
   const form = document.getElementById("waitlist-form") as HTMLFormElement | null;
   if (form) {
+    // Locale-correct strings rendered into data-* by the server (English consts
+    // are the fallback). Lets the inline script speak the page's language.
+    const T = {
+      idle: form.dataset.tIdle ?? SUBMIT_IDLE,
+      loading: form.dataset.tLoading ?? SUBMIT_LOADING,
+      success: form.dataset.tSuccess ?? SUCCESS_MESSAGE,
+      dupTitle: form.dataset.tDupTitle ?? DUPLICATE_TITLE,
+      dupBody: form.dataset.tDupBody ?? DUPLICATE_BODY,
+      errTitle: form.dataset.tErrTitle ?? ERROR_TITLE,
+      errBody: form.dataset.tErrBody ?? ERROR_BODY,
+    };
     const emailField = form.querySelector<HTMLElement>("[data-email-field]");
     const roleField = form.querySelector<HTMLElement>("[data-role-field]");
     const emailInput = form.querySelector<HTMLInputElement>("#waitlist-email")!;
@@ -270,10 +273,10 @@ const CHECK_STOPS = [
 
     const LIVE_TEXT: Record<Status, string> = {
       idle: "",
-      submitting: SUBMIT_LOADING,
-      success: SUCCESS_MESSAGE,
-      duplicate: `${DUPLICATE_TITLE} ${DUPLICATE_BODY}`,
-      error: `${ERROR_TITLE}. ${ERROR_BODY}`,
+      submitting: T.loading,
+      success: T.success,
+      duplicate: `${T.dupTitle} ${T.dupBody}`,
+      error: `${T.errTitle}. ${T.errBody}`,
     };
 
     const setLive = () => {
@@ -286,9 +289,8 @@ const CHECK_STOPS = [
     };
 
     const showAlert = (kind: "duplicate" | "error") => {
-      alertTitle.textContent =
-        kind === "duplicate" ? DUPLICATE_TITLE : ERROR_TITLE;
-      alertBody.textContent = kind === "duplicate" ? DUPLICATE_BODY : ERROR_BODY;
+      alertTitle.textContent = kind === "duplicate" ? T.dupTitle : T.errTitle;
+      alertBody.textContent = kind === "duplicate" ? T.dupBody : T.errBody;
       alertBox.setAttribute("data-kind", kind);
       alertBox.hidden = false;
     };
@@ -344,7 +346,7 @@ const CHECK_STOPS = [
 
     const setBusy = (busy: boolean) => {
       submitBtn.disabled = busy;
-      submitBtn.textContent = busy ? SUBMIT_LOADING : SUBMIT_IDLE;
+      submitBtn.textContent = busy ? T.loading : T.idle;
       emailInput.disabled = busy;
       messageInput.disabled = busy;
       for (const r of [...roleInputs, ...ageInputs]) r.disabled = busy;

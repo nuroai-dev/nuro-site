@@ -250,6 +250,46 @@
   opacity: 0.9;
 }
 
+.langSwitch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  transition:
+    color 150ms ease,
+    border-color 150ms ease;
+}
+
+.langSwitch:hover {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink) 36%, transparent);
+}
+
+/* Language switch inside the mobile menu — text-style, larger. */
+.menuLangSwitch {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.menuLangSwitch:hover {
+  color: var(--ink);
+}
+
 /* ── Responsive: left links hidden ≤920px (SPEC §4) ────────────────────── */
 @media (max-width: 920px) {
   .links {

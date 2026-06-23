@@ -1,0 +1,40 @@
+---
+/**
+ * Swedish homepage (/sv/) — renders the same sections as the English root.
+ * Each section reads the active locale from the URL (getLang) and renders its
+ * Swedish copy automatically, so this file only differs in the page metadata.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Hero from "@/components/hero/Hero.astro";
+import LogoStrip from "@/components/logos/LogoStrip.astro";
+import Problem from "@/components/problem/Problem.astro";
+import BusinessCase from "@/components/business-case/BusinessCase.astro";
+import Solution from "@/components/solution/Solution.astro";
+import AudiencesPoster from "@/components/audiences-poster/AudiencesPoster.astro";
+import FAQ from "@/components/faq/FAQ.astro";
+import Waitlist from "@/components/waitlist/Waitlist.astro";
+import Partners from "@/components/partners/Partners.astro";
+import Footer from "@/components/footer/Footer.astro";
+
+export const prerender = true;
+---
+
+<Layout
+  title="Nuro — Inkluderande utbildning för svenska skolor"
+  description="Nuro hjälper svenska skolor att stötta neurodivergenta elever med ADHD, autism och dyslexi. AI-driven lektionsanpassning som möter Skollagens krav."
+>
+  <Nav />
+  <main>
+    <Hero />
+    <LogoStrip />
+    <Problem />
+    <BusinessCase />
+    <Solution />
+    <AudiencesPoster />
+    <FAQ />
+    <Waitlist />
+    <Partners />
+  </main>
+  <Footer />
+</Layout>

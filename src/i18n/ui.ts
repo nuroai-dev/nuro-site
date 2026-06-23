@@ -22,11 +22,25 @@ function toEnglishPath(pathname: string): string {
   return stripped === "" ? "/" : stripped;
 }
 
+/**
+ * English paths that already have a Swedish (/sv) translation. The site is
+ * rolling out bilingually page by page — add a path here when its /sv version
+ * ships, and the switcher + hreflang light up for it automatically. Anything
+ * not listed falls back to the Swedish home (no broken /sv/<page> links).
+ */
+export const TRANSLATED_PATHS = new Set<string>(["/"]);
+
+/** Does this page have a Swedish version yet? */
+export function hasSv(pathname: string): boolean {
+  return TRANSLATED_PATHS.has(toEnglishPath(pathname));
+}
+
 /** The same page in the given language (used by the language switcher). */
 export function switchLangPath(pathname: string, lang: Lang): string {
   const en = toEnglishPath(pathname);
-  if (lang === "en") return en;
-  return en === "/" ? "/sv/" : "/sv" + en;
+  if (lang === "en") return en; // every page exists in English
+  if (en === "/") return "/sv/";
+  return TRANSLATED_PATHS.has(en) ? "/sv" + en : "/sv/";
 }
 
 /**

@@ -9,27 +9,61 @@
  * `scroll-behavior: smooth` (globals.css), so navigation works without JS.
  */
 import styles from "./nav.module.css";
+import { getLang, localizePath, switchLangPath } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const L = {
+  en: {
+    problem: "The Problem",
+    businessCase: "Business Case",
+    solution: "Solution",
+    about: "About",
+    team: "Team",
+    blog: "Blog",
+    press: "Press",
+    contact: "Contact",
+    career: "Career",
+    joinWaitlist: "Join waitlist",
+    homeAria: "Nuro — home",
+  },
+  sv: {
+    problem: "Problemet",
+    businessCase: "Affärscaset",
+    solution: "Lösningen",
+    about: "Om oss",
+    team: "Team",
+    blog: "Blogg",
+    press: "Press",
+    contact: "Kontakt",
+    career: "Karriär",
+    joinWaitlist: "Gå med i väntelistan",
+    homeAria: "Nuro — hem",
+  },
+}[lang];
+
+const lp = (href: string) => localizePath(href, lang);
+const otherLang = lang === "sv" ? "en" : "sv";
+const switchHref = switchLangPath(Astro.url.pathname, otherLang);
+const switchLabel = otherLang === "sv" ? "SV" : "EN";
 
 const LEFT_LINKS = [
-  { label: "The Problem", href: "/#problem" },
-  { label: "Business Case", href: "/#business-case" },
-  { label: "Solution", href: "/#features" },
+  { label: L.problem, href: lp("/#problem") },
+  { label: L.businessCase, href: lp("/#business-case") },
+  { label: L.solution, href: lp("/#features") },
 ] as const;
 
 const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
 const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
 
 // Mobile burger menu (desktop has no burger — it keeps the LEFT_LINKS bar).
-// The site menu the team asked for: About / Press / Contact / Career, plus the
-// waitlist CTA. Contact opens the shared ContactDrawer via data-contact-trigger.
 const MENU_ITEMS = [
-  { label: "About", href: "/about" },
-  { label: "Team", href: "/team" },
-  { label: "Blog", href: "/blog" },
-  { label: "Press", href: "/press" },
-  { label: "Contact", href: "#contact", drawer: true },
-  { label: "Career", href: "/career" },
-  { label: "Join waitlist", href: "/#waitlist" },
+  { label: L.about, href: lp("/about") },
+  { label: L.team, href: lp("/team") },
+  { label: L.blog, href: lp("/blog") },
+  { label: L.press, href: lp("/press") },
+  { label: L.contact, href: "#contact", drawer: true },
+  { label: L.career, href: lp("/career") },
+  { label: L.joinWaitlist, href: lp("/#waitlist") },
 ];
 ---
 
@@ -63,7 +97,7 @@ const MENU_ITEMS = [
       </ul>
     </div>
 
-    <a class={styles.logo} href="/" aria-label="Nuro — home">
+    <a class={styles.logo} href={lp("/")} aria-label={L.homeAria}>
       <img src="/logo-symbol.png" alt="" width="34" height="34" />
     </a>
 
@@ -113,7 +147,15 @@ const MENU_ITEMS = [
           ></path>
         </svg>
       </a>
-      <a class={`${styles.cta} focusable`} href="/#waitlist">Join waitlist</a>
+      <a
+        class={`${styles.langSwitch} focusable`}
+        href={switchHref}
+        hreflang={otherLang}
+        aria-label={otherLang === "sv" ? "Byt till svenska" : "Switch to English"}
+      >
+        {switchLabel}
+      </a>
+      <a class={`${styles.cta} focusable`} href={lp("/#waitlist")}>{L.joinWaitlist}</a>
     </div>
   </nav>
 
@@ -185,6 +227,16 @@ const MENU_ITEMS = [
         </svg>
       </a>
     </div>
+
+    <a
+      class={`${styles.menuLangSwitch} ${styles.menuItem}`}
+      style={`--i:${MENU_ITEMS.length + 1}`}
+      href={switchHref}
+      hreflang={otherLang}
+      data-menu-link
+    >
+      {otherLang === "sv" ? "Svenska" : "English"}
+    </a>
   </div>
 </header>
 

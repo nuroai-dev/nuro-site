@@ -14,9 +14,60 @@
 import Reveal from "@/components/motion/Reveal.astro";
 import ContactDrawer from "@/components/contact/ContactDrawer.tsx";
 import styles from "./footer.module.css";
+import { getLang, localizePath, switchLangPath } from "@/i18n/ui";
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/nuroaidev/";
 const INSTAGRAM_URL = "https://www.instagram.com/nuroai.dev/";
+
+const lang = getLang(Astro.url);
+const lp = (href: string) => localizePath(href, lang);
+const otherLang = lang === "sv" ? "en" : "sv";
+const switchHref = switchLangPath(Astro.url.pathname, otherLang);
+
+const T = {
+  en: {
+    product: "Product",
+    company: "Company",
+    social: "Social",
+    legal: "Legal",
+    problem: "Problem",
+    businessCase: "Business case",
+    solution: "Solution",
+    joinWaitlist: "Join waitlist",
+    about: "About",
+    team: "Team",
+    blog: "Blog",
+    press: "Press",
+    career: "Career",
+    contact: "Contact",
+    privacy: "Privacy",
+    terms: "Terms",
+    designed: "Designed in Sweden",
+    backToTop: "Back to top",
+    switchTo: "English",
+  },
+  sv: {
+    product: "Produkt",
+    company: "Företag",
+    social: "Socialt",
+    legal: "Juridik",
+    problem: "Problem",
+    businessCase: "Affärscase",
+    solution: "Lösning",
+    joinWaitlist: "Gå med i väntelistan",
+    about: "Om oss",
+    team: "Team",
+    blog: "Blogg",
+    press: "Press",
+    career: "Karriär",
+    contact: "Kontakt",
+    privacy: "Integritet",
+    terms: "Villkor",
+    designed: "Designad i Sverige",
+    backToTop: "Tillbaka till toppen",
+    switchTo: "Svenska",
+  },
+}[lang];
 
 type Icon = "linkedin" | "instagram";
 type Col = {
@@ -32,37 +83,37 @@ type Col = {
 
 const COLUMNS: Col[] = [
   {
-    head: "Product",
+    head: T.product,
     links: [
-      { label: "Problem", href: "/#problem" },
-      { label: "Business case", href: "/#business-case" },
-      { label: "Solution", href: "/#features" },
-      { label: "Join waitlist", href: "/#waitlist" },
+      { label: T.problem, href: lp("/#problem") },
+      { label: T.businessCase, href: lp("/#business-case") },
+      { label: T.solution, href: lp("/#features") },
+      { label: T.joinWaitlist, href: lp("/#waitlist") },
     ],
   },
   {
-    head: "Company",
+    head: T.company,
     links: [
-      { label: "About", href: "/about" },
-      { label: "Team", href: "/team" },
-      { label: "Blog", href: "/blog" },
-      { label: "Press", href: "/press" },
-      { label: "Career", href: "/career" },
-      { label: "Contact", href: "#contact", drawer: true },
+      { label: T.about, href: lp("/about") },
+      { label: T.team, href: lp("/team") },
+      { label: T.blog, href: lp("/blog") },
+      { label: T.press, href: lp("/press") },
+      { label: T.career, href: lp("/career") },
+      { label: T.contact, href: "#contact", drawer: true },
     ],
   },
   {
-    head: "Social",
+    head: T.social,
     links: [
       { label: "LinkedIn", href: LINKEDIN_URL, external: true, icon: "linkedin" },
       { label: "Instagram", href: INSTAGRAM_URL, external: true, icon: "instagram" },
     ],
   },
   {
-    head: "Legal",
+    head: T.legal,
     links: [
-      { label: "Privacy", href: "/privacy" },
-      { label: "Terms", href: "/terms" },
+      { label: T.privacy, href: lp("/privacy") },
+      { label: T.terms, href: lp("/terms") },
     ],
   },
 ];
@@ -72,7 +123,7 @@ const COLUMNS: Col[] = [
   <Reveal class={styles.container}>
     <div class={styles.grid}>
       <div class={styles.brandCol}>
-        <a href="/#hero" class={styles.brand} aria-label="Nuro — back to top">
+        <a href={lp("/#hero")} class={styles.brand} aria-label={`Nuro — ${T.backToTop}`}>
           <img
             src="/brand/nuro-lockup.svg"
             alt="Nuro"
@@ -168,10 +219,14 @@ const COLUMNS: Col[] = [
           <rect x="5" width="2" height="12" fill="#FECC02"></rect>
           <rect y="5" width="16" height="2" fill="#FECC02"></rect>
         </svg>
-        Designed in Sweden
+        {T.designed}
       </p>
 
-      <a href="/#hero" class={styles.backToTop}>Back to top ↑</a>
+      <a href={switchHref} hreflang={otherLang} class={styles.backToTop}>
+        {T.switchTo}
+      </a>
+
+      <a href={lp("/#hero")} class={styles.backToTop}>{T.backToTop} ↑</a>
     </div>
   </div>
 
