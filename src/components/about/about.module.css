@@ -68,65 +68,6 @@
   margin-top: 40px !important;
 }
 
-/* ── Founders / team ────────────────────────────────────────── */
-
-.team {
-  margin-top: 84px;
-  padding-top: 56px;
-  border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-  text-align: center;
-}
-
-.teamHeading {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 36px);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--ink);
-}
-
-.teamPhoto {
-  display: block;
-  margin: 32px auto 0;
-  max-width: 460px;
-}
-
-.teamPhoto img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-}
-
-.founders {
-  margin-top: 28px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px 56px;
-}
-
-.person {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.personName {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(17px, 1.8vw, 20px);
-  color: var(--ink);
-}
-
-.personRole {
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  letter-spacing: 0.04em;
-  color: var(--ink-3);
-}
-
 @media (max-width: 920px) {
   .section {
     padding: 130px 0 90px;
@@ -138,9 +79,5 @@
 
   .body {
     margin-top: 34px;
-  }
-
-  .team {
-    margin-top: 64px;
   }
 }
