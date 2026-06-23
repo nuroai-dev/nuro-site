@@ -12,21 +12,41 @@
 import Aurora from "@/components/motion/Aurora.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./hero.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Let's help schools stop breaking the law",
+    tagPre: "The missing tool for ",
+    tagHi: "neurodivergent",
+    tagPost: " students.",
+    cta: "Join waitlist",
+    alt: "The Nuro student dashboard — a calm daily view with focus blocks and quests.",
+  },
+  sv: {
+    title: "Hjälp skolor att sluta bryta mot lagen",
+    tagPre: "Det saknade verktyget för ",
+    tagHi: "neurodivergenta",
+    tagPost: " elever.",
+    cta: "Gå med i väntelistan",
+    alt: "Nuros elevvy — en lugn daglig översikt med fokuspass och uppdrag.",
+  },
+}[lang];
 ---
 
 <section class={styles.hero} id="hero">
   <Aurora variant="hero" />
   <div class={styles.inner}>
     <Reveal as="h1" eager class={styles.title}>
-      Let's help schools stop breaking the law
+      {t.title}
     </Reveal>
     <Reveal as="p" eager delay={0.08} class={styles.tagline}>
-      The missing tool for <span class="holo-text">neurodivergent</span>{" "}
-      students.
+      {t.tagPre}<span class="holo-text">{t.tagHi}</span>{t.tagPost}
     </Reveal>
     <Reveal eager delay={0.16} class={styles.ctaRow}>
       <a href="#waitlist" class={`${styles.cta} focusable`}>
-        Join waitlist
+        {t.cta}
         <svg
           width="15"
           height="15"
@@ -47,7 +67,7 @@ import styles from "./hero.module.css";
         <img
           class={styles.heroImage}
           src="/nuro-hero.png"
-          alt="The Nuro student dashboard — a calm daily view with focus blocks and quests."
+          alt={t.alt}
           width="2400"
           height="1600"
         />

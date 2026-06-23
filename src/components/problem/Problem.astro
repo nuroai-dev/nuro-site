@@ -9,33 +9,50 @@
  */
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./problem.module.css";
+import { getLang } from "@/i18n/ui";
 
-type Stat = {
-  value: string;
-  tint: "blue" | "purple" | "pink";
-  body: string;
-  source: string;
-};
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    eyebrow: "The Problem",
+    chip: "🇸🇪 Initial market, Sweden",
+    headPre: "The system is failing our ",
+    headHi: "most vulnerable students.",
+    subPre: "And it's costing ",
+    subStrong: "EVERYONE",
+    subPost: ", teachers, families and schools.",
+    subDetail:
+      "225,000+ neurodivergent students in Sweden have a legal right to support they are not receiving.",
+    bodies: [
+      "of teachers say they do not have the right tools to support neurodivergent students.",
+      "of teachers say they do not have enough time to properly support students with additional needs.",
+      "of schools admit that students with NDD diagnoses are NOT getting the support they are legally entitled to.",
+    ],
+  },
+  sv: {
+    eyebrow: "Problemet",
+    chip: "🇸🇪 Första marknad, Sverige",
+    headPre: "Systemet sviker våra ",
+    headHi: "mest utsatta elever.",
+    subPre: "Och det kostar ",
+    subStrong: "ALLA",
+    subPost: " — lärare, familjer och skolor.",
+    subDetail:
+      "225 000+ neurodivergenta elever i Sverige har laglig rätt till stöd som de inte får.",
+    bodies: [
+      "av lärarna säger att de saknar rätt verktyg för att stötta neurodivergenta elever.",
+      "av lärarna säger att de inte har tillräckligt med tid för att stötta elever med särskilda behov ordentligt.",
+      "av skolorna medger att elever med NPF-diagnoser INTE får det stöd de har laglig rätt till.",
+    ],
+  },
+}[lang];
+
+type Stat = { value: string; tint: "blue" | "purple" | "pink"; source: string };
 
 const STATS: readonly Stat[] = [
-  {
-    value: "94%",
-    tint: "blue",
-    body: "of teachers say they do not have the right tools to support neurodivergent students.",
-    source: "Karolinska Institute, Emma Leifler (2022)",
-  },
-  {
-    value: "82%",
-    tint: "purple",
-    body: "of teachers say they do not have enough time to properly support students with additional needs.",
-    source: "Skolverket, 2018",
-  },
-  {
-    value: "51%",
-    tint: "pink",
-    body: "of schools admit that students with NDD diagnoses are NOT getting the support they are legally entitled to.",
-    source: "Lärarnas Riksförbund",
-  },
+  { value: "94%", tint: "blue", source: "Karolinska Institute, Emma Leifler (2022)" },
+  { value: "82%", tint: "purple", source: "Skolverket, 2018" },
+  { value: "51%", tint: "pink", source: "Lärarnas Riksförbund" },
 ];
 
 const TINT_CLASS: Record<Stat["tint"], string> = {
@@ -48,23 +65,20 @@ const TINT_CLASS: Record<Stat["tint"], string> = {
 <section id="problem" class={styles.section}>
   <div class={styles.container}>
     <Reveal class={styles.metaRow}>
-      <span class={styles.eyebrow}>The Problem</span>
-      <span class={styles.chip}>🇸🇪 Initial market, Sweden</span>
+      <span class={styles.eyebrow}>{t.eyebrow}</span>
+      <span class={styles.chip}>{t.chip}</span>
     </Reveal>
 
     <Reveal as="h2" class={styles.heading} delay={0.06}>
-      The system is failing our{" "}
-      <span class="holo-text">most vulnerable students.</span>
+      {t.headPre}<span class="holo-text">{t.headHi}</span>
     </Reveal>
 
     <Reveal as="p" class={styles.subLead} delay={0.12}>
-      And it&apos;s costing <strong>EVERYONE</strong>, teachers, families and
-      schools.
+      {t.subPre}<strong>{t.subStrong}</strong>{t.subPost}
     </Reveal>
 
     <Reveal as="p" class={styles.subDetail} delay={0.18}>
-      225,000+ neurodivergent students in Sweden have a legal right to support
-      they are not receiving.
+      {t.subDetail}
     </Reveal>
 
     <div class={styles.grid}>
@@ -74,7 +88,7 @@ const TINT_CLASS: Record<Stat["tint"], string> = {
             <div class={`${styles.statValue} ${TINT_CLASS[stat.tint]}`}>
               {stat.value}
             </div>
-            <p class={styles.statBody}>{stat.body}</p>
+            <p class={styles.statBody}>{t.bodies[i]}</p>
             <div class={styles.statSource}>{stat.source}</div>
           </Reveal>
         ))
