@@ -10,6 +10,9 @@
  */
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./partners.module.css";
+import { getLang } from "@/i18n/ui";
+
+const supportedBy = getLang(Astro.url) === "sv" ? "Stöds av" : "Supported by";
 
 const LOGOS = [
   {
@@ -25,9 +28,9 @@ const LOGOS = [
 ] as const;
 ---
 
-<section class={styles.section} aria-label="Supported by">
+<section class={styles.section} aria-label={supportedBy}>
   <Reveal class={styles.inner}>
-    <p class={styles.eyebrow}>Supported by</p>
+    <p class={styles.eyebrow}>{supportedBy}</p>
     <ul class={styles.logos}>
       {
         LOGOS.map((logo) => (

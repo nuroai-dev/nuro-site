@@ -8,33 +8,73 @@
  */
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./faq.module.css";
+import { getLang } from "@/i18n/ui";
 
-const FAQS = [
-  {
-    q: "What is Nuro?",
-    a: "Nuro is an AI-powered platform that helps Swedish schools give neurodivergent students the adapted support they are legally entitled to. It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers.",
+const lang = getLang(Astro.url);
+const TT = {
+  en: {
+    eyebrow: "FAQ",
+    heading: "Questions, answered",
+    faqs: [
+      {
+        q: "What is Nuro?",
+        a: "Nuro is an AI-powered platform that helps Swedish schools give neurodivergent students the adapted support they are legally entitled to. It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers.",
+      },
+      {
+        q: "How does Nuro help neurodivergent students?",
+        a: "Every student gets a profile built around their strengths and challenges, and lessons are auto-adapted into clear, structured steps they can follow. Nuro catches students who are struggling early and gives teachers the tools to support them without hours of extra manual work.",
+      },
+      {
+        q: "Does Nuro help schools meet Skollagen requirements?",
+        a: "Yes. Swedish law gives every student the right to adapted support. Nuro helps schools actually deliver that support, and documents it automatically, so the legal right becomes something students receive in practice rather than only on paper.",
+      },
+      {
+        q: "Who is Nuro for?",
+        a: "Teachers, students, and parents. Teachers get automated lesson adaptation and easier documentation, students get learning that works with their brain, and parents get a real-time view of how their child is doing.",
+      },
+      {
+        q: "Which needs does Nuro support?",
+        a: "Nuro is built for neurodivergent students, including those with ADHD, autism, and dyslexia, and any learner who needs a more adapted and structured way to learn.",
+      },
+      {
+        q: "Is Nuro available yet?",
+        a: "We are building Nuro now together with schools and families. Join the waitlist to be among the first to get access and to help shape the product.",
+      },
+    ],
   },
-  {
-    q: "How does Nuro help neurodivergent students?",
-    a: "Every student gets a profile built around their strengths and challenges, and lessons are auto-adapted into clear, structured steps they can follow. Nuro catches students who are struggling early and gives teachers the tools to support them without hours of extra manual work.",
+  sv: {
+    eyebrow: "FAQ",
+    heading: "Frågor, besvarade",
+    faqs: [
+      {
+        q: "Vad är Nuro?",
+        a: "Nuro är en AI-driven plattform som hjälper svenska skolor att ge neurodivergenta elever det anpassade stöd de har laglig rätt till. Den hjälper lärare att se varje enskild elev, anpassar automatiskt lektioner efter hur varje barn lär sig, och flaggar elever som riskerar att hamna efter långt innan de blir hemmasittare.",
+      },
+      {
+        q: "Hur hjälper Nuro neurodivergenta elever?",
+        a: "Varje elev får en profil byggd kring sina styrkor och utmaningar, och lektioner anpassas automatiskt till tydliga, strukturerade steg som de kan följa. Nuro fångar tidigt upp elever som kämpar och ger lärare verktygen att stötta dem utan timmar av extra manuellt arbete.",
+      },
+      {
+        q: "Hjälper Nuro skolor att uppfylla Skollagens krav?",
+        a: "Ja. Svensk lag ger varje elev rätt till anpassat stöd. Nuro hjälper skolor att faktiskt leverera det stödet, och dokumenterar det automatiskt, så att den lagliga rätten blir något eleverna får i praktiken — inte bara på papper.",
+      },
+      {
+        q: "Vem är Nuro för?",
+        a: "Lärare, elever och föräldrar. Lärare får automatisk lektionsanpassning och enklare dokumentation, elever får lärande som funkar med deras hjärna, och föräldrar får en realtidsbild av hur deras barn mår.",
+      },
+      {
+        q: "Vilka behov stöttar Nuro?",
+        a: "Nuro är byggt för neurodivergenta elever, inklusive de med ADHD, autism och dyslexi, och alla som behöver ett mer anpassat och strukturerat sätt att lära sig.",
+      },
+      {
+        q: "Är Nuro tillgängligt än?",
+        a: "Vi bygger Nuro just nu tillsammans med skolor och familjer. Gå med i väntelistan för att vara bland de första att få tillgång och hjälpa till att forma produkten.",
+      },
+    ],
   },
-  {
-    q: "Does Nuro help schools meet Skollagen requirements?",
-    a: "Yes. Swedish law gives every student the right to adapted support. Nuro helps schools actually deliver that support, and documents it automatically, so the legal right becomes something students receive in practice rather than only on paper.",
-  },
-  {
-    q: "Who is Nuro for?",
-    a: "Teachers, students, and parents. Teachers get automated lesson adaptation and easier documentation, students get learning that works with their brain, and parents get a real-time view of how their child is doing.",
-  },
-  {
-    q: "Which needs does Nuro support?",
-    a: "Nuro is built for neurodivergent students, including those with ADHD, autism, and dyslexia, and any learner who needs a more adapted and structured way to learn.",
-  },
-  {
-    q: "Is Nuro available yet?",
-    a: "We are building Nuro now together with schools and families. Join the waitlist to be among the first to get access and to help shape the product.",
-  },
-];
+}[lang];
+
+const FAQS = TT.faqs;
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",
@@ -49,9 +89,9 @@ const FAQ_SCHEMA = {
 
 <section class={styles.section} id="faq" aria-label="Frequently asked questions">
   <div class={styles.container}>
-    <Reveal as="span" class={styles.eyebrow}>FAQ</Reveal>
+    <Reveal as="span" class={styles.eyebrow}>{TT.eyebrow}</Reveal>
     <Reveal as="h2" delay={0.06} class={styles.heading}>
-      Questions, answered
+      {TT.heading}
     </Reveal>
 
     <div class={styles.list}>

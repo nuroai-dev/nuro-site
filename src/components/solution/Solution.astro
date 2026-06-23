@@ -9,36 +9,69 @@
  */
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./solution.module.css";
+import { getLang } from "@/i18n/ui";
 
-const BEFORE_ITEMS: readonly string[] = [
-  "Individual strengths go unseen, individual needs go unmet.",
-  "Lessons follow one rigid format that doesn't fit everyone.",
-  "Teachers firefight instead of adapting support.",
-  "Parents are left guessing how their child is really doing.",
-  "Help arrives late, generic, or not at all.",
-];
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    eyebrow: "The Solution",
+    heading: "One platform.",
+    subLead: "For every person who cares about the child.",
+    beforeTitle: "Before Nuro",
+    afterTitle: "With Nuro",
+    before: [
+      "Individual strengths go unseen, individual needs go unmet.",
+      "Lessons follow one rigid format that doesn't fit everyone.",
+      "Teachers firefight instead of adapting support.",
+      "Parents are left guessing how their child is really doing.",
+      "Help arrives late, generic, or not at all.",
+    ],
+    after: [
+      "Every student gets a profile built around their strengths and needs.",
+      "Lessons are auto-adapted into clear, structured steps each child can follow.",
+      "Teachers deliver targeted help without extra planning hours.",
+      "Parents see exactly how their child is progressing, in real time.",
+    ],
+  },
+  sv: {
+    eyebrow: "Lösningen",
+    heading: "En plattform.",
+    subLead: "För alla som bryr sig om barnet.",
+    beforeTitle: "Före Nuro",
+    afterTitle: "Med Nuro",
+    before: [
+      "Individuella styrkor förbises, individuella behov möts inte.",
+      "Lektioner följer ett stelt format som inte passar alla.",
+      "Lärare släcker bränder i stället för att anpassa stödet.",
+      "Föräldrar får gissa hur deras barn egentligen mår.",
+      "Hjälpen kommer sent, generisk eller inte alls.",
+    ],
+    after: [
+      "Varje elev får en profil byggd kring sina styrkor och behov.",
+      "Lektioner anpassas automatiskt till tydliga, strukturerade steg som varje barn kan följa.",
+      "Lärare ger riktat stöd utan extra planeringstimmar.",
+      "Föräldrar ser exakt hur deras barn utvecklas, i realtid.",
+    ],
+  },
+}[lang];
 
-const AFTER_ITEMS: readonly string[] = [
-  "Every student gets a profile built around their strengths and needs.",
-  "Lessons are auto-adapted into clear, structured steps each child can follow.",
-  "Teachers deliver targeted help without extra planning hours.",
-  "Parents see exactly how their child is progressing, in real time.",
-];
+const BEFORE_ITEMS = t.before;
+const AFTER_ITEMS = t.after;
 ---
 
 <section id="features" class={styles.section}>
   <div class={styles.container}>
-    <Reveal as="span" class={styles.eyebrow}>The Solution</Reveal>
+    <Reveal as="span" class={styles.eyebrow}>{t.eyebrow}</Reveal>
 
-    <Reveal as="h2" class={styles.heading} delay={0.06}>One platform.</Reveal>
+    <Reveal as="h2" class={styles.heading} delay={0.06}>{t.heading}</Reveal>
 
     <Reveal as="p" class={styles.subLead} delay={0.12}>
-      For every person who cares about the child.
+      {t.subLead}
     </Reveal>
 
     <div class={styles.grid}>
       <Reveal as="article" class={styles.card} delay={0.08}>
-        <h3 class={styles.cardTitle}>Before Nuro</h3>
+        <h3 class={styles.cardTitle}>{t.beforeTitle}</h3>
         <ul class={styles.list}>
           {
             BEFORE_ITEMS.map((item) => (
@@ -68,7 +101,7 @@ const AFTER_ITEMS: readonly string[] = [
         class={`${styles.card} ${styles.cardElevated}`}
         delay={0.16}
       >
-        <h3 class={styles.cardTitle}>With Nuro</h3>
+        <h3 class={styles.cardTitle}>{t.afterTitle}</h3>
         <ul class={styles.list}>
           {
             AFTER_ITEMS.map((item) => (
