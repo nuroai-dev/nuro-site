@@ -1,0 +1,122 @@
+/* ============================================================
+   Team page (/team) — group photo + founders, cream surface.
+   ============================================================ */
+
+.section {
+  position: relative;
+  padding: 160px 0 130px;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.heading {
+  margin: 16px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.6vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.032em;
+  line-height: 1.04;
+  color: var(--ink);
+}
+
+.intro {
+  margin: 18px auto 0;
+  max-width: 620px;
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.photo {
+  display: block;
+  margin: 52px auto 0;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+/* Founders callout. */
+.foundersHead {
+  margin: 56px 0 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.founders {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 56px;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.personName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(18px, 1.9vw, 21px);
+  color: var(--ink);
+}
+
+.personRole {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.hiring {
+  margin-top: 56px;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: var(--ink-2);
+}
+
+.hiring a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 920px) {
+  .section {
+    padding: 130px 0 90px;
+  }
+
+  .container {
+    padding: 0 22px;
+  }
+
+  .photo {
+    margin-top: 40px;
+  }
+}
