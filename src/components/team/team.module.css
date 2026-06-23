@@ -55,9 +55,14 @@
   border-radius: 18px;
 }
 
-/* Founders callout. */
-.foundersHead {
-  margin: 56px 0 0;
+/* ── Groups & profiles ──────────────────────────────────────── */
+
+.group {
+  margin-top: 64px;
+}
+
+.groupHeading {
+  margin: 0 0 22px;
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
@@ -66,18 +71,21 @@
   color: var(--ink-3);
 }
 
-.founders {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px 56px;
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
 .person {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 4px;
+  padding: 22px 24px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--hair);
+  border-radius: 16px;
 }
 
 .personName {
@@ -92,6 +100,27 @@
   font-size: 12.5px;
   letter-spacing: 0.04em;
   color: var(--ink-3);
+}
+
+.contact {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactLink {
+  width: fit-content;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .hiring {
@@ -118,5 +147,9 @@
 
   .photo {
     margin-top: 40px;
+  }
+
+  .people {
+    grid-template-columns: 1fr;
   }
 }

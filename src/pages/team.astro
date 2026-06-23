@@ -1,7 +1,8 @@
 ---
 /**
- * Team page (/team) — the people building Nuro. Group photo plus the founders.
- * The wider roster (names/roles) can be added as the team supplies it.
+ * Team page (/team) — the people building Nuro. Group photo, then profiles
+ * grouped as Founders / Team / Board, each with contact details. Phone
+ * numbers shown in +46(0) international format.
  */
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
@@ -11,15 +12,67 @@ import styles from "@/components/team/team.module.css";
 
 export const prerender = true;
 
-const FOUNDERS = [
-  { name: "Sandra Hilltomt", role: "Founder & CEO" },
-  { name: "Victor Wallander", role: "Co-Founder & CTO" },
+type Person = {
+  name: string;
+  role: string;
+  phoneDisplay?: string;
+  phoneHref?: string;
+  email: string;
+};
+
+const GROUPS: { heading: string; people: Person[] }[] = [
+  {
+    heading: "Founders",
+    people: [
+      {
+        name: "Sandra Hilltomt",
+        role: "Founder & CEO",
+        phoneDisplay: "+46(0)736 56 01 63",
+        phoneHref: "+46736560163",
+        email: "sandra@nuroai.dev",
+      },
+      {
+        name: "Victor Wallander",
+        role: "Co-Founder & CTO",
+        phoneDisplay: "+46(0)730 35 25 06",
+        phoneHref: "+46730352506",
+        email: "victor@nuroai.dev",
+      },
+    ],
+  },
+  {
+    heading: "Team",
+    people: [
+      {
+        name: "Jonathan Olsen",
+        role: "Head of Design",
+        email: "jonathan@nuroai.dev",
+      },
+      {
+        name: "Isabella Sällfors",
+        role: "Founders Associate",
+        email: "isabella@nuroai.dev",
+      },
+    ],
+  },
+  {
+    heading: "Board",
+    people: [
+      {
+        name: "Sead Kadric",
+        role: "Board Member",
+        phoneDisplay: "+46(0)708 79 51 17",
+        phoneHref: "+46708795117",
+        email: "sead@nuroai.dev",
+      },
+    ],
+  },
 ];
 ---
 
 <Layout
   title="Team — Nuro"
-  description="Meet the team building Nuro — engineers, educators, and builders on one mission: give every neurodivergent student the support they're entitled to."
+  description="Meet the team building Nuro — the founders, the team, and the board behind a mission to give every neurodivergent student the support they're entitled to."
 >
   <Nav />
   <main>
@@ -44,21 +97,38 @@ const FOUNDERS = [
           />
         </Reveal>
 
-        <Reveal as="p" class={styles.foundersHead} delay={0.18}>
-          Founders
-        </Reveal>
-        <Reveal class={styles.founders} delay={0.22}>
-          {
-            FOUNDERS.map((p) => (
-              <div class={styles.person}>
-                <span class={styles.personName}>{p.name}</span>
-                <span class={styles.personRole}>{p.role}</span>
+        {
+          GROUPS.map((group) => (
+            <div class={styles.group}>
+              <Reveal as="h2" class={styles.groupHeading}>
+                {group.heading}
+              </Reveal>
+              <div class={styles.people}>
+                {group.people.map((p) => (
+                  <Reveal class={styles.person}>
+                    <span class={styles.personName}>{p.name}</span>
+                    <span class={styles.personRole}>{p.role}</span>
+                    <div class={styles.contact}>
+                      {p.phoneDisplay && (
+                        <a
+                          class={styles.contactLink}
+                          href={`tel:${p.phoneHref}`}
+                        >
+                          {p.phoneDisplay}
+                        </a>
+                      )}
+                      <a class={styles.contactLink} href={`mailto:${p.email}`}>
+                        {p.email}
+                      </a>
+                    </div>
+                  </Reveal>
+                ))}
               </div>
-            ))
-          }
-        </Reveal>
+            </div>
+          ))
+        }
 
-        <Reveal as="p" class={styles.hiring} delay={0.26}>
+        <Reveal as="p" class={styles.hiring}>
           We&rsquo;re growing. <a href="/career">See open roles →</a>
         </Reveal>
       </div>
