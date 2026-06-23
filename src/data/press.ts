@@ -38,6 +38,7 @@ export const PRESS_ITEMS: PressItem[] = [
     tldr: "Dagens Industri looks at the next wave of Swedish AI startups building deep, domain-specific verticals — with Nuro among the companies named.",
     date: "2026-06-18",
     url: "https://www.di.se/digital/har-ar-nasta-vag-av-svenska-ai-bolag-djupa-vertikaler/",
+    image: "/press/nuro-team.jpg",
   },
   {
     outlet: "Breakit",
@@ -45,5 +46,6 @@ export const PRESS_ITEMS: PressItem[] = [
     tldr: "Breakit covers the new, AI-heavy cohort entering Stockholm School of Economics' incubator SSE Business Lab — with Nuro among the companies.",
     date: "2026-06-18",
     url: "https://www.breakit.se/artikel/46679/ai-ai-och-ai-har-ar-bolagen-som-kommer-in-pa-sse-business-lab",
+    image: "/press/nuro-team.jpg",
   },
 ];
