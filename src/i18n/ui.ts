@@ -16,10 +16,14 @@ export function getLang(url: URL): Lang {
     : "en";
 }
 
-/** Strip the /sv prefix → the English-equivalent path. */
+/** Strip the /sv prefix and any trailing slash → the English-equivalent path
+ *  in the same form TRANSLATED_PATHS uses (Astro's pathname has a trailing
+ *  slash, e.g. "/about/", so normalize before comparing). */
 function toEnglishPath(pathname: string): string {
-  const stripped = pathname.replace(/^\/sv(?=\/|$)/, "");
-  return stripped === "" ? "/" : stripped;
+  let p = pathname.replace(/^\/sv(?=\/|$)/, "");
+  if (p === "") p = "/";
+  if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+  return p;
 }
 
 /**
@@ -28,7 +32,7 @@ function toEnglishPath(pathname: string): string {
  * ships, and the switcher + hreflang light up for it automatically. Anything
  * not listed falls back to the Swedish home (no broken /sv/<page> links).
  */
-export const TRANSLATED_PATHS = new Set<string>(["/"]);
+export const TRANSLATED_PATHS = new Set<string>(["/", "/about"]);
 
 /** Does this page have a Swedish version yet? */
 export function hasSv(pathname: string): boolean {

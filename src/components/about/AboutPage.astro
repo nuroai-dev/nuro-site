@@ -1,0 +1,69 @@
+---
+/**
+ * About page content — Nuro's mission statement, locale-aware (English at
+ * /about, Swedish at /sv/about; the locale is read from the URL). Rendered by
+ * both src/pages/about.astro and src/pages/sv/about.astro so there is one
+ * source of truth. English copy supplied by the team; Swedish is the team's
+ * own mission-statement text (Sandra).
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/about/about.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "About — Nuro",
+    description:
+      "Nuro's mission: help every school give neurodivergent students the adapted support the law says they're entitled to, before they fall through the cracks.",
+    eyebrow: "About",
+    heading: "Nuro mission statement",
+    p1: "The law says it clearly: every student has the right to adapted support. But that’s also where the system ends.",
+    p2: "Millions of neurodivergent students in schools where there’s no room for them. Where educators don’t have the tools. Where budgets are already exhausted. Where a student with ADHD, autism or dyslexia, who just needed the right support at the right time, so no one is at risk of becoming a school refuser.",
+    lede: "It’s not a design issue. It’s a system failure.",
+    built: "We built Nuro to change that.",
+    p4: "We enable educators to see every individual student, to provide the personalized support that the law says students are entitled to. We catch students at risk of falling between the lines long before they become homeschoolers. We help every student develop their superpowers while supporting them with their challenges.",
+    closer: "The law was right. The system only needed one tool, and now it’s here!",
+  },
+  sv: {
+    title: "Om oss — Nuro",
+    description:
+      "Nuros mission: hjälpa varje skola att ge neurodivergenta elever det anpassade stöd lagen säger att de har rätt till, innan de faller mellan stolarna.",
+    eyebrow: "Om oss",
+    heading: "Nuros mission",
+    p1: "Lagboken säger det tydligt: varje elev har rätt till anpassat stöd. Det står där i svart på vitt. Men det är också där systemet tar slut.",
+    p2: "Hundratusentals neurodivergenta elever i skolor där det inte finns rum för dem. Där pedagogerna inte har verktyget. Där budgeten redan är slut. Där en elev med ADHD, autism eller dyslexi, som bara behövde rätt stöd vid rätt tid, riskerar att bli en hemmasittare.",
+    lede: "Det är inte en designfråga. Det är ett systemfel.",
+    built: "Vi byggde Nuro för att ändra på det.",
+    p4: "Vi gör det möjligt för pedagoger att se varje enskild elev, att ge det anpassade stöd som lagen säger att eleverna förtjänar. Vi fångar upp de elever som riskerar att hamna mellan stolarna långt innan de blir hemmasittare. Vi hjälper varje neurodivergent elev att utveckla sina superkrafter, det unika sättet deras hjärnor fungerar på.",
+    closer: "Lagboken hade rätt. Systemet behövde bara ett verktyg, och nu är det här!",
+  },
+}[lang];
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>{t.p1}</Reveal>
+          <Reveal as="p" delay={0.16}>{t.p2}</Reveal>
+          <Reveal as="p" delay={0.2} class={styles.lede}>{t.lede}</Reveal>
+          <Reveal as="p" delay={0.24}>{t.built}</Reveal>
+          <Reveal as="p" delay={0.28}>{t.p4}</Reveal>
+          <Reveal as="p" delay={0.32} class={styles.closer}>{t.closer}</Reveal>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
