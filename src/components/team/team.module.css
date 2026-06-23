@@ -46,6 +46,7 @@
 .photo {
   display: block;
   margin: 52px auto 0;
+  max-width: 440px;
 }
 
 .photo img {
