@@ -15,10 +15,21 @@ export const prerender = true;
 type Person = {
   name: string;
   role: string;
+  photo?: string;
   phoneDisplay?: string;
   phoneHref?: string;
   email: string;
 };
+
+/** Initials for the avatar fallback (first + last name). */
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
 
 const GROUPS: { heading: string; people: Person[] }[] = [
   {
@@ -27,6 +38,7 @@ const GROUPS: { heading: string; people: Person[] }[] = [
       {
         name: "Sandra Hilltomt",
         role: "Founder & CEO",
+        photo: "/team/sandra-hilltomt.jpg",
         phoneDisplay: "+46(0)736 56 01 63",
         phoneHref: "+46736560163",
         email: "sandra@nuroai.dev",
@@ -106,6 +118,22 @@ const GROUPS: { heading: string; people: Person[] }[] = [
               <div class={styles.people}>
                 {group.people.map((p) => (
                   <Reveal class={styles.person}>
+                    <div class={styles.avatar}>
+                      {p.photo ? (
+                        <img
+                          class={styles.avatarImg}
+                          src={p.photo}
+                          alt={p.name}
+                          width="64"
+                          height="64"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span class={styles.avatarFallback} aria-hidden="true">
+                          {initials(p.name)}
+                        </span>
+                      )}
+                    </div>
                     <span class={styles.personName}>{p.name}</span>
                     <span class={styles.personRole}>{p.role}</span>
                     <div class={styles.contact}>
