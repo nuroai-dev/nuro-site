@@ -32,7 +32,7 @@ Closing the gap means making adapted support something the system produces autom
 
 - **Seeing each student as an individual** — their strengths, their challenges, how they actually learn — instead of a class average.
 - **Adapting the material, not just the expectations.** A lesson broken into clear, followable steps is worth more than a note in a file saying a student needs extra help.
-- **Catching the early signals.** The students most at risk of becoming "hemmasittare" — kids who stop coming to school altogether — usually send signals long before that point. The cost of missing those signals is enormous, for the student most of all.
+- **Catching the early signals.** The students most at risk of becoming [hemmasittare](/blog/school-absence-starts-earlier) — kids who stop coming to school altogether — usually send signals long before that point. The cost of missing those signals is enormous, for the student most of all.
 - **Documenting the support as it happens**, so meeting the legal requirement is a by-product of doing the work, not a second job after it.
 
 None of this replaces the teacher. It gives the teacher back the time and the visibility the current system quietly takes away.
