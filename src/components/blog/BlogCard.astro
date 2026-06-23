@@ -1,0 +1,77 @@
+---
+/**
+ * Blog card — one post, styled to match the Press cards (cover image or
+ * branded fallback, meta line, title, description, read link). The whole card
+ * links to the post.
+ */
+import type { CollectionEntry } from "astro:content";
+import styles from "./blog.module.css";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
+const dateLabel = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+}).format(post.data.pubDate);
+
+// Fallback panel label — the post's primary tag (Title Case), else "Nuro".
+const tag = post.data.tags[0];
+const fallbackLabel = tag
+  ? tag.replace(/\b\w/g, (c) => c.toUpperCase())
+  : "Nuro";
+---
+
+<a class={styles.card} href={`/blog/${post.id}`}>
+  <div class={styles.media}>
+    {
+      post.data.heroImage ? (
+        <img
+          class={styles.image}
+          src={post.data.heroImage}
+          alt=""
+          loading="lazy"
+        />
+      ) : (
+        <div class={styles.mediaFallback} aria-hidden="true">
+          <span class={styles.fallbackOutlet}>{fallbackLabel}</span>
+        </div>
+      )
+    }
+  </div>
+
+  <div class={styles.body}>
+    <div class={styles.meta}>
+      <span class={styles.outlet}>{post.data.author}</span>
+      <span class={styles.dot} aria-hidden="true">·</span>
+      <time class={styles.date} datetime={post.data.pubDate.toISOString()}>
+        {dateLabel}
+      </time>
+    </div>
+
+    <h3 class={styles.title}>{post.data.title}</h3>
+    <p class={styles.tldr}>{post.data.description}</p>
+
+    <span class={styles.readMore}>
+      Read article
+      <svg
+        class={styles.extIcon}
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.75"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M5 12h14M13 6l6 6-6 6"></path>
+      </svg>
+    </span>
+  </div>
+</a>

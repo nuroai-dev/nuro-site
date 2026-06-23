@@ -15,6 +15,7 @@ const blog = defineCollection({
     author: z.string().default("The Nuro team"),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    heroImage: z.string().optional(),
   }),
 });
 
