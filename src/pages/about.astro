@@ -63,6 +63,29 @@ export const prerender = true;
             it&rsquo;s here!
           </Reveal>
         </div>
+
+        <div class={styles.team}>
+          <Reveal as="h2" class={styles.teamHeading}>The team</Reveal>
+          <Reveal class={styles.teamPhoto} delay={0.06}>
+            <img
+              src="/team/founders.jpg"
+              alt="Sandra Hilltomt and Victor Wallander, Nuro's founders"
+              width="1000"
+              height="1500"
+              loading="lazy"
+            />
+          </Reveal>
+          <Reveal class={styles.founders} delay={0.12}>
+            <div class={styles.person}>
+              <span class={styles.personName}>Sandra Hilltomt</span>
+              <span class={styles.personRole}>Founder &amp; CEO</span>
+            </div>
+            <div class={styles.person}>
+              <span class={styles.personName}>Victor Wallander</span>
+              <span class={styles.personRole}>Co-Founder &amp; CTO</span>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   </main>
