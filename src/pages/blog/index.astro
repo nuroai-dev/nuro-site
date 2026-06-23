@@ -1,0 +1,71 @@
+---
+/**
+ * Blog index (/blog) — lists published posts newest-first, or an empty state
+ * while there are none. Posts are Markdown files in src/content/blog/.
+ */
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/blog/blog.module.css";
+
+export const prerender = true;
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<Layout
+  title="Blog — Nuro"
+  description="Notes on neurodiversity in education — what the research says, what the law requires, and what actually helps teachers, students, and parents."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Blog</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          Notes on inclusive education
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          What the research says, what the law requires, and what actually helps
+          neurodivergent students — for the teachers, students, and parents
+          living it every day.
+        </Reveal>
+
+        {
+          posts.length > 0 ? (
+            <div class={styles.list}>
+              {posts.map((post, i) => (
+                <Reveal delay={Math.min(i, 6) * 0.05}>
+                  <a class={styles.post} href={`/blog/${post.id}`}>
+                    <span class={styles.postMeta}>
+                      {fmt(post.data.pubDate)} · {post.data.author}
+                    </span>
+                    <h2 class={styles.postTitle}>{post.data.title}</h2>
+                    <p class={styles.postDesc}>{post.data.description}</p>
+                    <span class={styles.readMore}>Read →</span>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <p class={styles.empty}>
+              No posts yet — the first one is on its way.
+            </p>
+          )
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
