@@ -11,3 +11,6 @@ dist/
 .claude-harness/runs/
 .claude-harness/worktrees/
 .vercel
+
+# CS runtime artifact — injected into worktrees, never committed
+CLAUDE.md
