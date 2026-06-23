@@ -1,0 +1,66 @@
+---
+/**
+ * Single blog post (/blog/<slug>) — renders a Markdown post from the blog
+ * collection with prose styling and BlogPosting JSON-LD.
+ */
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/blog/blog.module.css";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const SITE_URL = "https://nuroai.dev";
+const url = `${SITE_URL}/blog/${post.id}`;
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.pubDate.toISOString(),
+  author: { "@type": "Organization", name: post.data.author },
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  mainEntityOfPage: url,
+  image: `${SITE_URL}/og.png`,
+};
+---
+
+<Layout title={`${post.data.title} — Nuro`} description={post.data.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={`${styles.container} ${styles.article}`}>
+        <a class={styles.backLink} href="/blog">← Blog</a>
+        <Reveal as="h1" eager class={styles.heading}>{post.data.title}</Reveal>
+        <Reveal as="p" eager delay={0.06} class={styles.articleMeta}>
+          {fmt(post.data.pubDate)} · {post.data.author}
+        </Reveal>
+        <article class={styles.prose}>
+          <Content />
+        </article>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</Layout>
