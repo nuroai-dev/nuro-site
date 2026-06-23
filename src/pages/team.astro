@@ -1,0 +1,68 @@
+---
+/**
+ * Team page (/team) — the people building Nuro. Group photo plus the founders.
+ * The wider roster (names/roles) can be added as the team supplies it.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/team/team.module.css";
+
+export const prerender = true;
+
+const FOUNDERS = [
+  { name: "Sandra Hilltomt", role: "Founder & CEO" },
+  { name: "Victor Wallander", role: "Co-Founder & CTO" },
+];
+---
+
+<Layout
+  title="Team — Nuro"
+  description="Meet the team building Nuro — engineers, educators, and builders on one mission: give every neurodivergent student the support they're entitled to."
+>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>Team</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          The people building Nuro
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          Engineers, educators, and builders on one mission: make sure every
+          neurodivergent student gets the support they&rsquo;re entitled to.
+        </Reveal>
+
+        <Reveal class={styles.photo} delay={0.14}>
+          <img
+            src="/press/nuro-team.jpg"
+            alt="The Nuro team"
+            width="1240"
+            height="698"
+            loading="lazy"
+          />
+        </Reveal>
+
+        <Reveal as="p" class={styles.foundersHead} delay={0.18}>
+          Founders
+        </Reveal>
+        <Reveal class={styles.founders} delay={0.22}>
+          {
+            FOUNDERS.map((p) => (
+              <div class={styles.person}>
+                <span class={styles.personName}>{p.name}</span>
+                <span class={styles.personRole}>{p.role}</span>
+              </div>
+            ))
+          }
+        </Reveal>
+
+        <Reveal as="p" class={styles.hiring} delay={0.26}>
+          We&rsquo;re growing. <a href="/career">See open roles →</a>
+        </Reveal>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

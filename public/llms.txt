@@ -22,6 +22,7 @@
 - [Home](https://nuroai.dev/): the problem, the business case, the solution, and the three experiences (students, teachers, parents).
 - [About](https://nuroai.dev/about): Nuro's mission statement.
 - [Blog](https://nuroai.dev/blog): notes on neurodiversity in education — research, the law, and what helps.
+- [Team](https://nuroai.dev/team): the people building Nuro.
 - [Press](https://nuroai.dev/press): news and coverage.
 - [Career](https://nuroai.dev/career): join the team.
 - [Privacy](https://nuroai.dev/privacy): how the website handles personal data.
