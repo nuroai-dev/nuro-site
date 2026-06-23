@@ -26,6 +26,8 @@ import plexLatinHref from
 import interLatinHref from
   "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 
+import { getLang, switchLangPath, hasSv } from "@/i18n/ui";
+
 const SITE_URL = "https://nuroai.dev";
 const DEFAULT_TITLE = "Nuro — Inclusive Education for Swedish Schools";
 const DEFAULT_DESCRIPTION =
@@ -42,6 +44,13 @@ const TITLE = title;
 const DESCRIPTION = description;
 const OG_IMAGE = `${SITE_URL}/og.png`;
 const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
+
+// Bilingual: active language + hreflang alternates for this exact page.
+const LANG = getLang(Astro.url);
+const HAS_SV = hasSv(Astro.url.pathname);
+const HREF_EN = new URL(switchLangPath(Astro.url.pathname, "en"), SITE_URL).href;
+const HREF_SV = new URL(switchLangPath(Astro.url.pathname, "sv"), SITE_URL).href;
+const OG_LOCALE = LANG === "sv" ? "sv_SE" : "en_US";
 
 // Site-wide structured data (JSON-LD) — helps search engines and answer
 // engines (Google AI, ChatGPT, Perplexity) resolve Nuro as an entity. An
@@ -91,7 +100,7 @@ const STRUCTURED_DATA = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={LANG}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -99,6 +108,9 @@ const STRUCTURED_DATA = {
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={CANONICAL} />
+    <link rel="alternate" hreflang="en" href={HREF_EN} />
+    {HAS_SV && <link rel="alternate" hreflang="sv" href={HREF_SV} />}
+    <link rel="alternate" hreflang="x-default" href={HREF_EN} />
 
     {/* Preload the above-the-fold webfonts so the hero never swaps from the
         system fallback (which would reflow the H1 mid blur-in). */}
@@ -123,7 +135,7 @@ const STRUCTURED_DATA = {
     <meta name="theme-color" content="#FAF7F2" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={OG_LOCALE} />
     <meta property="og:url" content={CANONICAL} />
     <meta property="og:site_name" content="Nuro" />
     <meta property="og:title" content={TITLE} />

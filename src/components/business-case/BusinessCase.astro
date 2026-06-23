@@ -12,28 +12,49 @@
 import Aurora from "@/components/motion/Aurora.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./business-case.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    eyebrow: "The Business Case",
+    heading: "This isn't just the right thing to do.",
+    subLead: "It's the smartest investment a school can make.",
+    body: "When students with special needs don't get timely support, they become school refusers. Schools then face spiralling costs: specialist programs, home tuition, social services and eventually welfare dependency. Nuro is a preventative intervention that pays for itself many times over.",
+    statValue: "15M SEK",
+    statBody:
+      "estimated lifetime societal cost of one student dropping out due to lack of support.",
+    statSource: "Skandia Stiftelse",
+  },
+  sv: {
+    eyebrow: "Affärscaset",
+    heading: "Det här är inte bara det rätta att göra.",
+    subLead: "Det är den smartaste investeringen en skola kan göra.",
+    body: "När elever med särskilda behov inte får stöd i tid blir de hemmasittare. Skolan möter då skenande kostnader: specialprogram, hemundervisning, socialtjänst och till slut bidragsberoende. Nuro är en förebyggande insats som betalar sig många gånger om.",
+    statValue: "15 MSEK",
+    statBody:
+      "uppskattad samhällskostnad över en livstid för en elev som hoppar av på grund av bristande stöd.",
+    statSource: "Skandias stiftelse",
+  },
+}[lang];
 ---
 
 <section id="business-case" class={styles.section}>
   <div class={styles.container}>
     <div class={styles.grid}>
       <div>
-        <Reveal class={styles.eyebrow}>The Business Case</Reveal>
+        <Reveal class={styles.eyebrow}>{t.eyebrow}</Reveal>
 
         <Reveal as="h2" class={styles.heading} delay={0.06}>
-          This isn&apos;t just the right thing to do.
+          {t.heading}
         </Reveal>
 
         <Reveal as="p" class={styles.subLead} delay={0.12}>
-          It&apos;s the smartest investment a school can make.
+          {t.subLead}
         </Reveal>
 
         <Reveal as="p" class={styles.body} delay={0.18}>
-          When students with special needs don&apos;t get timely support, they
-          become school refusers. Schools then face spiralling costs: specialist
-          programs, home tuition, social services and eventually welfare
-          dependency. Nuro is a preventative intervention that pays for itself
-          many times over.
+          {t.body}
         </Reveal>
       </div>
 

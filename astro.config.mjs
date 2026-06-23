@@ -10,6 +10,13 @@ export default defineConfig({
   output: "server",
   adapter: node({ mode: "standalone" }),
   site: "https://nuroai.dev",
+  // Bilingual: English at the root (/), Swedish under /sv/. No auto-redirect —
+  // a language switcher in the nav/footer is the only way between them.
+  i18n: {
+    locales: ["en", "sv"],
+    defaultLocale: "en",
+    routing: { prefixDefaultLocale: false },
+  },
   // React only powers the contact-drawer island (Vaul). It hydrates on
   // demand (client:visible in the footer) — the rest of the page is static.
   integrations: [react()],
