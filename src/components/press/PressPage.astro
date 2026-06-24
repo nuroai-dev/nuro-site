@@ -1,0 +1,73 @@
+---
+/**
+ * Press page content, locale-aware (English at /press, Swedish at /sv/press).
+ * Rendered by both src/pages/press.astro and src/pages/sv/press.astro. Reads
+ * PRESS_ITEMS; each card picks its Swedish title/summary on /sv (PressCard).
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import PressCard from "@/components/press/PressCard.astro";
+import { PRESS_ITEMS } from "@/data/press";
+import styles from "@/components/press/press.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Press — Nuro",
+    description:
+      "News coverage and press about Nuro, inclusive education for Swedish schools.",
+    eyebrow: "Press",
+    heading: "Nuro in the news",
+    emptyTitle: "No press articles yet",
+    emptyBody:
+      "We're just getting started. When outlets write about Nuro, their articles will appear here.",
+  },
+  sv: {
+    title: "Press — Nuro",
+    description:
+      "Nyheter och press om Nuro, inkluderande utbildning för svenska skolor.",
+    eyebrow: "Press",
+    heading: "Nuro i media",
+    emptyTitle: "Inga pressartiklar än",
+    emptyBody:
+      "Vi har precis börjat. När medier skriver om Nuro dyker deras artiklar upp här.",
+  },
+}[lang];
+
+const items = [...PRESS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+
+        {
+          items.length > 0 ? (
+            <div class={styles.grid}>
+              {items.map((item, i) => (
+                <Reveal delay={Math.min(i, 5) * 0.06}>
+                  <PressCard item={item} />
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <Reveal class={styles.empty} delay={0.18}>
+              <span class={styles.emptyTitle}>{t.emptyTitle}</span>
+              <p class={styles.emptyBody}>{t.emptyBody}</p>
+            </Reveal>
+          )
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

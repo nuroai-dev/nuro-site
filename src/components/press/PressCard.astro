@@ -6,14 +6,20 @@
  */
 import type { PressItem } from "@/data/press";
 import styles from "./press.module.css";
+import { getLang } from "@/i18n/ui";
 
 interface Props {
   item: PressItem;
 }
 
 const { item } = Astro.props;
+const lang = getLang(Astro.url);
 
-const dateLabel = new Intl.DateTimeFormat("en-GB", {
+const title = lang === "sv" ? (item.titleSv ?? item.title) : item.title;
+const tldr = lang === "sv" ? (item.tldrSv ?? item.tldr) : item.tldr;
+const readLabel = lang === "sv" ? "Läs artikeln" : "Read article";
+
+const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
   day: "numeric",
   month: "short",
   year: "numeric",
@@ -45,11 +51,11 @@ const dateLabel = new Intl.DateTimeFormat("en-GB", {
       <time class={styles.date} datetime={item.date}>{dateLabel}</time>
     </div>
 
-    <h3 class={styles.title}>{item.title}</h3>
-    <p class={styles.tldr}>{item.tldr}</p>
+    <h3 class={styles.title}>{title}</h3>
+    <p class={styles.tldr}>{tldr}</p>
 
     <span class={styles.readMore}>
-      Read article
+      {readLabel}
       <svg
         class={styles.extIcon}
         width="14"
