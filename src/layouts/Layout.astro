@@ -70,6 +70,7 @@ const STRUCTURED_DATA = {
       logo: `${SITE_URL}/logo.png`,
       description:
         "Nuro helps Swedish schools support neurodivergent students with ADHD, autism, and dyslexia through AI-powered lesson adaptation.",
+      knowsLanguage: ["en", "sv"],
       sameAs: SOCIAL,
     },
     {
@@ -79,7 +80,7 @@ const STRUCTURED_DATA = {
       name: "Nuro",
       description: DEFAULT_DESCRIPTION,
       publisher: { "@id": `${SITE_URL}/#organization` },
-      inLanguage: "en",
+      inLanguage: LANG,
     },
     {
       "@type": "SoftwareApplication",
