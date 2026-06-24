@@ -1,0 +1,181 @@
+---
+/**
+ * Privacy policy content, locale-aware (English at /privacy, Swedish at
+ * /sv/privacy). Rendered by both src/pages/privacy.astro and
+ * src/pages/sv/privacy.astro so there is one source of truth.
+ *
+ * Scoped to the marketing website (the waitlist + contact forms), written to
+ * reflect what the site actually collects. Starter content the team plans to
+ * refine later. The product's handling of student data is governed separately.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Privacy Policy — Nuro",
+    description:
+      "How Nuro handles personal data collected through this website — what we collect, why, and the rights you have under the GDPR.",
+    eyebrow: "Legal",
+    heading: "Privacy Policy",
+    updated: "Last updated June 2026",
+    intro:
+      "This policy explains how Nuro handles personal data collected through this website – primarily the waitlist and contact forms. We keep data collection to the minimum we need, and we never sell your personal data.",
+    collectHeading: "What we collect",
+    collectIntro: "When you use this website, we may collect:",
+    collectWaitlist:
+      "your email address, the role you select (parent/guardian, student, or teacher/school staff), the student age ranges you choose, and any optional message you write.",
+    collectWaitlistLabel: "Waitlist details",
+    collectContact:
+      "the name, email, and message you send us through the contact form.",
+    collectContactLabel: "Contact messages",
+    collectTechnical:
+      "basic server logs (such as IP address and browser type) needed to operate and secure the site.",
+    collectTechnicalLabel: "Technical data",
+    whyHeading: "Why we use it and our legal basis",
+    whyWaitlistPre: "To add you to the waitlist and keep you updated about Nuro – on the basis of your ",
+    whyWaitlistStrong: "consent",
+    whyWaitlistPost: ", which you can withdraw at any time.",
+    whyContactPre: "To reply to your enquiries – on the basis of our ",
+    whyContactStrong: "legitimate interest",
+    whyContactPost: " in responding to people who contact us.",
+    whySecurity:
+      "To keep the site secure and working – on the basis of our legitimate interest in operating the service.",
+    sharingHeading: "Sharing",
+    sharingBody:
+      "We use a small number of trusted service providers (for example, email delivery and website hosting) who process data on our behalf under appropriate agreements. We do not sell your data or share it for advertising.",
+    retentionHeading: "How long we keep it",
+    retentionBody:
+      "We keep waitlist and contact data only as long as needed for the purpose it was collected, or until you ask us to remove it.",
+    rightsHeading: "Your rights",
+    rightsBody:
+      "Under the GDPR you have the right to access, correct, or delete your personal data, to object to or restrict its processing, to data portability, and to withdraw consent at any time. You can also lodge a complaint with the Swedish Authority for Privacy Protection (IMY).",
+    childrenHeading: "Children’s data",
+    childrenBody:
+      "This website is intended for adults (parents, guardians, and school staff). It does not knowingly collect personal data directly from children. How Nuro’s product handles student data is described separately in the agreements with the schools and families that use it.",
+    contactHeading: "Contact",
+    contactPre: "For any privacy question or to exercise your rights, email us at ",
+    contactPost:
+      ". If you need our formal company details for a request, contact us and we will provide them.",
+  },
+  sv: {
+    title: "Integritetspolicy — Nuro",
+    description:
+      "Hur Nuro hanterar personuppgifter som samlas in via den här webbplatsen, vad vi samlar in, varför, och vilka rättigheter du har enligt GDPR.",
+    eyebrow: "Juridik",
+    heading: "Integritetspolicy",
+    updated: "Senast uppdaterad juni 2026",
+    intro:
+      "Den här policyn förklarar hur Nuro hanterar personuppgifter som samlas in via den här webbplatsen, främst via väntelistan och kontaktformulären. Vi håller insamlingen av uppgifter till ett minimum, och vi säljer aldrig dina personuppgifter.",
+    collectHeading: "Vad vi samlar in",
+    collectIntro: "När du använder den här webbplatsen kan vi samla in:",
+    collectWaitlist:
+      "din e-postadress, den roll du väljer (förälder/vårdnadshavare, elev eller lärare/skolpersonal), de åldersspann för elever du väljer, och eventuella meddelanden du själv skriver.",
+    collectWaitlistLabel: "Uppgifter från väntelistan",
+    collectContact:
+      "det namn, den e-postadress och det meddelande du skickar till oss via kontaktformuläret.",
+    collectContactLabel: "Kontaktmeddelanden",
+    collectTechnical:
+      "grundläggande serverloggar (som IP-adress och webbläsartyp) som behövs för att driva och säkra webbplatsen.",
+    collectTechnicalLabel: "Tekniska uppgifter",
+    whyHeading: "Varför vi använder uppgifterna och vår rättsliga grund",
+    whyWaitlistPre:
+      "För att lägga till dig på väntelistan och hålla dig uppdaterad om Nuro, med stöd av ditt ",
+    whyWaitlistStrong: "samtycke",
+    whyWaitlistPost: ", som du kan återkalla när som helst.",
+    whyContactPre: "För att svara på dina frågor, med stöd av vårt ",
+    whyContactStrong: "berättigade intresse",
+    whyContactPost: " av att svara de personer som kontaktar oss.",
+    whySecurity:
+      "För att hålla webbplatsen säker och fungerande, med stöd av vårt berättigade intresse av att driva tjänsten.",
+    sharingHeading: "Delning",
+    sharingBody:
+      "Vi använder ett fåtal betrodda tjänsteleverantörer (till exempel för e-postutskick och webbhotell) som behandlar uppgifter för vår räkning enligt lämpliga avtal. Vi säljer inte dina uppgifter och delar dem inte för annonsering.",
+    retentionHeading: "Hur länge vi sparar uppgifterna",
+    retentionBody:
+      "Vi sparar uppgifter från väntelistan och kontaktformulären bara så länge som behövs för det ändamål de samlades in för, eller tills du ber oss ta bort dem.",
+    rightsHeading: "Dina rättigheter",
+    rightsBody:
+      "Enligt GDPR har du rätt att få tillgång till, rätta eller radera dina personuppgifter, att invända mot eller begränsa behandlingen av dem, till dataportabilitet, och att återkalla ditt samtycke när som helst. Du kan också lämna in ett klagomål till Integritetsskyddsmyndigheten (IMY).",
+    childrenHeading: "Barns uppgifter",
+    childrenBody:
+      "Den här webbplatsen är avsedd för vuxna (föräldrar, vårdnadshavare och skolpersonal). Den samlar inte medvetet in personuppgifter direkt från barn. Hur Nuros produkt hanterar elevuppgifter beskrivs separat i avtalen med de skolor och familjer som använder den.",
+    contactHeading: "Kontakt",
+    contactPre:
+      "Vid frågor om integritet eller för att utöva dina rättigheter, mejla oss på ",
+    contactPost:
+      ". Om du behöver våra formella företagsuppgifter för en begäran, kontakta oss så lämnar vi dem.",
+  },
+}[lang];
+
+export const prerender = true;
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+          {t.updated}
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>{t.intro}</Reveal>
+
+          <h2>{t.collectHeading}</h2>
+          <p>{t.collectIntro}</p>
+          <ul>
+            <li>
+              <strong>{t.collectWaitlistLabel}</strong> – {t.collectWaitlist}
+            </li>
+            <li>
+              <strong>{t.collectContactLabel}</strong> – {t.collectContact}
+            </li>
+            <li>
+              <strong>{t.collectTechnicalLabel}</strong> – {t.collectTechnical}
+            </li>
+          </ul>
+
+          <h2>{t.whyHeading}</h2>
+          <ul>
+            <li>
+              {t.whyWaitlistPre}<strong>{t.whyWaitlistStrong}</strong>{t.whyWaitlistPost}
+            </li>
+            <li>
+              {t.whyContactPre}<strong>{t.whyContactStrong}</strong>{t.whyContactPost}
+            </li>
+            <li>{t.whySecurity}</li>
+          </ul>
+
+          <h2>{t.sharingHeading}</h2>
+          <p>{t.sharingBody}</p>
+
+          <h2>{t.retentionHeading}</h2>
+          <p>{t.retentionBody}</p>
+
+          <h2>{t.rightsHeading}</h2>
+          <p>{t.rightsBody}</p>
+
+          <h2>{t.childrenHeading}</h2>
+          <p>{t.childrenBody}</p>
+
+          <h2>{t.contactHeading}</h2>
+          <p>
+            {t.contactPre}<a href="mailto:hello@nuroai.dev">hello@nuroai.dev</a>{t.contactPost}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

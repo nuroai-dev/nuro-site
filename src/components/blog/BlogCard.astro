@@ -6,6 +6,7 @@
  */
 import type { CollectionEntry } from "astro:content";
 import styles from "./blog.module.css";
+import { getLang } from "@/i18n/ui";
 
 interface Props {
   post: CollectionEntry<"blog">;
@@ -13,7 +14,12 @@ interface Props {
 
 const { post } = Astro.props;
 
-const dateLabel = new Intl.DateTimeFormat("en-GB", {
+// Card chrome follows the page locale; the post title/description stay as
+// authored (English for now). Links also stay on /blog (posts not yet localized).
+const lang = getLang(Astro.url);
+const readMore = lang === "sv" ? "Läs artikeln" : "Read article";
+
+const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
   day: "numeric",
   month: "short",
   year: "numeric",
@@ -57,7 +63,7 @@ const fallbackLabel = tag
     <p class={styles.tldr}>{post.data.description}</p>
 
     <span class={styles.readMore}>
-      Read article
+      {readMore}
       <svg
         class={styles.extIcon}
         width="14"

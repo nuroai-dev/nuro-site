@@ -32,7 +32,7 @@ function toEnglishPath(pathname: string): string {
  * ships, and the switcher + hreflang light up for it automatically. Anything
  * not listed falls back to the Swedish home (no broken /sv/<page> links).
  */
-export const TRANSLATED_PATHS = new Set<string>(["/", "/about", "/team", "/press"]);
+export const TRANSLATED_PATHS = new Set<string>(["/", "/about", "/team", "/press", "/career", "/privacy", "/terms", "/blog"]);
 
 /** Does this page have a Swedish version yet? */
 export function hasSv(pathname: string): boolean {
