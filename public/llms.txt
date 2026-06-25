@@ -1,6 +1,8 @@
 # Nuro
 
-> Nuro is an AI-powered education platform that helps Swedish schools give neurodivergent students — including those with ADHD, autism, and dyslexia — the adapted support they are legally entitled to under Skollagen (the Swedish Education Act). It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers (hemmasittare).
+> Nuro is an AI-powered education platform that helps Swedish schools give neurodivergent students (including those with ADHD, autism, and dyslexia) the adapted support they are legally entitled to under Skollagen (the Swedish Education Act). It helps teachers see each individual student, automatically adapts lessons to how each child learns, and flags students at risk of falling behind long before they become school refusers (hemmasittare).
+
+The site is bilingual: English at the root and Swedish under /sv (for example https://nuroai.dev/sv/).
 
 ## What Nuro does
 
@@ -19,11 +21,17 @@
 
 ## Pages
 
-- [Home](https://nuroai.dev/): the problem, the business case, the solution, and the three experiences (students, teachers, parents).
+- [Home](https://nuroai.dev/): the problem, the business case, the solution, and the three experiences (students, teachers, parents). Swedish: https://nuroai.dev/sv/
 - [About](https://nuroai.dev/about): Nuro's mission statement.
-- [Blog](https://nuroai.dev/blog): notes on neurodiversity in education — research, the law, and what helps.
 - [Team](https://nuroai.dev/team): the people building Nuro.
 - [Press](https://nuroai.dev/press): news and coverage.
 - [Career](https://nuroai.dev/career): join the team.
-- [Privacy](https://nuroai.dev/privacy): how the website handles personal data.
-- [Terms](https://nuroai.dev/terms): terms of use for the website and waitlist.
+- [Blog](https://nuroai.dev/blog): notes on neurodiversity in education, the research, the law, and what helps.
+- [Privacy](https://nuroai.dev/privacy) and [Terms](https://nuroai.dev/terms).
+
+## Blog posts
+
+- [The right to support exists. The system to deliver it doesn't, yet.](https://nuroai.dev/blog/the-right-exists-the-system-doesnt): the legal right to support versus the lived reality for neurodivergent students.
+- [Sweden needs 80% more special-education teachers. The students can't wait for them.](https://nuroai.dev/blog/sweden-needs-more-special-education-teachers): the special-education teacher shortage and what it means for students who need support now.
+- [Sweden's hemmasittare have doubled in four years. Most of them are neurodivergent.](https://nuroai.dev/blog/school-absence-starts-earlier): chronic school absence, who it affects, and catching the early signals.
+- [Extra anpassningar, särskilt stöd, åtgärdsprogram: what Skollagen actually requires.](https://nuroai.dev/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod): the three legal support tiers explained, who decides them, and what can be appealed.
