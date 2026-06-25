@@ -4,10 +4,9 @@
  * Rendered by both src/pages/blog/index.astro and src/pages/sv/blog/index.astro
  * so there is one source of truth.
  *
- * Only the page chrome is translated. The posts themselves are Markdown files
- * in src/content/blog/ and their bodies stay English for now; on /sv the cards
- * still show the English post title/description but localize their own chrome
- * (date, "read article" label).
+ * The page chrome is translated, and so are the posts: /blog lists the English
+ * `blog` collection, /sv/blog lists the Swedish `blogSv` collection (same slugs,
+ * translated bodies). The cards link to the matching locale's post URL.
  */
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
@@ -44,9 +43,9 @@ const t = {
 
 export const prerender = true;
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
-  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
-);
+const posts = (
+  await getCollection(lang === "sv" ? "blogSv" : "blog", ({ data }) => !data.draft)
+).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 ---
 
 <Layout title={t.title} description={t.description}>

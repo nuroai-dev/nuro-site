@@ -61,11 +61,22 @@ export const GET: APIRoute = async () => {
   }
 
   for (const post of posts) {
-    urls.push(
-      `  <url>\n    <loc>${SITE}/blog/${post.id}/</loc>\n    <lastmod>${post.data.pubDate
-        .toISOString()
-        .slice(0, 10)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>`,
-    );
+    const lastmod = post.data.pubDate.toISOString().slice(0, 10);
+    const meta = `    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>`;
+    const enHref = `${SITE}/blog/${post.id}/`;
+    // Posts whose Swedish body has shipped get both URLs + hreflang alternates.
+    const hasSv = TRANSLATED_PATHS.has(`/blog/${post.id}`);
+    if (hasSv) {
+      const svHref = `${SITE}/sv/blog/${post.id}/`;
+      urls.push(
+        `  <url>\n    <loc>${enHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
+      );
+      urls.push(
+        `  <url>\n    <loc>${svHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
+      );
+    } else {
+      urls.push(`  <url>\n    <loc>${enHref}</loc>\n${meta}\n  </url>`);
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls.join("\n")}\n</urlset>\n`;
