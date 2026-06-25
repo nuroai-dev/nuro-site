@@ -14,7 +14,7 @@ On paper, that should be the end of the story. In practice, it's where the harde
 
 A legal right is a promise. Delivering it is a logistics problem — and it lands on people who are already stretched thin. A teacher with thirty students can believe completely in inclusive education and still not have the hours in the day to build a different version of every lesson for the handful of students who need one. The support is owed. The capacity to give it isn't there.
 
-This is where neurodivergent students — those with ADHD, autism, dyslexia, and other ways of thinking — tend to slip. Not because anyone decided they didn't deserve help, and not because the law forgot them. They slip because the system around the teacher was never built to make adapted support the default. It treats it as an exception, something you arrange after a student has already started to struggle.
+This is where neurodivergent students — those with ADHD, autism, dyslexia, and other ways of thinking — tend to slip. Not because anyone decided they didn't deserve help, and not because the law forgot them. They slip because the system around the teacher was never built to make [adapted support](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod) the default. It treats it as an exception, something you arrange after a student has already started to struggle.
 
 By then, you're often not preventing a problem. You're managing one.
 
