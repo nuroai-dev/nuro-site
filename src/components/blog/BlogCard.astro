@@ -9,15 +9,16 @@ import styles from "./blog.module.css";
 import { getLang } from "@/i18n/ui";
 
 interface Props {
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog"> | CollectionEntry<"blogSv">;
 }
 
 const { post } = Astro.props;
 
-// Card chrome follows the page locale; the post title/description stay as
-// authored (English for now). Links also stay on /blog (posts not yet localized).
+// Card chrome and post link follow the page locale: /sv cards link to the
+// Swedish post body at /sv/blog/<slug>, English cards to /blog/<slug>.
 const lang = getLang(Astro.url);
 const readMore = lang === "sv" ? "Läs artikeln" : "Read article";
+const href = lang === "sv" ? `/sv/blog/${post.id}` : `/blog/${post.id}`;
 
 const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
   day: "numeric",
@@ -37,7 +38,7 @@ const fallbackLabel = tag
   : "Nuro";
 ---
 
-<a class={styles.card} href={`/blog/${post.id}`}>
+<a class={styles.card} href={href}>
   <div class={styles.media}>
     {
       post.data.heroImage ? (
