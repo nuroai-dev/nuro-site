@@ -46,6 +46,16 @@ const schema = {
   mainEntityOfPage: url,
   image: `${SITE_URL}/og.png`,
 };
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Hem", item: `${SITE_URL}/sv/` },
+    { "@type": "ListItem", position: 2, name: "Blogg", item: `${SITE_URL}/sv/blog` },
+    { "@type": "ListItem", position: 3, name: post.data.title, item: url },
+  ],
+};
 ---
 
 <Layout title={`${post.data.title} — Nuro`} description={post.data.description}>
@@ -66,4 +76,5 @@ const schema = {
   </main>
   <Footer />
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
 </Layout>
