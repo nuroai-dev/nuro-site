@@ -51,6 +51,8 @@ const HAS_SV = hasSv(Astro.url.pathname);
 const HREF_EN = new URL(switchLangPath(Astro.url.pathname, "en"), SITE_URL).href;
 const HREF_SV = new URL(switchLangPath(Astro.url.pathname, "sv"), SITE_URL).href;
 const OG_LOCALE = LANG === "sv" ? "sv_SE" : "en_US";
+// Only advertise the alternate locale when this page actually exists in it.
+const OG_LOCALE_ALT = HAS_SV ? (LANG === "sv" ? "en_US" : "sv_SE") : null;
 
 // Site-wide structured data (JSON-LD) — helps search engines and answer
 // engines (Google AI, ChatGPT, Perplexity) resolve Nuro as an entity. An
@@ -137,6 +139,7 @@ const STRUCTURED_DATA = {
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={OG_LOCALE} />
+    {OG_LOCALE_ALT && <meta property="og:locale:alternate" content={OG_LOCALE_ALT} />}
     <meta property="og:url" content={CANONICAL} />
     <meta property="og:site_name" content="Nuro" />
     <meta property="og:title" content={TITLE} />
