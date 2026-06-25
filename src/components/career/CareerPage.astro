@@ -1,0 +1,72 @@
+---
+/**
+ * Career page content, locale-aware (English at /career, Swedish at
+ * /sv/career). Rendered by both src/pages/career.astro and
+ * src/pages/sv/career.astro so there is one source of truth.
+ *
+ * No open roles posted yet — a short, warm "we're growing, get in touch" page
+ * with a Contact CTA that opens the shared ContactDrawer (data-contact-trigger).
+ * Copy is starter content — edit freely as hiring plans firm up.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Career — Nuro",
+    description:
+      "Help us build the tool that gives every neurodivergent student the support the law promises them. Join the Nuro team.",
+    eyebrow: "Career",
+    heading: "Build the tool the system was missing",
+    p1: "We’re a small team in Sweden on a big mission: make sure every neurodivergent student gets the adapted support the law already says they’re entitled to – long before they fall through the cracks.",
+    p2: "We don’t have any open positions posted right now, but we grow fast and we’re always glad to meet people who care about education, inclusion, and building things that matter. Engineers, educators, designers, researchers – if that’s you, we’d love to hear from you.",
+    p3: "Tell us who you are and how you’d want to help.",
+    cta: "Get in touch",
+  },
+  sv: {
+    title: "Karriär — Nuro",
+    description:
+      "Hjälp oss bygga verktyget som ger varje neurodivergent elev det stöd som lagen lovar dem. Bli en del av teamet på Nuro.",
+    eyebrow: "Karriär",
+    heading: "Bygg verktyget som systemet saknade",
+    p1: "Vi är ett litet team i Sverige med ett stort uppdrag. Vi vill se till att varje neurodivergent elev får det anpassade stöd som lagen redan säger att de har rätt till, långt innan de faller mellan stolarna.",
+    p2: "Vi har inga lediga tjänster utlysta just nu, men vi växer snabbt och vi träffar alltid gärna människor som bryr sig om utbildning, inkludering och att bygga saker som spelar roll. Ingenjörer, pedagoger, designers, forskare. Om det är du vill vi gärna höra från dig.",
+    p3: "Berätta vem du är och hur du skulle vilja bidra.",
+    cta: "Kontakta oss",
+  },
+}[lang];
+
+export const prerender = true;
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>{t.p1}</Reveal>
+          <Reveal as="p" delay={0.16}>{t.p2}</Reveal>
+          <Reveal as="p" delay={0.2}>{t.p3}</Reveal>
+
+          <Reveal delay={0.24}>
+            <button type="button" class={styles.cta} data-contact-trigger>
+              {t.cta}
+            </button>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

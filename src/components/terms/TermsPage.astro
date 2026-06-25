@@ -1,0 +1,130 @@
+---
+/**
+ * Terms of use content, locale-aware (English at /terms, Swedish at /sv/terms).
+ * Rendered by both src/pages/terms.astro and src/pages/sv/terms.astro so there
+ * is one source of truth.
+ *
+ * Covers use of the marketing website and the waitlist. Starter content the
+ * team plans to refine later. Terms for the Nuro product/service are agreed
+ * separately with customers.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/page/page.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Terms of Use — Nuro",
+    description:
+      "The terms that apply to your use of the Nuro website and waitlist.",
+    eyebrow: "Legal",
+    heading: "Terms of Use",
+    updated: "Last updated June 2026",
+    intro:
+      "These terms apply to your use of this website and the Nuro waitlist. By using the site you agree to them. If you don’t agree, please don’t use the site.",
+    usingHeading: "Using this site",
+    usingBody:
+      "You may browse the site and join the waitlist for your own, non-commercial use. Please don’t misuse the site – for example by attempting to disrupt it, access it without authorization, or submit false or abusive information through the forms.",
+    waitlistHeading: "The waitlist",
+    waitlistBody:
+      "Joining the waitlist registers your interest in Nuro. It is not a purchase, a contract for the product, or a guarantee of access, pricing, timing, or any specific feature. We may contact you with updates about Nuro, and you can opt out at any time.",
+    ipHeading: "Intellectual property",
+    ipBody:
+      "The Nuro name, logo, content, and design on this site belong to Nuro and may not be copied or reused without our permission.",
+    warrantiesHeading: "No warranties",
+    warrantiesBody:
+      "The site is provided “as is”. We work to keep it accurate and available, but we don’t guarantee it will always be uninterrupted, error-free, or up to date.",
+    liabilityHeading: "Limitation of liability",
+    liabilityBody:
+      "To the extent permitted by law, Nuro is not liable for any indirect or consequential loss arising from your use of this website.",
+    changesHeading: "Changes",
+    changesBody:
+      "We may update these terms from time to time. The current version always lives on this page.",
+    contactHeading: "Contact",
+    contactPre: "Questions about these terms? Email us at ",
+    contactPost: ".",
+  },
+  sv: {
+    title: "Användarvillkor — Nuro",
+    description:
+      "Villkoren som gäller för din användning av Nuros webbplats och väntelista.",
+    eyebrow: "Juridik",
+    heading: "Användarvillkor",
+    updated: "Senast uppdaterad juni 2026",
+    intro:
+      "De här villkoren gäller för din användning av den här webbplatsen och Nuros väntelista. Genom att använda webbplatsen godkänner du dem. Om du inte godkänner dem ber vi dig att inte använda webbplatsen.",
+    usingHeading: "Att använda webbplatsen",
+    usingBody:
+      "Du får besöka webbplatsen och anmäla dig till väntelistan för eget, icke-kommersiellt bruk. Använd inte webbplatsen på fel sätt, till exempel genom att försöka störa den, komma åt den utan behörighet eller skicka in falsk eller kränkande information via formulären.",
+    waitlistHeading: "Väntelistan",
+    waitlistBody:
+      "Att anmäla sig till väntelistan registrerar ditt intresse för Nuro. Det är inte ett köp, ett avtal om produkten eller en garanti för tillgång, pris, tidpunkt eller någon specifik funktion. Vi kan kontakta dig med uppdateringar om Nuro, och du kan avregistrera dig när som helst.",
+    ipHeading: "Immateriella rättigheter",
+    ipBody:
+      "Namnet Nuro, logotypen, innehållet och designen på den här webbplatsen tillhör Nuro och får inte kopieras eller återanvändas utan vårt tillstånd.",
+    warrantiesHeading: "Inga garantier",
+    warrantiesBody:
+      "Webbplatsen tillhandahålls i befintligt skick. Vi arbetar för att hålla den korrekt och tillgänglig, men vi garanterar inte att den alltid är fri från avbrott, felfri eller uppdaterad.",
+    liabilityHeading: "Ansvarsbegränsning",
+    liabilityBody:
+      "I den utsträckning lagen tillåter ansvarar Nuro inte för någon indirekt skada eller följdskada som uppstår genom din användning av den här webbplatsen.",
+    changesHeading: "Ändringar",
+    changesBody:
+      "Vi kan komma att uppdatera de här villkoren då och då. Den aktuella versionen finns alltid på den här sidan.",
+    contactHeading: "Kontakt",
+    contactPre: "Frågor om de här villkoren? Mejla oss på ",
+    contactPost: ".",
+  },
+}[lang];
+
+export const prerender = true;
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+          {t.updated}
+        </Reveal>
+
+        <div class={styles.body}>
+          <Reveal as="p" delay={0.12}>{t.intro}</Reveal>
+
+          <h2>{t.usingHeading}</h2>
+          <p>{t.usingBody}</p>
+
+          <h2>{t.waitlistHeading}</h2>
+          <p>{t.waitlistBody}</p>
+
+          <h2>{t.ipHeading}</h2>
+          <p>{t.ipBody}</p>
+
+          <h2>{t.warrantiesHeading}</h2>
+          <p>{t.warrantiesBody}</p>
+
+          <h2>{t.liabilityHeading}</h2>
+          <p>{t.liabilityBody}</p>
+
+          <h2>{t.changesHeading}</h2>
+          <p>{t.changesBody}</p>
+
+          <h2>{t.contactHeading}</h2>
+          <p>
+            {t.contactPre}<a href="mailto:hello@nuroai.dev">hello@nuroai.dev</a>{t.contactPost}
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

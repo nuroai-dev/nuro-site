@@ -1,0 +1,195 @@
+---
+/**
+ * Team page content — locale-aware (English at /team, Swedish at /sv/team).
+ * Rendered by both src/pages/team.astro and src/pages/sv/team.astro. Names,
+ * photos and contact details are shared; headings + role titles + chrome are
+ * translated.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/team/team.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Team — Nuro",
+    description:
+      "Meet the team building Nuro: the founders, the team, and the board behind a mission to give every neurodivergent student the support they're entitled to.",
+    eyebrow: "Team",
+    heading: "The people building Nuro",
+    intro:
+      "Engineers, educators, and builders on one mission: make sure every neurodivergent student gets the support they're entitled to.",
+    photoAlt: "Sandra Hilltomt and Victor Wallander, Nuro's founders",
+    headFounders: "Founders",
+    headTeam: "Team",
+    headBoard: "Board",
+    rCeo: "Founder & CEO",
+    rCto: "Co-Founder & CTO",
+    rDesign: "Head of Design",
+    rAssociate: "Founders Associate",
+    rBoard: "Board Member",
+    hiringPre: "We're growing.",
+    hiringLink: "See open roles →",
+  },
+  sv: {
+    title: "Team — Nuro",
+    description:
+      "Möt teamet bakom Nuro: grundarna, teamet och styrelsen bakom uppdraget att ge varje neurodivergent elev det stöd den har rätt till.",
+    eyebrow: "Team",
+    heading: "Människorna som bygger Nuro",
+    intro:
+      "Ingenjörer, pedagoger och byggare med ett uppdrag: att se till att varje neurodivergent elev får det stöd den har rätt till.",
+    photoAlt: "Sandra Hilltomt och Victor Wallander, Nuros grundare",
+    headFounders: "Grundare",
+    headTeam: "Team",
+    headBoard: "Styrelse",
+    rCeo: "Grundare & VD",
+    rCto: "Medgrundare & CTO",
+    rDesign: "Designchef",
+    rAssociate: "Founders Associate",
+    rBoard: "Styrelseledamot",
+    hiringPre: "Vi växer.",
+    hiringLink: "Se lediga roller →",
+  },
+}[lang];
+
+type Person = {
+  name: string;
+  role: string;
+  photo?: string;
+  phoneDisplay?: string;
+  phoneHref?: string;
+  email: string;
+};
+
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+
+const GROUPS: { heading: string; people: Person[] }[] = [
+  {
+    heading: t.headFounders,
+    people: [
+      {
+        name: "Sandra Hilltomt",
+        role: t.rCeo,
+        photo: "/team/sandra-hilltomt.jpg",
+        phoneDisplay: "+46(0)736 56 01 63",
+        phoneHref: "+46736560163",
+        email: "sandra@nuroai.dev",
+      },
+      {
+        name: "Victor Wallander",
+        role: t.rCto,
+        photo: "/team/victor-wallander.jpg",
+        phoneDisplay: "+46(0)730 35 25 06",
+        phoneHref: "+46730352506",
+        email: "victor@nuroai.dev",
+      },
+    ],
+  },
+  {
+    heading: t.headTeam,
+    people: [
+      { name: "Jonathan Olsen", role: t.rDesign, email: "jonathan@nuroai.dev" },
+      { name: "Isabella Sällfors", role: t.rAssociate, email: "isabella@nuroai.dev" },
+    ],
+  },
+  {
+    heading: t.headBoard,
+    people: [
+      {
+        name: "Sead Kadric",
+        role: t.rBoard,
+        phoneDisplay: "+46(0)708 79 51 17",
+        phoneHref: "+46708795117",
+        email: "sead@nuroai.dev",
+      },
+    ],
+  },
+];
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main>
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          {t.intro}
+        </Reveal>
+
+        <Reveal class={styles.photo} delay={0.14}>
+          <img
+            src="/team/founders-wide.jpg"
+            alt={t.photoAlt}
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+        </Reveal>
+
+        {
+          GROUPS.map((group) => (
+            <div class={styles.group}>
+              <Reveal as="h2" class={styles.groupHeading}>
+                {group.heading}
+              </Reveal>
+              <div class={styles.people}>
+                {group.people.map((p) => (
+                  <Reveal class={styles.person}>
+                    <div class={styles.avatar}>
+                      {p.photo ? (
+                        <img
+                          class={styles.avatarImg}
+                          src={p.photo}
+                          alt={p.name}
+                          width="64"
+                          height="64"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span class={styles.avatarFallback} aria-hidden="true">
+                          {initials(p.name)}
+                        </span>
+                      )}
+                    </div>
+                    <span class={styles.personName}>{p.name}</span>
+                    <span class={styles.personRole}>{p.role}</span>
+                    <div class={styles.contact}>
+                      {p.phoneDisplay && (
+                        <a class={styles.contactLink} href={`tel:${p.phoneHref}`}>
+                          {p.phoneDisplay}
+                        </a>
+                      )}
+                      <a class={styles.contactLink} href={`mailto:${p.email}`}>
+                        {p.email}
+                      </a>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+
+        <Reveal as="p" class={styles.hiring}>
+          {t.hiringPre} <a href="/career">{t.hiringLink}</a>
+        </Reveal>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
