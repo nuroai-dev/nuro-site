@@ -19,8 +19,13 @@ const dateLabel = new Intl.DateTimeFormat("en-GB", {
   year: "numeric",
 }).format(post.data.pubDate);
 
-// Fallback panel label — the post's primary tag (Title Case), else "Nuro".
-const tag = post.data.tags[0];
+// Fallback panel label — the post's most specific tag (Title Case). Every
+// post carries the generic "neurodiversity" tag, so prefer the first tag that
+// isn't that, to keep the cards visually distinct (Skollagen / Teacher
+// shortage / School absence …). Falls back to the first tag, then "Nuro".
+const tag =
+  post.data.tags.find((t) => t.toLowerCase() !== "neurodiversity") ??
+  post.data.tags[0];
 const fallbackLabel = tag
   ? tag.replace(/\b\w/g, (c) => c.toUpperCase())
   : "Nuro";
