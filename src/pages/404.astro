@@ -1,0 +1,103 @@
+---
+/**
+ * Branded, bilingual 404 page, rendered for any unmatched route.
+ * Locale follows the requested path: /sv/... shows Swedish, everything else English.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "Page not found (404)",
+    description: "We could not find that page on nuroai.dev.",
+    eyebrow: "404",
+    heading: "We could not find that page",
+    intro: "The page may have moved, or the link was mistyped. Let us get you back on track.",
+    home: "Back to home",
+    blog: "Read the blog",
+    homeHref: "/",
+    blogHref: "/blog",
+  },
+  sv: {
+    title: "Sidan hittades inte (404)",
+    description: "Vi kunde inte hitta den sidan på nuroai.dev.",
+    eyebrow: "404",
+    heading: "Vi kunde inte hitta sidan",
+    intro: "Sidan kan ha flyttat, eller så blev länken fel. Vi hjälper dig tillbaka på rätt spår.",
+    home: "Till startsidan",
+    blog: "Läs bloggen",
+    homeHref: "/sv/",
+    blogHref: "/sv/blog",
+  },
+}[lang];
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main id="main-content" tabindex="-1">
+    <section class="nf">
+      <span class="nf-eyebrow">{t.eyebrow}</span>
+      <h1 class="nf-heading">{t.heading}</h1>
+      <p class="nf-intro">{t.intro}</p>
+      <div class="nf-actions">
+        <a class="nf-btn nf-btn-primary" href={t.homeHref}>{t.home}</a>
+        <a class="nf-btn nf-btn-ghost" href={t.blogHref}>{t.blog}</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .nf {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(6rem, 16vh, 12rem) 1.5rem clamp(5rem, 12vh, 9rem);
+    text-align: center;
+  }
+  .nf-eyebrow {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--ink-3);
+    margin-bottom: 1rem;
+  }
+  .nf-heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0 0 1rem;
+  }
+  .nf-intro {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin: 0 auto 2.25rem;
+    max-width: 46ch;
+  }
+  .nf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    justify-content: center;
+  }
+  .nf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  .nf-btn-primary { background: var(--ink); color: var(--surface); }
+  .nf-btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1px var(--hair-2); }
+  .nf-btn:hover { transform: translateY(-1px); }
+</style>
