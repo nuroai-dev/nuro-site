@@ -26,7 +26,7 @@ So the real question isn't only "how do we produce more specialists?" It's "how 
 
 Swedish law is clear that every student has the right to [adapted support](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). We've [written before](/blog/the-right-exists-the-system-doesnt) about the gap between that right on paper and what happens in a real classroom. The teacher shortage is that gap made concrete: the promise is national, and the capacity to keep it is running out.
 
-When there aren't enough specialists, schools are left with bad options — long waits for an assessment, a support plan that exists in a binder but not in the lessons, or a student who [slowly disengages until they stop showing up at all](/blog/school-absence-starts-earlier). None of those are anyone's intention. They're what happens when demand for individual support collides with a system that can only deliver it one expert at a time.
+When there aren't enough specialists, schools are left with bad options — long waits for an assessment, a support plan that exists in a binder but not in the lessons, or a student who [slowly disengages until they stop showing up at all](/blog/school-absence-starts-earlier). None of those are anyone's intention. They're what happens when demand for individual support collides with a system that can only deliver it one expert at a time. In some municipalities that capacity is not only running out, it is being actively cut, a [false economy](/blog/cost-of-school-absence-false-economy) that saves a little now and costs far more later.
 
 ## What gives a teacher leverage
 
