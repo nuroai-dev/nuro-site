@@ -22,11 +22,11 @@ const t = {
   en: {
     title: "Blog — Nuro",
     description:
-      "Notes on neurodiversity in education — what the research says, what the law requires, and what actually helps teachers, students, and parents.",
+      "Notes on neurodiversity in education: what the research says, what the law requires, and what actually helps teachers, students, and parents.",
     eyebrow: "Blog",
     heading: "Notes on inclusive education",
     intro:
-      "What the research says, what the law requires, and what actually helps neurodivergent students — for the teachers, students, and parents living it every day.",
+      "What the research says, what the law requires, and what actually helps neurodivergent students, for the teachers, students, and parents living it every day.",
     empty: "No posts yet — the first one is on its way.",
   },
   sv: {
@@ -46,6 +46,27 @@ export const prerender = true;
 const posts = (
   await getCollection(lang === "sv" ? "blogSv" : "blog", ({ data }) => !data.draft)
 ).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const SITE_URL = "https://nuroai.dev";
+const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": `${SITE_URL}${blogBase}#blog`,
+  name: lang === "sv" ? "Nuro Blogg" : "Nuro Blog",
+  description: t.description,
+  url: `${SITE_URL}${blogBase}`,
+  inLanguage: lang === "sv" ? "sv-SE" : "en-US",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+  blogPost: posts.map((post) => ({
+    "@type": "BlogPosting",
+    headline: post.data.title,
+    description: post.data.description,
+    url: `${SITE_URL}${blogBase}/${post.id}`,
+    datePublished: post.data.pubDate.toISOString(),
+    author: { "@type": "Organization", name: post.data.author },
+  })),
+};
 ---
 
 <Layout title={t.title} description={t.description}>
@@ -78,4 +99,5 @@ const posts = (
     </section>
   </main>
   <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(blogSchema)} />
 </Layout>
