@@ -120,7 +120,7 @@ const GROUPS: { heading: string; people: Person[] }[] = [
 
 <Layout title={t.title} description={t.description}>
   <Nav />
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class={styles.section}>
       <div class={styles.container}>
         <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
