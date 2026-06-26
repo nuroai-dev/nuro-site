@@ -47,6 +47,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/school-absence-starts-earlier",
   "/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod",
   "/blog/cost-of-school-absence-false-economy",
+  "/blog/adhd-in-the-classroom-what-helps",
 ]);
 
 /** Does this page have a Swedish version yet? */
