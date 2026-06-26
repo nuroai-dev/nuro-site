@@ -46,6 +46,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/sweden-needs-more-special-education-teachers",
   "/blog/school-absence-starts-earlier",
   "/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod",
+  "/blog/cost-of-school-absence-false-economy",
 ]);
 
 /** Does this page have a Swedish version yet? */
