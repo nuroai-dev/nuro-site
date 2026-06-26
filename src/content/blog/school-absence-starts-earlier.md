@@ -44,4 +44,4 @@ This is exactly where the teacher shortage we [wrote about](/blog/sweden-needs-m
 
 Nuro exists to close that gap — to help schools see each student early, adapt to how they actually learn, and catch the quiet signals long before a child becomes a statistic. A *hemmasittare* is almost never a student who didn't care. It's usually a student whose needs went unmet for too long.
 
-Doubling in four years is not a trend anyone should accept as normal. We think it's preventable — and that prevention starts with seeing students before they disappear.
+Doubling in four years is not a trend anyone should accept as normal. We think it's preventable — and that prevention starts with seeing students before they disappear. It is also, for a school and the municipality behind it, by far the [cheaper path](/blog/cost-of-school-absence-false-economy).

@@ -26,7 +26,7 @@ Så den riktiga frågan är inte bara "hur producerar vi fler specialister?" Den
 
 Svensk lag är tydlig med att varje elev har rätt till [anpassat stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). Vi har [skrivit tidigare](/sv/blog/the-right-exists-the-system-doesnt) om glappet mellan den rätten på pappret och vad som händer i ett riktigt klassrum. Lärarbristen är det glappet i konkret form: löftet är nationellt, och kapaciteten att hålla det håller på att ta slut.
 
-När det inte finns tillräckligt med specialister står skolorna kvar med dåliga alternativ: långa väntetider på en utredning, en stödplan som finns i en pärm men inte i lektionerna, eller en elev som [långsamt drar sig undan tills den slutar dyka upp helt](/sv/blog/school-absence-starts-earlier). Inget av det är någons avsikt. Det är vad som händer när efterfrågan på individuellt stöd krockar med ett system som bara kan leverera det en expert i taget.
+När det inte finns tillräckligt med specialister står skolorna kvar med dåliga alternativ: långa väntetider på en utredning, en stödplan som finns i en pärm men inte i lektionerna, eller en elev som [långsamt drar sig undan tills den slutar dyka upp helt](/sv/blog/school-absence-starts-earlier). Inget av det är någons avsikt. Det är vad som händer när efterfrågan på individuellt stöd krockar med ett system som bara kan leverera det en expert i taget. I vissa kommuner håller den kapaciteten inte bara på att ta slut, den skärs aktivt ner, en [falsk besparing](/sv/blog/cost-of-school-absence-false-economy) som sparar lite nu och kostar långt mer senare.
 
 ## Vad som ger en lärare hävstång
 
