@@ -28,7 +28,7 @@ Social interaction and communication are, by definition, where autism is hardest
 
 None of this is exotic. Most of it is what Skollagen calls [extra anpassningar](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), the everyday adjustments a school is expected to make without any formal decision, and the [right to that support already exists](/blog/the-right-exists-the-system-doesnt). SPSM is also clear on the order of operations: before reaching for individual adaptations, make the shared learning environment more accessible for the whole group first.
 
-And here is the part worth holding on to. Structure, predictability and clarity do not only help the student with a diagnosis. Most students do better with them. The same clear schedule that a student with autism needs is one a great many of their classmates quietly benefit from too. This is the same logic behind the practical adaptations for [ADHD in the classroom](/blog/adhd-in-the-classroom-what-helps): build the structure once, and the whole room gains.
+And here is the part worth holding on to. Structure, predictability and clarity do not only help the student with a diagnosis. Most students do better with them. The same clear schedule that a student with autism needs is one a great many of their classmates quietly benefit from too. This is the same logic behind the practical adaptations for [ADHD](/blog/adhd-in-the-classroom-what-helps) and [dyslexia](/blog/dyslexia-in-the-classroom-what-helps) in the classroom: build the structure once, and the whole room gains.
 
 ## Where Nuro fits
 
