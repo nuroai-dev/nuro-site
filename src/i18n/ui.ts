@@ -49,6 +49,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/cost-of-school-absence-false-economy",
   "/blog/adhd-in-the-classroom-what-helps",
   "/blog/autism-in-the-classroom-what-helps",
+  "/blog/dyslexia-in-the-classroom-what-helps",
 ]);
 
 /** Does this page have a Swedish version yet? */
