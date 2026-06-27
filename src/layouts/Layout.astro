@@ -68,11 +68,27 @@ const STRUCTURED_DATA = {
       "@type": "Organization",
       "@id": `${SITE_URL}/#organization`,
       name: "Nuro",
+      alternateName: "Nuro AI",
       url: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
       description:
         "Nuro helps Swedish schools support neurodivergent students with ADHD, autism, and dyslexia through AI-powered lesson adaptation.",
+      slogan: "The missing tool for neurodivergent students",
       knowsLanguage: ["en", "sv"],
+      knowsAbout: [
+        "Neurodiversity",
+        "Special education",
+        "ADHD",
+        "Autism",
+        "Dyslexia",
+        "Inclusive education",
+        "Skollagen",
+      ],
+      areaServed: { "@type": "Country", name: "Sweden" },
+      founder: [
+        { "@type": "Person", name: "Sandra Hilltomt" },
+        { "@type": "Person", name: "Victor Wallander" },
+      ],
       sameAs: SOCIAL,
     },
     {
