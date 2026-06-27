@@ -28,7 +28,7 @@ Socialt samspel och kommunikation är, per definition, där autism är som svår
 
 Inget av detta är exotiskt. Det mesta är vad skollagen kallar [extra anpassningar](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), de vardagliga justeringar en skola förväntas göra utan något formellt beslut, och [rätten till det stödet finns redan](/sv/blog/the-right-exists-the-system-doesnt). SPSM är också tydlig med ordningen: innan man tar till individuella anpassningar ska man först göra den gemensamma lärmiljön mer tillgänglig för hela gruppen.
 
-Och här är den del som är värd att hålla fast vid. Struktur, förutsägbarhet och tydlighet hjälper inte bara eleven med en diagnos. De flesta elever fungerar bättre med dem. Samma tydliga schema som en elev med autism behöver är ett som väldigt många av klasskamraterna tyst också drar nytta av. Det är samma logik som ligger bakom de praktiska anpassningarna för [adhd i klassrummet](/sv/blog/adhd-in-the-classroom-what-helps): bygg strukturen en gång, och hela rummet vinner på det.
+Och här är den del som är värd att hålla fast vid. Struktur, förutsägbarhet och tydlighet hjälper inte bara eleven med en diagnos. De flesta elever fungerar bättre med dem. Samma tydliga schema som en elev med autism behöver är ett som väldigt många av klasskamraterna tyst också drar nytta av. Det är samma logik som ligger bakom de praktiska anpassningarna för [adhd](/sv/blog/adhd-in-the-classroom-what-helps) och [dyslexi](/sv/blog/dyslexia-in-the-classroom-what-helps) i klassrummet: bygg strukturen en gång, och hela rummet vinner på det.
 
 ## Var Nuro passar in
 
