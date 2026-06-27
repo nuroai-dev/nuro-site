@@ -8,9 +8,9 @@ import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./logo-strip.module.css";
 
 const LOGOS = [
-  { src: "/logos/google-for-startups.png", alt: "Google for Startups", h: 30 },
-  { src: "/logos/microsoft-for-startups.png", alt: "Microsoft for Startups", h: 26 },
-  { src: "/logos/di.png", alt: "Dagens industri", h: 46 },
+  { src: "/logos/google-for-startups.png", alt: "Google for Startups", h: 30, iw: 391, ih: 57 },
+  { src: "/logos/microsoft-for-startups.png", alt: "Microsoft for Startups", h: 26, iw: 255, ih: 54 },
+  { src: "/logos/di.png", alt: "Dagens industri", h: 46, iw: 56, ih: 56 },
 ];
 ---
 
@@ -22,6 +22,8 @@ const LOGOS = [
           class={styles.logo}
           src={logo.src}
           alt={logo.alt}
+          width={logo.iw}
+          height={logo.ih}
           style={`height:${logo.h}px`}
           loading="lazy"
         />

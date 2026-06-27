@@ -19,11 +19,15 @@ const LOGOS = [
     src: "/partners/google-for-startups.png",
     alt: "Google for Startups",
     className: "wordmark",
+    iw: 416,
+    ih: 53,
   },
   {
     src: "/partners/microsoft-for-startups.png",
     alt: "Microsoft for Startups",
     className: "stacked",
+    iw: 837,
+    ih: 353,
   },
 ] as const;
 ---
@@ -39,6 +43,8 @@ const LOGOS = [
               class={`${styles.logo} ${styles[logo.className]}`}
               src={logo.src}
               alt={logo.alt}
+              width={logo.iw}
+              height={logo.ih}
               loading="lazy"
               decoding="async"
             />
