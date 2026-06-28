@@ -51,6 +51,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/autism-in-the-classroom-what-helps",
   "/blog/dyslexia-in-the-classroom-what-helps",
   "/blog/parent-guide-child-not-getting-support-at-school",
+  "/blog/school-leaders-support-compliance-risk",
 ]);
 
 /** Does this page have a Swedish version yet? */
