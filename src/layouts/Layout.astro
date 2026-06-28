@@ -130,6 +130,7 @@ const STRUCTURED_DATA = {
     <link rel="alternate" hreflang="en" href={HREF_EN} />
     {HAS_SV && <link rel="alternate" hreflang="sv" href={HREF_SV} />}
     <link rel="alternate" hreflang="x-default" href={HREF_EN} />
+    <link rel="alternate" type="application/rss+xml" title={LANG === "sv" ? "Nuro Blogg" : "Nuro Blog"} href={LANG === "sv" ? `${SITE_URL}/sv/rss.xml` : `${SITE_URL}/rss.xml`} />
 
     {/* Preload the above-the-fold webfonts so the hero never swaps from the
         system fallback (which would reflow the H1 mid blur-in). */}
