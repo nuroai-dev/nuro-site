@@ -18,7 +18,7 @@ In practice that means visually marking the structure of the lesson, the day and
 
 ## Design the room for the senses
 
-Autism often comes with a different sensory experience. Many students are over or under sensitive to sound, light or smell, which turns a noisy, brightly lit, visually busy classroom into a source of stress before any learning begins ([SPSM](https://www.spsm.se/funktionsnedsattningar/autism/)). SPSM advises stripping away unnecessary clutter and decoration so a student can focus on the right things, and organising the room so it actually supports the kind of work being done. A calmer room is not a frill. For some students it is the difference between being able to stay and not.
+Autism, one of the [neurodevelopmental conditions grouped as NPF](/blog/what-is-npf-neurodevelopmental-conditions-school), often comes with a different sensory experience. Many students are over or under sensitive to sound, light or smell, which turns a noisy, brightly lit, visually busy classroom into a source of stress before any learning begins ([SPSM](https://www.spsm.se/funktionsnedsattningar/autism/)). SPSM advises stripping away unnecessary clutter and decoration so a student can focus on the right things, and organising the room so it actually supports the kind of work being done. A calmer room is not a frill. For some students it is the difference between being able to stay and not.
 
 ## Use visual support, not just spoken instructions
 
