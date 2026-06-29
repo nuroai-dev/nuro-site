@@ -12,7 +12,7 @@ Here is what actually helps, grounded in guidance from Specialpedagogiska skolmy
 
 ## Start with the student, not the diagnosis
 
-ADHD is not one thing. It involves difficulties regulating attention, activity level and impulses, and those difficulties show up differently in every child ([SPSM](https://www.spsm.se/funktionsnedsattningar/adhd/)). Around one in ten students has some form of neurodevelopmental condition (NPF), and the group is highly varied ([SPSM](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)). SPSM is clear that the starting point is a pedagogical mapping of how this particular student's school situation actually works, including their strengths, not a generic checklist applied because of a label.
+ADHD is not one thing. It involves difficulties regulating attention, activity level and impulses, and those difficulties show up differently in every child ([SPSM](https://www.spsm.se/funktionsnedsattningar/adhd/)). Around one in ten students has some form of [neurodevelopmental condition (NPF)](/blog/what-is-npf-neurodevelopmental-conditions-school), and the group is highly varied ([SPSM](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)). SPSM is clear that the starting point is a pedagogical mapping of how this particular student's school situation actually works, including their strengths, not a generic checklist applied because of a label.
 
 ## The adaptations that work
 

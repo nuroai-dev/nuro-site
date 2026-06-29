@@ -18,7 +18,7 @@ I praktiken betyder det att visuellt markera strukturen för lektionen, dagen oc
 
 ## Utforma rummet för sinnena
 
-Autism innebär ofta en annorlunda sinnesupplevelse. Många elever är över- eller underkänsliga för ljud, ljus eller lukt, vilket gör ett bullrigt, starkt upplyst och visuellt rörigt klassrum till en källa till stress innan något lärande ens har börjat ([SPSM](https://www.spsm.se/funktionsnedsattningar/autism/)). SPSM råder skolor att ta bort onödig röra och dekoration så att en elev kan fokusera på rätt saker, och att organisera rummet så att det faktiskt stöder den typ av arbete som ska göras. Ett lugnare rum är ingen lyx. För vissa elever är det skillnaden mellan att kunna stanna kvar och inte.
+Autism, en av de [neuropsykiatriska funktionsnedsättningarna (NPF)](/sv/blog/what-is-npf-neurodevelopmental-conditions-school), innebär ofta en annorlunda sinnesupplevelse. Många elever är över- eller underkänsliga för ljud, ljus eller lukt, vilket gör ett bullrigt, starkt upplyst och visuellt rörigt klassrum till en källa till stress innan något lärande ens har börjat ([SPSM](https://www.spsm.se/funktionsnedsattningar/autism/)). SPSM råder skolor att ta bort onödig röra och dekoration så att en elev kan fokusera på rätt saker, och att organisera rummet så att det faktiskt stöder den typ av arbete som ska göras. Ett lugnare rum är ingen lyx. För vissa elever är det skillnaden mellan att kunna stanna kvar och inte.
 
 ## Använd visuellt stöd, inte bara muntliga instruktioner
 

@@ -12,7 +12,7 @@ Här är vad som faktiskt hjälper, grundat i vägledning från Specialpedagogis
 
 ## Börja med eleven, inte diagnosen
 
-Adhd är inte en enda sak. Det handlar om svårigheter att reglera uppmärksamhet, aktivitetsnivå och impulser, och de svårigheterna visar sig olika hos varje barn ([SPSM](https://www.spsm.se/funktionsnedsattningar/adhd/)). Ungefär en av tio elever har någon form av neuropsykiatrisk funktionsnedsättning (NPF), och gruppen är mycket varierad ([SPSM](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)). SPSM är tydlig med att utgångspunkten är en pedagogisk kartläggning av hur just den här elevens skolsituation faktiskt fungerar, inklusive elevens styrkor, inte en generisk checklista som tillämpas på grund av en etikett.
+Adhd är inte en enda sak. Det handlar om svårigheter att reglera uppmärksamhet, aktivitetsnivå och impulser, och de svårigheterna visar sig olika hos varje barn ([SPSM](https://www.spsm.se/funktionsnedsattningar/adhd/)). Ungefär en av tio elever har någon form av [neuropsykiatrisk funktionsnedsättning (NPF)](/sv/blog/what-is-npf-neurodevelopmental-conditions-school), och gruppen är mycket varierad ([SPSM](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)). SPSM är tydlig med att utgångspunkten är en pedagogisk kartläggning av hur just den här elevens skolsituation faktiskt fungerar, inklusive elevens styrkor, inte en generisk checklista som tillämpas på grund av en etikett.
 
 ## Anpassningarna som fungerar
 

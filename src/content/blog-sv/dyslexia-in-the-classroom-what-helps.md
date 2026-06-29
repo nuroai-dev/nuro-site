@@ -12,7 +12,7 @@ Här är vad som faktiskt hjälper, grundat i vägledning från Specialpedagogis
 
 ## Förstå vad som egentligen är svårt
 
-Dyslexi är en form av läs- och skrivsvårighet. Kärnproblemet är att automatisera avkodningen av ord, att flytande omvandla bokstäver till ljud och ord, vilket vilar på kopplingen mellan ljud och bokstäver ([SPSM](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)). Det har inget med intelligens att göra. Men det förstärker sig självt: en elev som läser långsamt möter långt mindre text än sina klasskamrater, och när skolan väl går från att lära sig läsa till att läsa för att lära sprider sig glappet tyst in i varje ämne som bygger på en lärobok.
+Dyslexi är en form av läs- och skrivsvårighet, och en av de [neuropsykiatriska funktionsnedsättningarna (NPF)](/sv/blog/what-is-npf-neurodevelopmental-conditions-school). Kärnproblemet är att automatisera avkodningen av ord, att flytande omvandla bokstäver till ljud och ord, vilket vilar på kopplingen mellan ljud och bokstäver ([SPSM](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)). Det har inget med intelligens att göra. Men det förstärker sig självt: en elev som läser långsamt möter långt mindre text än sina klasskamrater, och när skolan väl går från att lära sig läsa till att läsa för att lära sprider sig glappet tyst in i varje ämne som bygger på en lärobok.
 
 ## Ge eleven verktygen, i skolan och hemma
 

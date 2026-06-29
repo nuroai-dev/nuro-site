@@ -12,7 +12,7 @@ Here is what actually helps, grounded in guidance from Specialpedagogiska skolmy
 
 ## Understand what is actually hard
 
-Dyslexia is a form of reading and writing difficulty. The core problem is automating word decoding, turning letters into sounds and words fluently, which rests on the link between sounds and letters ([SPSM](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)). It has nothing to do with intelligence. But it compounds: a student who reads slowly meets far less text than their classmates, and once school shifts from learning to read to reading to learn, the gap quietly spreads into every subject that depends on a textbook.
+Dyslexia is a form of reading and writing difficulty, and one of the [neurodevelopmental conditions grouped as NPF](/blog/what-is-npf-neurodevelopmental-conditions-school). The core problem is automating word decoding, turning letters into sounds and words fluently, which rests on the link between sounds and letters ([SPSM](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)). It has nothing to do with intelligence. But it compounds: a student who reads slowly meets far less text than their classmates, and once school shifts from learning to read to reading to learn, the gap quietly spreads into every subject that depends on a textbook.
 
 ## Give the student the tools, in school and at home
 
