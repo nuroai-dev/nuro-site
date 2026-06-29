@@ -54,6 +54,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/school-leaders-support-compliance-risk",
   "/blog/what-is-npf-neurodevelopmental-conditions-school",
   "/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap",
+  "/blog/support-without-a-diagnosis-school",
 ]);
 
 /** Does this page have a Swedish version yet? */
