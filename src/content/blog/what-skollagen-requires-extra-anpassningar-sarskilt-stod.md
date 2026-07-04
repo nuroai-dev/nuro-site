@@ -49,3 +49,7 @@ On paper, this is a well-designed ladder: light-touch adaptations first, formal 
 In practice, every rung depends on something the system is short of. Extra anpassningar assume a teacher with time to adapt for each student. Särskilt stöd assumes the [specialists to deliver it](/blog/sweden-needs-more-special-education-teachers). The åtgärdsprogram assumes the documentation gets done well enough to hold up. When any of those is missing, the student who needed help quietly stops getting it, often long before anyone files an appeal.
 
 That gap, between the tiers the law defines and the capacity to deliver them, is exactly what Nuro is built to close: helping teachers provide and document adapted support at the scale a real classroom demands, so the rungs of the ladder actually hold weight.
+
+## A note on what is changing
+
+This framework is not fixed. In March 2026 the government proposed [rewriting these rules](/blog/sweden-proposes-rewriting-school-support-law), including abolishing the extra anpassningar regulation, with the changes proposed to take effect on 1 July 2028. Until then, the tiers described here are the law in force, and a school's duty to deliver them does not pause while a bill moves through the Riksdag.
