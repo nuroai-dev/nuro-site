@@ -49,3 +49,7 @@ På pappret är det här en väl utformad trappa: lätta anpassningar först, fo
 I praktiken vilar varje steg på något som systemet har brist på. Extra anpassningar förutsätter en lärare med tid att anpassa för varje elev. Särskilt stöd förutsätter [specialisterna som ska ge det](/sv/blog/sweden-needs-more-special-education-teachers). Åtgärdsprogrammet förutsätter att dokumentationen görs tillräckligt bra för att hålla. När något av det saknas slutar eleven som behövde hjälp i tysthet att få den, ofta långt innan någon lämnar in en överklagan.
 
 Det glappet, mellan nivåerna som lagen definierar och kapaciteten att leverera dem, är precis vad Nuro är byggt för att sluta: att hjälpa lärare att ge och dokumentera anpassat stöd i den skala som ett riktigt klassrum kräver, så att trappstegen faktiskt bär.
+
+## En not om vad som ändras
+
+Det här ramverket är inte hugget i sten. I mars 2026 föreslog regeringen att [skriva om de här reglerna](/sv/blog/sweden-proposes-rewriting-school-support-law), bland annat att avskaffa regleringen om extra anpassningar, med ändringar som föreslås träda i kraft den 1 juli 2028. Fram till dess är nivåerna som beskrivs här de regler som gäller, och en skolas skyldighet att leverera dem pausas inte medan en proposition rör sig genom riksdagen.
