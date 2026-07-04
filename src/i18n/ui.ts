@@ -57,6 +57,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/support-without-a-diagnosis-school",
   "/blog/swedens-parliament-npf-school-results",
   "/blog/sweden-proposes-rewriting-school-support-law",
+  "/blog/sweden-doesnt-count-school-absence",
 ]);
 
 /** Does this page have a Swedish version yet? */
