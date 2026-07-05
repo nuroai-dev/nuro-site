@@ -60,6 +60,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/sweden-doesnt-count-school-absence",
   "/blog/principals-say-they-lack-resources-for-npf",
   "/blog/what-is-an-accessible-learning-environment",
+  "/blog/swedens-school-inspectorate-2025-support-gap",
 ]);
 
 /** Does this page have a Swedish version yet? */
