@@ -1,0 +1,57 @@
+---
+/**
+ * Related posts: up to 3 other posts from the same collection, chosen by
+ * shared-tag overlap (ties broken by recency), rendered as BlogCards. Locale
+ * follows the page URL, exactly like BlogCard. Renders nothing if there are no
+ * other posts.
+ */
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BlogCard from "@/components/blog/BlogCard.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/blog/blog.module.css";
+import { getLang } from "@/i18n/ui";
+
+interface Props {
+  post: CollectionEntry<"blog"> | CollectionEntry<"blogSv">;
+  collection: "blog" | "blogSv";
+}
+
+const { post, collection } = Astro.props;
+const lang = getLang(Astro.url);
+const heading = lang === "sv" ? "Relaterade inlägg" : "Related posts";
+
+const others = (
+  await getCollection(collection, ({ data }) => !data.draft)
+).filter((p) => p.id !== post.id);
+
+const currentTags = new Set(post.data.tags.map((t) => t.toLowerCase()));
+const related = others
+  .map((p) => ({
+    p,
+    score: p.data.tags.filter((t) => currentTags.has(t.toLowerCase())).length,
+    time: p.data.pubDate.getTime(),
+  }))
+  .sort((a, b) => b.score - a.score || b.time - a.time)
+  .slice(0, 3)
+  .map((s) => s.p);
+---
+
+{
+  related.length > 0 && (
+    <section class={styles.relatedSection} aria-label={heading}>
+      <div class={styles.container}>
+        <Reveal as="h2" class={styles.relatedHeading}>
+          {heading}
+        </Reveal>
+        <div class={styles.grid}>
+          {related.map((p, i) => (
+            <Reveal delay={Math.min(i, 3) * 0.05}>
+              <BlogCard post={p} />
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
