@@ -33,3 +33,7 @@ Läs dem tillsammans och mönstret är bekant. Sverige brydde sig, och Sverige l
 En garanti är ett löfte plus en skyldighet. Den säger åt skolorna att de måste hitta och stödja elever tidigt. Vad den inte gör är att ge en lärare med trettio elever de timmar, den struktur eller de verktyg som krävs för att faktiskt göra det, elev för elev, mitt i allt annat som dagen kräver. Det är gapet mellan en reform på pappret och stöd i klassrummet.
 
 Sveriges svar hittills har varit mer politik. [Själva stödlagstiftningen skrivs nu om](/sv/blog/sweden-proposes-rewriting-school-support-law). Men att skriva om löftet bygger inte maskinen som håller det. Den maskinen, det dagliga arbetet med att upptäcka eleven som håller på att tappa fotfästet och anpassa arbetet i tid, är precis vad Nuro är byggt för att vara. [Rätten finns. Systemet för att leverera den har varit den saknade biten](/sv/blog/the-right-exists-the-system-doesnt). En garanti som inte levereras är det tydligaste beviset hittills för att den saknade biten är leverans.
+
+## Källor
+
+- [Skolinspektionen, "Garantin för tidiga stödinsatser" (slutredovisning, december 2024)](https://www.skolinspektionen.se/beslut-rapporter/publikationer/regeringsrapporter/2024/garantin/)

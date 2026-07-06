@@ -33,3 +33,7 @@ Read those together and the pattern is familiar. Sweden did not fail to care, an
 A guarantee is a promise plus a duty. It tells schools they must find and support students early. What it does not do is give a teacher of thirty the hours, the structure, or the tools to actually do the finding and the supporting, student by student, in the middle of everything else the day demands. That is the gap between a reform on paper and support in a classroom.
 
 Sweden's answer so far has been more policy. [The support law itself is now being rewritten](/blog/sweden-proposes-rewriting-school-support-law). But rewriting the promise does not build the machine that keeps it. That machine, the day to day work of spotting the student who is slipping and adapting the work in time, is exactly what Nuro is built to be. [The right exists. The system to deliver it has been the missing piece](/blog/the-right-exists-the-system-doesnt). A guarantee that is not delivered is the clearest evidence yet that the missing piece is delivery.
+
+## Sources
+
+- [Skolinspektionen, "Garantin för tidiga stödinsatser" (slutredovisning, december 2024)](https://www.skolinspektionen.se/beslut-rapporter/publikationer/regeringsrapporter/2024/garantin/)
