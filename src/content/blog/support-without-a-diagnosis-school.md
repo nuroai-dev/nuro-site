@@ -34,3 +34,8 @@ This connects to something at the heart of how support should work. A diagnosis 
 ## Where Nuro fits
 
 Building support around the individual student rather than the diagnosis is exactly what Nuro is for. By seeing how a particular child actually learns and adapting the material to that, support can start the moment a need shows up, without waiting for a label to make it official. For a child stuck on a waiting list, that difference is measured in school years.
+
+## Sources
+
+- [Skolinspektionen, "Frågor som rör stöd"](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)

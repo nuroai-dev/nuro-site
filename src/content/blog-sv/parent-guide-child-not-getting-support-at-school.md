@@ -48,3 +48,8 @@ Det är lätt att skicka en anmälan till fel ställe. Kort sagt:
 ## Var Nuro passar in
 
 De flesta av dessa strider sker av ett skäl: stödet är något eleven har rätt till, men skolan har inte timmarna att utforma och dokumentera det för varje elev som behöver det. Det är glappet Nuro är byggt för att sluta, genom att hjälpa lärare att faktiskt leverera anpassat material och hålla den dokumentation som ett åtgärdsprogram kräver, så att stödet når ditt barn under lektionen, och du kan se att det sker. Målet är en skola där du aldrig behöver ta till överklagandeblanketten över huvud taget.
+
+## Källor
+
+- [Skolinspektionen, "Frågor som rör stöd"](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)

@@ -48,3 +48,8 @@ Even if an appeal does not go your way, the school's duty does not end. It can n
 ## Where Nuro fits
 
 Most of these fights happen for one reason: the support is owed, but the school does not have the hours to design and document it for every student who needs it. That is the gap Nuro is built to close, helping teachers actually deliver adapted material and keep the documentation an åtgärdsprogram requires, so the support reaches your child in the lesson, and you can see that it is happening. The goal is a school where you never have to reach for the appeal form in the first place.
+
+## Sources
+
+- [Skolinspektionen, "Frågor som rör stöd"](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
