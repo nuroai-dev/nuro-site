@@ -36,3 +36,8 @@ The problem is delivery, not principle. A review by Skolinspektionen found that 
 ## Where Nuro fits
 
 Everything SPSM describes, mapping the individual student, adapting the material into clear steps, keeping structure and feedback tight, is exactly the work that does not scale by hand. That is the part Nuro is built to carry: turning "we know what would help" into help that actually reaches the student, in the lesson, on an ordinary day. The teacher stays in charge. The adaptation stops depending on whether there were enough hours in the day to build it.
+
+## Sources
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "ADHD"](https://www.spsm.se/funktionsnedsattningar/adhd/)
+- [Skolinspektionen, "Skolors arbete för en tillgänglig lärmiljö för elever med neuropsykiatriska svårigheter" (2023)](https://www.skolinspektionen.se/globalassets/02-beslut-rapporter-stat/granskningsrapporter/tkg/2023/tillganglig-larmiljo/skolors-arbete-for-en-tillganglig-larmiljo-for-elever-med-neuropsykiatriska-svarigheter.pdf)
