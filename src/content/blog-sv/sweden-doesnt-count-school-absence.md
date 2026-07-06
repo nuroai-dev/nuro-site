@@ -31,3 +31,8 @@ Det är rätt instinkt. Elever med adhd, autism och andra neuropsykiatriska till
 Men ett nationellt register mäter problemet i efterhand, i aggregat, oftast en gång om året. Det kan berätta för landet hur många elever som gick förlorade. Det hjälper inte i sig den enskilda läraren att märka att en specifik elev har börjat komma sent, skolka från samma lektion, eller bli tyst, den här månaden, medan det fortfarande finns tid att agera.
 
 Det är på den nivån Nuro arbetar. Samma logik som ligger bakom ett nationellt register, att frånvaro är en signal värd att fånga tidigt, gäller inuti ett enda klassrum, per elev, i realtid. [Rätten till stöd finns redan](/sv/blog/the-right-exists-the-system-doesnt). Den saknade biten har alltid varit förmågan att se vem som behöver det tidigt nog för att hjälpa. Att räkna är där det börjar.
+
+## Källor
+
+- [Skolverket, "Nationell kartläggning av elevfrånvaro" (Rapport 2021:10)](https://www.skolverket.se/download/18.645f1c0e17821f1d15c71f7/1631188566807/pdf8573.pdf)
+- [Regeringen, "Rapport visar på fortsatt hög skolfrånvaro i grundskolan" (pressmeddelande, november 2024)](https://www.regeringen.se/pressmeddelanden/2024/11/rapport-visar-pa-fortsatt-hog-skolfranvaro-i-grundskolan---har-ar-regeringens-atgarder/)

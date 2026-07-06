@@ -27,3 +27,7 @@ You cannot legislate a budget into existence, and Nuro does not pretend to. What
 A large part of adapted support is work that has to be redone for every student: reworking a task so a student with ADHD can start it, breaking a text down for a student with dyslexia, turning a wall of instructions into a structure a student can actually follow. That is exactly the work that does not scale when the resources are not there, so it is the first thing that gets dropped. Nuro does that work, per student, at the moment it is needed, so that the support the law requires does not depend on a school having resources it has just told Skolverket it does not have.
 
 Two out of three principals have named the gap. [Closing it](/blog/the-right-exists-the-system-doesnt) is the entire point of what we are building.
+
+## Sources
+
+- [Skolverket, "Grundskolors arbete för en tillgänglig lärmiljö för elever med neuropsykiatriska funktionsnedsättningar" (Rapport 2025:1)](https://www.skolverket.se/sok-publikationer/publikationsserier/rapporter/2025/grundskolors-arbete-for-en-tillganglig-larmiljo-for-elever-med-neuropsykiatriska-funktionsnedsattningar)

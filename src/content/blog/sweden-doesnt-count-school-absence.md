@@ -31,3 +31,8 @@ That is the right instinct. Students with ADHD, autism and other neurodevelopmen
 But a national register measures the problem after the fact, in aggregate, usually once a year. It can tell the country how many students were lost. It does not, on its own, help the individual teacher notice that one specific student has started arriving late, skipping the same lesson, or going quiet, this month, while there is still time to act.
 
 That is the level Nuro works at. The same logic behind a national register, that absence is a signal worth catching early, applies inside a single classroom, per student, in real time. [The right to support already exists](/blog/the-right-exists-the-system-doesnt). The missing piece has always been the capacity to see who needs it early enough to help. Counting is where that starts.
+
+## Sources
+
+- [Skolverket, "Nationell kartläggning av elevfrånvaro" (Rapport 2021:10)](https://www.skolverket.se/download/18.645f1c0e17821f1d15c71f7/1631188566807/pdf8573.pdf)
+- [Regeringen, "Rapport visar på fortsatt hög skolfrånvaro i grundskolan" (pressmeddelande, november 2024)](https://www.regeringen.se/pressmeddelanden/2024/11/rapport-visar-pa-fortsatt-hog-skolfranvaro-i-grundskolan---har-ar-regeringens-atgarder/)

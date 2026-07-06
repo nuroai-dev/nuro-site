@@ -36,3 +36,7 @@ The report also makes a point that is easy to miss under the grim statistics: it
 That distance is where students slip, and it is the [gap we keep coming back to](/blog/the-right-exists-the-system-doesnt). A teacher who believes completely in inclusive education still does not gain hours in the day. Adapted material, delivered early and by default rather than after a student has already fallen behind, is a capacity problem before it is anything else.
 
 Nuro exists to close that specific gap: to make adapted, [Skollagen-aligned support](/blog/what-is-npf-neurodevelopmental-conditions-school) something a school can give every neurodivergent student from the start, without asking a teacher to build thirty versions of every lesson by hand. The Parliament's report is a measurement of the problem. The work is making the next measurement look different.
+
+## Sources
+
+- [Sveriges riksdag, "Skolgång och studieresultat för elever med NPF" (2025/26:RFR13)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/)
