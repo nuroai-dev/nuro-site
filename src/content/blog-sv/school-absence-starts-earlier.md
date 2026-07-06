@@ -45,3 +45,8 @@ Det är precis här lärarbristen vi [skrev om](/sv/blog/sweden-needs-more-speci
 Nuro finns för att sluta det glappet, för att hjälpa skolor att se varje elev tidigt, anpassa sig till hur de faktiskt lär sig och fånga de tysta signalerna långt innan ett barn blir en statistik. En *hemmasittare* är nästan aldrig en elev som inte brydde sig. Det är oftast en elev vars behov gick omötta för länge.
 
 En fördubbling på fyra år är ingen trend som någon borde acceptera som normal. Vi tror att den går att förebygga, och att det förebyggandet börjar med att se eleverna innan de försvinner. Det är också, för en skola och kommunen bakom den, den klart [billigare vägen](/sv/blog/cost-of-school-absence-false-economy).
+
+## Källor
+
+- [Riksförbundet Attention, "Ny undersökning visar att NPF-elever hamnar hemma" (2023)](https://attention.se/2023/09/14/ny-undersokning-visar-att-npf-elever-hamnar-hemma/)
+- [Specialpedagogiska skolmyndigheten (SPSM), "Neuropsykiatriska funktionsnedsättningar (NPF)"](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)
