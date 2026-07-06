@@ -44,3 +44,8 @@ Det är hävstång: det ersätter inte speciallärare, och det låtsas inte att 
 Nuro finns på grund av exakt de här två siffrorna. Bristen är verklig, det som står på spel för NPF-elever är verkligt, och "utbilda fler specialister", hur nödvändigt det än är, når inte barnet som behöver hjälp den här terminen. Vi tror att samtalet Sverige för om sin skola behöver ett tredje alternativ vid sidan av *anställ fler* och *vänta*: **ge varje lärare verktygen att stödja varje elev nu.**
 
 Det är den delen vi bygger. Vi kommer att fortsätta skriva här om forskningen, politiken och vad som faktiskt fungerar, för det här är ett problem värt att få rätt.
+
+## Källor
+
+- [Sveriges riksdag, "Skolgång och studieresultat för elever med NPF" (2025/26:RFR13)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/)
+- [Vi lärare, "Stor brist på speciallärare, krävs 400 nya per år"](https://www.vilarare.se/nyheter/specialpedagogik/stor-brist-pa-speciallarare--kravs-400-nya-per-ar/)

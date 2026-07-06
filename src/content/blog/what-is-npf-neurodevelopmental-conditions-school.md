@@ -38,3 +38,7 @@ The gap, almost always, is not knowing that students with NPF exist. It is havin
 ## Where Nuro fits
 
 That is the gap Nuro is built to close: helping teachers see each student, adapt the material to how they actually learn, and catch the early signs of someone slipping, so a neurodevelopmental condition stops being the reason a student falls behind. NPF is common, it is well understood, and the support that helps is known. What has been missing is a way to deliver it at the scale of a real classroom.
+
+## Sources
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Neuropsykiatriska funktionsnedsättningar (NPF)"](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)

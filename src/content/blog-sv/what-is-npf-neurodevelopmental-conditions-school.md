@@ -38,3 +38,7 @@ Glappet är nästan alltid inte att veta att elever med NPF finns. Det är att h
 ## Var Nuro passar in
 
 Det är det glappet Nuro är byggt för att sluta: att hjälpa lärare se varje elev, anpassa materialet till hur de faktiskt lär sig, och fånga de tidiga tecknen på någon som håller på att halka efter, så att en neuropsykiatrisk funktionsnedsättning slutar vara skälet till att en elev hamnar på efterkälken. NPF är vanligt, det är väl förstått, och det stöd som hjälper är känt. Det som har saknats är ett sätt att leverera det i ett verkligt klassrums skala.
+
+## Källor
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Neuropsykiatriska funktionsnedsättningar (NPF)"](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)

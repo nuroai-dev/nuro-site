@@ -29,3 +29,8 @@ Vägen genom överlapp är inte en längre checklista. Det är att utgå från h
 ## Var Nuro passar in
 
 Det är precis därför Nuro är byggt kring den enskilda eleven snarare än diagnosen. Att kartlägga hur ett specifikt barn faktiskt lär sig, och att anpassa materialet efter det, hanterar överlapp naturligt, eftersom det aldrig var beroende av att sortera in barnet i en enda låda från första början. För de många elever vars NPF inte kommer som en enda prydlig etikett är det skillnaden mellan stöd som passar och stöd som bara gör det till hälften.
+
+## Källor
+
+- [Socialstyrelsen, "Nu kommer nationella riktlinjer för adhd och autism"](https://www.socialstyrelsen.se/om-socialstyrelsen/pressrum/press/nu-kommer-nationella-riktlinjer-for-adhd-och-autism/)
+- [Specialpedagogiska skolmyndigheten (SPSM), "Neuropsykiatriska funktionsnedsättningar (NPF)"](https://www.spsm.se/funktionsnedsattningar/neuropsykiatriska-funktionsnedsattningar-npf/)

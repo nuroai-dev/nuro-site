@@ -44,3 +44,8 @@ That's leverage: it doesn't replace special-education teachers, and it doesn't p
 Nuro exists because of exactly these two numbers. The shortage is real, the stakes for NPF students are real, and "train more specialists", necessary as it is, won't reach the child who needs help this term. We think the conversation Sweden is having about its schools needs a third option alongside *hire more* and *wait*: **give every teacher the tools to support every student now.**
 
 That's the part we're building. We'll keep writing here about the research, the policy, and what actually works, because this is a problem worth getting right.
+
+## Sources
+
+- [Sveriges riksdag, "Skolgång och studieresultat för elever med NPF" (2025/26:RFR13)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/)
+- [Vi lärare, "Stor brist på speciallärare, krävs 400 nya per år"](https://www.vilarare.se/nyheter/specialpedagogik/stor-brist-pa-speciallarare--kravs-400-nya-per-ar/)
