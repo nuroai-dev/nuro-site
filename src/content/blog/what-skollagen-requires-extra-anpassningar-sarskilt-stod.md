@@ -53,3 +53,7 @@ That gap, between the tiers the law defines and the capacity to deliver them, is
 ## A note on what is changing
 
 This framework is not fixed. In March 2026 the government proposed [rewriting these rules](/blog/sweden-proposes-rewriting-school-support-law), including abolishing the extra anpassningar regulation, with the changes proposed to take effect on 1 July 2028. Until then, the tiers described here are the law in force, and a school's duty to deliver them does not pause while a bill moves through the Riksdag.
+
+## Sources
+
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)

@@ -33,3 +33,7 @@ But earlier identification only helps if schools can act on it. Knowing in Septe
 It is also worth being clear about what does not change before 1 July 2028. The current rules, including [extra anpassningar and särskilt stöd as they stand today](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), remain in force until then. A school's obligations to its neurodivergent students do not pause while a bill works its way through the Riksdag.
 
 Nuro is built for exactly the capacity problem the reform leaves open: giving every student adapted, [Skollagen-aligned support](/blog/what-is-npf-neurodevelopmental-conditions-school) early and by default, without asking a teacher to build thirty versions of every lesson by hand. Whichever legal mechanism the support is delivered under, the work of actually delivering it stays the same. That is the part we build for.
+
+## Sources
+
+- [Regeringen, "Förbättrat stöd i skolan" (Prop. 2025/26:195)](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf)
