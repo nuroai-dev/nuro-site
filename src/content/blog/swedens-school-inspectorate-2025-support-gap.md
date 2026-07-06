@@ -31,3 +31,8 @@ The inspectorate points to concrete mechanics behind that gap. Support needs oft
 Here is the limit of what an inspectorate can do. It can find the gap. It can name the huvudman's unmet duty. It can count the rising reports. What it cannot do is teach the lesson, adapt the task, or sit with the student who has stalled. Inspection describes the problem. It does not deliver the support.
 
 That is the layer Nuro is built for. Not another law and not another audit, but the day to day work of actually adapting learning for each student, the work the inspectorate keeps finding undone. [The right exists. The system to deliver it has been the missing piece](/blog/the-right-exists-the-system-doesnt). Nuro is built to be that piece.
+
+## Sources
+
+- [Skolinspektionen, Årsrapport 2025](https://www.skolinspektionen.se/beslut-rapporter/publikationer/regeringsrapporter/2026/arsrapport-2025/)
+- [Skolinspektionen, "Stödinsatser" (tema)](https://www.skolinspektionen.se/beslut-rapporter/teman-fran-var-inspektionen/stodinsatser/)

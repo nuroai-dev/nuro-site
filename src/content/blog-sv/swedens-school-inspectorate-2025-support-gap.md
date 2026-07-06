@@ -31,3 +31,8 @@ Inspektionen pekar på konkreta mekanismer bakom den luckan. Stödbehov utreds o
 Här går gränsen för vad en inspektion kan göra. Den kan hitta luckan. Den kan namnge huvudmannens ouppfyllda skyldighet. Den kan räkna de ökande anmälningarna. Vad den inte kan göra är att undervisa lektionen, anpassa uppgiften eller sitta med eleven som har kört fast. Granskning beskriver problemet. Den levererar inte stödet.
 
 Det är det lagret Nuro är byggt för. Inte ännu en lag och inte ännu en granskning, utan det dagliga arbetet med att faktiskt anpassa lärandet för varje elev, arbetet som inspektionen gång på gång hittar ogjort. [Rätten finns. Systemet för att leverera den har varit den saknade biten](/sv/blog/the-right-exists-the-system-doesnt). Nuro är byggt för att vara den biten.
+
+## Källor
+
+- [Skolinspektionen, Årsrapport 2025](https://www.skolinspektionen.se/beslut-rapporter/publikationer/regeringsrapporter/2026/arsrapport-2025/)
+- [Skolinspektionen, "Stödinsatser" (tema)](https://www.skolinspektionen.se/beslut-rapporter/teman-fran-var-inspektionen/stodinsatser/)
