@@ -35,3 +35,8 @@ Spakarna som minskar både risken och den mänskliga kostnaden är desamma:
 - **Dokumentera längs vägen**, så att uppfyllandet av lagkravet, och att kunna visa Skolinspektionen att du uppfyllt det, blir en biprodukt av arbetet snarare än ett andra jobb.
 
 Det är glappet Nuro är byggt för att sluta, och det är därför vi ramar in det som vi gör. För en skolledare är att hjälpa varje elev inte bara det rätta och det lagliga. Med det genomsnittliga vitet nu över två miljoner kronor är det i allt högre grad också det ekonomiskt kloka. Den billigaste versionen av elevstöd är den som faktiskt når eleven i tid.
+
+## Källor
+
+- [Skolinspektionen, "Elever får inte det stöd de har rätt till" (pressmeddelande)](https://www.skolinspektionen.se/om-oss/press/pressmeddelanden/elever-far-inte-det-stod-de-har-ratt-till/)
+- [Skolinspektionen, "Elever blir fortsatt utan rätt stöd i rätt tid" (Årsrapport 2024)](https://www.skolinspektionen.se/beslut-rapporter/arsrapport-2024/elever-blir-fortsatt-utan-ratt-stod-i-ratt-tid/)

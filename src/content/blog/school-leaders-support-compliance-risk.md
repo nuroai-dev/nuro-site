@@ -35,3 +35,8 @@ The levers that reduce both the risk and the human cost are the same ones:
 - **Document as you go**, so that meeting the legal requirement, and being able to show Skolinspektionen you met it, is a by-product of the work rather than a second job.
 
 That is the gap Nuro is built to close, and it is why we frame it the way we do. For a school leader, helping every student is not only the right thing and the legal thing. With the average vite now over two million kronor, it is increasingly the financially prudent thing too. The cheapest version of student support is the one that actually reaches the student in time.
+
+## Sources
+
+- [Skolinspektionen, "Elever får inte det stöd de har rätt till" (pressmeddelande)](https://www.skolinspektionen.se/om-oss/press/pressmeddelanden/elever-far-inte-det-stod-de-har-ratt-till/)
+- [Skolinspektionen, "Elever blir fortsatt utan rätt stöd i rätt tid" (Årsrapport 2024)](https://www.skolinspektionen.se/beslut-rapporter/arsrapport-2024/elever-blir-fortsatt-utan-ratt-stod-i-ratt-tid/)

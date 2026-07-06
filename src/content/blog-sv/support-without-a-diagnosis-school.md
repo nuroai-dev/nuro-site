@@ -34,3 +34,8 @@ Det här hänger ihop med något som ligger i hjärtat av hur stöd borde funger
 ## Var Nuro passar in
 
 Att bygga stöd kring den enskilda eleven snarare än diagnosen är precis vad Nuro är till för. Genom att se hur ett specifikt barn faktiskt lär sig och anpassa materialet efter det kan stödet börja i det ögonblick ett behov visar sig, utan att vänta på att en etikett ska göra det officiellt. För ett barn som sitter fast i en kö mäts den skillnaden i skolår.
+
+## Källor
+
+- [Skolinspektionen, "Frågor som rör stöd"](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
