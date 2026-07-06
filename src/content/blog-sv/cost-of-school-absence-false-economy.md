@@ -31,3 +31,8 @@ Den politiska riktningen är tydlig. Den statliga utredningen [Bättre förutsä
 Det finns ingen version av det här där att göra mindre fungerar. Den enda spaken som sänker både den mänskliga och den ekonomiska kostnaden är densamma: fånga eleverna innan frånvaron sätter sig, ge läraren som redan står i rummet medlen att leverera anpassat stöd utan ett andra heltidsjobb av pappersarbete, och dokumentera det stödet så att det håller.
 
 Det är argumentet för förebyggande, och det är också argumentet för Nuro. Att se varje elev tidigt, anpassa materialet till hur de lär sig och lyfta fram varningssignalerna medan det fortfarande finns tid att agera är inte bara det rätta för barnet. För en kommun är det det billigare, mätt över vilken horisont som helst längre än ett enda budgetår.
+
+## Källor
+
+- [Statens offentliga utredningar, "Bättre förutsättningar för trygghet och studiero i skolan"](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/battre-forutsattningar-for-trygghet-och-studiero-i_hdb38/html/)
+- [Regeringen, "Rapport visar på fortsatt hög skolfrånvaro i grundskolan" (pressmeddelande, november 2024)](https://www.regeringen.se/pressmeddelanden/2024/11/rapport-visar-pa-fortsatt-hog-skolfranvaro-i-grundskolan---har-ar-regeringens-atgarder/)

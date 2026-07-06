@@ -31,3 +31,8 @@ The policy direction is clear. The state inquiry [Bättre förutsättningar för
 There is no version of this where doing less works. The only lever that lowers both the human and the financial cost is the same one: catch students before the absence sets in, give the teacher already in the room the means to deliver adapted support without a second full-time job of paperwork, and document that support so it holds up.
 
 That is the case for prevention, and it is also the case for Nuro. Seeing each student early, adapting the material to how they learn, and surfacing the warning signs while there is still time to act is not only the right thing for the child. For a municipality, it is the cheaper thing, measured over any horizon longer than a single budget year.
+
+## Sources
+
+- [Statens offentliga utredningar, "Bättre förutsättningar för trygghet och studiero i skolan"](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/statens-offentliga-utredningar/battre-forutsattningar-for-trygghet-och-studiero-i_hdb38/html/)
+- [Regeringen, "Rapport visar på fortsatt hög skolfrånvaro i grundskolan" (pressmeddelande, november 2024)](https://www.regeringen.se/pressmeddelanden/2024/11/rapport-visar-pa-fortsatt-hog-skolfranvaro-i-grundskolan---har-ar-regeringens-atgarder/)
