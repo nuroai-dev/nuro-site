@@ -33,3 +33,8 @@ And here is the part worth holding on to. Structure, predictability and clarity 
 ## Where Nuro fits
 
 The catch is familiar. Mapping each student, clarifying every lesson into clear visual steps, keeping the structure consistent day after day, is exactly the work a single teacher cannot build by hand for everyone who needs it. That is the part Nuro is built to carry: turning the structure SPSM describes into something that actually reaches each student, in the lesson, on an ordinary day, without depending on whether there were enough hours to prepare it. The teacher stays in charge. The clarity stops being optional.
+
+## Sources
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Autism"](https://www.spsm.se/funktionsnedsattningar/autism/)
+- [Specialpedagogiska skolmyndigheten (SPSM), "Autism och undervisning"](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)

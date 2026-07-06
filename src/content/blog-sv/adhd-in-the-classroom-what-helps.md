@@ -36,3 +36,8 @@ Problemet är leveransen, inte principen. En granskning av Skolinspektionen fann
 ## Var Nuro passar in
 
 Allt SPSM beskriver, att kartlägga den enskilda eleven, anpassa materialet till tydliga steg, hålla struktur och återkoppling tät, är precis det arbete som inte skalar för hand. Det är den del Nuro är byggt för att bära: att förvandla "vi vet vad som skulle hjälpa" till hjälp som faktiskt når eleven, i lektionen, en helt vanlig dag. Läraren behåller kontrollen. Anpassningen slutar bero på om det fanns tillräckligt med timmar på dagen för att bygga den.
+
+## Källor
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "ADHD"](https://www.spsm.se/funktionsnedsattningar/adhd/)
+- [Skolinspektionen, "Skolors arbete för en tillgänglig lärmiljö för elever med neuropsykiatriska svårigheter" (2023)](https://www.skolinspektionen.se/globalassets/02-beslut-rapporter-stat/granskningsrapporter/tkg/2023/tillganglig-larmiljo/skolors-arbete-for-en-tillganglig-larmiljo-for-elever-med-neuropsykiatriska-svarigheter.pdf)

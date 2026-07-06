@@ -38,3 +38,8 @@ Det här är samma mönster som de praktiska anpassningarna för [adhd](/sv/blog
 ## Var Nuro passar in
 
 Den sista begränsningen är den verkliga. Att veta att en elev behöver lyssningsbart, omstrukturerat, individuellt anpassat material är inte det svåra. Att producera det, lektion efter lektion, åt alla som behöver det, är det. Det är det arbete Nuro är byggt för att bära: att förvandla en vanlig lektion till en version som varje elev faktiskt kommer åt, så att tekniken SPSM rekommenderar når eleven i lektionen, inte bara i princip. Läraren behåller kontrollen. Lässvårigheten slutar bestämma vad eleven får lära sig.
+
+## Källor
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Läs- och skrivsvårigheter/dyslexi"](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)
+- [Dyslexiförbundet, "Skola och utbildning: läsa och skriva"](https://dyslexi.org/rad-och-rattigheter/skola-och-utbildning/grundskola/lasa-skriva/)

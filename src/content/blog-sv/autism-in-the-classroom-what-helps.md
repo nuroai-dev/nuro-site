@@ -33,3 +33,8 @@ Och här är den del som är värd att hålla fast vid. Struktur, förutsägbarh
 ## Var Nuro passar in
 
 Haken är välbekant. Att kartlägga varje elev, att tydliggöra varje lektion i tydliga visuella steg, att hålla strukturen konsekvent dag efter dag, är precis det arbete som en enskild lärare inte kan bygga för hand åt alla som behöver det. Det är den del Nuro är byggt för att bära: att förvandla strukturen SPSM beskriver till något som faktiskt når varje elev, i lektionen, en helt vanlig dag, utan att bero på om det fanns tillräckligt med timmar för att förbereda den. Läraren behåller kontrollen. Tydligheten slutar vara valfri.
+
+## Källor
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Autism"](https://www.spsm.se/funktionsnedsattningar/autism/)
+- [Specialpedagogiska skolmyndigheten (SPSM), "Autism och undervisning"](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)

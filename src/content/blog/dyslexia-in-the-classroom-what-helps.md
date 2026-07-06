@@ -38,3 +38,8 @@ This is the same pattern as the practical adaptations for [ADHD](/blog/adhd-in-t
 ## Where Nuro fits
 
 That last limit is the real one. Knowing a student needs listenable, restructured, individually adjusted material is not the hard part. Producing it, lesson after lesson, for everyone who needs it, is. That is the work Nuro is built to carry: turning a standard lesson into a version each student can actually access, so the technology SPSM recommends reaches the student in the lesson, not just in principle. The teacher stays in charge. The reading difficulty stops deciding what the student is allowed to learn.
+
+## Sources
+
+- [Specialpedagogiska skolmyndigheten (SPSM), "Läs- och skrivsvårigheter/dyslexi"](https://www.spsm.se/funktionsnedsattningar/las--och-skrivsvarigheterdyslexi/)
+- [Dyslexiförbundet, "Skola och utbildning: läsa och skriva"](https://dyslexi.org/rad-och-rattigheter/skola-och-utbildning/grundskola/lasa-skriva/)
