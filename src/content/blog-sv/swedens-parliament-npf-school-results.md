@@ -36,3 +36,7 @@ Rapporten gör också en poäng som är lätt att missa bakom den dystra statist
 Det är i det avståndet eleverna glider undan, och det är [glappet vi återkommer till](/sv/blog/the-right-exists-the-system-doesnt). En lärare som tror fullt och fast på inkluderande undervisning får ändå inte fler timmar på dygnet. Anpassat material, levererat tidigt och som standard snarare än efter att en elev redan halkat efter, är ett kapacitetsproblem innan det är något annat.
 
 Nuro finns för att sluta just det glappet: att göra anpassat, [skollagsförankrat stöd](/sv/blog/what-is-npf-neurodevelopmental-conditions-school) till något en skola kan ge varje neurodivergent elev från början, utan att be en lärare bygga trettio versioner av varje lektion för hand. Riksdagens rapport är en mätning av problemet. Arbetet är att få nästa mätning att se annorlunda ut.
+
+## Källor
+
+- [Sveriges riksdag, "Skolgång och studieresultat för elever med NPF" (2025/26:RFR13)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/)

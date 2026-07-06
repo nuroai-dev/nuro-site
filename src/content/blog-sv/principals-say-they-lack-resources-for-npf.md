@@ -27,3 +27,7 @@ Man kan inte lagstifta fram en budget, och Nuro låtsas inte om det. Vad Nuro g�
 En stor del av det anpassade stödet är arbete som måste göras om för varje elev: att arbeta om en uppgift så att en elev med adhd kan börja på den, att bryta ner en text för en elev med dyslexi, att förvandla en vägg av instruktioner till en struktur som en elev faktiskt kan följa. Det är precis det arbete som inte skalar när resurserna inte finns, så det är det första som faller bort. Nuro gör det arbetet, per elev, i det ögonblick det behövs, så att stödet som lagen kräver inte är beroende av att en skola har resurser som den precis har berättat för Skolverket att den inte har.
 
 Två av tre rektorer har pekat ut luckan. [Att sluta den](/sv/blog/the-right-exists-the-system-doesnt) är hela poängen med det vi bygger.
+
+## Källor
+
+- [Skolverket, "Grundskolors arbete för en tillgänglig lärmiljö för elever med neuropsykiatriska funktionsnedsättningar" (Rapport 2025:1)](https://www.skolverket.se/sok-publikationer/publikationsserier/rapporter/2025/grundskolors-arbete-for-en-tillganglig-larmiljo-for-elever-med-neuropsykiatriska-funktionsnedsattningar)
