@@ -7,6 +7,7 @@
 import type { CollectionEntry } from "astro:content";
 import styles from "./blog.module.css";
 import { getLang } from "@/i18n/ui";
+import { tagSlug, tagLabel } from "@/lib/blog-tags";
 
 interface Props {
   post: CollectionEntry<"blog"> | CollectionEntry<"blogSv">;
@@ -33,9 +34,7 @@ const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
 const tag =
   post.data.tags.find((t) => t.toLowerCase() !== "neurodiversity") ??
   post.data.tags[0];
-const fallbackLabel = tag
-  ? tag.replace(/\b\w/g, (c) => c.toUpperCase())
-  : "Nuro";
+const fallbackLabel = tag ? tagLabel(tagSlug(tag)) : "Nuro";
 ---
 
 <a class={styles.card} href={href}>
