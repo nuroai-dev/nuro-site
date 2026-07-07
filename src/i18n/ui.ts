@@ -63,6 +63,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/swedens-school-inspectorate-2025-support-gap",
   "/blog/swedens-early-support-guarantee-not-delivering",
   "/blog/sweden-ai-in-schools-npf-support",
+  "/blog/what-an-atgardsprogram-must-contain",
 ]);
 
 /** Does this page have a Swedish version yet? */
