@@ -1,0 +1,72 @@
+---
+/**
+ * Blog tag page (/blog/tag/<slug>) — a topic hub listing every English post
+ * that carries a given tag. One page is prerendered per tag used by 2+ posts
+ * (see buildTagIndex / MIN_TAGGED). Mirrors the single-post chrome.
+ */
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import BlogCard from "@/components/blog/BlogCard.astro";
+import styles from "@/components/blog/blog.module.css";
+import { buildTagIndex } from "@/lib/blog-tags";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return buildTagIndex(posts).map((group) => ({
+    params: { tag: group.slug },
+    props: { label: group.label, posts: group.posts },
+  }));
+}
+
+const { label, posts } = Astro.props;
+const slug = Astro.params.tag;
+
+const SITE_URL = "https://nuroai.dev";
+const url = `${SITE_URL}/blog/tag/${slug}`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  inLanguage: "en-US",
+  name: `Posts tagged ${label}`,
+  description: `Nuro blog posts about ${label}.`,
+  url,
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    { "@type": "ListItem", position: 3, name: label, item: url },
+  ],
+};
+---
+
+<Layout title={`Posts tagged ${label} — Nuro`} description={`Nuro blog posts about ${label}.`}>
+  <Nav />
+  <main id="main-content" tabindex="-1">
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <a class={styles.backLink} href="/blog">← Blog</a>
+        <Reveal as="h1" eager class={styles.heading}>Posts tagged {label}</Reveal>
+        <div class={styles.grid}>
+          {posts.map((p, i) => (
+            <Reveal delay={Math.min(i, 6) * 0.05}>
+              <BlogCard post={p} />
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+</Layout>

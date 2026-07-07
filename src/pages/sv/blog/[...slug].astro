@@ -12,6 +12,7 @@ import Footer from "@/components/footer/Footer.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import RelatedPosts from "@/components/blog/RelatedPosts.astro";
 import styles from "@/components/blog/blog.module.css";
+import { buildTagIndex, tagSlug, tagLabel } from "@/lib/blog-tags";
 
 export const prerender = true;
 
@@ -25,6 +26,17 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+
+// Clickable tag chips: only tags that have their own topic-hub page (used by
+// 2+ posts) qualify, so every chip links somewhere real.
+const qualifying = new Set(
+  buildTagIndex(await getCollection("blogSv", ({ data }) => !data.draft)).map(
+    (g) => g.slug,
+  ),
+);
+const tagSlugs = [...new Set(post.data.tags.map(tagSlug))].filter((s) =>
+  qualifying.has(s),
+);
 
 const SITE_URL = "https://nuroai.dev";
 const url = `${SITE_URL}/sv/blog/${post.id}`;
@@ -69,6 +81,13 @@ const breadcrumb = {
         <Reveal as="p" eager delay={0.06} class={styles.articleMeta}>
           {fmt(post.data.pubDate)} · {post.data.author}
         </Reveal>
+        {tagSlugs.length > 0 && (
+          <div class={styles.tags}>
+            {tagSlugs.map((s) => (
+              <a class={styles.tagChip} href={`/sv/blog/tag/${s}`}>{tagLabel(s)}</a>
+            ))}
+          </div>
+        )}
         <article class={styles.prose}>
           <Content />
         </article>
