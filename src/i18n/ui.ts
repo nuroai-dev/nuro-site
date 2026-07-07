@@ -62,6 +62,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/blog/what-is-an-accessible-learning-environment",
   "/blog/swedens-school-inspectorate-2025-support-gap",
   "/blog/swedens-early-support-guarantee-not-delivering",
+  "/blog/sweden-ai-in-schools-npf-support",
 ]);
 
 /** Does this page have a Swedish version yet? */
