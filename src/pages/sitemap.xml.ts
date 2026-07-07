@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { TRANSLATED_PATHS } from "@/i18n/ui";
+import { buildTagIndex } from "@/lib/blog-tags";
 
 /**
  * Dynamic sitemap. Static pages + every published blog post, and for pages
@@ -68,6 +69,30 @@ export const GET: APIRoute = async () => {
     const hasSv = TRANSLATED_PATHS.has(`/blog/${post.id}`);
     if (hasSv) {
       const svHref = `${SITE}/sv/blog/${post.id}/`;
+      urls.push(
+        `  <url>\n    <loc>${enHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
+      );
+      urls.push(
+        `  <url>\n    <loc>${svHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
+      );
+    } else {
+      urls.push(`  <url>\n    <loc>${enHref}</loc>\n${meta}\n  </url>`);
+    }
+  }
+
+  // Topic-hub tag pages. A tag that qualifies (2+ posts) in both languages gets
+  // both URLs with hreflang alternates; an EN-only tag gets just the EN loc.
+  const svTagSlugs = new Set(
+    buildTagIndex(await getCollection("blogSv", ({ data }) => !data.draft)).map(
+      (g) => g.slug,
+    ),
+  );
+  const enTags = buildTagIndex(posts);
+  for (const { slug } of enTags) {
+    const meta = `    <changefreq>weekly</changefreq>\n    <priority>0.5</priority>`;
+    const enHref = `${SITE}/blog/tag/${slug}/`;
+    if (svTagSlugs.has(slug)) {
+      const svHref = `${SITE}/sv/blog/tag/${slug}/`;
       urls.push(
         `  <url>\n    <loc>${enHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
       );
