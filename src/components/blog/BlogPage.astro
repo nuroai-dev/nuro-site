@@ -16,6 +16,7 @@ import Reveal from "@/components/motion/Reveal.astro";
 import BlogCard from "@/components/blog/BlogCard.astro";
 import styles from "@/components/blog/blog.module.css";
 import { getLang } from "@/i18n/ui";
+import { buildTagIndex } from "@/lib/blog-tags";
 
 const lang = getLang(Astro.url);
 const t = {
@@ -28,6 +29,7 @@ const t = {
     intro:
       "What the research says, what the law requires, and what actually helps neurodivergent students, for the teachers, students, and parents living it every day.",
     empty: "No posts yet — the first one is on its way.",
+    topicsLabel: "Browse by topic",
   },
   sv: {
     title: "Blogg — Nuro",
@@ -38,6 +40,7 @@ const t = {
     intro:
       "Vad forskningen säger, vad lagen kräver och vad som faktiskt hjälper neurodivergenta elever, för lärarna, eleverna och föräldrarna som lever med det varje dag.",
     empty: "Inga inlägg än, det första är på väg.",
+    topicsLabel: "Bläddra efter ämne",
   },
 }[lang];
 
@@ -49,6 +52,7 @@ const posts = (
 
 const SITE_URL = "https://nuroai.dev";
 const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+const topics = buildTagIndex(posts);
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
@@ -81,6 +85,21 @@ const blogSchema = {
         <Reveal as="p" eager delay={0.1} class={styles.intro}>
           {t.intro}
         </Reveal>
+
+        {
+          topics.length > 0 && (
+            <Reveal eager delay={0.14} class={styles.topicsRow}>
+              <span class={styles.topicsLabel}>{t.topicsLabel}</span>
+              <div class={styles.tags}>
+                {topics.map((g) => (
+                  <a class={styles.tagChip} href={`${blogBase}/tag/${g.slug}`}>
+                    {g.label}
+                  </a>
+                ))}
+              </div>
+            </Reveal>
+          )
+        }
 
         {
           posts.length > 0 ? (
