@@ -12,6 +12,7 @@ import PressCard from "@/components/press/PressCard.astro";
 import { PRESS_ITEMS } from "@/data/press";
 import styles from "@/components/press/press.module.css";
 import { getLang } from "@/i18n/ui";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 
 const lang = getLang(Astro.url);
 const t = {
@@ -41,6 +42,7 @@ const items = [...PRESS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
 ---
 
 <Layout title={t.title} description={t.description}>
+  <BreadcrumbSchema name="Press" pageType="CollectionPage" />
   <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>
