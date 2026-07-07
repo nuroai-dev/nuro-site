@@ -11,6 +11,7 @@ import Footer from "@/components/footer/Footer.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "@/components/team/team.module.css";
 import { getLang } from "@/i18n/ui";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 
 const lang = getLang(Astro.url);
 const t = {
@@ -119,6 +120,7 @@ const GROUPS: { heading: string; people: Person[] }[] = [
 ---
 
 <Layout title={t.title} description={t.description}>
+  <BreadcrumbSchema name="Team" pageType="AboutPage" />
   <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>
