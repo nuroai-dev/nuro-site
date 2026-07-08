@@ -40,6 +40,7 @@ interface Props {
   publishedTime?: string;
   author?: string;
   ogImage?: string;
+  ogImageAlt?: string;
 }
 
 const {
@@ -49,10 +50,12 @@ const {
   publishedTime,
   author,
   ogImage,
+  ogImageAlt,
 } = Astro.props;
 const TITLE = title;
 const DESCRIPTION = description;
 const OG_IMAGE = ogImage ?? `${SITE_URL}/og.png`;
+const OG_IMAGE_ALT = ogImageAlt ?? "Nuro. Let's help schools stop breaking the law.";
 const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
 
 // Bilingual: active language + hreflang alternates for this exact page.
@@ -177,19 +180,13 @@ const STRUCTURED_DATA = {
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Nuro — Let's help schools stop breaking the law."
-    />
+    <meta property="og:image:alt" content={OG_IMAGE_ALT} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={TITLE} />
     <meta name="twitter:description" content={DESCRIPTION} />
     <meta name="twitter:image" content={OG_IMAGE} />
-    <meta
-      name="twitter:image:alt"
-      content="Nuro — Let's help schools stop breaking the law."
-    />
+    <meta name="twitter:image:alt" content={OG_IMAGE_ALT} />
 
     <script
       type="application/ld+json"
