@@ -9,6 +9,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   output: "server",
   adapter: node({ mode: "standalone" }),
+  redirects: {
+    "/blog/swedens-school-support-reform-2028":
+      "/blog/sweden-proposes-rewriting-school-support-law",
+    "/sv/blog/swedens-school-support-reform-2028":
+      "/sv/blog/sweden-proposes-rewriting-school-support-law",
+  },
   site: "https://nuroai.dev",
   // Bilingual: English at the root (/), Swedish under /sv/. No auto-redirect —
   // a language switcher in the nav/footer is the only way between them.
