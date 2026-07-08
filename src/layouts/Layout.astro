@@ -39,6 +39,7 @@ interface Props {
   ogType?: string;
   publishedTime?: string;
   author?: string;
+  ogImage?: string;
 }
 
 const {
@@ -47,10 +48,11 @@ const {
   ogType = "website",
   publishedTime,
   author,
+  ogImage,
 } = Astro.props;
 const TITLE = title;
 const DESCRIPTION = description;
-const OG_IMAGE = `${SITE_URL}/og.png`;
+const OG_IMAGE = ogImage ?? `${SITE_URL}/og.png`;
 const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
 
 // Bilingual: active language + hreflang alternates for this exact page.
