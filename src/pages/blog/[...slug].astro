@@ -52,6 +52,7 @@ const schema = {
   headline: post.data.title,
   description: post.data.description,
   datePublished: post.data.pubDate.toISOString(),
+  dateModified: (post.data.updatedDate ?? post.data.pubDate).toISOString(),
   author: { "@type": "Organization", name: post.data.author },
   publisher: { "@id": `${SITE_URL}/#organization` },
   mainEntityOfPage: url,

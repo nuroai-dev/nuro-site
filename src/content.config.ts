@@ -10,6 +10,7 @@ const blogSchema = z.object({
   title: z.string(),
   description: z.string(),
   pubDate: z.coerce.date(),
+  updatedDate: z.coerce.date().optional(),
   author: z.string().default("The Nuro team"),
   tags: z.array(z.string()).default([]),
   draft: z.boolean().default(false),
