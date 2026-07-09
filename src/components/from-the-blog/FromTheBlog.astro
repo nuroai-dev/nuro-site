@@ -1,0 +1,84 @@
+---
+/**
+ * From the blog — a homepage teaser surfacing the three most recent posts.
+ *
+ * Locale-aware: the English homepage shows the `blog` collection and links to
+ * /blog, the Swedish homepage shows `blogSv` and links to /sv/blog. It reuses
+ * the blog index's card, grid and heading styles (BlogCard + blog.module.css)
+ * so it matches the /blog page exactly, and it auto-updates as new posts ship.
+ */
+import { getCollection } from "astro:content";
+import Reveal from "@/components/motion/Reveal.astro";
+import BlogCard from "@/components/blog/BlogCard.astro";
+import blog from "@/components/blog/blog.module.css";
+import s from "./from-the-blog.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    eyebrow: "From the blog",
+    heading: "Notes on inclusive education",
+    intro:
+      "What the research says, what the law requires, and what actually helps neurodivergent students.",
+    readAll: "Read the blog",
+  },
+  sv: {
+    eyebrow: "Från bloggen",
+    heading: "Tankar om en inkluderande skola",
+    intro:
+      "Vad forskningen säger, vad lagen kräver och vad som faktiskt hjälper neurodivergenta elever.",
+    readAll: "Läs bloggen",
+  },
+}[lang];
+
+const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+const posts = (
+  await getCollection(lang === "sv" ? "blogSv" : "blog", ({ data }) => !data.draft)
+)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
+---
+
+{
+  posts.length > 0 && (
+    <section class={s.section} aria-label={t.heading}>
+      <div class={blog.container}>
+        <Reveal as="span" class={blog.eyebrow}>
+          {t.eyebrow}
+        </Reveal>
+        <Reveal as="h2" delay={0.06} class={blog.heading}>
+          {t.heading}
+        </Reveal>
+        <Reveal as="p" delay={0.1} class={blog.intro}>
+          {t.intro}
+        </Reveal>
+
+        <div class={blog.grid}>
+          {posts.map((post) => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+
+        <Reveal class={s.readAllRow} delay={0.12}>
+          <a class={s.readAll} href={blogBase}>
+            {t.readAll}
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
