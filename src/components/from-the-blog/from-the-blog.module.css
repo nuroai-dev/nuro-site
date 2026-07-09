@@ -1,0 +1,48 @@
+/* ============================================================
+   From the blog — homepage teaser. Cream surface, same section
+   rhythm as the rest of the homepage. Cards, grid and headings
+   are inherited from blog.module.css via the BlogCard component,
+   so this module only owns the section frame and the read-all
+   pill.
+   ============================================================ */
+
+.section {
+  position: relative;
+  padding: clamp(80px, 10vw, 130px) 0;
+  background: var(--bg);
+}
+
+.readAllRow {
+  margin-top: 44px;
+}
+
+.readAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.readAll:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.readAll svg {
+  transition: transform 0.18s ease;
+}
+
+.readAll:hover svg {
+  transform: translateX(3px);
+}
