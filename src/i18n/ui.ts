@@ -42,6 +42,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/terms",
   "/blog",
   // Translated blog post bodies (src/content/blog-sv/<slug>.md → /sv/blog/<slug>).
+  "/blog/the-utredning-behind-sarskilt-stod",
   "/blog/adhd-diagnoses-rising-fastest-among-girls",
   "/blog/the-right-exists-the-system-doesnt",
   "/blog/sweden-needs-more-special-education-teachers",
