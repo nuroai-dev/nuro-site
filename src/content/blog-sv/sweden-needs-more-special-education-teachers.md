@@ -47,5 +47,6 @@ Det är den delen vi bygger. Vi kommer att fortsätta skriva här om forskningen
 
 ## Källor
 
+- [Skolverket, "Fortsatt brist på behöriga lärare och förskollärare" (2025-01-28)](https://www.skolverket.se/om-skolverket/nyheter-och-pressmeddelanden/pressmeddelanden/pressmeddelanden/2025-01-28-fortsatt-brist-pa-behoriga-larare-och-forskollarare)
 - [Sveriges riksdag, "Skolgång och studieresultat för elever med NPF" (2025/26:RFR13)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/)
 - [Vi lärare, "Stor brist på speciallärare, krävs 400 nya per år"](https://www.vilarare.se/nyheter/specialpedagogik/stor-brist-pa-speciallarare--kravs-400-nya-per-ar/)
