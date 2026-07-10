@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["skollagen", "policy", "neurodiversity"]
 ---
 
-Den 17 mars 2026 lämnade regeringen [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf) till riksdagen. Den föreslår ändringar i skollagen (2010:800) som skulle förändra hur skolan är skyldig att ge elever stöd. Ändringarna föreslås träda i kraft den 1 juli 2028. Här är vad den faktiskt säger.
+Den 17 mars 2026 lämnade regeringen [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf) till riksdagen. Den föreslår ändringar i skollagen (2010:800) som skulle förändra hur skolan är skyldig att ge elever stöd. Riksdagen biföll propositionen den 3 juni 2026, och ändringarna ska träda i kraft den 1 juli 2028. Här är vad den faktiskt säger.
 
 ## Vad propositionen föreslår
 
@@ -30,10 +30,11 @@ För elever med NPF är det detaljen om tajming som betyder mest. [Resultatglapp
 
 Men tidigare identifiering hjälper bara om skolan kan agera på den. Att i september veta att en elev har halkat efter ger inte i sig en överbelastad lärare timmarna att bygga anpassat material för den eleven. Det är [glappet vi återkommer till](/sv/blog/the-right-exists-the-system-doesnt): avståndet mellan vad lagen kräver och vad en lärare faktiskt hinner ge trettio olika elever samtidigt.
 
-Det är också värt att vara tydlig med vad som inte ändras före den 1 juli 2028. De nuvarande reglerna, inklusive [extra anpassningar och särskilt stöd som de ser ut i dag](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), gäller fram till dess. En skolas skyldigheter mot sina neurodivergenta elever pausas inte medan en proposition arbetar sig genom riksdagen.
+Det är också värt att vara tydlig med vad som inte ändras före den 1 juli 2028. De nuvarande reglerna, inklusive [extra anpassningar och särskilt stöd som de ser ut i dag](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), gäller fram till dess. En skolas skyldigheter mot sina neurodivergenta elever pausas inte mellan att en reform beslutas och att den träder i kraft.
 
 Nuro är byggt för precis det kapacitetsproblem som reformen lämnar öppet: att ge varje elev anpassat, [skollagsförankrat stöd](/sv/blog/what-is-npf-neurodevelopmental-conditions-school) tidigt och som standard, utan att be en lärare bygga trettio versioner av varje lektion för hand. Oavsett vilken juridisk mekanism stödet ges under är själva arbetet med att leverera det detsamma. Det är den delen vi bygger för.
 
 ## Källor
 
 - [Regeringen, "Förbättrat stöd i skolan" (Prop. 2025/26:195)](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf)
+- [Sveriges riksdag, "Förbättrat stöd i skolan" (Betänkande 2025/26:UbU24, beslut 3 juni 2026)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/betankande/forbattrat-stod-i-skolan_hd01ubu24/)
