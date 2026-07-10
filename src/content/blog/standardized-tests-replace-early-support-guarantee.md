@@ -14,7 +14,7 @@ This is a real shift in the machinery of support, so it is worth being precise a
 
 Two things are being abolished.
 
-The first is [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser---lasa-skriva-rakna), the early-support guarantee, usually called the "läsa, skriva, räkna" guarantee. Since 2019 it has required schools to use mandatory mapping and assessment materials in the youngest year groups, make a closer assessment of a student's knowledge development when the materials indicate a risk, put support in place, follow up whether it worked, and hand the results to next year's teacher.
+The first is [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan), the early-support guarantee, usually called the "läsa, skriva, räkna" guarantee. Since 2019 it has required schools to use mandatory mapping and assessment materials in the youngest year groups, make a closer assessment of a student's knowledge development when the materials indicate a risk, put support in place, follow up whether it worked, and hand the results to next year's teacher.
 
 The second is the regulation on [extra anpassningar](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), the lighter tier of support a teacher provides within ordinary teaching, below the threshold of a formal särskilt stöd decision.
 
@@ -49,4 +49,4 @@ Whichever model applies, the hard part is the same one it has always been: turni
 
 - [Regeringen, "Förbättrat stöd i skolan" (Prop. 2025/26:195)](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf)
 - [Sveriges riksdag, "Förbättrat stöd i skolan" (Betänkande 2025/26:UbU24, beslut 3 juni 2026)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/betankande/forbattrat-stod-i-skolan_hd01ubu24/)
-- [Skolverket, "Garantin för tidiga stödinsatser, läsa skriva räkna"](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser---lasa-skriva-rakna)
+- [Skolverket, "Garantin för tidiga stödinsatser, läsa skriva räkna"](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan)
