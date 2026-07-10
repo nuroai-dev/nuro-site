@@ -30,3 +30,7 @@ For neurodivergent students, the area that most often breaks down is the pedagog
 Nuro is built for exactly that corner. It does not rearrange the room or run the social climate. It works inside the pedagogical learning environment, the planning, the teaching materials, the way a task is structured, adapting them per student so that a lesson designed for thirty can still reach the one who learns differently.
 
 An accessible school needs all four of SPSM's areas. Three of them have clear owners and budgets. The pedagogical one, the day to day adaptation of the actual learning, has been the area without enough hands. [That is the gap we are building to close](/blog/the-right-exists-the-system-doesnt).
+
+## Sources
+
+- [SPSM, "Områden i tillgänglighetsmodellen"](https://www.spsm.se/stodmaterial-for-tillganglig-utbildning/omraden-i-tillganglighetsmodellen/)

@@ -42,3 +42,7 @@ None of this replaces the teacher. It gives the teacher back the time and the vi
 The law was right. Every student does have a right to support, and that includes the one in the back row whose brain works a little differently from the lesson plan. What's been missing isn't the principle. It's the tool that makes the principle real at the scale of a real classroom, on a real Tuesday, with a real teacher who has thirty other students to reach.
 
 That's the gap we built Nuro to close. We'll be writing here about neurodiversity in education, what the research says, and what actually helps, for the teachers, students, and parents living this every day.
+
+## Sources
+
+- [Skollagen (2010:800), 3 kap., Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)

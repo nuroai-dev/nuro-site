@@ -30,3 +30,7 @@ För neurodivergenta elever är det område som oftast brister det pedagogiska. 
 Nuro är byggt för precis det hörnet. Det möblerar inte om rummet och sköter inte det sociala klimatet. Det arbetar inuti den pedagogiska lärmiljön, planeringen, läromaterialet, sättet en uppgift är strukturerad på, och anpassar dem per elev så att en lektion utformad för trettio ändå kan nå den som lär sig annorlunda.
 
 En tillgänglig skola behöver alla fyra av SPSM:s områden. Tre av dem har tydliga ägare och budgetar. Det pedagogiska, den dagliga anpassningen av själva lärandet, har varit det område som saknat tillräckligt med händer. [Det är den lucka vi bygger för att sluta](/sv/blog/the-right-exists-the-system-doesnt).
+
+## Källor
+
+- [SPSM, "Områden i tillgänglighetsmodellen"](https://www.spsm.se/stodmaterial-for-tillganglig-utbildning/omraden-i-tillganglighetsmodellen/)
