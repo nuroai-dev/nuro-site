@@ -42,3 +42,7 @@ Inget av det här ersätter läraren. Det ger tillbaka läraren den tid och den 
 Lagen hade rätt. Varje elev har rätt till stöd, och det inkluderar den på bakre raden vars hjärna fungerar lite annorlunda än lektionsplaneringen. Det som har saknats är inte principen. Det är verktyget som gör principen verklig i skala i ett riktigt klassrum, en riktig tisdag, med en riktig lärare som har trettio andra elever att nå.
 
 Det är det glappet vi byggde Nuro för att sluta. Vi kommer att skriva här om neurodiversitet i skolan, vad forskningen säger och vad som faktiskt hjälper, för lärarna, eleverna och föräldrarna som lever med det här varje dag.
+
+## Källor
+
+- [Skollagen (2010:800), 3 kap., Sveriges riksdag](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
