@@ -1,15 +1,16 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { TRANSLATED_PATHS } from "@/i18n/ui";
+import { hasSv } from "@/i18n/ui";
 import { buildTagIndex } from "@/lib/blog-tags";
 
 /**
  * Dynamic sitemap. Static pages + every published blog post, and for pages
- * that exist in Swedish (TRANSLATED_PATHS) both the English and /sv URLs are
- * listed with xhtml:link hreflang alternates, so Google serves the right
- * language. Grows automatically as pages are translated (single source of
- * truth = TRANSLATED_PATHS). Prerendered to /sitemap.xml (robots.txt points
- * here).
+ * that exist in Swedish both the English and /sv URLs are listed with
+ * xhtml:link hreflang alternates, so Google serves the right language.
+ * Whether a page has a Swedish version comes from the shared hasSv() helper
+ * (static pages via TRANSLATED_PATHS, blog posts via their bilingual shape),
+ * so the sitemap stays in sync with the in-page hreflang. Grows automatically
+ * as posts are added. Prerendered to /sitemap.xml (robots.txt points here).
  */
 export const prerender = true;
 
@@ -26,8 +27,6 @@ const STATIC: { path: string; changefreq: string; priority: string }[] = [
   { path: "/terms/", changefreq: "yearly", priority: "0.3" },
 ];
 
-/** English key for TRANSLATED_PATHS ("/about/" -> "/about", "/" -> "/"). */
-const enKey = (path: string) => (path === "/" ? "/" : path.replace(/\/$/, ""));
 /** Swedish equivalent loc ("/" -> "/sv/", "/about/" -> "/sv/about/"). */
 const svPath = (path: string) => (path === "/" ? "/sv/" : "/sv" + path);
 
@@ -45,10 +44,10 @@ export const GET: APIRoute = async () => {
   const urls: string[] = [];
 
   for (const p of STATIC) {
-    const hasSv = TRANSLATED_PATHS.has(enKey(p.path));
+    const translated = hasSv(p.path);
     const enHref = `${SITE}${p.path}`;
     const meta = `    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>`;
-    if (hasSv) {
+    if (translated) {
       const svHref = `${SITE}${svPath(p.path)}`;
       urls.push(
         `  <url>\n    <loc>${enHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,
@@ -65,9 +64,9 @@ export const GET: APIRoute = async () => {
     const lastmod = post.data.pubDate.toISOString().slice(0, 10);
     const meta = `    <lastmod>${lastmod}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>`;
     const enHref = `${SITE}/blog/${post.id}/`;
-    // Posts whose Swedish body has shipped get both URLs + hreflang alternates.
-    const hasSv = TRANSLATED_PATHS.has(`/blog/${post.id}`);
-    if (hasSv) {
+    // Every post ships bilingually, so it gets both URLs + hreflang alternates.
+    const translated = hasSv(`/blog/${post.id}`);
+    if (translated) {
       const svHref = `${SITE}/sv/blog/${post.id}/`;
       urls.push(
         `  <url>\n    <loc>${enHref}</loc>\n${alts(enHref, svHref)}\n${meta}\n  </url>`,

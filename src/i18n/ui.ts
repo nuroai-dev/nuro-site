@@ -27,10 +27,10 @@ function toEnglishPath(pathname: string): string {
 }
 
 /**
- * English paths that already have a Swedish (/sv) translation. The site is
- * rolling out bilingually page by page — add a path here when its /sv version
- * ships, and the switcher + hreflang light up for it automatically. Anything
- * not listed falls back to the Swedish home (no broken /sv/<page> links).
+ * English static pages that already have a Swedish (/sv) translation. Add a
+ * path here when its /sv version ships, and the switcher + hreflang light up
+ * for it automatically. Blog posts are NOT listed here; they are handled by
+ * isBlogPost() below, because every post ships bilingually.
  */
 export const TRANSLATED_PATHS = new Set<string>([
   "/",
@@ -41,37 +41,24 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/privacy",
   "/terms",
   "/blog",
-  // Translated blog post bodies (src/content/blog-sv/<slug>.md → /sv/blog/<slug>).
-  "/blog/girls-with-npf-receive-less-sarskilt-stod",
-  "/blog/the-utredning-behind-sarskilt-stod",
-  "/blog/adhd-diagnoses-rising-fastest-among-girls",
-  "/blog/the-right-exists-the-system-doesnt",
-  "/blog/sweden-needs-more-special-education-teachers",
-  "/blog/school-absence-starts-earlier",
-  "/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod",
-  "/blog/cost-of-school-absence-false-economy",
-  "/blog/adhd-in-the-classroom-what-helps",
-  "/blog/autism-in-the-classroom-what-helps",
-  "/blog/dyslexia-in-the-classroom-what-helps",
-  "/blog/parent-guide-child-not-getting-support-at-school",
-  "/blog/school-leaders-support-compliance-risk",
-  "/blog/what-is-npf-neurodevelopmental-conditions-school",
-  "/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap",
-  "/blog/support-without-a-diagnosis-school",
-  "/blog/swedens-parliament-npf-school-results",
-  "/blog/sweden-proposes-rewriting-school-support-law",
-  "/blog/sweden-doesnt-count-school-absence",
-  "/blog/principals-say-they-lack-resources-for-npf",
-  "/blog/what-is-an-accessible-learning-environment",
-  "/blog/swedens-school-inspectorate-2025-support-gap",
-  "/blog/swedens-early-support-guarantee-not-delivering",
-  "/blog/sweden-ai-in-schools-npf-support",
-  "/blog/what-an-atgardsprogram-must-contain",
 ]);
+
+/**
+ * Every blog post ships bilingually: an English body in src/content/blog and a
+ * matching Swedish body in src/content/blog-sv (→ /sv/blog/<slug>). So any
+ * /blog/<slug> path always has a Swedish counterpart. Matching by shape keeps
+ * the switcher and hreflang correct automatically as posts are added, with no
+ * per-post maintenance. (The /blog index itself is a static path above, not a
+ * post, so it is intentionally excluded here.)
+ */
+function isBlogPost(enPath: string): boolean {
+  return /^\/blog\/[^/]+$/.test(enPath);
+}
 
 /** Does this page have a Swedish version yet? */
 export function hasSv(pathname: string): boolean {
-  return TRANSLATED_PATHS.has(toEnglishPath(pathname));
+  const en = toEnglishPath(pathname);
+  return TRANSLATED_PATHS.has(en) || isBlogPost(en);
 }
 
 /** The same page in the given language (used by the language switcher). */
@@ -79,7 +66,7 @@ export function switchLangPath(pathname: string, lang: Lang): string {
   const en = toEnglishPath(pathname);
   if (lang === "en") return en; // every page exists in English
   if (en === "/") return "/sv/";
-  return TRANSLATED_PATHS.has(en) ? "/sv" + en : "/sv/";
+  return TRANSLATED_PATHS.has(en) || isBlogPost(en) ? "/sv" + en : "/sv/";
 }
 
 /**
