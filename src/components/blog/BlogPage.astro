@@ -30,6 +30,7 @@ const t = {
       "What the research says, what the law requires, and what actually helps neurodivergent students, for the teachers, students, and parents living it every day.",
     empty: "No posts yet — the first one is on its way.",
     topicsLabel: "Browse by topic",
+    allTopics: "All topics →",
   },
   sv: {
     title: "Blogg — Nuro",
@@ -41,6 +42,7 @@ const t = {
       "Vad forskningen säger, vad lagen kräver och vad som faktiskt hjälper neurodivergenta elever, för lärarna, eleverna och föräldrarna som lever med det varje dag.",
     empty: "Inga inlägg än, det första är på väg.",
     topicsLabel: "Bläddra efter ämne",
+    allTopics: "Alla ämnen →",
   },
 }[lang];
 
@@ -96,6 +98,9 @@ const blogSchema = {
                     {g.label}
                   </a>
                 ))}
+                <a class={styles.tagChip} href={`${blogBase}/tags`}>
+                  {t.allTopics}
+                </a>
               </div>
             </Reveal>
           )
