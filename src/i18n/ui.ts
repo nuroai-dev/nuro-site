@@ -41,6 +41,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/privacy",
   "/terms",
   "/blog",
+  "/blog/tags",
 ]);
 
 /**

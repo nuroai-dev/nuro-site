@@ -1,0 +1,112 @@
+---
+/**
+ * Blog topics index, locale-aware (English at /blog/tags, Swedish at
+ * /sv/blog/tags). Rendered by both src/pages/blog/tags.astro and
+ * src/pages/sv/blog/tags.astro so there is one source of truth.
+ *
+ * A single crawlable hub that links every qualifying topic page (tags used by
+ * MIN_TAGGED+ posts), with a post count each. Strengthens internal linking to
+ * the topic hubs and gives readers and answer engines one map of what Nuro
+ * writes about. Reuses the blog chrome and blog.module.css classes; no new CSS.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import styles from "@/components/blog/blog.module.css";
+import { getLang } from "@/i18n/ui";
+import { getCollection } from "astro:content";
+import { buildTagIndex } from "@/lib/blog-tags";
+
+const lang = getLang(Astro.url);
+const t = {
+  en: {
+    title: "All topics — Nuro Blog",
+    description:
+      "Every topic the Nuro blog covers, the law, the research, and what actually helps neurodivergent students, in one place.",
+    eyebrow: "Topics",
+    heading: "Browse the blog by topic",
+    intro:
+      "Every subject we write about, from what Skollagen requires to what genuinely helps in the classroom. Pick a topic to see every post on it.",
+    back: "← Blog",
+    count: (n: number) => `${n} post${n === 1 ? "" : "s"}`,
+  },
+  sv: {
+    title: "Alla ämnen — Nuro Blogg",
+    description:
+      "Alla ämnen Nuros blogg tar upp, lagen, forskningen och vad som faktiskt hjälper neurodivergenta elever, samlade på ett ställe.",
+    eyebrow: "Ämnen",
+    heading: "Bläddra i bloggen efter ämne",
+    intro:
+      "Alla ämnen vi skriver om, från vad skollagen kräver till vad som faktiskt hjälper i klassrummet. Välj ett ämne för att se alla inlägg om det.",
+    back: "← Blogg",
+    count: (n: number) => `${n} inlägg`,
+  },
+}[lang];
+
+export const prerender = true;
+
+const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+const posts = await getCollection(
+  lang === "sv" ? "blogSv" : "blog",
+  ({ data }) => !data.draft,
+);
+const topics = buildTagIndex(posts);
+
+const SITE_URL = "https://nuroai.dev";
+const url = `${SITE_URL}${blogBase}/tags`;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  inLanguage: lang === "sv" ? "sv-SE" : "en-US",
+  name: t.heading,
+  description: t.description,
+  url,
+  hasPart: topics.map((g) => ({
+    "@type": "CollectionPage",
+    name: g.label,
+    url: `${SITE_URL}${blogBase}/tag/${g.slug}`,
+  })),
+};
+
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}${blogBase}` },
+    { "@type": "ListItem", position: 3, name: t.eyebrow, item: url },
+  ],
+};
+---
+
+<Layout title={t.title} description={t.description}>
+  <Nav />
+  <main id="main-content" tabindex="-1">
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <a class={styles.backLink} href={blogBase}>{t.back}</a>
+        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {t.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          {t.intro}
+        </Reveal>
+        <Reveal eager delay={0.14} class={styles.topicsRow}>
+          <div class={styles.tags}>
+            {topics.map((g) => (
+              <a class={styles.tagChip} href={`${blogBase}/tag/${g.slug}`}>
+                {g.label} · {t.count(g.posts.length)}
+              </a>
+            ))}
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+</Layout>
