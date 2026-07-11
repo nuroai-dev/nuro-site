@@ -1,0 +1,139 @@
+---
+/**
+ * End-of-article call to action. Turns a top-of-funnel blog reader into a
+ * waitlist lead by connecting the article back to what Nuro does. Locale
+ * follows the page URL (same pattern as RelatedPosts). Copy reuses the site's
+ * existing positioning, no new claims or numbers.
+ */
+import Reveal from "@/components/motion/Reveal.astro";
+import { getLang, localizePath } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+
+const t = {
+  en: {
+    eyebrow: "About Nuro",
+    heading: "Support that meets Skollagen, for every neurodivergent student",
+    body: "Nuro helps Swedish schools give students with ADHD, autism, and dyslexia the adapted support the law already requires, and spot the ones at risk before they fall behind.",
+    primary: "Join the waitlist",
+    secondary: "Learn more about Nuro",
+  },
+  sv: {
+    eyebrow: "Om Nuro",
+    heading: "Stöd som lever upp till skollagen, för varje neurodivergent elev",
+    body: "Nuro hjälper svenska skolor att ge elever med adhd, autism och dyslexi det anpassade stöd som lagen redan kräver, och fånga dem i riskzon innan de hamnar efter.",
+    primary: "Gå med i väntelistan",
+    secondary: "Läs mer om Nuro",
+  },
+}[lang];
+
+const waitlistHref = localizePath("/#waitlist", lang);
+const aboutHref = localizePath("/about", lang);
+---
+
+<section class="ctaWrap" aria-label={t.eyebrow}>
+  <div class="ctaInner">
+    <Reveal as="div" class="cta">
+      <p class="eyebrow">{t.eyebrow}</p>
+      <h2 class="heading">{t.heading}</h2>
+      <p class="body">{t.body}</p>
+      <div class="actions">
+        <a class="btnPrimary focusable" href={waitlistHref}>{t.primary}</a>
+        <a class="btnSecondary focusable" href={aboutHref}>{t.secondary} →</a>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
+<style>
+  .ctaWrap {
+    padding: clamp(1.75rem, 4vw, 2.75rem) 1.25rem 0;
+  }
+  .ctaInner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .cta {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-l);
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    box-shadow: 0 1px 2px rgba(22, 22, 28, 0.04), 0 10px 30px rgba(22, 22, 28, 0.06);
+  }
+  .cta::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--holo-1),
+      var(--holo-2),
+      var(--holo-3),
+      var(--holo-4),
+      var(--holo-5)
+    );
+  }
+  .eyebrow {
+    margin: 0 0 0.5rem;
+    font-family: var(--f-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .heading {
+    margin: 0 0 0.6rem;
+    font-family: var(--f-display);
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .body {
+    margin: 0 0 1.35rem;
+    font-family: var(--f-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+    max-width: 60ch;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  .btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: var(--f-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition:
+      transform 0.15s ease,
+      opacity 0.15s ease;
+  }
+  .btnPrimary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  .btnSecondary {
+    font-family: var(--f-sans);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-2);
+    padding-bottom: 1px;
+  }
+  .btnSecondary:hover {
+    border-bottom-color: var(--ink);
+  }
+</style>
