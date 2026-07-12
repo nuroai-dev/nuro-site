@@ -12,7 +12,7 @@ import Footer from "@/components/footer/Footer.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import BlogCard from "@/components/blog/BlogCard.astro";
 import styles from "@/components/blog/blog.module.css";
-import { buildTagIndex } from "@/lib/blog-tags";
+import { buildTagIndex, tagIntroSv } from "@/lib/blog-tags";
 
 export const prerender = true;
 
@@ -29,13 +29,14 @@ const slug = Astro.params.tag;
 
 const SITE_URL = "https://nuroai.dev";
 const url = `${SITE_URL}/sv/blog/tag/${slug}`;
+const intro = tagIntroSv(slug, label);
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   inLanguage: "sv-SE",
   name: `Inlägg taggade ${label}`,
-  description: `Nuro-blogginlägg om ${label}.`,
+  description: intro,
   url,
 };
 
@@ -50,13 +51,14 @@ const breadcrumb = {
 };
 ---
 
-<Layout title={`Inlägg taggade ${label} — Nuro`} description={`Nuro-blogginlägg om ${label}.`}>
+<Layout title={`Inlägg taggade ${label} — Nuro`} description={intro}>
   <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>
       <div class={styles.container}>
         <a class={styles.backLink} href="/sv/blog">← Blogg</a>
         <Reveal as="h1" eager class={styles.heading}>Inlägg taggade {label}</Reveal>
+        <Reveal as="p" class={styles.intro}>{intro}</Reveal>
         <div class={styles.grid}>
           {posts.map((p, i) => (
             <Reveal delay={Math.min(i, 6) * 0.05}>
