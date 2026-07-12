@@ -16,9 +16,11 @@ import Reveal from "@/components/motion/Reveal.astro";
 import styles from "@/components/blog/blog.module.css";
 import { getLang } from "@/i18n/ui";
 import { getCollection } from "astro:content";
-import { buildTagIndex } from "@/lib/blog-tags";
+import { buildTagIndex, tagIntroEn, tagIntroSv } from "@/lib/blog-tags";
 
 const lang = getLang(Astro.url);
+const introFor = (slug: string, label: string) =>
+  lang === "sv" ? tagIntroSv(slug, label) : tagIntroEn(slug, label);
 const t = {
   en: {
     title: "All topics — Nuro Blog",
@@ -66,6 +68,7 @@ const schema = {
   hasPart: topics.map((g) => ({
     "@type": "CollectionPage",
     name: g.label,
+    description: introFor(g.slug, g.label),
     url: `${SITE_URL}${blogBase}/tag/${g.slug}`,
   })),
 };
@@ -94,15 +97,19 @@ const breadcrumb = {
         <Reveal as="p" eager delay={0.1} class={styles.intro}>
           {t.intro}
         </Reveal>
-        <Reveal eager delay={0.14} class={styles.topicsRow}>
-          <div class={styles.tags}>
-            {topics.map((g) => (
-              <a class={styles.tagChip} href={`${blogBase}/tag/${g.slug}`}>
-                {g.label} · {t.count(g.posts.length)}
+        <div class={styles.topicList}>
+          {topics.map((g, i) => (
+            <Reveal delay={Math.min(i, 8) * 0.04}>
+              <a class={styles.topicItem} href={`${blogBase}/tag/${g.slug}`}>
+                <span class={styles.topicItemHead}>
+                  <span class={styles.topicItemLabel}>{g.label}</span>
+                  <span class={styles.topicItemCount}>{t.count(g.posts.length)}</span>
+                </span>
+                <span class={styles.topicItemDesc}>{introFor(g.slug, g.label)}</span>
               </a>
-            ))}
-          </div>
-        </Reveal>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   </main>
