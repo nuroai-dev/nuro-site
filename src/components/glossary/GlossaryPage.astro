@@ -1,0 +1,337 @@
+---
+/**
+ * Glossary of the Swedish school-support system, locale-aware (English at
+ * /glossary, Swedish at /sv/glossary; locale read from the URL). Rendered by
+ * both src/pages/glossary.astro and src/pages/sv/glossary.astro so there is one
+ * source of truth.
+ *
+ * Every definition is plain-language and grounded in the same primary sources
+ * the blog posts cite; each term links to the post that tells the full story,
+ * so the glossary doubles as an internal-linking hub into the knowledge base.
+ * Emits a DefinedTermSet + BreadcrumbList so answer engines can lift the terms.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
+import styles from "@/components/glossary/glossary.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const SITE_URL = "https://nuroai.dev";
+const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+
+const chrome = {
+  en: {
+    title: "Glossary: the Swedish school-support system, explained",
+    description:
+      "A plain-language glossary of the Swedish school-support system: ledning och stimulans, extra anpassningar, särskilt stöd, åtgärdsprogram, elevhälsa, and more, with what each term means for neurodivergent students.",
+    eyebrow: "Glossary",
+    heading: "The Swedish school-support system, explained",
+    intro:
+      "The words schools, parents and municipalities use when a student needs support, in plain language. Each term links to a fuller explanation, and to what it means for students with ADHD, autism, and dyslexia.",
+    readMore: "Read more",
+    groups: {
+      staircase: "The support staircase",
+      actors: "Who does what",
+      terms: "Key terms",
+    },
+  },
+  sv: {
+    title: "Ordlista: skolans stödsystem, förklarat",
+    description:
+      "En ordlista i klarspråk över skolans stödsystem: ledning och stimulans, extra anpassningar, särskilt stöd, åtgärdsprogram, elevhälsa och mer, med vad varje begrepp betyder för neurodivergenta elever.",
+    eyebrow: "Ordlista",
+    heading: "Skolans stödsystem, förklarat",
+    intro:
+      "Orden som skolan, föräldrar och kommuner använder när en elev behöver stöd, i klarspråk. Varje begrepp länkar till en fylligare förklaring, och till vad det betyder för elever med ADHD, autism och dyslexi.",
+    readMore: "Läs mer",
+    groups: {
+      staircase: "Stödtrappan",
+      actors: "Vem gör vad",
+      terms: "Nyckelbegrepp",
+    },
+  },
+}[lang];
+
+type Term = {
+  id: string;
+  term: string;
+  glossEn: string;
+  group: "staircase" | "actors" | "terms";
+  slug?: string;
+  def: { en: string; sv: string };
+};
+
+const TERMS: Term[] = [
+  {
+    id: "ledning-och-stimulans",
+    term: "Ledning och stimulans",
+    glossEn: "Guidance and stimulation",
+    group: "staircase",
+    slug: "what-is-ledning-och-stimulans",
+    def: {
+      en: "The guidance and stimulation every student is entitled to inside ordinary teaching. It is the first and broadest level of support, and it applies before any formal decision. For many neurodivergent students, good ledning och stimulans is most of what they need.",
+      sv: "Den ledning och stimulans varje elev har rätt till inom den ordinarie undervisningen. Det är den första och bredaste nivån av stöd, och den gäller innan något formellt beslut. För många neurodivergenta elever är god ledning och stimulans det mesta av det de behöver.",
+    },
+  },
+  {
+    id: "extra-anpassningar",
+    term: "Extra anpassningar",
+    glossEn: "Extra adjustments",
+    group: "staircase",
+    slug: "standardized-tests-replace-early-support-guarantee",
+    def: {
+      en: "Smaller adjustments within ordinary teaching, such as a checklist, a quieter room, more time, or instructions broken into steps. Today it is a separately regulated step, but that regulation is set to be abolished on 1 July 2028.",
+      sv: "Mindre anpassningar inom den ordinarie undervisningen, till exempel en checklista, ett lugnare rum, mer tid eller instruktioner uppdelade i steg. I dag är det ett särskilt reglerat steg, men den regleringen ska avskaffas den 1 juli 2028.",
+    },
+  },
+  {
+    id: "sarskilt-stod",
+    term: "Särskilt stöd",
+    glossEn: "Special support",
+    group: "staircase",
+    slug: "the-utredning-behind-sarskilt-stod",
+    def: {
+      en: "More intensive support that needs a formal decision by the principal, when ledning och stimulans and extra anpassningar are not enough. It is documented in an åtgärdsprogram and follows the student until the need is met.",
+      sv: "Mer omfattande stöd som kräver ett formellt beslut av rektor, när ledning och stimulans och extra anpassningar inte räcker. Det dokumenteras i ett åtgärdsprogram och följer eleven tills behovet är tillgodosett.",
+    },
+  },
+  {
+    id: "atgardsprogram",
+    term: "Åtgärdsprogram",
+    glossEn: "Action programme",
+    group: "staircase",
+    slug: "what-an-atgardsprogram-must-contain",
+    def: {
+      en: "The document that records a decision on särskilt stöd. Skollagen says it must set out the student's needs, the measures, who is responsible for each, and how and when they will be followed up.",
+      sv: "Dokumentet som fastställer ett beslut om särskilt stöd. Skollagen säger att det ska ange elevens behov, åtgärderna, vem som ansvarar för vad, och hur och när de ska följas upp.",
+    },
+  },
+  {
+    id: "utredning",
+    term: "Utredning av behov av särskilt stöd",
+    glossEn: "Investigation of support needs",
+    group: "staircase",
+    slug: "the-utredning-behind-sarskilt-stod",
+    def: {
+      en: "Before a school can decide on särskilt stöd, it must investigate what the student actually needs. This is where a vague worry is meant to become a concrete plan, and it is often where the process stalls.",
+      sv: "Innan en skola kan besluta om särskilt stöd måste den utreda vad eleven faktiskt behöver. Det är här en vag oro ska bli en konkret plan, och det är ofta här processen fastnar.",
+    },
+  },
+  {
+    id: "anpassad-studiegang",
+    term: "Anpassad studiegång",
+    glossEn: "Adapted study path",
+    group: "staircase",
+    def: {
+      en: "A form of särskilt stöd that departs from the ordinary timetable or set of subjects. Under the 2028 reform it may be decided only once all other options for särskilt stöd are exhausted or judged unsuitable, because it can narrow a student's future choices.",
+      sv: "En form av särskilt stöd som avviker från den ordinarie timplanen eller ämnesuppsättningen. Enligt 2028 års reform får det beslutas först när alla andra möjligheter till särskilt stöd är uttömda eller bedöms olämpliga, eftersom det kan begränsa elevens framtida val.",
+    },
+  },
+  {
+    id: "huvudman",
+    term: "Huvudman",
+    glossEn: "The responsible authority",
+    group: "actors",
+    slug: "school-leaders-support-compliance-risk",
+    def: {
+      en: "The body legally responsible for a school: the municipality for a municipal school, or the private operator for a friskola. The huvudman is ultimately accountable for meeting the duty to give students support, and can be fined when it does not.",
+      sv: "Den som är juridiskt ansvarig för en skola: kommunen för en kommunal skola, eller den fristående aktören för en friskola. Huvudmannen är ytterst ansvarig för att skyldigheten att ge elever stöd uppfylls, och kan föreläggas vite när den inte gör det.",
+    },
+  },
+  {
+    id: "rektor",
+    term: "Rektor",
+    glossEn: "Principal",
+    group: "actors",
+    def: {
+      en: "The principal leads the school and makes the formal decisions in the support process, including the decision to provide särskilt stöd and to establish an åtgärdsprogram.",
+      sv: "Rektor leder skolan och fattar de formella besluten i stödprocessen, bland annat beslutet att ge särskilt stöd och att upprätta ett åtgärdsprogram.",
+    },
+  },
+  {
+    id: "elevhalsa",
+    term: "Elevhälsa",
+    glossEn: "Student health team",
+    group: "actors",
+    slug: "elevhalsa-understaffed-support-frontline",
+    def: {
+      en: "The team every school must have, covering medical, psychological, psychosocial and special-education competence. It is the frontline meant to identify and support struggling students early, and reporting points to it being severely stretched.",
+      sv: "Det team varje skola måste ha, med medicinsk, psykologisk, psykosocial och specialpedagogisk kompetens. Det är den första linjen som ska upptäcka och stötta elever som kämpar tidigt, och rapporter pekar på att det är hårt ansträngt.",
+    },
+  },
+  {
+    id: "skolverket",
+    term: "Skolverket",
+    glossEn: "National Agency for Education",
+    group: "actors",
+    def: {
+      en: "Sweden's national education agency. It sets the curricula and grading criteria, produces official statistics and guidance, and supports schools in carrying out their assignment.",
+      sv: "Sveriges nationella skolmyndighet. Den fastställer läroplaner och betygskriterier, tar fram officiell statistik och stödmaterial, och stöttar skolorna i att genomföra sitt uppdrag.",
+    },
+  },
+  {
+    id: "skolinspektionen",
+    term: "Skolinspektionen",
+    glossEn: "Schools Inspectorate",
+    group: "actors",
+    slug: "swedens-school-inspectorate-2025-support-gap",
+    def: {
+      en: "The state inspectorate that supervises schools. It can issue injunctions and conditional fines, and year after year it names support for struggling students as one of the most common and most serious deficiencies it finds.",
+      sv: "Den statliga inspektion som granskar skolor. Den kan utfärda förelägganden och vitesförelägganden, och år efter år pekar den ut stödet till elever som kämpar som en av de vanligaste och allvarligaste bristerna den finner.",
+    },
+  },
+  {
+    id: "spsm",
+    term: "SPSM",
+    glossEn: "Agency for Special Needs Education and Schools",
+    group: "actors",
+    slug: "spsm-special-education-perspective-on-ai",
+    def: {
+      en: "Specialpedagogiska skolmyndigheten, Sweden's national agency for special-needs education. It advises schools, runs special schools, and defines what makes a learning environment accessible to every student.",
+      sv: "Specialpedagogiska skolmyndigheten, Sveriges myndighet för specialpedagogik. Den ger råd till skolor, driver specialskolor, och definierar vad som gör en lärmiljö tillgänglig för alla elever.",
+    },
+  },
+  {
+    id: "skollagen",
+    term: "Skollagen",
+    glossEn: "The Education Act",
+    group: "terms",
+    slug: "what-skollagen-requires-extra-anpassningar-sarskilt-stod",
+    def: {
+      en: "Sweden's Education Act (2010:800). It is where the right to support is written down: every student is to be given the guidance and support they need to reach the goals, and support may not be made conditional on a diagnosis.",
+      sv: "Sveriges skollag (2010:800). Det är här rätten till stöd står skriven: varje elev ska ges den ledning och det stöd de behöver för att nå målen, och stödet får inte villkoras av en diagnos.",
+    },
+  },
+  {
+    id: "npf",
+    term: "NPF",
+    glossEn: "Neurodevelopmental conditions",
+    group: "terms",
+    slug: "what-is-npf-neurodevelopmental-conditions-school",
+    def: {
+      en: "Neuropsykiatriska funktionsnedsättningar: the Swedish umbrella term for neurodevelopmental conditions such as ADHD, autism and dyslexia. The government estimates one to two students with NPF in every classroom.",
+      sv: "Neuropsykiatriska funktionsnedsättningar: det svenska samlingsbegreppet för tillstånd som ADHD, autism och dyslexi. Regeringen uppskattar en till två elever med NPF i varje klassrum.",
+    },
+  },
+  {
+    id: "tillganglig-larmiljo",
+    term: "Tillgänglig lärmiljö",
+    glossEn: "Accessible learning environment",
+    group: "terms",
+    slug: "what-is-an-accessible-learning-environment",
+    def: {
+      en: "A learning environment, pedagogical, social and physical, in which every student can take part and reach the same goals as their peers. SPSM's model describes what it takes; the pedagogical part is the one neurodivergent students most often lose.",
+      sv: "En lärmiljö, pedagogisk, social och fysisk, där varje elev kan delta och nå samma mål som sina klasskamrater. SPSM:s modell beskriver vad som krävs; den pedagogiska delen är den som neurodivergenta elever oftast förlorar.",
+    },
+  },
+  {
+    id: "hemmasittare",
+    term: "Hemmasittare",
+    glossEn: "School refuser / extensive absence",
+    group: "terms",
+    slug: "sweden-doesnt-count-school-absence",
+    def: {
+      en: "A student with extensive school absence. It is rarely a first cause and usually the end of a long chain of unmet needs, and neurodivergent students are disproportionately affected. Sweden does not yet count absence in regular national statistics.",
+      sv: "En elev med omfattande skolfrånvaro. Det är sällan en första orsak och oftast slutet på en lång kedja av otillgodosedda behov, och neurodivergenta elever drabbas oproportionerligt. Sverige räknar ännu inte frånvaro i regelbunden nationell statistik.",
+    },
+  },
+  {
+    id: "lasa-skriva-rakna",
+    term: "Läsa-skriva-räkna-garantin",
+    glossEn: "The early-support guarantee",
+    group: "terms",
+    slug: "swedens-early-support-guarantee-not-delivering",
+    def: {
+      en: "The guarantee for early support measures in reading, writing and maths, meant to catch difficulties in the youngest years. Skolinspektionen found it was not delivering as intended, and it is set to be abolished on 1 July 2028.",
+      sv: "Garantin för tidiga stödinsatser i läsning, skrivning och matematik, tänkt att fånga svårigheter i de yngsta åren. Skolinspektionen fann att den inte levererade som avsett, och den ska avskaffas den 1 juli 2028.",
+    },
+  },
+  {
+    id: "behov-inte-diagnos",
+    term: "Behov, inte diagnos",
+    glossEn: "Needs, not a label",
+    group: "terms",
+    slug: "support-without-a-diagnosis-school",
+    def: {
+      en: "The principle that the right to support is decided by the student's needs, not by a diagnosis. A school may not make support conditional on a label, which matters because a neuropsychiatric assessment can take months or years.",
+      sv: "Principen att rätten till stöd avgörs av elevens behov, inte av en diagnos. En skola får inte villkora stöd med en etikett, vilket är viktigt eftersom en neuropsykiatrisk utredning kan ta månader eller år.",
+    },
+  },
+];
+
+const groupOrder: Array<"staircase" | "actors" | "terms"> = [
+  "staircase",
+  "actors",
+  "terms",
+];
+const termsIn = (g: "staircase" | "actors" | "terms") =>
+  TERMS.filter((x) => x.group === g);
+
+const glossaryUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const definedTermSet = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": `${glossaryUrl}#glossary`,
+  name: chrome.heading,
+  description: chrome.description,
+  url: glossaryUrl,
+  inLanguage: lang === "sv" ? "sv-SE" : "en-US",
+  hasDefinedTerm: TERMS.map((x) => ({
+    "@type": "DefinedTerm",
+    "@id": `${glossaryUrl}#${x.id}`,
+    name: x.term,
+    description: x.def[lang],
+    inDefinedTermSet: `${glossaryUrl}#glossary`,
+    ...(x.slug ? { url: `${SITE_URL}${blogBase}/${x.slug}` } : {}),
+  })),
+};
+---
+
+<Layout title={chrome.title} description={chrome.description}>
+  <BreadcrumbSchema name={chrome.eyebrow} pageType="CollectionPage" />
+  <Nav />
+  <main id="main-content" tabindex="-1">
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{chrome.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {chrome.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          {chrome.intro}
+        </Reveal>
+
+        {
+          groupOrder.map((g) => (
+            <>
+              <Reveal as="h2" class={styles.groupHead}>
+                {chrome.groups[g]}
+              </Reveal>
+              <div class={styles.list}>
+                {termsIn(g).map((x) => (
+                  <div class={styles.item} id={x.id}>
+                    <h3 class={styles.term}>
+                      {x.term}
+                      {lang === "en" && <span class={styles.gloss}>{x.glossEn}</span>}
+                    </h3>
+                    <p class={styles.def}>{x.def[lang]}</p>
+                    {x.slug && (
+                      <a class={styles.readMore} href={`${blogBase}/${x.slug}`}>
+                        {chrome.readMore} →
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(definedTermSet)} />
+</Layout>
