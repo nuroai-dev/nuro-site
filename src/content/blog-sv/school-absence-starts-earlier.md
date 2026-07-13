@@ -8,7 +8,7 @@ tags: ["neurodiversity", "school absence", "hemmasittare", "sweden"]
 
 Det finns ett svenskt ord för det: *hemmasittare*, en elev som i praktiken har slutat komma till skolan. Och de är betydligt fler än de brukade vara.
 
-På fyra år har antalet ungefär **fördubblats, från omkring 8 400 till över 17 000** elever med allvarlig, ihållande frånvaro, enligt föräldranätverket Rätten till Utbildning ([källa](https://www.rattentillutbildning.se/franvaro/)). Det är inte ett avrundningsfel i statistiken. Det är tusentals barn som fanns i klassrummen och nu inte gör det.
+På fyra år har antalet ungefär **fördubblats, från omkring 8 400 till över 17 000** elever med allvarlig, ihållande frånvaro, enligt föräldranätverket Rätten till Utbildning ([källa](https://www.rattentillutbildning.se/franvaro/)). Sverige [för ingen regelbunden nationell statistik över skolfrånvaro](/sv/blog/sweden-doesnt-count-school-absence), så siffror som denna kommer från föräldranätverk snarare än staten. Det är inte ett avrundningsfel i statistiken. Det är tusentals barn som fanns i klassrummen och nu inte gör det.
 
 Och de är inte ett slumpmässigt urval av alla elever.
 

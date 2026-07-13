@@ -12,7 +12,7 @@ Swedish law is clear that schools must give neurodivergent students the support 
 
 The report quotes principals directly: "Två av tre rektorer i grundskolan uppger att de inte får tillräckliga ekonomiska resurser tilldelade från sin huvudman för att möta stödbehoven hos elever med NPF-diagnoser eller liknande utmaningar." Two out of three principals in compulsory school report that they do not receive sufficient financial resources from their school operator to meet the support needs of students with NPF diagnoses or similar challenges.
 
-The report is not one-sided. It also found that a majority of school operators have offered staff competence development, and that over half have a central student-health team with specialists in NPF. Schools are doing real work. But when two in three of the people running those schools say the resources do not reach the classroom, that is not a story about effort. It is a story about capacity.
+The report is not one-sided. It also found that a majority of school operators have offered [staff competence development](/blog/are-teachers-prepared-for-neurodivergent-students), and that over half have a central student-health team with specialists in NPF. Schools are doing real work. But when two in three of the people running those schools say the resources do not reach the classroom, that is not a story about effort. It is a story about capacity.
 
 ## Why this is the whole problem, in one number
 

@@ -8,7 +8,7 @@ tags: ["neurodiversity", "school absence", "hemmasittare", "sweden"]
 
 There is a Swedish word for it that doesn't translate cleanly: *hemmasittare*, a student who has, in effect, stopped coming to school. And there are far more of them than there used to be.
 
-In four years, the number roughly **doubled, from around 8,400 to over 17,000** students with serious, sustained absence, according to the parent network Rätten till Utbildning ([källa](https://www.rattentillutbildning.se/franvaro/)). That's not a rounding error in the statistics. That's thousands of children who were in classrooms and now aren't.
+In four years, the number roughly **doubled, from around 8,400 to over 17,000** students with serious, sustained absence, according to the parent network Rätten till Utbildning ([källa](https://www.rattentillutbildning.se/franvaro/)). Sweden [does not count school absence nationally on a regular basis](/blog/sweden-doesnt-count-school-absence), so figures like this come from parent networks rather than the state. That's not a rounding error in the statistics. That's thousands of children who were in classrooms and now aren't.
 
 And they are not a random sample of all students.
 

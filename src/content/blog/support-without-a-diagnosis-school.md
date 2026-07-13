@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["diagnosis", "rights", "skollagen", "sweden"]
 ---
 
-If your child is struggling at school and you are waiting, sometimes for months or years, for a neuropsychiatric assessment, here is something every parent and teacher should know. Your child does not need a diagnosis to get support at school. Under Swedish law, the right to support is decided by the student's needs, not by a label.
+If your child is struggling at school and you are [waiting, sometimes for months or years, for a neuropsychiatric assessment](/blog/neuropsychiatric-assessment-waiting-times), here is something every parent and teacher should know. Your child does not need a diagnosis to get support at school. Under Swedish law, the right to support is decided by the student's needs, not by a label.
 
 ## The law is about need, not diagnosis
 
