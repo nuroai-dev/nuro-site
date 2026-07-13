@@ -14,7 +14,7 @@ Det här är en verklig förändring av stödets maskineri, så det är värt at
 
 Två saker avskaffas.
 
-Det första är [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan), oftast kallad läsa-skriva-räkna-garantin. Sedan 2019 har den krävt att skolan använder obligatoriska kartläggnings- och bedömningsmaterial i de yngsta årskurserna, gör en särskild bedömning av elevens kunskapsutveckling när materialet visar en risk, sätter in stöd, följer upp om det gav resultat och för över resultatet till nästa års lärare.
+Det första är [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan), oftast kallad läsa-skriva-räkna-garantin. Sedan 2019 har den krävt att skolan använder obligatoriska kartläggnings- och bedömningsmaterial i de yngsta årskurserna, gör en särskild bedömning av elevens kunskapsutveckling när materialet visar en risk, sätter in stöd, följer upp om det gav resultat och för över resultatet till nästa års lärare. Skolinspektionen har funnit att garantin i praktiken [inte konsekvent har levererat det stödet](/sv/blog/swedens-early-support-guarantee-not-delivering).
 
 Det andra är regleringen om [extra anpassningar](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), den lättare stödnivå en lärare ger inom den ordinarie undervisningen, under tröskeln för ett formellt beslut om särskilt stöd.
 
@@ -22,7 +22,7 @@ Det andra är regleringen om [extra anpassningar](/sv/blog/what-skollagen-requir
 
 Reformen behåller den starkaste nivån och bygger om den tidiga. I korthet:
 
-- **En tydligare allmän skyldighet.** Det ska framgå uttryckligen av skollagen att alla elever ska ges ledning och stimulans så att de kan följa undervisningen.
+- **En tydligare allmän skyldighet.** Det ska framgå uttryckligen av skollagen att alla elever ska ges [ledning och stimulans](/sv/blog/what-is-ledning-och-stimulans) så att de kan följa undervisningen.
 - **Standardiserade prov i början av höstterminen** i vissa årskurser, som används för att identifiera elever som behöver stöd, i stället för den avskaffade garantin.
 - **Tidig stödundervisning** i svenska, svenska som andraspråk och matematik, som ges i ett tidigt skede i grundskolan, gymnasieskolan och anpassade gymnasieskolan.
 - **Särskilt stöd, tidigare.** En ansvarig lärare eller mentor ska anmäla till rektor när en elevs behov av särskilt stöd behöver utredas, och sådana behov ska utredas tidigare än i dag. Beslut om att ge särskilt stöd i en mindre undervisningsgrupp eller som enskild undervisning görs enklare, och anpassad studiegång får beslutas först när andra möjligheter är uttömda eller bedöms olämpliga.

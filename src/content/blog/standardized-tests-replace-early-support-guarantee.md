@@ -14,7 +14,7 @@ This is a real shift in the machinery of support, so it is worth being precise a
 
 Two things are being abolished.
 
-The first is [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan), the early-support guarantee, usually called the "läsa, skriva, räkna" guarantee. Since 2019 it has required schools to use mandatory mapping and assessment materials in the youngest year groups, make a closer assessment of a student's knowledge development when the materials indicate a risk, put support in place, follow up whether it worked, and hand the results to next year's teacher.
+The first is [garantin för tidiga stödinsatser](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/garantin-for-tidiga-stodinsatser-i-grundskolan), the early-support guarantee, usually called the "läsa, skriva, räkna" guarantee. Since 2019 it has required schools to use mandatory mapping and assessment materials in the youngest year groups, make a closer assessment of a student's knowledge development when the materials indicate a risk, put support in place, follow up whether it worked, and hand the results to next year's teacher. Sweden's own school inspectorate has found that, in practice, [the guarantee has not consistently delivered on that promise](/blog/swedens-early-support-guarantee-not-delivering).
 
 The second is the regulation on [extra anpassningar](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), the lighter tier of support a teacher provides within ordinary teaching, below the threshold of a formal särskilt stöd decision.
 
@@ -22,7 +22,7 @@ The second is the regulation on [extra anpassningar](/blog/what-skollagen-requir
 
 The reform keeps the strongest tier and rebuilds the early one. In summary:
 
-- **A clearer general duty.** The Education Act will state explicitly that all students are to be given guidance and stimulation (ledning och stimulans) so they can follow the teaching.
+- **A clearer general duty.** The Education Act will state explicitly that all students are to be given [guidance and stimulation (ledning och stimulans)](/blog/what-is-ledning-och-stimulans) so they can follow the teaching.
 - **Standardized tests at the start of the autumn term** in certain year groups, used to identify students who need support, in place of the abolished guarantee.
 - **Early remedial teaching** (stödundervisning) in Swedish, Swedish as a second language, and mathematics, given at an early stage in compulsory, upper secondary, and adapted upper secondary school.
 - **Särskilt stöd, reached earlier.** A responsible teacher or mentor must notify the principal when a student's need for special support has to be investigated, and such needs are to be investigated earlier than today. Decisions to give special support in a smaller teaching group or as individual teaching are made easier, and an adapted study path (anpassad studiegång) may only be decided once other options are exhausted or judged unsuitable.
