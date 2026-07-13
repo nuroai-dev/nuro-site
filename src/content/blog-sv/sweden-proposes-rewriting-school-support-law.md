@@ -2,6 +2,7 @@
 title: "Sverige vill göra om hur skolan ger stöd. Det här föreslår proposition 2025/26:195."
 description: "I mars 2026 lämnade regeringen en proposition, Förbättrat stöd i skolan, som skulle ändra skollagens regler om stöd. Den vill avskaffa garantin för tidiga stödinsatser och regleringen om extra anpassningar, införa standardiserade tester och tidig stödundervisning, och ändra reglerna om särskilt stöd, från 1 juli 2028. Här är vad den föreslår, och vad det betyder."
 pubDate: 2026-07-03
+updatedDate: 2026-07-13
 author: "The Nuro team"
 tags: ["skollagen", "policy", "neurodiversity"]
 ---
@@ -34,7 +35,14 @@ Det är också värt att vara tydlig med vad som inte ändras före den 1 juli 2
 
 Nuro är byggt för precis det kapacitetsproblem som reformen lämnar öppet: att ge varje elev anpassat, [skollagsförankrat stöd](/sv/blog/what-is-npf-neurodevelopmental-conditions-school) tidigt och som standard, utan att be en lärare bygga trettio versioner av varje lektion för hand. Oavsett vilken juridisk mekanism stödet ges under är själva arbetet med att leverera det detsamma. Det är den delen vi bygger för.
 
+## Uppdatering, juli 2026: reformen går från förslag till praktik
+
+Sedan det här skrevs har propositionen tagit sina första steg. Riksdagen beslutade om den den 3 juni 2026, och den 23 juni 2026 gav regeringen Skolverket ett formellt uppdrag att "genomföra insatser för att stödja införandet av skolreformer", alltså att göra det som hjälper skolorna att omsätta reformerna i praktiken. Förbättrat stöd i skolan är en av fem reformer i paketet, vid sidan av nya kurs- och läroplaner, ett nytt betygssystem, ökad trygghet och studiero, och nya regler om lärares undervisningsuppdrag. Skolverket ska ge skolorna "tydligt och konkret stöd" och redovisa arbetet i etapper, med redovisningsdatum den 2 november 2026, den 1 juni 2027 och en slutredovisning senast den 15 juni 2029.
+
+Det praktiska budskapet för skolorna är att nedräkningen mot den 1 juli 2028 har börjat, och att förberedelsen nu är ett officiellt uppdrag snarare än ett förslag på bordet. Det som inte ändras är poängen ovan: skyldigheten att faktiskt leverera anpassat stöd till neurodivergenta elever löper hela vägen igenom, och den lättar inte när de nya reglerna kommer. Det är det kapacitetsproblem Nuro är byggt för, oavsett vad den juridiska mekanismen till slut kommer att heta.
+
 ## Källor
 
+- [Regeringen, "Skolverket får i uppdrag att stödja skolorna inför de stora reformerna" (23 juni 2026)](https://www.regeringen.se/pressmeddelanden/2026/06/skolverket-far-i-uppdrag-att-stodja-skolorna-infor-de-stora-reformerna/)
 - [Regeringen, "Förbättrat stöd i skolan" (Prop. 2025/26:195)](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf)
 - [Sveriges riksdag, "Förbättrat stöd i skolan" (Betänkande 2025/26:UbU24, beslut 3 juni 2026)](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/betankande/forbattrat-stod-i-skolan_hd01ubu24/)
