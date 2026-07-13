@@ -29,6 +29,8 @@ const t = {
     intro:
       "What the research says, what the law requires, and what actually helps neurodivergent students, for the teachers, students, and parents living it every day.",
     empty: "No posts yet — the first one is on its way.",
+    hubPre: "New to the terms? Start with the ",
+    hubLink: "glossary of the Swedish school-support system",
     topicsLabel: "Browse by topic",
     allTopics: "All topics →",
   },
@@ -41,6 +43,8 @@ const t = {
     intro:
       "Vad forskningen säger, vad lagen kräver och vad som faktiskt hjälper neurodivergenta elever, för lärarna, eleverna och föräldrarna som lever med det varje dag.",
     empty: "Inga inlägg än, det första är på väg.",
+    hubPre: "Ny bland begreppen? Börja med ",
+    hubLink: "ordlistan över skolans stödsystem",
     topicsLabel: "Bläddra efter ämne",
     allTopics: "Alla ämnen →",
   },
@@ -86,6 +90,10 @@ const blogSchema = {
         </Reveal>
         <Reveal as="p" eager delay={0.1} class={styles.intro}>
           {t.intro}
+        </Reveal>
+        <Reveal as="p" eager delay={0.12} class={styles.hubNote}>
+          {t.hubPre}
+          <a href={lang === "sv" ? "/sv/glossary" : "/glossary"}>{t.hubLink}</a>.
         </Reveal>
 
         {

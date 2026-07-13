@@ -43,6 +43,26 @@
   color: var(--ink-2);
 }
 
+/* Subtle pointer into the glossary hub, under the intro. */
+.hubNote {
+  margin: 14px 0 0;
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-3);
+}
+
+.hubNote a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--hair-2);
+  transition: border-color 0.2s var(--ease, ease);
+}
+
+.hubNote a:hover {
+  border-bottom-color: var(--ink);
+}
+
 /* ── Browse-by-topic row (blog index, links to tag hubs) ────── */
 
 .topicsRow {
