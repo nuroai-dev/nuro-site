@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["diagnosis", "rights", "skollagen", "sweden"]
 ---
 
-Om ditt barn kämpar i skolan och du väntar, ibland i månader eller år, på en neuropsykiatrisk utredning, är det här något varje förälder och lärare bör veta. Ditt barn behöver ingen diagnos för att få stöd i skolan. Enligt svensk lag avgörs rätten till stöd av elevens behov, inte av en etikett.
+Om ditt barn kämpar i skolan och du [väntar, ibland i månader eller år, på en neuropsykiatrisk utredning](/sv/blog/neuropsychiatric-assessment-waiting-times), är det här något varje förälder och lärare bör veta. Ditt barn behöver ingen diagnos för att få stöd i skolan. Enligt svensk lag avgörs rätten till stöd av elevens behov, inte av en etikett.
 
 ## Lagen handlar om behov, inte diagnos
 
