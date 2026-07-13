@@ -40,6 +40,7 @@ The site is bilingual: English at the root and Swedish under /sv (for example ht
 - [Press](https://nuroai.dev/press): news and coverage.
 - [Career](https://nuroai.dev/career): join the team.
 - [Blog](https://nuroai.dev/blog): notes on neurodiversity in education, the research, the law, and what helps.
+- [Glossary](https://nuroai.dev/glossary): plain-language definitions of the Swedish school-support system (ledning och stimulans, extra anpassningar, särskilt stöd, åtgärdsprogram, elevhälsa, NPF, tilläggsbelopp, and more), each linking to a fuller explainer. Swedish: https://nuroai.dev/sv/glossary
 - [Privacy](https://nuroai.dev/privacy) and [Terms](https://nuroai.dev/terms).
 
 ## Blog posts
