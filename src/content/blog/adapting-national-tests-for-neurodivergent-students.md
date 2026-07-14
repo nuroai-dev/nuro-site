@@ -42,6 +42,8 @@ Three things follow from the rules, and all three are about the school knowing t
 - **The decision should be grounded in what the student already does.** The cleanest basis for a test adaptation is an aid or a way of working the student already uses in teaching, ideally already documented.
 - **The decision has to preserve the test's purpose.** That is a judgement, made per subtest, about what is actually being measured.
 
+One boundary is worth marking: these adaptations change how a student sits the test, not the grade criteria themselves. A separate rule, [the undantagsbestämmelsen](/blog/undantagsbestammelsen-grading-neurodivergent-students), lets a teacher disregard isolated criteria at final grading, but it explicitly does not apply to the national tests.
+
 A school that has a clear, current picture of how each student works, what they use, what is written in their åtgärdsprogram, what helps them read or focus, walks into the national tests able to make these decisions quickly and defensibly. A school that does not is left reconstructing it under time pressure. Keeping that per-student picture accurate and ready is exactly what Nuro is built to do, so that when the test comes, the adaptation a student is entitled to is already known, not improvised. It is one more place where [the right to support exists but the system to deliver it lags behind](/blog/the-right-exists-the-system-doesnt).
 
 ## Sources
