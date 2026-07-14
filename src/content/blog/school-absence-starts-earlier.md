@@ -36,7 +36,7 @@ That means three things working together:
 
 - **Adapting the lesson to the student** before they fall behind, not after.
 - **Surfacing the early warning signs** (the subtle rise in absence and disengagement) while there's still time to act.
-- **Acting on them with real support**, not just documenting that a problem exists.
+- **Acting on them with real support**, not just documenting that a problem exists. And when absence does set in, the law requires the school to [investigate it promptly](/blog/school-duty-to-investigate-absence), valid or not.
 
 This is exactly where the teacher shortage we [wrote about](/blog/sweden-needs-more-special-education-teachers) bites hardest: the people best placed to catch the drift are the ones with the least time to watch for it.
 
