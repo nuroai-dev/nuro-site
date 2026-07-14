@@ -14,7 +14,7 @@ Den 15 oktober 2025 lämnade Camilla Hansén, riksdagsledamot för Miljöpartiet
 
 Utbildnings- och integrationsminister Simona Mohamsson (Liberalerna) svarade den 22 oktober 2025. Hon svarade att Sverige redan är ett av världens mest digitaliserade länder, att grundläggande färdigheter kommer först, och att digitala verktyg bör införas selektivt och utifrån forskning. Hon hänvisade till planerade reformer, bland annat en tioårig grundskola från hösten 2028 med större fokus på grundläggande kunskaper och färdigheter.
 
-Det var inte en engångsföreteelse. Frågan om vem som ansvarar för att rusta eleverna med kunskap om AI återkom till riksdagen senare under samma riksmöte. Poängen här är inte vem som har rätt. Den är att Sveriges nationella samtal om AI i skolan, med all rätt, handlar om strategi, läroplan och hur digitalt ett klassrum bör vara.
+Det var inte en engångsföreteelse. Frågan om vem som ansvarar för att rusta eleverna med kunskap om AI återkom till riksdagen senare under samma riksmöte. Poängen här är inte vem som har rätt. Den är att Sveriges nationella samtal om AI i skolan, med all rätt, handlar om strategi, läroplan och hur digitalt ett klassrum bör vara. Även Specialpedagogiska skolmyndigheten (SPSM) har [gett sin egen syn på vad AI kan och inte kan göra för elever med funktionsnedsättning](/sv/blog/spsm-special-education-perspective-on-ai).
 
 ## Användningen som inte väntar på en strategi
 

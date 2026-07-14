@@ -14,7 +14,7 @@ On 15 October 2025, Camilla Hansén, a Member of Parliament for the Green Party 
 
 The Minister for Education and Integration, Simona Mohamsson (Liberalerna), answered on 22 October 2025. She replied that Sweden is already one of the world's most digitalized countries, that foundational skills come first, and that digital tools should be introduced selectively and on the basis of research. She pointed to planned reforms, including a ten-year compulsory school from autumn 2028 with a greater focus on foundational knowledge and skills.
 
-It was not a one-off. The question of who is responsible for equipping students with knowledge about AI returned to Parliament again later in the same session. The point here is not who is right. It is that Sweden's national conversation about AI in schools is, understandably, about strategy, curriculum, and how digital a classroom should be.
+It was not a one-off. The question of who is responsible for equipping students with knowledge about AI returned to Parliament again later in the same session. The point here is not who is right. It is that Sweden's national conversation about AI in schools is, understandably, about strategy, curriculum, and how digital a classroom should be. Even Sweden's specialist authority for special-needs education (SPSM) has [set out its own view on what AI can and cannot do for students with disabilities](/blog/spsm-special-education-perspective-on-ai).
 
 ## The use that is not waiting for a strategy
 
