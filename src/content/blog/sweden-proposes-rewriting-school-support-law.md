@@ -1,8 +1,8 @@
 ---
-title: "Sweden wants to rewrite how schools give support. Here is what proposition 2025/26:195 proposes."
-description: "In March 2026 the government submitted a bill, Förbättrat stöd i skolan, that would change the Education Act's rules on support. It would abolish the early-support guarantee and the extra anpassningar regulation, bring in standardized early testing and early remedial teaching, and change the rules on särskilt stöd, from 1 July 2028. Here is what it proposes, and what it means."
+title: "Sweden has decided to rewrite how schools give support. Here is what proposition 2025/26:195 changes."
+description: "In March 2026 the government submitted a bill, Förbättrat stöd i skolan, to change the Education Act's rules on support, and the Riksdag approved it on 3 June 2026, in force 1 July 2028. It abolishes the early-support guarantee and the extra anpassningar regulation, brings in standardized early testing and early remedial teaching, and changes the rules on särskilt stöd. Here is what it changes, and what it means."
 pubDate: 2026-07-03
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 author: "The Nuro team"
 tags: ["skollagen", "policy", "neurodiversity"]
 ---
