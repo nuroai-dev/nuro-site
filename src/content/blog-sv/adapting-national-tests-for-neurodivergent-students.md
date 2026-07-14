@@ -42,6 +42,8 @@ Tre saker följer av reglerna, och alla tre handlar om att skolan känner eleven
 - **Beslutet bör grundas i det eleven redan gör.** Den renaste grunden för en provanpassning är ett hjälpmedel eller ett arbetssätt som eleven redan använder i undervisningen, helst redan dokumenterat.
 - **Beslutet måste bevara provets syfte.** Det är en bedömning, gjord per delprov, av vad som faktiskt mäts.
 
+En gräns är värd att markera: de här anpassningarna ändrar hur en elev genomför provet, inte själva betygskriterierna. En separat regel, [undantagsbestämmelsen](/sv/blog/undantagsbestammelsen-grading-neurodivergent-students), låter en lärare bortse från enstaka kriterier vid betygssättningen, men den gäller uttryckligen inte de nationella proven.
+
 En skola som har en tydlig, aktuell bild av hur varje elev arbetar, vad de använder, vad som står i deras åtgärdsprogram, vad som hjälper dem att läsa eller fokusera, går in i de nationella proven med förmågan att fatta dessa beslut snabbt och väl underbyggt. En skola som inte har det tvingas rekonstruera bilden under tidspress. Att hålla den elevnära bilden korrekt och redo är precis det Nuro är byggt för, så att när provet kommer är anpassningen som eleven har rätt till redan känd, inte improviserad. Det är ännu en plats där [rätten till stöd finns men systemet för att leverera det släpar efter](/sv/blog/the-right-exists-the-system-doesnt).
 
 ## Källor
