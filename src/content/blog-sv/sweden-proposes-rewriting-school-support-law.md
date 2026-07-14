@@ -1,8 +1,8 @@
 ---
-title: "Sverige vill göra om hur skolan ger stöd. Det här föreslår proposition 2025/26:195."
-description: "I mars 2026 lämnade regeringen en proposition, Förbättrat stöd i skolan, som skulle ändra skollagens regler om stöd. Den vill avskaffa garantin för tidiga stödinsatser och regleringen om extra anpassningar, införa standardiserade tester och tidig stödundervisning, och ändra reglerna om särskilt stöd, från 1 juli 2028. Här är vad den föreslår, och vad det betyder."
+title: "Sverige har beslutat att göra om hur skolan ger stöd. Det här ändrar proposition 2025/26:195."
+description: "I mars 2026 lämnade regeringen en proposition, Förbättrat stöd i skolan, för att ändra skollagens regler om stöd, och riksdagen biföll den 3 juni 2026, i kraft 1 juli 2028. Den avskaffar garantin för tidiga stödinsatser och regleringen om extra anpassningar, inför standardiserade tester och tidig stödundervisning, och ändrar reglerna om särskilt stöd. Här är vad den ändrar, och vad det betyder."
 pubDate: 2026-07-03
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 author: "The Nuro team"
 tags: ["skollagen", "policy", "neurodiversity"]
 ---
