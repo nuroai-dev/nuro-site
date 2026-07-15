@@ -28,7 +28,7 @@ export const ROLE_OPTIONS = [
 
 export const AGES_LABEL = "What age are your students/children?";
 export const AGES_HELPER =
-  "Select all that apply — pick multiple if you have more than one child.";
+  "Select all that apply, pick multiple if you have more than one child.";
 export const AGE_OPTIONS = [
   "6–9 years (F–3)",
   "10–12 years (4–6)",
@@ -93,7 +93,7 @@ export function getCopy(lang: Lang) {
       roleLabel: "Jag är... *",
       roleOptions: ["Förälder eller vårdnadshavare", "Elev", "Lärare eller skolpersonal"],
       agesLabel: "Hur gamla är dina elever/barn?",
-      agesHelper: "Välj alla som stämmer — kryssa flera om du har mer än ett barn.",
+      agesHelper: "Välj alla som stämmer, kryssa flera om du har mer än ett barn.",
       ageOptions: [
         "6–9 år (F–3)",
         "10–12 år (4–6)",
