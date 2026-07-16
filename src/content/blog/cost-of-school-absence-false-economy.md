@@ -16,7 +16,7 @@ Long-term absence is not evenly spread. Estimates cited alongside the survey sug
 
 ## The cut that costs more than it saves
 
-Here is the part that should worry anyone holding a municipal budget. Faced with tight finances, many municipalities have trimmed exactly the things that keep these students in school: special-education support, learning-support assistants, attendance teams. It reads as a saving on this year's spreadsheet. In practice it removes the early, cheap interventions and leaves only the late, expensive ones: the investigations, the placements, the years of lost schooling.
+Here is the part that should worry anyone holding a municipal budget. Faced with tight finances, many municipalities have trimmed exactly the things that keep these students in school: special-education support, learning-support assistants, attendance teams. It reads as a saving on this year's spreadsheet. In practice it removes the early, cheap interventions and leaves only the late, expensive ones: the investigations, the placements, the years of lost schooling. Most of that support is meant to come out of the ordinary per-student grant, not the [narrow tilläggsbelopp reserved for extraordinary needs](/blog/what-is-tillaggsbelopp-school-support-funding), so trimming the ordinary budget cuts the support directly.
 
 This is the textbook shape of a false economy. The cost does not disappear when you cut the prevention. It moves downstream, grows, and reappears on a bigger line in a later budget, by which point the child has already paid the highest price.
 

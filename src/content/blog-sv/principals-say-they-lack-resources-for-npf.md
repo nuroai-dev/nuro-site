@@ -14,6 +14,8 @@ Rapporten citerar rektorerna direkt: "Två av tre rektorer i grundskolan uppger 
 
 Rapporten är inte ensidig. Den fann också att en majoritet av huvudmännen har erbjudit [kompetensutveckling](/sv/blog/are-teachers-prepared-for-neurodivergent-students), och att över hälften har en central elevhälsa med specialister på NPF. Skolorna gör ett verkligt arbete. Men när två av tre av dem som styr dessa skolor säger att resurserna inte når klassrummet, handlar det inte om engagemang. Det handlar om kapacitet.
 
+Det kapacitetsgapet är delvis inbyggt i hur skolor finansieras. Det vardagliga stöd som de flesta neurodivergenta elever behöver ska betalas ur skolans ordinarie grundbelopp per elev, inte ur det [smala tilläggsbelopp en skola bara kan söka för extraordinära, individuellt kostnadsberäknade behov](/sv/blog/what-is-tillaggsbelopp-school-support-funding). När grundbeloppet inte räcker har stödet ingenstans kvar att komma ifrån.
+
 ## Varför det här är hela problemet, i en enda siffra
 
 [Rätten till stöd finns redan i lagen](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Sveriges riksdag har själv dokumenterat hur långt ifrån den verkligheten hamnar](/sv/blog/swedens-parliament-npf-school-results). Vad Skolverkets rapport tillför är orsaken, uttalad av dem som står närmast: stödet som lagen lovar är beroende av resurser som, två gånger av tre, inte finns där.
