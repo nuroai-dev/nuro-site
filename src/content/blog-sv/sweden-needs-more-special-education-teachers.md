@@ -12,7 +12,7 @@ Den första: för att möta behovet skulle Sverige behöva anta ungefär **400 f
 
 Den andra: ungefär **var tredje elev med en neuropsykiatrisk funktionsnedsättning (NPF) lämnar årskurs 9 utan behörighet till gymnasiet**, jämfört med ungefär var åttonde av klasskamraterna utan en sådan diagnos ([Riksdagsrapport 2025/26:RFR13](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/); [Riksförbundet Attention](https://attention.se/2025/08/19/npf-elever-slas-ut-ur-skolan-enligt-ny-rapport/)).
 
-Ställ dem sida vid sida och knipan är uppenbar. Eleverna som mest behöver specialiststöd halkar efter just nu, och specialisterna som ska hjälpa dem finns inte i närheten av de antal som krävs.
+Ställ dem sida vid sida och knipan är uppenbar. Eleverna som mest behöver specialiststöd halkar efter just nu, och specialisterna som ska hjälpa dem finns inte i närheten av de antal som krävs. Familjerna ser det först: i [Attentions skolrapport 2025, en enkät med fler än 2 800 vårdnadshavare](/sv/blog/attention-2025-school-survey-npf-students), hade 41 procent av eleverna väntat ett år eller mer på stöd, och 10 procent fick inget alls.
 
 ## Du hinner inte utbilda dig ur det här i tid
 
