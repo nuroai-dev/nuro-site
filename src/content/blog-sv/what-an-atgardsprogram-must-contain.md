@@ -25,7 +25,7 @@ Två saker ställer ofta till det här.
 
 För det första skrivs extra anpassningar inte in i ett åtgärdsprogram. Skolverket är tydligt med att extra anpassningar är det lättare stöd en lärare ger inom den ordinarie undervisningen, att de inte kräver något formellt beslut, och att de dokumenteras på annat sätt. Åtgärdsprogrammet är bara till för särskilt stöd, det mer ingripande stöd som normalt inte går att ge inom den ordinarie undervisningen. Att blanda ihop de två är ett av de vanligaste dokumentationsfelen.
 
-För det andra ska dokumentet bara innehålla det som behövs för att ge och följa upp stödet. Det är inte platsen för långa beskrivningar av elevens svårigheter eller en diagnos. Poängen med ett åtgärdsprogram är framåtblickande: vad ska vi göra, och hur vet vi om det fungerade.
+För det andra ska dokumentet bara innehålla det som behövs för att ge och följa upp stödet. Det är inte platsen för långa beskrivningar av elevens svårigheter eller en diagnos. Poängen med ett åtgärdsprogram är framåtblickande: vad ska vi göra, och hur vet vi om det fungerade. Det är också precis den sortens dokumentation som ska [följa med eleven vid ett skolbyte](/sv/blog/support-follows-student-changing-schools), så att stödet inte börjar om från noll.
 
 ## Vem beslutar, och vad som kan överklagas
 
