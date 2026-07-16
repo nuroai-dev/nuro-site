@@ -16,7 +16,7 @@ Långvarig frånvaro är inte jämnt fördelad. Uppskattningar som anges vid sid
 
 ## Nedskärningen som kostar mer än den sparar
 
-Här är den del som borde oroa alla som håller i en kommunal budget. Inför ansträngd ekonomi har många kommuner skurit bort precis de saker som håller de här eleverna kvar i skolan: specialpedagogiskt stöd, elevassistenter, frånvaroteam. Det ser ut som en besparing i årets kalkylblad. I praktiken tar det bort de tidiga, billiga insatserna och lämnar bara de sena, dyra: utredningarna, placeringarna, åren av förlorad skolgång.
+Här är den del som borde oroa alla som håller i en kommunal budget. Inför ansträngd ekonomi har många kommuner skurit bort precis de saker som håller de här eleverna kvar i skolan: specialpedagogiskt stöd, elevassistenter, frånvaroteam. Det ser ut som en besparing i årets kalkylblad. I praktiken tar det bort de tidiga, billiga insatserna och lämnar bara de sena, dyra: utredningarna, placeringarna, åren av förlorad skolgång. Det mesta av det stödet ska betalas ur det ordinarie grundbeloppet per elev, inte ur det [smala tilläggsbelopp som är reserverat för extraordinära behov](/sv/blog/what-is-tillaggsbelopp-school-support-funding), så när den ordinarie budgeten skärs ned skärs stödet direkt.
 
 Det är den klassiska formen av en falsk besparing. Kostnaden försvinner inte när man skär bort förebyggandet. Den flyttas nedströms, växer, och dyker upp igen på en större rad i en senare budget, och då har barnet redan betalat det högsta priset.
 
