@@ -16,7 +16,7 @@ Ställ dem sida vid sida och knipan är uppenbar. Eleverna som mest behöver spe
 
 ## Du hinner inte utbilda dig ur det här i tid
 
-Fler speciallärare skulle hjälpa. Sverige bör absolut utbilda och behålla fler av dem. Men även med en optimistisk tidsplan är det ett projekt på över ett decennium, och som en facklig företrädare uttryckte det är det "inte rätt väg att gå" att bara vänta på att fler ska utbildas, eftersom bristen ändå väntas bestå i åratal.
+Fler speciallärare skulle hjälpa. Sverige bör absolut utbilda och behålla fler av dem. Men även med en optimistisk tidsplan är det ett projekt på över ett decennium, och som en facklig företrädare uttryckte det är det "inte rätt väg att gå" att bara vänta på att fler ska utbildas, eftersom bristen ändå väntas bestå i åratal. Gapet är också mer strukturellt koncentrerat än vad en enda rubriksiffra antyder: Sverige har två distinkta specialpedagogiska roller, och de är [inte utbytbara mot varandra — bara en av dem kan undervisa elever direkt](/sv/blog/two-special-education-roles-one-shortage), och det är den skolorna saknar.
 
 Ett barn i årskurs 4 i höst kan inte vänta till 2038. Stödet det har laglig rätt till måste komma från läraren som redan står framför det, en lärare som i de flesta fall saknar specialistutbildning och har tjugonio andra elever att nå.
 
