@@ -12,7 +12,7 @@ Every teacher in Sweden already teaches neurodivergent students, whether or not 
 
 In its own reasoning around teacher education, the government has estimated that there are, on average, one to two students with a neurodevelopmental condition (NPF) in every class. That figure is cited in a 2024 analysis by Sofia Littmarck and Mathilda Hallberg at Linköping University, "i genomsnitt finns en till två elever med neuropsykiatrisk funktionsnedsättning i varje klass" ([Venue, Linköpings universitet, 2024](https://venue.ep.liu.se/article/view/5139)).
 
-One to two per class is not a special case. It is a structural feature of an ordinary Swedish classroom. And yet, as the same analysis notes, explicit knowledge of NPF was only written into the national exam goals for teacher education in a 2020 revision. A teacher who trained before then may have covered it well, or barely at all, depending on where they studied. The preparation has been uneven by design.
+One to two per class is not a special case. It is a structural feature of an ordinary Swedish classroom. And yet, as the same analysis notes, explicit knowledge of NPF was only written into the national exam goals for teacher education in a 2020 revision. A teacher who trained before then may have covered it well, or barely at all, depending on where they studied. The preparation has been uneven by design. The uneven preparation is visible from the family side too, in [what NPF students and parents report about school](/blog/attention-2025-school-survey-npf-students).
 
 ## "Train teachers about diagnoses" is the wrong instruction
 

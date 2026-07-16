@@ -12,7 +12,7 @@ Varje lärare i Sverige undervisar redan neurodivergenta elever, oavsett om de u
 
 I sitt eget resonemang kring lärarutbildningen har regeringen uppskattat att det i genomsnitt finns en till två elever med en neuropsykiatrisk funktionsnedsättning (NPF) i varje klass. Den siffran citeras i en analys från 2024 av Sofia Littmarck och Mathilda Hallberg vid Linköpings universitet, "i genomsnitt finns en till två elever med neuropsykiatrisk funktionsnedsättning i varje klass" ([Venue, Linköpings universitet, 2024](https://venue.ep.liu.se/article/view/5139)).
 
-En till två per klass är inte ett specialfall. Det är ett strukturellt drag i ett vanligt svenskt klassrum. Och ändå, som samma analys noterar, skrevs uttrycklig kunskap om NPF in i de nationella examensmålen för lärarutbildningen först i en revidering 2020. En lärare som utbildades dessförinnan kan ha gått igenom det väl, eller knappt alls, beroende på var hen studerade. Förberedelsen har varit ojämn av konstruktion.
+En till två per klass är inte ett specialfall. Det är ett strukturellt drag i ett vanligt svenskt klassrum. Och ändå, som samma analys noterar, skrevs uttrycklig kunskap om NPF in i de nationella examensmålen för lärarutbildningen först i en revidering 2020. En lärare som utbildades dessförinnan kan ha gått igenom det väl, eller knappt alls, beroende på var hen studerade. Förberedelsen har varit ojämn av konstruktion. Den ojämna förberedelsen syns även från familjernas håll, i [vad elever med NPF och deras föräldrar berättar om skolan](/sv/blog/attention-2025-school-survey-npf-students).
 
 ## "Utbilda lärare om diagnoser" är fel instruktion
 

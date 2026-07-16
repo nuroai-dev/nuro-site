@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["neurodiversity", "npf", "sweden", "classroom"]
 ---
 
-Antalet elever i ett svenskt klassrum som har en ADHD-diagnos ökar, och det ökar snabbast bland [den grupp skolan i decennier förbisåg](/sv/blog/girls-with-npf-receive-less-sarskilt-stod): flickorna. Det är ingen prognos. Det är vad Socialstyrelsen rapporterade i november 2023. För en skola är den praktiska följden enkel och svår. Att anpassa undervisningen för neurodivergenta elever är inte längre ett tillfälligt undantag, en elev i taget. Det håller på att bli ett normaltillstånd i klassrummet.
+Antalet elever i ett svenskt klassrum som har en ADHD-diagnos ökar, och det ökar snabbast bland [den grupp skolan i decennier förbisåg](/sv/blog/girls-with-npf-receive-less-sarskilt-stod): flickorna. Det är ingen prognos. Det är vad Socialstyrelsen rapporterade i november 2023. För en skola är den praktiska följden enkel och svår. Att anpassa undervisningen för neurodivergenta elever är inte längre ett tillfälligt undantag, en elev i taget. Det håller på att bli ett normaltillstånd i klassrummet. Fler diagnoser innebär också fler familjer i kö för utredning, där [väntetiderna redan sträcker sig över månader eller år](/sv/blog/neuropsychiatric-assessment-waiting-times), vilket är ännu ett skäl till att stödet inte kan vänta på en formell etikett.
 
 ## Vad siffrorna faktiskt säger
 
