@@ -25,7 +25,7 @@ Two things trip schools up here.
 
 First, extra anpassningar (extra adaptations) are not written into an åtgärdsprogram. Skolverket is explicit that extra anpassningar are the lighter support a teacher gives inside ordinary teaching, they need no formal decision, and they are documented elsewhere. The åtgärdsprogram is only for särskilt stöd, the more far-reaching support that cannot normally be delivered within ordinary teaching. Mixing the two is one of the most common documentation errors.
 
-Second, the document should hold only what is needed to give and follow up the support. It is not the place for long descriptions of the student's difficulties or a diagnosis. The point of an åtgärdsprogram is forward-looking: what will we do, and how will we know if it worked.
+Second, the document should hold only what is needed to give and follow up the support. It is not the place for long descriptions of the student's difficulties or a diagnosis. The point of an åtgärdsprogram is forward-looking: what will we do, and how will we know if it worked. It is also exactly the kind of record that should [follow the student if they change schools](/blog/support-follows-student-changing-schools), so support does not restart from zero.
 
 ## Who decides, and what can be appealed
 
