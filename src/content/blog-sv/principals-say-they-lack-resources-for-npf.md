@@ -12,7 +12,7 @@ Svensk lag är tydlig med att skolan ska ge neurodivergenta elever det stöd de 
 
 Rapporten citerar rektorerna direkt: "Två av tre rektorer i grundskolan uppger att de inte får tillräckliga ekonomiska resurser tilldelade från sin huvudman för att möta stödbehoven hos elever med NPF-diagnoser eller liknande utmaningar."
 
-Rapporten är inte ensidig. Den fann också att en majoritet av huvudmännen har erbjudit [kompetensutveckling](/sv/blog/are-teachers-prepared-for-neurodivergent-students), och att över hälften har en central elevhälsa med specialister på NPF. Skolorna gör ett verkligt arbete. Men när två av tre av dem som styr dessa skolor säger att resurserna inte når klassrummet, handlar det inte om engagemang. Det handlar om kapacitet.
+Rapporten är inte ensidig. Den fann också att en majoritet av huvudmännen har erbjudit [kompetensutveckling](/sv/blog/are-teachers-prepared-for-neurodivergent-students), och att över hälften har en central [elevhälsa](/sv/blog/elevhalsa-understaffed-support-frontline) med specialister på NPF. Skolorna gör ett verkligt arbete. Men när två av tre av dem som styr dessa skolor säger att resurserna inte når klassrummet, handlar det inte om engagemang. Det handlar om kapacitet.
 
 Det kapacitetsgapet är delvis inbyggt i hur skolor finansieras. Det vardagliga stöd som de flesta neurodivergenta elever behöver ska betalas ur skolans ordinarie grundbelopp per elev, inte ur det [smala tilläggsbelopp en skola bara kan söka för extraordinära, individuellt kostnadsberäknade behov](/sv/blog/what-is-tillaggsbelopp-school-support-funding). När grundbeloppet inte räcker har stödet ingenstans kvar att komma ifrån.
 
