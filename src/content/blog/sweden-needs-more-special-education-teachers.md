@@ -12,7 +12,7 @@ The first: to meet demand, Sweden would need to enrol roughly **400 more special
 
 The second: roughly **one in three students with a neurodevelopmental condition (NPF) leaves grade 9 without the grades to qualify for upper secondary school**, compared with about one in eight of their classmates without such a diagnosis ([Riksdag report 2025/26:RFR13](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/rapport-fran-riksdagen/skolgang-och-studieresultat-for-elever-med-npf_hd0wrfr13/html/); [Riksförbundet Attention](https://attention.se/2025/08/19/npf-elever-slas-ut-ur-skolan-enligt-ny-rapport/)).
 
-Put them side by side and the bind is obvious. The students who most need specialist support are falling behind right now, and the specialists who are supposed to help them don't exist in anywhere near the numbers required.
+Put them side by side and the bind is obvious. The students who most need specialist support are falling behind right now, and the specialists who are supposed to help them don't exist in anywhere near the numbers required. The families see it first: in [Attention's 2025 survey of more than 2,800 guardians](/blog/attention-2025-school-survey-npf-students), 41 percent of students had waited a year or more for support, and 10 percent got none at all.
 
 ## You can't train your way out of this in time
 
