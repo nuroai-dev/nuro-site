@@ -34,7 +34,7 @@ The list above is Skolverket's. The reading below is ours: a plain sense of why 
 
 - **A clear schedule and extra clear instructions** answer the single biggest daily barrier in ADHD and autism: not the thinking, but knowing what to do, in what order, and when it ends. A predictable structure removes the invisible tax of figuring that out.
 - **Help getting started** targets the exact moment executive-function difficulties bite hardest. Many students can do the work once they are in it; the wall is the first step, and a nudge across it is often the whole difference.
-- **A topic explained in a different way, help understanding texts, adapted materials, and adapted software** are the reading and processing supports. For a student with dyslexia, text-to-speech and adapted materials are not a shortcut, they are how the same knowledge goal is reached through a different door.
+- **A topic explained in a different way, help understanding texts, adapted materials, and adapted software** are the reading and processing supports. For a student with dyslexia, text-to-speech and adapted materials are not a shortcut, they are how the same knowledge goal is reached through a different door, and [schools are required by law to provide them at no cost](/blog/digital-learning-tools-schools-must-provide-free).
 - **An occasional special-education input and skills training** are the targeted, short bursts of practice on the specific thing that is blocking progress, without escalating to a full support plan.
 
 The point of the list is that most of what a neurodivergent student needs is available today, at the teacher's own discretion, with no paperwork gate in front of it.

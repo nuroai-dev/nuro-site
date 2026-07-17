@@ -34,7 +34,7 @@ Listan ovan är Skolverkets. Tolkningen nedan är vår: en enkel bild av varför
 
 - **Ett tydligt schema och extra tydliga instruktioner** möter det största dagliga hindret vid adhd och autism: inte tänkandet, utan att veta vad man ska göra, i vilken ordning och när det tar slut. En förutsägbar struktur tar bort den osynliga skatt det innebär att räkna ut det.
 - **Stöd att sätta igång** träffar precis det ögonblick där svårigheter med exekutiva funktioner biter hårdast. Många elever kan göra arbetet när de väl är inne i det; muren är första steget, och en knuff över det är ofta hela skillnaden.
-- **Ett område förklarat på annat sätt, hjälp att förstå texter, anpassade läromedel och anpassad programvara** är läs- och bearbetningsstöden. För en elev med dyslexi är talsyntes och anpassade läromedel inte en genväg, de är hur samma kunskapsmål nås genom en annan dörr.
+- **Ett område förklarat på annat sätt, hjälp att förstå texter, anpassade läromedel och anpassad programvara** är läs- och bearbetningsstöden. För en elev med dyslexi är talsyntes och anpassade läromedel inte en genväg, de är hur samma kunskapsmål nås genom en annan dörr, och [skolan är skyldig att tillhandahålla dem utan kostnad](/sv/blog/digital-learning-tools-schools-must-provide-free).
 - **Någon enstaka specialpedagogisk insats och färdighetsträning** är de riktade, korta stunderna av träning på just det som blockerar framsteg, utan att trappa upp till en full stödplan.
 
 Poängen med listan är att det mesta en neurodivergent elev behöver finns tillgängligt redan idag, efter lärarens eget omdöme, utan någon pappersgrind framför sig.

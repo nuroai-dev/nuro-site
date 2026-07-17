@@ -43,7 +43,7 @@ It is easy to send a complaint to the wrong place. In short:
 
 ## The principle to hold on to
 
-Even if an appeal does not go your way, the school's duty does not end. It can never stop working for your child, and for a student with a disability the right to support holds regardless of whether they are reaching the minimum grades. A school cannot refuse a student the tools or support they need.
+Even if an appeal does not go your way, the school's duty does not end. It can never stop working for your child, and for a student with a disability the right to support holds regardless of whether they are reaching the minimum grades. A school cannot refuse a student the tools or support they need. That includes digital tools: Skollagen requires schools to provide the lärverktyg a student needs for learning at no cost ([what the law says about digital learning tools](/blog/digital-learning-tools-schools-must-provide-free)).
 
 ## Where Nuro fits
 

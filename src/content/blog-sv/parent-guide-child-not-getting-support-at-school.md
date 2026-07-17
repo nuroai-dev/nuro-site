@@ -43,7 +43,7 @@ Det är lätt att skicka en anmälan till fel ställe. Kort sagt:
 
 ## Principen att hålla fast vid
 
-Även om en överklagan inte går din väg upphör inte skolans skyldighet. Den kan aldrig sluta arbeta för ditt barn, och för en elev med en funktionsnedsättning gäller rätten till stöd oavsett om eleven når de lägsta betygen eller inte. En skola kan inte neka en elev de verktyg eller det stöd som eleven behöver.
+Även om en överklagan inte går din väg upphör inte skolans skyldighet. Den kan aldrig sluta arbeta för ditt barn, och för en elev med en funktionsnedsättning gäller rätten till stöd oavsett om eleven når de lägsta betygen eller inte. En skola kan inte neka en elev de verktyg eller det stöd som eleven behöver. Det gäller även digitala lärverktyg: Skollagen kräver att skolan tillhandahåller de lärverktyg en elev behöver för sin kunskapsutveckling utan kostnad ([vad lagen säger om digitala lärverktyg](/sv/blog/digital-learning-tools-schools-must-provide-free)).
 
 ## Var Nuro passar in
 
