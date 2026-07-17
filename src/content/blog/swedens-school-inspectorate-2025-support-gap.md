@@ -14,7 +14,7 @@ This is not a campaigner or a parent group. It is the state's own inspector, rep
 
 Skolinspektionen's Årsrapport 2025 lists a handful of overarching observations. Alongside the finding on the huvudman's responsibility, two stand out for any family of a neurodivergent student.
 
-On abusive treatment: "Tillsyn av kränkande behandling av enskilda barn och elever leder ofta till att brist konstateras." When the inspectorate examines a case of abusive treatment of an individual child, it often finds a violation.
+On abusive treatment: "Tillsyn av kränkande behandling av enskilda barn och elever leder ofta till att brist konstateras." When the inspectorate examines a case of abusive treatment of an individual child, it often finds a violation. Skollagen sets out [specific duties every school must meet](/blog/krankande-behandling-school-duty-to-act) on this.
 
 On volume: "Fler uppgifter om missförhållanden inom skola och förskola inkommer till myndigheten." More reports of problems in schools and preschools are reaching the authority. Referrals to the teachers' disciplinary board have also risen over time. The direction of travel is not toward fewer problems.
 

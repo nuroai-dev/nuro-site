@@ -38,7 +38,7 @@ It is easy to send a complaint to the wrong place. In short:
 
 - **ÖKN** handles appeals of an åtgärdsprogram and of decisions not to write one.
 - **Skolinspektionen** can investigate whether a school is failing its duty to give support, but it does not itself rewrite the support decision, and a review can take a long time.
-- **BEO**, the Child and School Student Representative, mainly handles degrading treatment (kränkande behandling).
+- **[BEO](/blog/krankande-behandling-school-duty-to-act)**, the Child and School Student Representative, mainly handles degrading treatment (kränkande behandling). It can investigate and pursue compensation in court on behalf of a child.
 - **DO**, the Equality Ombudsman, handles discrimination. A school that fails to support a student with a disability can, in some cases, owe compensation.
 
 ## The principle to hold on to

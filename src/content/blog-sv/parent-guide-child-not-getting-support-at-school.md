@@ -38,7 +38,7 @@ Det är lätt att skicka en anmälan till fel ställe. Kort sagt:
 
 - **ÖKN** hanterar överklaganden av ett åtgärdsprogram och av beslut att inte skriva ett.
 - **Skolinspektionen** kan utreda om en skola brister i sin skyldighet att ge stöd, men den skriver inte själv om stödbeslutet, och en granskning kan ta lång tid.
-- **BEO**, Barn- och elevombudet, hanterar främst kränkande behandling.
+- **[BEO](/sv/blog/krankande-behandling-school-duty-to-act)**, Barn- och elevombudet, hanterar främst kränkande behandling och kan utreda samt driva skadeståndsärenden i domstol för ett barns räkning.
 - **DO**, Diskrimineringsombudsmannen, hanterar diskriminering. En skola som brister i att stödja en elev med en funktionsnedsättning kan i vissa fall bli skyldig att betala ersättning.
 
 ## Principen att hålla fast vid
