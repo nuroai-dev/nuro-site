@@ -14,7 +14,7 @@ Det är inte en opinionsbildare eller en föräldragrupp. Det är statens egen i
 
 Skolinspektionens Årsrapport 2025 listar ett antal övergripande iakttagelser. Vid sidan av slutsatsen om huvudmannens ansvar sticker två ut för varje familj till en neurodivergent elev.
 
-Om kränkande behandling: "Tillsyn av kränkande behandling av enskilda barn och elever leder ofta till att brist konstateras." När inspektionen granskar ett fall av kränkande behandling av ett enskilt barn konstateras ofta en brist.
+Om kränkande behandling: "Tillsyn av kränkande behandling av enskilda barn och elever leder ofta till att brist konstateras." När inspektionen granskar ett fall av kränkande behandling av ett enskilt barn konstateras ofta en brist. Skollagen anger [vilka konkreta skyldigheter varje skola har](/sv/blog/krankande-behandling-school-duty-to-act) på detta område.
 
 Om volym: "Fler uppgifter om missförhållanden inom skola och förskola inkommer till myndigheten." Fler anmälningar om problem i skolor och förskolor når myndigheten. Anmälningar till Lärarnas ansvarsnämnd har också ökat över tid. Utvecklingen går inte mot färre problem.
 
