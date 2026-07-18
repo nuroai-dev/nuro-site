@@ -10,7 +10,7 @@ Every school in Sweden is required by law to have an elevhälsa, a student healt
 
 ## What the elevhälsa is supposed to do
 
-The elevhälsa is not optional. The Education Act requires it to be available to every student, and to bring together medical, psychological, psychosocial, and special-pedagogical expertise. Crucially, its work is meant to be mainly förebyggande och hälsofrämjande, preventive and health-promoting, not just reactive ([Skolverket](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/elevhalsa)). Prevention is exactly where a struggling neurodivergent student should be caught, before difficulties harden into absence.
+The elevhälsa is not optional. The Education Act requires it to be available to every student, and to bring together medical, psychological, psychosocial, and special-pedagogical expertise. Crucially, its work is meant to be mainly förebyggande och hälsofrämjande, preventive and health-promoting, not just reactive ([Skolverket](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/elevhalsa)). Prevention is exactly where a struggling neurodivergent student should be caught, before difficulties harden into absence. When a child's needs reach beyond the school into healthcare or social services, the elevhälsa is often the school's link into a [samordnad individuell plan (SIP)](/blog/what-is-a-sip-samordnad-individuell-plan), the statutory plan that coordinates the kommun and the region around one child.
 
 ## The numbers tell a different story
 

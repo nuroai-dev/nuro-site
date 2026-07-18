@@ -10,7 +10,7 @@ Varje skola i Sverige är enligt lag skyldig att ha en elevhälsa, ett team som 
 
 ## Vad elevhälsan ska göra
 
-Elevhälsan är inte frivillig. Skollagen kräver att den finns tillgänglig för varje elev och att den samlar medicinsk, psykologisk, psykosocial och specialpedagogisk kompetens. Framför allt ska dess arbete främst vara förebyggande och hälsofrämjande, inte bara reaktivt ([Skolverket](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/elevhalsa)). Förebyggande arbete är precis där en elev som kämpar borde fångas upp, innan svårigheterna hårdnar till frånvaro.
+Elevhälsan är inte frivillig. Skollagen kräver att den finns tillgänglig för varje elev och att den samlar medicinsk, psykologisk, psykosocial och specialpedagogisk kompetens. Framför allt ska dess arbete främst vara förebyggande och hälsofrämjande, inte bara reaktivt ([Skolverket](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/elevhalsa)). Förebyggande arbete är precis där en elev som kämpar borde fångas upp, innan svårigheterna hårdnar till frånvaro. När ett barns behov sträcker sig bortom skolan in i vården eller socialtjänsten är elevhälsan ofta skolans länk in i en [samordnad individuell plan (SIP)](/sv/blog/what-is-a-sip-samordnad-individuell-plan), den lagstadgade plan som samordnar kommunen och regionen kring ett och samma barn.
 
 ## Siffrorna berättar en annan historia
 
