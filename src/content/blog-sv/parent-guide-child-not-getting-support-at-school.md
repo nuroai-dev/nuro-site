@@ -41,6 +41,10 @@ Det är lätt att skicka en anmälan till fel ställe. Kort sagt:
 - **[BEO](/sv/blog/krankande-behandling-school-duty-to-act)**, Barn- och elevombudet, hanterar främst kränkande behandling och kan utreda samt driva skadeståndsärenden i domstol för ett barns räkning.
 - **DO**, Diskrimineringsombudsmannen, hanterar diskriminering. En skola som brister i att stödja en elev med en funktionsnedsättning kan i vissa fall bli skyldig att betala ersättning.
 
+## När mer än skolan är inblandad
+
+Om ditt barn också har stöd från vården eller socialtjänsten, till exempel en BUP-kontakt eller en pågående insats från socialtjänsten, behöver du inte vara den som förmedlar mellan dem. Du kan begära en samordnad individuell plan (SIP), den lagstadgade plan som får kommunen och regionen att samordna sig kring barnet i stället för att lämna familjen som växel. Skolan är inte automatiskt en part i en SIP, men den kan och bör oftast delta ([vad en SIP är och vem som har skyldighet att kalla till en](/sv/blog/what-is-a-sip-samordnad-individuell-plan)).
+
 ## Principen att hålla fast vid
 
 Även om en överklagan inte går din väg upphör inte skolans skyldighet. Den kan aldrig sluta arbeta för ditt barn, och för en elev med en funktionsnedsättning gäller rätten till stöd oavsett om eleven når de lägsta betygen eller inte. En skola kan inte neka en elev de verktyg eller det stöd som eleven behöver. Det gäller även digitala lärverktyg: Skollagen kräver att skolan tillhandahåller de lärverktyg en elev behöver för sin kunskapsutveckling utan kostnad ([vad lagen säger om digitala lärverktyg](/sv/blog/digital-learning-tools-schools-must-provide-free)).

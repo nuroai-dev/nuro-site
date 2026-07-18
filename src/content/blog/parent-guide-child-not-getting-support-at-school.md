@@ -41,6 +41,10 @@ It is easy to send a complaint to the wrong place. In short:
 - **[BEO](/blog/krankande-behandling-school-duty-to-act)**, the Child and School Student Representative, mainly handles degrading treatment (kränkande behandling). It can investigate and pursue compensation in court on behalf of a child.
 - **DO**, the Equality Ombudsman, handles discrimination. A school that fails to support a student with a disability can, in some cases, owe compensation.
 
+## When more than the school is involved
+
+If your child also has support from healthcare or social services, for example a BUP contact or an ongoing socialtjänst involvement, you do not have to be the one relaying between them. You can ask for a samordnad individuell plan (SIP), the statutory plan that makes the kommun and the region coordinate around the child rather than leaving the family as the switchboard. The school is not automatically a party to a SIP, but it can and usually should take part ([what a SIP is and who has the duty to call one](/blog/what-is-a-sip-samordnad-individuell-plan)).
+
 ## The principle to hold on to
 
 Even if an appeal does not go your way, the school's duty does not end. It can never stop working for your child, and for a student with a disability the right to support holds regardless of whether they are reaching the minimum grades. A school cannot refuse a student the tools or support they need. That includes digital tools: Skollagen requires schools to provide the lärverktyg a student needs for learning at no cost ([what the law says about digital learning tools](/blog/digital-learning-tools-schools-must-provide-free)).
