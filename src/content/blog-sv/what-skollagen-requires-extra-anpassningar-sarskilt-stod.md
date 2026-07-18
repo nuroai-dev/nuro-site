@@ -52,7 +52,7 @@ Det glappet, mellan nivåerna som lagen definierar och kapaciteten att leverera 
 
 ## En not om vad som ändras
 
-Det här ramverket är inte hugget i sten. I mars 2026 föreslog regeringen att [skriva om de här reglerna](/sv/blog/sweden-proposes-rewriting-school-support-law), bland annat att avskaffa regleringen om extra anpassningar, med ändringar som föreslås träda i kraft den 1 juli 2028. Fram till dess är nivåerna som beskrivs här de regler som gäller, och en skolas skyldighet att leverera dem pausas inte medan en proposition rör sig genom riksdagen.
+Det här ramverket är inte hugget i sten. I mars 2026 föreslog regeringen att [skriva om de här reglerna](/sv/blog/sweden-proposes-rewriting-school-support-law), bland annat att avskaffa regleringen om extra anpassningar, med ändringar som föreslås träda i kraft den 1 juli 2028. Fram till dess är nivåerna som beskrivs här de regler som gäller, och en skolas skyldighet att leverera dem pausas inte medan en proposition rör sig genom riksdagen. Samma nivåer [gäller i gymnasieskolan](/sv/blog/npf-support-rights-gymnasium) som i grundskolan.
 
 ## Källor
 
