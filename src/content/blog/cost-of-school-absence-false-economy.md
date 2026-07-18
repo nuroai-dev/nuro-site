@@ -28,7 +28,7 @@ The policy direction is clear. The state inquiry [Bättre förutsättningar för
 
 ## Prevention is the only version that is actually cheaper
 
-There is no version of this where doing less works. The only lever that lowers both the human and the financial cost is the same one: catch students before the absence sets in, give the teacher already in the room the means to deliver adapted support without a second full-time job of paperwork, and document that support so it holds up.
+There is no version of this where doing less works. The only lever that lowers both the human and the financial cost is the same one: catch students before the absence sets in, give the teacher already in the room the means to deliver adapted support without a second full-time job of paperwork, and document that support so it holds up. Some of the catch mechanisms are already written into law and go unused: a school [must offer lovskola](/blog/lovskola-school-must-offer-holiday-tuition) to a year-9 or year-10 student at risk of not qualifying for gymnasiet, which is exactly the moment a disengaging student is cheapest to keep.
 
 That is the case for prevention, and it is also the case for Nuro. Seeing each student early, adapting the material to how they learn, and surfacing the warning signs while there is still time to act is not only the right thing for the child. For a municipality, it is the cheaper thing, measured over any horizon longer than a single budget year.
 

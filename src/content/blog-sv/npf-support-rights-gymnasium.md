@@ -44,7 +44,7 @@ Det rättsliga ramverket är detsamma, men sammanhanget skiftar på sätt som sp
 
 ## Överlämningen
 
-En av de mest sårbara stunderna för en elev som behöver stöd är flytten från grundskolan till gymnasiet. En ny skola, nya lärare, ingen gemensam historia. Den föregående skolan har en rättslig skyldighet att lämna över information som hjälper den nya skolan att sätta in stöd från start, snarare än att återupptäcka behovet månader senare. Den skyldigheten finns i 3 kap. 12 j § i Skollagen.
+En av de mest sårbara stunderna för en elev som behöver stöd är flytten från grundskolan till gymnasiet. En ny skola, nya lärare, ingen gemensam historia. Den föregående skolan har en rättslig skyldighet att lämna över information som hjälper den nya skolan att sätta in stöd från start, snarare än att återupptäcka behovet månader senare. Den skyldigheten finns i 3 kap. 12 j § i Skollagen. Och för en elev i årskurs 9 som ligger nära gränsen finns ett lagstadgat skyddsnät strax före övergången: skolan [är skyldig att erbjuda lovskola](/sv/blog/lovskola-school-must-offer-holiday-tuition), undervisning under lov, när en elev riskerar att inte nå behörighet till ett nationellt program.
 
 Se [När en neurodivergent elev byter skola ska stödet följa med](/sv/blog/support-follows-student-changing-schools) för vad överlämningen bör innehålla och vad en familj kan göra om det inte sker.
 
