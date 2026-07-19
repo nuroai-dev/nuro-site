@@ -46,7 +46,7 @@ Nuro is a digital learning tool. It adapts content to each student's needs, prod
 
 ## Sources
 
-- [Riksdagen, Skollagen (2010:800) 1 kap. 3 § — definition of lärverktyg](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
-- [Riksdagen, Skollagen (2010:800) 10 kap. 10 § — free access to learning tools](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
+- [Riksdagen, Skollagen (2010:800) 1 kap. 3 §, definition of lärverktyg](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
+- [Riksdagen, Skollagen (2010:800) 10 kap. 10 §, free access to learning tools](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
 - [SPSM, "Vilka regler gäller när en elev behöver assisterande lärverktyg?"](https://www.spsm.se/stod-och-rad/fraga-en-radgivare/fragor-och-svar/vilka-regler-galler-nar-en-elev-behover-assisterande-larverktyg/)
 - [SPSM, Specialpedagogik och digitala lärverktyg (Skoldatatek)](https://www.spsm.se/laromedel/valja-anvanda-och-utvardera-larverktyg/larverktyg-pa-huvudmannaniva/skoldatatek/)

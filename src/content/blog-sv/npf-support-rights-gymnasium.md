@@ -17,14 +17,14 @@ Det relevanta kapitlet är 3 kap. i Skollagen, "Barns och elevers utveckling mot
 **Extra anpassningar** (3 kap. 5 §) är mindre åtgärder som en lärare gör inom den ordinarie undervisningen, utan ett formellt beslut: att läsa text högt, dela upp uppgifter i steg, ge ett skriftligt schema, ge extra tid. Utlösaren är varje tecken på att en elev riskerar att inte nå de lägsta betygskriterierna. Paragrafen avslutas med en mening som avgör gymnasiefrågan direkt:
 
 > "Detta gäller elever i samtliga skolformer och i fritidshemmet."
-> — Skollagen 3 kap. 5 §, Lag (2022:146)
+> Källa: Skollagen 3 kap. 5 §, Lag (2022:146)
 
 Samtliga skolformer. Gymnasieskolan är en skolform.
 
 **Särskilt stöd** (det mer formella steget, som regleras i 3 kap. 7-12 §§) kräver en skriftlig utredning, ett beslut av rektorn och, om stöd beviljas, ett skriftligt åtgärdsprogram. Tillämpningsområdet för dessa bestämmelser fastslås i 3 kap. 6 §, som listar de skolformer där de gäller. Gymnasieskolan finns med på den listan uttryckligen:
 
 > "Bestämmelserna i 7-12 §§ gäller endast i grundskolan, anpassade grundskolan, specialskolan, sameskolan, fritidshemmet, **gymnasieskolan** och anpassade gymnasieskolan."
-> — Skollagen 3 kap. 6 §, Lag (2025:729)
+> Källa: Skollagen 3 kap. 6 §, Lag (2025:729)
 
 Hela stödtrappan gäller alltså på gymnasiet, inklusive utredningsskyldigheten, skyldigheten att ge särskilt stöd när behovet är bekräftat, och rätten till ett åtgärdsprogram. Skolan kan inte kringgå detta.
 
@@ -58,5 +58,5 @@ Om en skola vägrar att utreda en elevs stödbehov, eller vägrar att ge särski
 
 ## Källor
 
-- [Riksdagen, Skollagen (2010:800), 3 kap. 5 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/) — extra anpassningar, "gäller elever i samtliga skolformer och i fritidshemmet," Lag (2022:146)
-- [Riksdagen, Skollagen (2010:800), 3 kap. 6 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/) — tillämpningsområde för bestämmelser om särskilt stöd, gymnasieskolan explicit listad, Lag (2025:729)
+- [Riksdagen, Skollagen (2010:800), 3 kap. 5 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/): extra anpassningar, "gäller elever i samtliga skolformer och i fritidshemmet," Lag (2022:146)
+- [Riksdagen, Skollagen (2010:800), 3 kap. 6 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/): tillämpningsområde för bestämmelser om särskilt stöd, gymnasieskolan explicit listad, Lag (2025:729)

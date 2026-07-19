@@ -17,14 +17,14 @@ The relevant chapter is chapter 3 of Skollagen, "Barns och elevers utveckling mo
 **Extra anpassningar** (3 kap. 5 §) are smaller adaptations a teacher makes within ordinary teaching, without a formal decision: reading text aloud, breaking tasks into steps, providing a written schedule, allowing extra time. The trigger is any sign that a student risks not meeting the minimum grade criteria. The section ends with a sentence that settles the gymnasium question directly:
 
 > "Detta gäller elever i samtliga skolformer och i fritidshemmet."
-> — Skollagen 3 kap. 5 §, Lag (2022:146)
+> Source: Skollagen 3 kap. 5 §, Lag (2022:146)
 
 All school forms. Gymnasieskolan is a school form.
 
 **Särskilt stöd** (the more formal tier, covered in 3 kap. 7-12 §§) requires a written investigation, a decision by the rektor, and if support is granted, a written åtgärdsprogram. The scope of these provisions is set in 3 kap. 6 §, which lists the school forms where they apply. Gymnasieskolan appears on that list explicitly:
 
 > "Bestämmelserna i 7-12 §§ gäller endast i grundskolan, anpassade grundskolan, specialskolan, sameskolan, fritidshemmet, **gymnasieskolan** och anpassade gymnasieskolan."
-> — Skollagen 3 kap. 6 §, Lag (2025:729)
+> Source: Skollagen 3 kap. 6 §, Lag (2025:729)
 
 So the full support ladder, including the investigation duty, the obligation to provide särskilt stöd when the need is confirmed, and the right to an åtgärdsprogram, all apply at gymnasiet. The school cannot bypass them.
 
@@ -58,5 +58,5 @@ The [parent guide to getting support at school](/blog/parent-guide-child-not-get
 
 ## Sources
 
-- [Riksdagen, Skollagen (2010:800), 3 kap. 5 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/) — extra anpassningar, "gäller elever i samtliga skolformer och i fritidshemmet," Lag (2022:146)
-- [Riksdagen, Skollagen (2010:800), 3 kap. 6 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/) — tillämpningsområde för bestämmelser om särskilt stöd, gymnasieskolan explicit listed, Lag (2025:729)
+- [Riksdagen, Skollagen (2010:800), 3 kap. 5 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/): extra anpassningar, "gäller elever i samtliga skolformer och i fritidshemmet," Lag (2022:146)
+- [Riksdagen, Skollagen (2010:800), 3 kap. 6 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/): tillämpningsområde för bestämmelser om särskilt stöd, gymnasieskolan explicit listed, Lag (2025:729)
