@@ -22,15 +22,15 @@ Myndigheten mildrade inte slutsatsen. Som dess avdelningschef Mattias Fredricson
 
 ## Lagen låter inte stödet vänta
 
-Här är den del som förändrar vad en skola kan göra i dag. Enligt skollagen avgörs rätten till stöd i skolan av elevens behov, inte av en diagnos. Stödet får inte villkoras av att en utredning är klar, eller av att en diagnos överhuvudtaget finns. Det som utlöser skyldigheten att agera är en enda fråga: kan det befaras att eleven inte kommer att nå de kunskapskrav som minst ska uppnås? Om svaret är ja måste skolan ge [extra anpassningar och, vid behov, särskilt stöd](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), med eller utan diagnos. Vi går igenom hela den principen i [ditt barn behöver ingen diagnos för att få stöd i skolan](/blog/support-without-a-diagnosis-school).
+Här är den del som förändrar vad en skola kan göra i dag. Enligt skollagen avgörs rätten till stöd i skolan av elevens behov, inte av en diagnos. Stödet får inte villkoras av att en utredning är klar, eller av att en diagnos överhuvudtaget finns. Det som utlöser skyldigheten att agera är en enda fråga: kan det befaras att eleven inte kommer att nå de kunskapskrav som minst ska uppnås? Om svaret är ja måste skolan ge [extra anpassningar och, vid behov, särskilt stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), med eller utan diagnos. Vi går igenom hela den principen i [ditt barn behöver ingen diagnos för att få stöd i skolan](/sv/blog/support-without-a-diagnosis-school).
 
 Så de två systemen går efter olika klockor. Vårdens klocka, utredningen, kan ta många månader. Skolans klocka, den lagstadgade skyldigheten att ge stöd, startar i det ögonblick en elev riskerar att inte nå målen. Misstaget, vanligt och dyrt, är att behandla den första klockan som om den styrde den andra.
 
 ## Varför glappet spelar roll
 
-Om skolans stöd verkligen måste vänta på diagnosen skulle ett kämpande barn förlora månader, ibland mer än ett skolår, under den mest formande perioden i sin utbildning. Det är lång tid att hamna efter, och att hamna efter är sällan där historien slutar. Behov som inte möts är en av trådarna som löper genom [skolfrånvaro och vägen mot att bli hemmasittare](/blog/school-absence-starts-earlier). Det är också värt att minnas att många elever som väntar har [mer än en diagnos samtidigt](/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap), vilket gör den enda etiketten i slutet av väntan till en ännu sämre grund för att avgöra vilket stöd som ska ges.
+Om skolans stöd verkligen måste vänta på diagnosen skulle ett kämpande barn förlora månader, ibland mer än ett skolår, under den mest formande perioden i sin utbildning. Det är lång tid att hamna efter, och att hamna efter är sällan där historien slutar. Behov som inte möts är en av trådarna som löper genom [skolfrånvaro och vägen mot att bli hemmasittare](/sv/blog/school-absence-starts-earlier). Det är också värt att minnas att många elever som väntar har [mer än en diagnos samtidigt](/sv/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap), vilket gör den enda etiketten i slutet av väntan till en ännu sämre grund för att avgöra vilket stöd som ska ges.
 
-För en förälder som får höra att man ska vänta på utredningen först är det inte vad lagen kräver. Du kan be skolan agera utifrån ditt barns behov nu. Vår [guide för föräldrar](/blog/parent-guide-child-not-getting-support-at-school) beskriver hur, steg för steg.
+För en förälder som får höra att man ska vänta på utredningen först är det inte vad lagen kräver. Du kan be skolan agera utifrån ditt barns behov nu. Vår [guide för föräldrar](/sv/blog/parent-guide-child-not-getting-support-at-school) beskriver hur, steg för steg.
 
 ## Var Nuro kommer in
 
