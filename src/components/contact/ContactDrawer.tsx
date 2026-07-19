@@ -75,7 +75,7 @@ export default function ContactDrawer() {
             {status === "success" ? (
               <div className="cd-success">
                 <Drawer.Title className="cd-title">
-                  Thanks — we&rsquo;ll be in touch.
+                  Thanks, we&rsquo;ll be in touch.
                 </Drawer.Title>
                 <Drawer.Description className="cd-lead">
                   We&rsquo;ve got your message and will reply to your email
