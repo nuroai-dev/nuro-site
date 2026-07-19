@@ -1,6 +1,6 @@
 ---
 title: "Lovskola: the holiday tuition a school must offer when a student risks missing gymnasiet"
-description: "Swedish schools have a statutory duty to offer lovskola — tuition during school holidays — to students in year 9 and year 10 who risk not qualifying for national programs at gymnasiet. For families of neurodivergent students, knowing this duty exists changes what they can ask for."
+description: "Swedish schools have a statutory duty to offer lovskola, tuition during school holidays, to students in year 9 and year 10 who risk not qualifying for national programs at gymnasiet. For families of neurodivergent students, knowing this duty exists changes what they can ask for."
 pubDate: 2026-07-18
 author: "The Nuro team"
 tags: ["skollagen", "gymnasiet", "rights"]
@@ -20,7 +20,7 @@ The statutory obligation sits in 10 kap. 23 a and 23 b §§ of Skollagen. The cu
 
 **During year 10** (10 kap. 23 b §): For students in year 10 who remain at risk, the school must offer lovskola during the breaks within the school year, totalling at least 25 hours. And after year 10, for students who still haven't qualified for a national program, a further 50 hours must be offered in June.
 
-The definition of lovskola in Skollagen (1 kap. 3 §) makes clear it is "undervisning inom grundskolan som anordnas ... under lov under en termin eller utanför terminstid" — tuition within the grundskola arranged during a term break or outside term time. It is not obligatory for the student to attend, but the school must make the offer.
+The definition of lovskola in Skollagen (1 kap. 3 §) makes clear it is "undervisning inom grundskolan som anordnas ... under lov under en termin eller utanför terminstid", that is, tuition within the grundskola arranged during a term break or outside term time. It is not obligatory for the student to attend, but the school must make the offer.
 
 ## Why this matters for neurodivergent students
 
@@ -36,7 +36,7 @@ Lovskola is tuition, not assessment. The school decides where to hold it (10 kap
 
 Once a student accepts the offer, attendance is expected. Skollagen (10 kap. 23 d §) requires that a student who accepts lovskola "ska delta i den verksamhet som anordnas för att ge den avsedda utbildningen, om eleven inte har giltigt skäl att utebli" (shall participate in the activities arranged to provide the intended education, unless the student has a valid reason for absence). Unexcused absences must be reported to guardians the same day.
 
-For a student with ADHD or autism who finds the school environment difficult, the intensity and novelty of a June lovskola session — smaller groups, different setting, different teacher in many cases — can be either easier or harder than the regular school year. The support that would help in lovskola is the same support that helps generally: knowing what is expected, structure, brief clear goals, and being told immediately when something is going well.
+For a student with ADHD or autism who finds the school environment difficult, the intensity and novelty of a June lovskola session (smaller groups, different setting, different teacher in many cases) can be either easier or harder than the regular school year. The support that would help in lovskola is the same support that helps generally: knowing what is expected, structure, brief clear goals, and being told immediately when something is going well.
 
 ## What a school can deduct
 
@@ -44,7 +44,7 @@ A school that has already voluntarily offered lovskola between August of year 9 
 
 ## The coming 2028 reform
 
-The version of 23 a § that takes effect from 2028 uses different language for the trigger: "riskerar att inte kunna tillgodogöra sig de kunskaper" (risks not being able to acquire the knowledge) to match the new grading framework. The underlying obligation — to offer lovskola to students at risk of missing gymnasiet qualification — remains the same. Lag (2026:1243).
+The version of 23 a § that takes effect from 2028 uses different language for the trigger: "riskerar att inte kunna tillgodogöra sig de kunskaper" (risks not being able to acquire the knowledge) to match the new grading framework. The underlying obligation (to offer lovskola to students at risk of missing gymnasiet qualification) remains the same. Lag (2026:1243).
 
 ## What to do if the offer does not come
 
