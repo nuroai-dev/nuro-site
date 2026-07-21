@@ -14,7 +14,7 @@ Den 17 mars 2026 lämnade regeringen [proposition 2025/26:195, Förbättrat stö
 Utifrån regeringens egen sammanfattning är de viktigaste förslagen:
 
 - **Ett tydligare uppdrag om ledning och stimulans.** Det ska förtydligas i skollagen att alla barn och elever i undervisningen ska ges ledning och stimulans i syfte att de ska kunna följa undervisningen.
-- **Garantin för tidiga stödinsatser och regleringen om extra anpassningar ska avskaffas.** I stället ska standardiserade tester genomföras i början av höstterminen i vissa årskurser, för att identifiera elever som behöver stöd.
+- **[Garantin för tidiga stödinsatser](/sv/blog/swedens-early-support-guarantee-not-delivering) och regleringen om extra anpassningar ska avskaffas.** I stället ska [standardiserade tester](/sv/blog/standardized-tests-replace-early-support-guarantee) genomföras i början av höstterminen i vissa årskurser, för att identifiera elever som behöver stöd.
 - **Tidig stödundervisning.** Elever ska ges stödundervisning i ett tidigt skede i de obligatoriska skolformerna, gymnasieskolan och anpassade gymnasieskolan, i ämnena svenska, svenska som andraspråk och matematik.
 - **Ändrade regler om särskilt stöd.** Ansvarig lärare eller mentor ska anmäla till rektorn när en elevs behov av särskilt stöd behöver utredas, och behovet ska utredas tidigare än i dag. Beslut om särskilt stöd i mindre undervisningsgrupp eller som enskild undervisning ska underlättas. Beslut om anpassad studiegång ska bara få fattas när alla andra möjligheter till särskilt stöd är uttömda eller bedöms olämpliga.
 - **Vuxenutbildning.** Lärare inom kommunal vuxenutbildning ska ha tillgång till, eller möjlighet att samråda med, personal med specialpedagogisk kompetens.

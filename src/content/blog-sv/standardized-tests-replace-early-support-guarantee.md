@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["skollagen", "sweden", "policy", "npf", "sarskilt-stod"]
 ---
 
-Den 3 juni 2026 biföll riksdagen [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf). Från den 1 juli 2028 försvinner två välbekanta delar av hur skolan ger tidigt stöd: garantin för tidiga stödinsatser (läsa-skriva-räkna-garantin) och regleringen om extra anpassningar. I stället ska skolan använda standardiserade prov i början av höstterminen i vissa årskurser för att identifiera elever som behöver stöd, tillsammans med tidig stödundervisning i svenska, svenska som andraspråk och matematik.
+Den 3 juni 2026 biföll riksdagen [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf). Från den 1 juli 2028 försvinner två välbekanta delar av hur skolan ger tidigt stöd: garantin för tidiga stödinsatser (läsa-skriva-räkna-garantin) och regleringen om extra anpassningar. I stället ska skolan använda standardiserade prov i början av höstterminen i vissa årskurser för att identifiera elever som behöver stöd, tillsammans med tidig stödundervisning i svenska, svenska som andraspråk och matematik. Det här inlägget fokuserar på bytet från garanti till prov; för hela propositionen och allt annat den ändrar, se vår [genomgång av proposition 2025/26:195](/sv/blog/sweden-proposes-rewriting-school-support-law).
 
 Det här är en verklig förändring av stödets maskineri, så det är värt att vara noga med vad som ändras och vad det betyder för just neurodivergenta elever.
 
