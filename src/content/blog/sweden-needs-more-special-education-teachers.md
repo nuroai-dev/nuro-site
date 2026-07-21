@@ -18,7 +18,7 @@ Put them side by side and the bind is obvious. The students who most need specia
 
 More special-education teachers would help. Sweden should absolutely train and keep more of them. But even on an optimistic timeline, that's a decade-plus project, and as one union leader put it, simply waiting for more people to be trained "is not the right way to go," because the shortage is forecast to last for years either way. The gap is also more structurally concentrated than a single headline number suggests: Sweden has two distinct special-education roles, and they are [not interchangeable, only one of them can teach students directly](/blog/two-special-education-roles-one-shortage), and that is the one schools lack.
 
-A child in grade 4 this autumn cannot wait until 2038. The support they're legally entitled to has to come from the teacher already standing in front of them, a teacher who, in most cases, has no specialist training and twenty-nine other students to reach.
+A child in grade 4 this autumn cannot wait until 2038. The support they're legally entitled to has to come from the teacher already standing in front of them, a teacher who, in most cases, has [no specialist training](/blog/are-teachers-prepared-for-neurodivergent-students) and twenty-nine other students to reach.
 
 So the real question isn't only "how do we produce more specialists?" It's "how do we give the teachers we already have the leverage to support every student, today?"
 
