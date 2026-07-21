@@ -10,7 +10,7 @@ tags: ["skollagen", "sarskilt-stod", "teachers"]
 
 När en svensk skola märker att en elev riskerar att inte nå kunskapskraven är det första lagen förväntar sig inte ett möte eller en diagnos. Det är extra anpassningar: praktiska justeringar en lärare kan göra inom den ordinarie undervisningen, direkt.
 
-Skolverket definierar dem som "en mindre ingripande stödinsats, som normalt är möjlig att genomföra för lärare och övrig skolpersonal inom ramen för den ordinarie undervisningen". Viktigt: de kräver inget formellt beslut och inget åtgärdsprogram, och en elev ska "skyndsamt ges stöd i form av extra anpassningar" så snart det finns skäl att befara att hen inte når minimikraven. Det här är en nivå under [särskilt stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), som är mer ingripande och kräver ett formellt beslut.
+Skolverket definierar dem som "en mindre ingripande stödinsats, som normalt är möjlig att genomföra för lärare och övrig skolpersonal inom ramen för den ordinarie undervisningen". Viktigt: de kräver inget formellt beslut och inget åtgärdsprogram, och en elev ska "skyndsamt ges stöd i form av extra anpassningar" så snart det finns skäl att befara att hen inte når minimikraven. Det här är en nivå under [särskilt stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), som är mer ingripande och kräver ett formellt beslut. När särskilt stöd beslutas väljer skolan vilken form det tar, vilket är varför en familj [inte helt enkelt kan kräva en viss insats som en elevassistent](/sv/blog/does-my-child-have-a-right-to-an-elevassistent), bara att behovet tillgodoses.
 
 ## De nio exemplen Skolverket ger
 

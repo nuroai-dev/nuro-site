@@ -19,7 +19,7 @@ It cuts both ways, which is worth understanding clearly:
 - **No diagnosis is needed to get support.** A school cannot make support conditional on an assessment being finished, or on a diagnosis existing at all.
 - **A diagnosis does not automatically trigger support either.** What matters is how the student's situation actually looks in school, not the label on a form. A diagnosis can help the school choose the right measures, but it is never a precondition for putting them in place ([Skolinspektionen](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)).
 
-There is even a detail that surprises many parents: an åtgärdsprogram, the formal plan for särskilt stöd, is not supposed to describe the student's diagnosis at all. It describes the need and what the school will do about it.
+There is even a detail that surprises many parents: an åtgärdsprogram, the formal plan for särskilt stöd, is not supposed to describe the student's diagnosis at all. It describes the need and what the school will do about it. The same needs-based logic runs the other way too: because support is decided by need, a family [cannot demand one particular measure, such as an elevassistent](/blog/does-my-child-have-a-right-to-an-elevassistent), only that the need is genuinely met.
 
 ## Why this matters so much in practice
 

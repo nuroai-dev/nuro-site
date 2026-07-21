@@ -19,7 +19,7 @@ Det går åt båda hållen, vilket är värt att förstå tydligt:
 - **Ingen diagnos behövs för att få stöd.** En skola får inte villkora stödet av att en utredning är klar, eller av att en diagnos överhuvudtaget finns.
 - **En diagnos utlöser inte heller stöd automatiskt.** Det som spelar roll är hur elevens situation faktiskt ser ut i skolan, inte etiketten på en blankett. En diagnos kan hjälpa skolan att välja rätt åtgärder, men den är aldrig en förutsättning för att sätta in dem ([Skolinspektionen](https://www.skolinspektionen.se/inspektion/missforhallanden-i-skolan/fragor-och-svar-om-barn-och-elevers-rattigheter-i-skolan/fragor-som-ror-stod/)).
 
-Det finns till och med en detalj som överraskar många föräldrar: ett åtgärdsprogram, den formella planen för särskilt stöd, ska inte beskriva elevens diagnos alls. Det beskriver behovet och vad skolan ska göra åt det.
+Det finns till och med en detalj som överraskar många föräldrar: ett åtgärdsprogram, den formella planen för särskilt stöd, ska inte beskriva elevens diagnos alls. Det beskriver behovet och vad skolan ska göra åt det. Samma behovsbaserade logik gäller åt andra hållet också: eftersom stödet avgörs av behovet kan en familj [inte kräva en viss insats, som en elevassistent](/sv/blog/does-my-child-have-a-right-to-an-elevassistent), bara att behovet verkligen tillgodoses.
 
 ## Varför det här spelar så stor roll i praktiken
 
