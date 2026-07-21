@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["skollagen", "sweden", "policy", "npf", "sarskilt-stod"]
 ---
 
-On 3 June 2026 the Riksdag adopted [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf). From 1 July 2028, two familiar parts of how schools give early support disappear: the guarantee for early support measures (the "läsa, skriva, räkna" guarantee) and the regulation on extra anpassningar. In their place, schools will use standardized tests at the start of the autumn term in certain year groups to identify students who need support, together with early remedial teaching in Swedish, Swedish as a second language, and mathematics.
+On 3 June 2026 the Riksdag adopted [proposition 2025/26:195, Förbättrat stöd i skolan](https://www.regeringen.se/contentassets/90deb85eeb924ac4a4b5ef087529f68a/forbattrat-stod-i-skolan-prop.-202526195.pdf). From 1 July 2028, two familiar parts of how schools give early support disappear: the guarantee for early support measures (the "läsa, skriva, räkna" guarantee) and the regulation on extra anpassningar. In their place, schools will use standardized tests at the start of the autumn term in certain year groups to identify students who need support, together with early remedial teaching in Swedish, Swedish as a second language, and mathematics. This post focuses on the tests-for-guarantee swap; for the full bill and everything else it changes, see our [breakdown of proposition 2025/26:195](/blog/sweden-proposes-rewriting-school-support-law).
 
 This is a real shift in the machinery of support, so it is worth being precise about what is changing and what it means for neurodivergent students in particular.
 
