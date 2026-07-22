@@ -20,7 +20,7 @@ That capacity gap is partly baked into how schools are funded. The everyday supp
 
 [The right to support already exists in law](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Sweden's own Parliament has documented how far short of it the outcomes fall](/blog/swedens-parliament-npf-school-results). What the Skolverket report adds is the reason, stated by the people closest to it: the support the law promises depends on resources that, two times out of three, are not there.
 
-This is the same wall from a different angle as the [special-education teacher shortage](/blog/sweden-needs-more-special-education-teachers). Whether the missing resource is a specialist, an hour, or a line in a budget, the effect on the student is identical. The adapted support they are entitled to does not arrive.
+This is the same wall from a different angle as the [special-education teacher shortage](/blog/sweden-needs-more-special-education-teachers), sharpened by the fact that [Sweden's two special-education roles are not interchangeable](/blog/two-special-education-roles-one-shortage). Whether the missing resource is a specialist, an hour, or a line in a budget, the effect on the student is identical. The adapted support they are entitled to does not arrive.
 
 ## What closes a resource gap
 

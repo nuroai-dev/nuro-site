@@ -36,7 +36,7 @@ Det betyder tre saker som samverkar:
 
 - **Att anpassa lektionen till eleven** innan den halkar efter, inte efter.
 - **Att lyfta fram de tidiga varningssignalerna**, den subtila ökningen av frånvaro och tillbakadragenhet, medan det fortfarande finns tid att agera.
-- **Att agera på dem med verkligt stöd**, inte bara dokumentera att ett problem finns. Och när frånvaron väl sätter in kräver lagen att skolan [utreder den skyndsamt](/sv/blog/school-duty-to-investigate-absence), giltig eller inte.
+- **Att agera på dem med verkligt stöd**, inte bara dokumentera att ett problem finns. Och när frånvaron väl sätter in kräver lagen att skolan [utreder den skyndsamt](/sv/blog/school-duty-to-investigate-absence), giltig eller inte, och i vissa fall blir [distansundervisning i sig en erkänd form av särskilt stöd](/sv/blog/distansundervisning-as-special-support).
 
 Det är precis här lärarbristen vi [skrev om](/sv/blog/sweden-needs-more-special-education-teachers) biter hårdast: de som har bäst förutsättningar att fånga glidningen är de som har minst tid att hålla utkik efter den.
 
