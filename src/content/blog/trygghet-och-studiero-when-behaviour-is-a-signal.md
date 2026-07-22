@@ -26,7 +26,7 @@ Read that cross-reference again. The behaviour chapter points directly at the su
 
 ## Why this matters for neurodivergent students
 
-Disruptive, restless, or withdrawn behaviour is one of the most common ways an unmet neurodivergent need shows up in a classroom. A student with ADHD who cannot sit still, an autistic student who reacts to sensory overload, a student with dyslexia who avoids a task they cannot access: from the front of the room this can all look like a discipline problem. It is often a support problem wearing a discipline problem's clothes.
+Disruptive, restless, or withdrawn behaviour is one of the most common ways an unmet neurodivergent need shows up in a classroom. A student with ADHD who cannot sit still, an autistic student who reacts to sensory overload, a student with dyslexia who avoids a task they cannot access: from the front of the room this can all look like a discipline problem. It is often a support problem wearing a discipline problem's clothes, and how an adult responds in that moment, ideally with [lågaffektivt bemötande, the low-arousal approach](/blog/what-is-lagaffektivt-bemotande), decides whether it escalates or settles.
 
 That is why the 5 kap. 9 § reflex matters so much. A school that only reaches for the disciplinary tools, removal after removal, warning after warning, is punishing the symptom while the cause goes unexamined. And the endpoint of that path is bleak: repeated exclusion from lessons is one of the threads that leads a student toward [absence and, eventually, becoming a hemmasittare](/blog/school-absence-starts-earlier). The right to support does not depend on a diagnosis, and it [does not wait for one](/blog/support-without-a-diagnosis-school); the trigger is the need the behaviour reveals.
 
