@@ -22,7 +22,7 @@ Du har rätt att delta när ett åtgärdsprogram tas fram. Det du inte kan göra
 
 Här är den del som många föräldrar inte känner till. Ett beslut om ett åtgärdsprogram går att överklaga, och det gör även ett beslut att inte skriva ett, eller att avsluta ett, och till och med innehållet i ett som du tycker är för tunt. Överklagandet går till ÖKN, Skolväsendets överklagandenämnd. Tidsfristen är tre veckor från den dag du tog emot beslutet. En elev som har fyllt 16 kan överklaga på egen hand. Du lämnar överklagandet till skolan först, som måste skicka det vidare till ÖKN ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)).
 
-En gräns värd att känna till: extra anpassningar går inte att överklaga, eftersom det inte finns något formellt beslut bakom dem. Bara nivån åtgärdsprogram går att utmana.
+En gräns värd att känna till: extra anpassningar går inte att överklaga, eftersom det inte finns något formellt beslut bakom dem. Bara nivån åtgärdsprogram går att utmana. För hela genomgången av frister, vem som får överklaga, och hur en överklagan skiljer sig från en anmälan, se [så överklagar du ett beslut om särskilt stöd](/sv/blog/how-to-appeal-a-sarskilt-stod-decision).
 
 ## Praktiska steg, i ordning
 

@@ -22,7 +22,7 @@ You have the right to take part when an åtgärdsprogram is drawn up. What you c
 
 Here is the part many parents do not know. A decision about an åtgärdsprogram can be appealed, and so can a decision not to write one, or to end one, and even the content of one you think is too thin. The appeal goes to ÖKN, Skolväsendets överklagandenämnd (the Education Appeals Board). The deadline is three weeks from the day you received the decision. A student who has turned 16 can appeal on their own. You hand the appeal to the school first, which must forward it to ÖKN ([Skolverket](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)).
 
-One limit worth knowing: extra anpassningar cannot be appealed, because there is no formal decision behind them. Only the åtgärdsprogram level can be challenged.
+One limit worth knowing: extra anpassningar cannot be appealed, because there is no formal decision behind them. Only the åtgärdsprogram level can be challenged. For the full walkthrough of deadlines, who may appeal, and how an appeal differs from a complaint, see [how to appeal a decision on särskilt stöd](/blog/how-to-appeal-a-sarskilt-stod-decision).
 
 ## Practical steps, in order
 
