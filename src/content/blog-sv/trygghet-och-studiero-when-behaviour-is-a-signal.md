@@ -26,7 +26,7 @@ Läs den korshänvisningen en gång till. Beteendekapitlet pekar rakt på stödk
 
 ## Varför detta spelar roll för neuropsykiatriska elever
 
-Störande, rastlöst eller tillbakadraget beteende är ett av de vanligaste sätten som ett neuropsykiatriskt behov som inte tillgodoses visar sig i ett klassrum. En elev med adhd som inte kan sitta still, en autistisk elev som reagerar på sinnesöverbelastning, en elev med dyslexi som undviker en uppgift den inte kommer åt: från katedern kan allt detta se ut som ett ordningsproblem. Det är ofta ett stödproblem i ordningsproblemets kläder.
+Störande, rastlöst eller tillbakadraget beteende är ett av de vanligaste sätten som ett neuropsykiatriskt behov som inte tillgodoses visar sig i ett klassrum. En elev med adhd som inte kan sitta still, en autistisk elev som reagerar på sinnesöverbelastning, en elev med dyslexi som undviker en uppgift den inte kommer åt: från katedern kan allt detta se ut som ett ordningsproblem. Det är ofta ett stödproblem i ordningsproblemets kläder, och hur en vuxen bemöter i den stunden, helst med [lågaffektivt bemötande](/sv/blog/what-is-lagaffektivt-bemotande), avgör om det trappas upp eller lägger sig.
 
 Det är därför reflexen i 5 kap. 9 § betyder så mycket. En skola som bara sträcker sig efter de disciplinära verktygen, utvisning efter utvisning, varning efter varning, bestraffar symtomet medan orsaken förblir outredd. Och slutpunkten på den vägen är dyster: upprepad uteslutning från lektioner är en av trådarna som leder en elev mot [frånvaro och, till slut, att bli hemmasittare](/sv/blog/school-absence-starts-earlier). Rätten till stöd beror inte på en diagnos, och den [väntar inte på en](/sv/blog/support-without-a-diagnosis-school); utlösaren är behovet som beteendet avslöjar.
 
