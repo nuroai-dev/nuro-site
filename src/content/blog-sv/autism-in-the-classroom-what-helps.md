@@ -12,7 +12,7 @@ Här är vad som faktiskt hjälper, grundat i vägledning från Specialpedagogis
 
 ## Låt dagen besvara de självklara frågorna
 
-Kärnan i det SPSM kallar tydliggörande pedagogik är att se till att en elev alltid kan svara på de grundläggande frågorna: varför, vad, var, med vem, när, hur, hur länge och vad som händer efteråt ([SPSM](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)). Arbetssättet har sina rötter i TEACCH, som utvecklades för elever med autism på 1970-talet, och målet är enkelt: en miljö som är begriplig och förutsägbar i stället för något som måste avkodas i stunden.
+Kärnan i det SPSM kallar [tydliggörande pedagogik](/sv/blog/what-is-tydliggorande-pedagogik) är att se till att en elev alltid kan svara på de grundläggande frågorna: varför, vad, var, med vem, när, hur, hur länge och vad som händer efteråt ([SPSM](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)). Arbetssättet har sina rötter i TEACCH, som utvecklades för elever med autism på 1970-talet, och målet är enkelt: en miljö som är begriplig och förutsägbar i stället för något som måste avkodas i stunden.
 
 I praktiken betyder det att visuellt markera strukturen för lektionen, dagen och veckan, att använda text- och bildstöd, att arbeta i tydliga steg, och att ge tidsangivelser tillsammans med instruktioner, inte att utgå från att strukturen är självklar.
 
