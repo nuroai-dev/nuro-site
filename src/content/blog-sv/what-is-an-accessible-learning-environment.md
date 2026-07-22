@@ -23,7 +23,7 @@ SPSM:s poäng är att tillgänglighet inte är någon enskild av dessa. Den upps
 
 För neurodivergenta elever är det område som oftast brister det pedagogiska. Det fysiska rummet kan åtgärdas med ljudabsorbenter och bättre belysning. Det sociala klimatet kan man arbeta med under en termin. Men den pedagogiska lärmiljön måste anpassas för varje elev, i varje ämne, för varje uppgift, och det är arbete som skalar dåligt. När Skolinspektionen granskade trettio skolors lärmiljöer för elever med NPF fann den precis detta: [på två av tre utformades undervisningen inte efter elevernas behov](/sv/blog/skolinspektionen-npf-learning-environment-review).
 
-[Rätten till det stödet är redan inskriven i svensk lag](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Om skolorna har resurserna att leverera det är en annan sak](/sv/blog/principals-say-they-lack-resources-for-npf). SPSM:s egen modell visar varför det pedagogiska hörnet är det svåraste av de tre: det är det enda som inte kan lösas en gång för hela byggnaden. Det måste lösas om igen för varje elev.
+[Rätten till det stödet är redan inskriven i svensk lag](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Om skolorna har resurserna att leverera det är en annan sak](/sv/blog/principals-say-they-lack-resources-for-npf). SPSM:s egen modell visar varför det pedagogiska hörnet är det svåraste av de tre: det är det enda som inte kan lösas en gång för hela byggnaden. Det måste lösas om igen för varje elev. SPSM har sedan dess gett [sitt eget perspektiv på vad AI kan, och inte kan, göra för det arbetet](/sv/blog/spsm-special-education-perspective-on-ai).
 
 ## Där Nuro arbetar
 

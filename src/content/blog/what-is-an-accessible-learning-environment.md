@@ -23,7 +23,7 @@ SPSM's point is that accessibility is not any single one of these. It emerges wh
 
 For neurodivergent students, the area that most often breaks down is the pedagogical one. The physical room can be fixed with acoustic panels and better lighting. The social climate can be worked on over a term. But the pedagogical learning environment has to be adapted for each student, in each subject, for each task, and that is work that scales badly. When Sweden's school inspector reviewed thirty schools' NPF learning environments, it found exactly this: [at two in three, teaching was not designed around students' needs](/blog/skolinspektionen-npf-learning-environment-review).
 
-[The right to that support is already written into Swedish law](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Whether schools have the resources to deliver it is another matter](/blog/principals-say-they-lack-resources-for-npf). SPSM's own model shows why the pedagogical corner is the hardest of the three: it is the one that cannot be solved once for the whole building. It has to be solved again for every student.
+[The right to that support is already written into Swedish law](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Whether schools have the resources to deliver it is another matter](/blog/principals-say-they-lack-resources-for-npf). SPSM's own model shows why the pedagogical corner is the hardest of the three: it is the one that cannot be solved once for the whole building. It has to be solved again for every student. SPSM has since offered [its own perspective on what AI can, and cannot, do for that work](/blog/spsm-special-education-perspective-on-ai).
 
 ## Where Nuro works
 

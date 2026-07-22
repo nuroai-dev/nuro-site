@@ -20,7 +20,7 @@ Det kapacitetsgapet är delvis inbyggt i hur skolor finansieras. Det vardagliga 
 
 [Rätten till stöd finns redan i lagen](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod). [Sveriges riksdag har själv dokumenterat hur långt ifrån den verkligheten hamnar](/sv/blog/swedens-parliament-npf-school-results). Vad Skolverkets rapport tillför är orsaken, uttalad av dem som står närmast: stödet som lagen lovar är beroende av resurser som, två gånger av tre, inte finns där.
 
-Det här är samma vägg från en annan vinkel som [bristen på speciallärare](/sv/blog/sweden-needs-more-special-education-teachers). Oavsett om den saknade resursen är en specialist, en timme eller en rad i en budget, blir effekten på eleven densamma. Det anpassade stöd de har rätt till uteblir.
+Det här är samma vägg från en annan vinkel som [bristen på speciallärare](/sv/blog/sweden-needs-more-special-education-teachers), skärpt av att [Sveriges två specialpedagogiska yrkesroller inte är utbytbara](/sv/blog/two-special-education-roles-one-shortage). Oavsett om den saknade resursen är en specialist, en timme eller en rad i en budget, blir effekten på eleven densamma. Det anpassade stöd de har rätt till uteblir.
 
 ## Vad som sluter en resurslucka
 
