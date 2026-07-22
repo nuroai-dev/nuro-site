@@ -38,7 +38,7 @@ The åtgärdsprogram is the formal decision that grants särskilt stöd. It is d
 Two things make the åtgärdsprogram different from everything above it:
 
 - It is a formal decision, made by the principal, not something a single teacher arranges.
-- Unlike extra anpassningar, an åtgärdsprogram **can be appealed**. If a family disagrees with it, or with a refusal to write one, they have a [route to challenge it](/blog/parent-guide-child-not-getting-support-at-school).
+- Unlike extra anpassningar, an åtgärdsprogram **[can be appealed](/blog/how-to-appeal-a-sarskilt-stod-decision)**. If a family disagrees with it, or with a refusal to write one, they have a [route to challenge it](/blog/parent-guide-child-not-getting-support-at-school).
 
 This is the legal backstop. It is the point at which a student's right to support stops being a general principle and becomes a documented, accountable, appealable commitment.
 

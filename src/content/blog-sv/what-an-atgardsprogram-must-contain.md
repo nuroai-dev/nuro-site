@@ -29,7 +29,7 @@ För det andra ska dokumentet bara innehålla det som behövs för att ge och f�
 
 ## Vem beslutar, och vad som kan överklagas
 
-Rektor beslutar om ett åtgärdsprogram ska upprättas. Det spelar roll, eftersom beslutet går att överklaga: ett beslut att inte upprätta ett program, eller att ändra eller avsluta ett, kan överklagas till Skolväsendets överklagandenämnd (ÖKN) inom tre veckor. [Vi tar upp familjens sida av den processen i vår föräldraguide](/sv/blog/parent-guide-child-not-getting-support-at-school). För de juridiska stödnivåerna bakom allt detta, se [vad skollagen faktiskt kräver](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod).
+Rektor beslutar om ett åtgärdsprogram ska upprättas. Det spelar roll, eftersom beslutet går att överklaga: ett beslut att inte upprätta ett program, eller att ändra eller avsluta ett, kan överklagas till Skolväsendets överklagandenämnd (ÖKN) [inom tre veckor](/sv/blog/how-to-appeal-a-sarskilt-stod-decision). [Vi tar upp familjens sida av den processen i vår föräldraguide](/sv/blog/parent-guide-child-not-getting-support-at-school). För de juridiska stödnivåerna bakom allt detta, se [vad skollagen faktiskt kräver](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod).
 
 ## Varför dokumentet fortsätter att brista
 

@@ -38,7 +38,7 @@ Att nå den här nivån utlöser en verklig process: skolan måste utreda eleven
 Två saker gör åtgärdsprogrammet annorlunda än allt ovanför det:
 
 - Det är ett formellt beslut, fattat av rektorn, inte något som en enskild lärare ordnar.
-- Till skillnad från extra anpassningar **går ett åtgärdsprogram att överklaga**. Om en familj inte håller med om det, eller om ett avslag på att upprätta ett, har den en [väg att överklaga](/sv/blog/parent-guide-child-not-getting-support-at-school).
+- Till skillnad från extra anpassningar **[går ett åtgärdsprogram att överklaga](/sv/blog/how-to-appeal-a-sarskilt-stod-decision)**. Om en familj inte håller med om det, eller om ett avslag på att upprätta ett, har den en [väg att överklaga](/sv/blog/parent-guide-child-not-getting-support-at-school).
 
 Det här är det rättsliga skyddsnätet. Det är punkten där en elevs rätt till stöd slutar vara en allmän princip och blir ett dokumenterat, ansvarsutkrävbart och överklagbart åtagande.
 

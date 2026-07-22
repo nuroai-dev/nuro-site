@@ -29,7 +29,7 @@ Second, the document should hold only what is needed to give and follow up the s
 
 ## Who decides, and what can be appealed
 
-The rektor (principal) decides whether to draw up an åtgärdsprogram. That matters because the decision is appealable: a decision not to create one, or to change or end one, can be appealed to Skolväsendets överklagandenämnd (ÖKN) within three weeks. [We cover the family's side of that process in our parent's guide](/blog/parent-guide-child-not-getting-support-at-school). For the legal tiers behind all of this, see [what Skollagen actually requires](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod).
+The rektor (principal) decides whether to draw up an åtgärdsprogram. That matters because the decision is appealable: a decision not to create one, or to change or end one, can be appealed to Skolväsendets överklagandenämnd (ÖKN) [within three weeks](/blog/how-to-appeal-a-sarskilt-stod-decision). [We cover the family's side of that process in our parent's guide](/blog/parent-guide-child-not-getting-support-at-school). For the legal tiers behind all of this, see [what Skollagen actually requires](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod).
 
 ## Why the document keeps falling short
 
