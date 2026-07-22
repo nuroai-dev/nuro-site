@@ -12,7 +12,7 @@ Here is what actually helps, grounded in guidance from Specialpedagogiska skolmy
 
 ## Make the day answer the obvious questions
 
-The core of what SPSM calls tydliggörande pedagogik, clarifying or explicit teaching, is making sure a student can always answer the basic questions: why, what, where, with whom, when, how, how long, and what happens after ([SPSM](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)). The approach has its roots in TEACCH, developed for autistic learners in the 1970s, and the goal is simple: an environment that is understandable and predictable rather than something to be decoded on the fly.
+The core of what SPSM calls [tydliggörande pedagogik](/blog/what-is-tydliggorande-pedagogik), clarifying or explicit teaching, is making sure a student can always answer the basic questions: why, what, where, with whom, when, how, how long, and what happens after ([SPSM](https://www.spsm.se/stod-och-rad/undervisning/autism-och-undervisning/)). The approach has its roots in TEACCH, developed for autistic learners in the 1970s, and the goal is simple: an environment that is understandable and predictable rather than something to be decoded on the fly.
 
 In practice that means visually marking the structure of the lesson, the day and the week, using text and image support, working in clear steps, and giving time cues with instructions, not assuming the structure is obvious.
 
