@@ -30,7 +30,7 @@ A neurotypical student answers most of these automatically. A student who strugg
 
 Tydliggörande pedagogik grew out of autism practice, but the reason it works is executive function, and executive function is where [ADHD, autism and dyslexia overlap](/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap). Planning, holding several steps in working memory, tracking time, starting a task: these are exactly the things a neurodivergent student tends to be short of. The method does not ask the student to be better at them. It moves the load off the student and onto the environment.
 
-For a student with ADHD, a visible sequence and a clear finish line do the time-keeping and step-tracking their own working memory struggles to hold. For a student with dyslexia, clear structure and visual support reduce how much unclear, text-heavy instruction they have to decode before they can even begin the actual task. Crucially, none of this lowers the bar. The student is working toward [the same goals as everyone else](/blog/autism-in-the-classroom-what-helps), with less friction in the way.
+For a student with ADHD, a visible sequence and a clear finish line do the time-keeping and step-tracking their own working memory struggles to hold. For a student with dyslexia, clear structure and [visual support](/blog/what-is-bildstod-akk-visual-support) reduce how much unclear, text-heavy instruction they have to decode before they can even begin the actual task. Crucially, none of this lowers the bar. The student is working toward [the same goals as everyone else](/blog/autism-in-the-classroom-what-helps), with less friction in the way.
 
 ## From good practice to a legal duty
 
