@@ -30,7 +30,7 @@ En elev utan svårigheter besvarar de flesta av dessa automatiskt. En elev som k
 
 Tydliggörande pedagogik växte fram ur autismpraktik, men skälet till att det fungerar är exekutiva funktioner, och exekutiva funktioner är där [adhd, autism och dyslexi går in i varandra](/sv/blog/when-a-child-has-more-than-one-diagnosis-npf-overlap). Att planera, hålla flera steg i arbetsminnet, hålla koll på tiden, komma igång med en uppgift: det är precis det en neurodivergent elev tenderar att ha brist på. Metoden ber inte eleven att bli bättre på dem. Den flyttar bördan från eleven till miljön.
 
-För en elev med adhd sköter en synlig sekvens och en tydlig mållinje den tidshållning och stegräkning som det egna arbetsminnet har svårt att bära. För en elev med dyslexi minskar tydlig struktur och visuellt stöd hur mycket otydlig, texttung instruktion de måste avkoda innan de ens kan börja med själva uppgiften. Och avgörande: inget av det sänker ribban. Eleven arbetar mot [samma mål som alla andra](/sv/blog/autism-in-the-classroom-what-helps), med mindre friktion i vägen.
+För en elev med adhd sköter en synlig sekvens och en tydlig mållinje den tidshållning och stegräkning som det egna arbetsminnet har svårt att bära. För en elev med dyslexi minskar tydlig struktur och [visuellt stöd](/sv/blog/what-is-bildstod-akk-visual-support) hur mycket otydlig, texttung instruktion de måste avkoda innan de ens kan börja med själva uppgiften. Och avgörande: inget av det sänker ribban. Eleven arbetar mot [samma mål som alla andra](/sv/blog/autism-in-the-classroom-what-helps), med mindre friktion i vägen.
 
 ## Från god praktik till en laglig skyldighet
 
