@@ -20,7 +20,7 @@ Faran är samma egenskap sedd från andra hållet. En reducerad timplan är ocks
 
 ## Vad lagen kräver innan det sker
 
-Anpassad studiegång är en av de "särskilt ingripande" formerna av stöd, och den bär hela särskilt-stöd-processen:
+Anpassad studiegång är en av de "särskilt ingripande" formerna av stöd, vid sidan av placering i en [särskild undervisningsgrupp](/sv/blog/what-is-sarskild-undervisningsgrupp), och den bär hela särskilt-stöd-processen:
 
 - en [utredning](/sv/blog/the-utredning-behind-sarskilt-stod) av elevens behov först, inte ett beslut fattat på en känsla;
 - ett skriftligt [åtgärdsprogram](/sv/blog/what-an-atgardsprogram-must-contain) som dokumenterar det;
