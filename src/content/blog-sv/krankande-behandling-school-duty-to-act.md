@@ -3,7 +3,7 @@ title: "Kränkande behandling: vad skolan är skyldig att göra"
 description: "Svenska skolor har en strikt lagstadgad skyldighet att förebygga, upptäcka och agera på behandling som kränker ett barns värdighet. Här är vad lagen säger, hur åtgärdskedjan ska se ut och vad föräldrar kan göra när en skola inte lever upp till kraven."
 pubDate: 2026-07-17
 author: "Nuro-teamet"
-tags: ["skollagen", "rättigheter", "npf", "föräldrar"]
+tags: ["skollagen", "rights", "npf", "parents"]
 ---
 
 ## Vad kränkande behandling faktiskt innebär i lagen
