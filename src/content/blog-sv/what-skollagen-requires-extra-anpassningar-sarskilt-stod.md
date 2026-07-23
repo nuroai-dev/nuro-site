@@ -18,7 +18,7 @@ Viktiga punkter:
 
 - De är tänkta att sättas in snabbt, så snart en elev riskerar att inte hänga med. Ingen lång utredning först.
 - De kräver inte ett formellt beslut från rektorn.
-- De dokumenteras i elevens skriftliga individuella utvecklingsplan (IUP) där en sådan finns, inte i ett åtgärdsprogram.
+- De dokumenteras i elevens skriftliga [individuella utvecklingsplan (IUP)](/sv/blog/what-is-an-utvecklingssamtal) där en sådan finns, inte i ett åtgärdsprogram.
 - De går inte att överklaga, eftersom det inte finns något formellt beslut att överklaga.
 
 Med andra ord: extra anpassningar är det vardagliga, lågtröskliga stöd som systemet förväntar sig att varje lärare ska ge (Skolverket nämner [nio konkreta exempel på hur de ser ut](/sv/blog/what-do-extra-anpassningar-look-like), från ett tydligt dagsschema till anpassad programvara). Haken är att "läraren kan göra det inom den ordinarie undervisningen" förutsätter att läraren har tiden och verktygen att faktiskt göra det för varje elev som behöver det.
