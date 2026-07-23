@@ -16,6 +16,8 @@ Skolverket's guidance is explicit about what this means for students who receive
 
 The transfer is not conditional on formal consent, but the sending school normally makes the judgment about what to pass on in consultation (samråd) with the student and, where relevant, the guardians. The point of the handover is the student's continued schooling, so what gets shared is what serves that.
 
+A related worry stops many handovers before they start: does secrecy (sekretess) not prevent a school from sharing a student's sensitive information? For this handover, no. Because the duty to pass on the information follows from law, it overrides the secrecy that would otherwise apply. Under 10 kap. 28 § offentlighets- och sekretesslagen, secrecy does not prevent a disclosure that another law requires, and the överlämning duty in skollagen is exactly such a required disclosure. A school that withholds a student's support information at a transition cannot hide behind sekretess. The law has already resolved that tension in the student's favour.
+
 ## Why transitions matter most for neurodivergent students
 
 For many students, a new school is an administrative event. For a neurodivergent student, it can be the moment everything that was working quietly falls apart. The [concrete extra anpassningar](/blog/what-do-extra-anpassningar-look-like) that a class teacher had learned by trial and error, a clear structure, text-to-speech, short steps, a seat away from the door, do not exist on paper unless someone wrote them down. The relationships that made those adjustments work do not transfer at all. A transition is exactly where a student who was managing can start to slip, and where slipping can turn into the absence a school then has a [duty to investigate](/blog/school-duty-to-investigate-absence). The move from grundskola to gymnasiet is the version of this transition where it is most often assumed the support page resets: it does not. [The same Skollagen support framework applies throughout gymnasiet](/blog/npf-support-rights-gymnasium), and without a proper överlämning the gymnasieskola starts from nothing.
@@ -32,3 +34,4 @@ This is where the work Nuro does matters. When a student's profile, the needs id
 
 - [Skolverket, "Överlämning vid skolbyte"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/overlamning-vid-skolbyte)
 - [Skollag (2010:800), 3 kap.](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
+- [Offentlighets- och sekretesslag (2009:400), 10 kap. 28 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/offentlighets--och-sekretesslag-2009400_sfs-2009-400/)
