@@ -28,7 +28,7 @@ So the students who most need a teacher's attention are, paradoxically, attached
 
 ## Where Nuro fits
 
-Nuro does not take a teacher's judgment out of the loop, and the professional decision about what support a student needs stays with the school. What it does is take on the part of the work that is genuinely mechanical: turning what is happening with each student into the written record. Nuro can draft the documentation of the adapted support a student is getting, ready for the teacher to review and approve, so the same act both frees teaching time and produces the compliance trail Skollagen asks for. For a profession that spends two-thirds of its time on things other than teaching, giving even part of that back is not a small thing.
+Nuro does not take a teacher's judgment out of the loop, and the professional decision about what support a student needs stays with the school. What it does is take on the part of the work that is genuinely mechanical: turning what is happening with each student into the written record. Nuro can draft the documentation of the adapted support a student is getting, ready for the teacher to review and approve, so the same act both frees teaching time and produces the compliance trail Skollagen asks for. For a profession that spends two-thirds of its time on things other than teaching, giving even part of that back is not a small thing. It is also the kind of AI use in schools that [Sweden's parliament has not really got around to debating](/blog/sweden-ai-in-schools-npf-support), even as it argues about the technology in the abstract.
 
 ## Sources
 
