@@ -33,7 +33,7 @@ It is easy to confuse the two ways of pushing back on a school, and they do very
 
 An **appeal (överklagande) to ÖKN** is about your child's specific decision. ÖKN can change that decision, uphold it, or send it back to the rektor. It is the lever that actually moves your case.
 
-A **complaint (anmälan) to Skolinspektionen or Barn- och elevombudet** is supervision of the school. It can lead the authority to criticise the school or require it to fix something, and it is the right route for things like [kränkande behandling](/blog/krankande-behandling-school-duty-to-act). But a Skolinspektionen complaint does not change your child's individual åtgärdsprogram. If your goal is to change the decision itself, the appeal to ÖKN is the door. [Our parent guide](/blog/parent-guide-child-not-getting-support-at-school) walks through when to use which.
+A **complaint (anmälan) to Skolinspektionen or Barn- och elevombudet** is supervision of the school. It can lead the authority to criticise the school or require it to fix something, and it is the right route for things like [kränkande behandling](/blog/krankande-behandling-school-duty-to-act). But a Skolinspektionen complaint does not change your child's individual åtgärdsprogram. If your goal is to change the decision itself, the appeal to ÖKN is the door, while [how to report the school to Skolinspektionen](/blog/how-to-report-a-school-to-skolinspektionen) covers the supervision route when the failure is systematic. [Our parent guide](/blog/parent-guide-child-not-getting-support-at-school) walks through when to use which.
 
 ## Why this matters for neurodivergent students
 
