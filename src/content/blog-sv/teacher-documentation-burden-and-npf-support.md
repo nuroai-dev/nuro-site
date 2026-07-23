@@ -28,7 +28,7 @@ Så de elever som mest behöver en lärares uppmärksamhet är, paradoxalt nog, 
 
 ## Var Nuro kommer in
 
-Nuro tar inte lärarens omdöme ur processen, och det professionella beslutet om vilket stöd en elev behöver stannar hos skolan. Det Nuro gör är att ta sig an den del av arbetet som är genuint mekanisk: att omvandla det som händer med varje elev till en skriftlig dokumentation. Nuro kan skriva ett utkast till dokumentationen av det anpassade stöd en elev får, redo för läraren att granska och godkänna, så att samma handling både frigör undervisningstid och skapar det underlag som skollagen efterfrågar. För ett yrke som lägger två tredjedelar av sin tid på annat än undervisning är det ingen liten sak att ge tillbaka en del av den.
+Nuro tar inte lärarens omdöme ur processen, och det professionella beslutet om vilket stöd en elev behöver stannar hos skolan. Det Nuro gör är att ta sig an den del av arbetet som är genuint mekanisk: att omvandla det som händer med varje elev till en skriftlig dokumentation. Nuro kan skriva ett utkast till dokumentationen av det anpassade stöd en elev får, redo för läraren att granska och godkänna, så att samma handling både frigör undervisningstid och skapar det underlag som skollagen efterfrågar. För ett yrke som lägger två tredjedelar av sin tid på annat än undervisning är det ingen liten sak att ge tillbaka en del av den. Det är också just den sortens AI-användning i skolan som [Sveriges riksdag inte riktigt har hunnit debattera](/sv/blog/sweden-ai-in-schools-npf-support), samtidigt som den diskuterar tekniken i det abstrakta.
 
 ## Källor
 

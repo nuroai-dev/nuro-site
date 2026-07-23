@@ -23,7 +23,7 @@ Det finns till och med en detalj som överraskar många föräldrar: ett åtgär
 
 ## Varför det här spelar så stor roll i praktiken
 
-Utredningar tar tid. En kö till en neuropsykiatrisk utredning kan löpa i många månader, ibland mer än ett år. Om stödet vore beroende av diagnosen i slutet av den väntan skulle ett barn som kämpar förlora ett år eller mer av skolan under den mest formativa perioden i sin utbildning. Lagen är byggd just för att förhindra det. Skyldigheten att ge [extra anpassningar och, vid behov, särskilt stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod) börjar i det ögonblick en elev riskerar att inte nå målen, inte den dag en diagnos kommer.
+Utredningar tar tid. En kö till en neuropsykiatrisk utredning kan löpa i många månader, ibland mer än ett år. När diagnoser av adhd och autism hos barn ökar, och [en nationell utredning nu granskar varför](/sv/blog/national-inquiry-npf-children-living-conditions-2026), lär de köerna inte bli kortare snart. Om stödet vore beroende av diagnosen i slutet av den väntan skulle ett barn som kämpar förlora ett år eller mer av skolan under den mest formativa perioden i sin utbildning. Lagen är byggd just för att förhindra det. Skyldigheten att ge [extra anpassningar och, vid behov, särskilt stöd](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod) börjar i det ögonblick en elev riskerar att inte nå målen, inte den dag en diagnos kommer.
 
 Så om du är en förälder som får höra att du först ska vänta in utredningen, är det inte vad lagen säger. Du kan be skolan att agera på ditt barns behov nu. Vår [guide för föräldrar](/sv/blog/parent-guide-child-not-getting-support-at-school) beskriver exakt hur du gör det, steg för steg.
 

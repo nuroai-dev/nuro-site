@@ -23,7 +23,7 @@ There is even a detail that surprises many parents: an åtgärdsprogram, the for
 
 ## Why this matters so much in practice
 
-Assessments take time. A waiting list for a neuropsychiatric evaluation can run for many months, sometimes more than a year. If support depended on the diagnosis at the end of that wait, a struggling child would lose a year or more of school during the most formative period of their education. The law is built precisely to prevent that. The duty to provide [extra anpassningar and, where needed, särskilt stöd](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod) starts the moment a student risks falling short, not the day a diagnosis arrives.
+Assessments take time. A waiting list for a neuropsychiatric evaluation can run for many months, sometimes more than a year. With child ADHD and autism diagnoses rising, and [a national inquiry now examining why](/blog/national-inquiry-npf-children-living-conditions-2026), those queues are unlikely to get shorter soon. If support depended on the diagnosis at the end of that wait, a struggling child would lose a year or more of school during the most formative period of their education. The law is built precisely to prevent that. The duty to provide [extra anpassningar and, where needed, särskilt stöd](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod) starts the moment a student risks falling short, not the day a diagnosis arrives.
 
 So if you are a parent being told to wait for the assessment first, that is not what the law says. You can ask the school to act on your child's needs now. Our [guide for parents](/blog/parent-guide-child-not-getting-support-at-school) sets out exactly how to do that, step by step.
 
