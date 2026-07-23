@@ -20,7 +20,7 @@ The danger is the same feature seen from the other side. A reduced timetable is 
 
 ## What the law requires before it happens
 
-Anpassad studiegång is one of the "särskilt ingripande" (especially intrusive) forms of support, and it carries the full särskilt stöd process:
+Anpassad studiegång is one of the "särskilt ingripande" (especially intrusive) forms of support, alongside placement in a [särskild undervisningsgrupp](/blog/what-is-sarskild-undervisningsgrupp), and it carries the full särskilt stöd process:
 
 - an [utredning](/blog/the-utredning-behind-sarskilt-stod) of the student's needs first, not a decision made on a hunch;
 - a written [åtgärdsprogram](/blog/what-an-atgardsprogram-must-contain) documenting it;

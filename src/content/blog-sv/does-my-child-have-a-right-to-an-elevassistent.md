@@ -14,7 +14,7 @@ För en förälder är det just den skillnaden som är hela saken. Du kan kräva
 
 ## Vad lagen säger om stödets form
 
-Särskilt stöd är den mer omfattande stödnivån som skolan ger när [extra anpassningar inte räcker](/sv/blog/what-do-extra-anpassningar-look-like). Skollagen namnger några särskilda former det kan ta: enskild undervisning, särskild undervisningsgrupp och anpassad studiegång. De formerna finns i skollagen 3 kap. 11 och 12 §§, enligt Skolverkets egen vägledning.
+Särskilt stöd är den mer omfattande stödnivån som skolan ger när [extra anpassningar inte räcker](/sv/blog/what-do-extra-anpassningar-look-like). Skollagen namnger några särskilda former det kan ta: enskild undervisning, [särskild undervisningsgrupp](/sv/blog/what-is-sarskild-undervisningsgrupp) och anpassad studiegång. De formerna finns i skollagen 3 kap. 11 och 12 §§, enligt Skolverkets egen vägledning.
 
 En elevassistent är inte någon av de namngivna lagstadgade formerna. Det är ett sätt för skolan att organisera stöd, och det kan absolut vara en del av en elevs särskilda stöd, men lagen listar det inte som en kategori en familj kan begära vid namn. Den styrande principen är, med Skolverkets ord, att "särskilt stöd ska ges med utgångspunkt i elevens utbildning i dess helhet".
 
