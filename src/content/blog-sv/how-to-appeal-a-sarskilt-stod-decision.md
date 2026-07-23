@@ -33,7 +33,7 @@ Det är lätt att blanda ihop de två sätten att invända mot en skola, och de 
 
 En **överklagan till ÖKN** handlar om ditt barns specifika beslut. ÖKN kan ändra det beslutet, fastställa det, eller skicka tillbaka det till rektorn. Det är hävstången som faktiskt rör ditt ärende.
 
-En **anmälan till Skolinspektionen eller Barn- och elevombudet** är tillsyn av skolan. Den kan leda till att myndigheten kritiserar skolan eller kräver att den rättar något, och det är rätt väg för sådant som [kränkande behandling](/sv/blog/krankande-behandling-school-duty-to-act). Men en anmälan till Skolinspektionen ändrar inte ditt barns individuella åtgärdsprogram. Om ditt mål är att ändra själva beslutet är överklagan till ÖKN dörren. [Vår föräldraguide](/sv/blog/parent-guide-child-not-getting-support-at-school) går igenom när man använder vilken.
+En **anmälan till Skolinspektionen eller Barn- och elevombudet** är tillsyn av skolan. Den kan leda till att myndigheten kritiserar skolan eller kräver att den rättar något, och det är rätt väg för sådant som [kränkande behandling](/sv/blog/krankande-behandling-school-duty-to-act). Men en anmälan till Skolinspektionen ändrar inte ditt barns individuella åtgärdsprogram. Om ditt mål är att ändra själva beslutet är överklagan till ÖKN dörren, medan [så anmäler du skolan till Skolinspektionen](/sv/blog/how-to-report-a-school-to-skolinspektionen) täcker tillsynsvägen när bristen är systematisk. [Vår föräldraguide](/sv/blog/parent-guide-child-not-getting-support-at-school) går igenom när man använder vilken.
 
 ## Varför det spelar roll för neurodivergenta elever
 
