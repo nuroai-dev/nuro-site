@@ -20,7 +20,7 @@ Den grundläggande omtolkningen är att svårt beteende oftast är ett sätt att
 
 Lågaffektivt bemötande bygger på tre principer som alla pekar mot den vuxne, inte eleven, som den som kan förändra:
 
-- **Ansvarsprincipen.** "Den som tar ansvar kan påverka." Du kan inte beordra en elev i affekt att lugna ner sig, men du kan anpassa kravet och ta bort stressfaktorer. Den anpassningen, kravanpassning, är metodens praktiska kärna: ändra det som efterfrågas så att eleven kan lyckas.
+- **Ansvarsprincipen.** "Den som tar ansvar kan påverka." Du kan inte beordra en elev i affekt att lugna ner sig, men du kan anpassa kravet och ta bort stressfaktorer. Den anpassningen, [kravanpassning](/sv/blog/what-is-kravanpassning-demand-adjustment), är metodens praktiska kärna: ändra det som efterfrågas så att eleven kan lyckas.
 - **Kontrollprincipen.** Du måste ha kontroll över dig själv innan du kan hjälpa någon annan att återfå sin. Att höja rösten eller ställa sig i vägen lämnar över din egen stress till en elev som inte har någon att avvara.
 - **Affektsmitta.** Känslor smittar. En lugn röst, avspänd hållning, att ge utrymme och inte kräva ögonkontakt sprider lugn; en stressad vuxen sprider stress. I praktiken lutar sig metoden mot avledning, affektreglering och kravanpassning snarare än konfrontation.
 

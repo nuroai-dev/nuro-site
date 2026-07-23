@@ -20,7 +20,7 @@ The core reframe is that difficult behaviour is usually coping under stress, not
 
 Lågaffektivt bemötande is built on three principles that all point the adult, not the student, toward the change:
 
-- **Ansvarsprincipen, responsibility.** "Den som tar ansvar kan påverka", the one who takes responsibility can influence the situation. You cannot order a dysregulated student to calm down, but you can adjust the demand and remove stressors. This adjustment, kravanpassning, is the practical heart of the method: change what is being asked so the student can succeed.
+- **Ansvarsprincipen, responsibility.** "Den som tar ansvar kan påverka", the one who takes responsibility can influence the situation. You cannot order a dysregulated student to calm down, but you can adjust the demand and remove stressors. This adjustment, [kravanpassning](/blog/what-is-kravanpassning-demand-adjustment), is the practical heart of the method: change what is being asked so the student can succeed.
 - **Kontrollprincipen, control.** You have to keep control of yourself before you can help someone else regain theirs. Raising your voice or squaring up hands your own stress to a student who has none to spare.
 - **Affektsmitta, affect contagion.** Emotion spreads. A calm voice, relaxed posture, giving space, and not demanding eye contact spread calm; a stressed adult spreads stress. In practice the method leans on diversion, affect regulation, and demand adjustment rather than confrontation.
 
