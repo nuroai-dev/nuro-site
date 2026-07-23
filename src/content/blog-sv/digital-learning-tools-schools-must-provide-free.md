@@ -3,7 +3,7 @@ title: "Digitala lärverktyg: vad svenska skolor måste tillhandahålla gratis"
 description: "Skollagen ger varje elev rätt till de lärverktyg, inklusive digitala, som de behöver för en god kunskapsutveckling. För elever med ADHD, dyslexi eller autism är den rätten viktig och ofta underutnyttjad."
 pubDate: 2026-07-17
 author: "Nuro-teamet"
-tags: ["föräldrar", "skollagen", "rättigheter", "digitala verktyg", "sverige"]
+tags: ["parents", "skollagen", "rights", "digital tools", "sweden"]
 ---
 
 För elever med ADHD, dyslexi eller autism kan rätt verktyg förvandla en lektion från omöjlig till hanterbar. En talsyntes-app ger en elev med dyslexi tillgång till en läsuppgift. En digital timer hjälper en elev med ADHD att strukturera ett arbetspass. Ett visuellt schema gör dagen förutsägbar för en elev med autism. Vad många familjer inte vet är att Skollagen gör dessa verktyg, när de används i undervisningen, till skolans ansvar att tillhandahålla utan kostnad för familjen.

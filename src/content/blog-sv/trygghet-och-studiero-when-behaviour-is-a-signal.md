@@ -3,7 +3,7 @@ title: "Trygghet och studiero: när en elev stör upprepat säger lagen utred, i
 description: "Svenska skolor är skyldiga att ge varje elev trygghet och studiero, en lugn miljö att lära i. Men samma kapitel i skollagen säger att när en elev stör upprepat ska skolan utreda varför, och om förutsättningarna är uppfyllda inleda en utredning om särskilt stöd. För neuropsykiatriska elever är just den bestämmelsen hela poängen."
 pubDate: 2026-07-18
 author: "The Nuro team"
-tags: ["skollagen", "classroom", "rattigheter"]
+tags: ["skollagen", "classroom", "rights"]
 ---
 
 ## Kort svar
