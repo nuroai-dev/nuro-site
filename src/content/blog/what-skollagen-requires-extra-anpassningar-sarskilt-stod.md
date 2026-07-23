@@ -18,7 +18,7 @@ Key points:
 
 - They are meant to be put in place quickly, as soon as a student risks not keeping up. No long investigation first.
 - They do not require a formal decision from the principal.
-- They are documented in the student's written individual development plan (IUP) where one exists, not in an åtgärdsprogram.
+- They are documented in the student's written [individual development plan (IUP)](/blog/what-is-an-utvecklingssamtal) where one exists, not in an åtgärdsprogram.
 - They cannot be appealed, because there is no formal decision to appeal.
 
 In other words: extra anpassningar are the everyday, low-friction support the system expects every teacher to provide (Skolverket names [nine concrete examples of what they look like](/blog/what-do-extra-anpassningar-look-like), from a clear daily schedule to adapted software). The catch is that "the teacher can do it inside ordinary teaching" assumes the teacher has the time and tools to actually do it for every student who needs it.
