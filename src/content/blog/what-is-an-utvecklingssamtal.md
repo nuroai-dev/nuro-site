@@ -28,7 +28,7 @@ The problem is that the samtal is only as good as what the teacher brings to it.
 
 ## Where Nuro fits
 
-This is squarely Nuro's lane. When a teacher can see, per student, how a child is actually doing, which adaptations have been tried, and what is working, the utvecklingssamtal stops depending on memory and gut feeling. The earliest signal, the one the law built this twice-a-year checkpoint to catch, is in front of the teacher instead of buried. For a parent, it means walking into the meeting to a real conversation about their child rather than a general reassurance. And if the samtal does surface a need the school then fails to act on, that is where the next steps begin: our [guide for when a child is not getting the support they need](/blog/parent-guide-child-not-getting-support-at-school).
+This is squarely Nuro's lane. When a teacher can see, per student, how a child is actually doing, which adaptations have been tried, and what is working, the utvecklingssamtal stops depending on memory and gut feeling. The earliest signal, the one the law built this twice-a-year checkpoint to catch, is in front of the teacher instead of buried. For a parent, it means [walking into the meeting prepared](/blog/how-to-prepare-for-your-childs-utvecklingssamtal) for a real conversation about their child rather than a general reassurance. And if the samtal does surface a need the school then fails to act on, that is where the next steps begin: our [guide for when a child is not getting the support they need](/blog/parent-guide-child-not-getting-support-at-school).
 
 ## Sources
 

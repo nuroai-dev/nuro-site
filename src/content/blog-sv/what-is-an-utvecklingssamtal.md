@@ -28,7 +28,7 @@ Problemet är att samtalet bara är så bra som det läraren tar med sig till de
 
 ## Var Nuro passar in
 
-Det här är precis Nuros område. När en lärare kan se, per elev, hur ett barn faktiskt mår, vilka anpassningar som har prövats och vad som fungerar, slutar utvecklingssamtalet vila på minne och magkänsla. Den tidigaste signalen, den som lagen byggde den här kontrollpunkten två gånger om året för att fånga, ligger framför läraren i stället för att vara begravd. För en förälder betyder det att man kliver in i mötet till ett verkligt samtal om sitt barn snarare än en allmän försäkran. Och om samtalet väl blottlägger ett behov som skolan sedan inte åtgärdar, är det där nästa steg börjar: vår [guide för när ett barn inte får det stöd det behöver](/sv/blog/parent-guide-child-not-getting-support-at-school).
+Det här är precis Nuros område. När en lärare kan se, per elev, hur ett barn faktiskt mår, vilka anpassningar som har prövats och vad som fungerar, slutar utvecklingssamtalet vila på minne och magkänsla. Den tidigaste signalen, den som lagen byggde den här kontrollpunkten två gånger om året för att fånga, ligger framför läraren i stället för att vara begravd. För en förälder betyder det att man [kliver in i mötet förberedd](/sv/blog/how-to-prepare-for-your-childs-utvecklingssamtal) på ett verkligt samtal om sitt barn snarare än en allmän försäkran. Och om samtalet väl blottlägger ett behov som skolan sedan inte åtgärdar, är det där nästa steg börjar: vår [guide för när ett barn inte får det stöd det behöver](/sv/blog/parent-guide-child-not-getting-support-at-school).
 
 ## Källor
 
