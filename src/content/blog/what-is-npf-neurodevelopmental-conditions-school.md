@@ -31,7 +31,7 @@ One more thing that surprises people: NPF diagnoses overlap. It is common to hav
 
 ## What it means in school
 
-This is the part that matters most. A neurodevelopmental condition does not lower what a student can learn. It changes what they need in order to learn it. And in Sweden, that need is not a favour the school may grant. Every student has [a legal right to the support they need](/blog/the-right-exists-the-system-doesnt), and the law sets out exactly [how that support is supposed to work](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), from everyday adjustments to formal särskilt stöd.
+This is the part that matters most. A neurodevelopmental condition does not lower what a student can learn. It changes what they need in order to learn it. And in Sweden, that need is not a favour the school may grant. Every student has [a legal right to the support they need](/blog/the-right-exists-the-system-doesnt), and the law sets out exactly [how that support is supposed to work](/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), from everyday adjustments to formal särskilt stöd (mapped step by step in [your child's right to support in Swedish school](/blog/your-childs-right-to-support-in-swedish-school)).
 
 The gap, almost always, is not knowing that students with NPF exist. It is having the time to see each one as an individual and adapt the teaching to them, in a class of thirty, on an ordinary Tuesday.
 

@@ -31,7 +31,7 @@ En sak till som förvånar folk: NPF-diagnoser överlappar. Det är vanligt att 
 
 ## Vad det betyder i skolan
 
-Det här är den del som betyder mest. En neuropsykiatrisk funktionsnedsättning sänker inte vad en elev kan lära sig. Den förändrar vad de behöver för att lära sig det. Och i Sverige är det behovet inte en tjänst som skolan får bevilja. Varje elev har [en laglig rätt till det stöd hen behöver](/sv/blog/the-right-exists-the-system-doesnt), och lagen anger precis [hur det stödet är tänkt att fungera](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), från vardagliga anpassningar till formellt särskilt stöd.
+Det här är den del som betyder mest. En neuropsykiatrisk funktionsnedsättning sänker inte vad en elev kan lära sig. Den förändrar vad de behöver för att lära sig det. Och i Sverige är det behovet inte en tjänst som skolan får bevilja. Varje elev har [en laglig rätt till det stöd hen behöver](/sv/blog/the-right-exists-the-system-doesnt), och lagen anger precis [hur det stödet är tänkt att fungera](/sv/blog/what-skollagen-requires-extra-anpassningar-sarskilt-stod), från vardagliga anpassningar till formellt särskilt stöd (steg för steg i [ditt barns rätt till stöd i svensk skola](/sv/blog/your-childs-right-to-support-in-swedish-school)).
 
 Glappet är nästan alltid inte att veta att elever med NPF finns. Det är att ha tiden att se var och en som en individ och anpassa undervisningen till dem, i en klass på trettio, en helt vanlig tisdag.
 
