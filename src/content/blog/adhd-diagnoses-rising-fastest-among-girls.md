@@ -3,7 +3,7 @@ title: "ADHD diagnoses are rising fastest among girls. Here is what it means for
 description: "Between 2019 and 2022, the share of children in Sweden with an ADHD diagnosis rose by up to 50 percent, and the fastest growth was among girls, the group schools have historically missed. Here is what the numbers actually say, and why they change what a classroom has to be able to do."
 pubDate: 2026-07-09
 author: "The Nuro team"
-tags: ["neurodiversity", "npf", "sweden", "classroom"]
+tags: ["neurodiversity", "npf", "sweden", "classroom", "adhd"]
 ---
 
 The number of students in a Swedish classroom who have an ADHD diagnosis is rising, and it is rising fastest among [the group schools spent decades overlooking](/blog/girls-with-npf-receive-less-sarskilt-stod): girls. That is not a projection. It is what Socialstyrelsen, Sweden's National Board of Health and Welfare, reported in November 2023. For a school, the practical consequence is simple and hard. Adapting teaching for neurodivergent students is no longer an occasional, one-student-at-a-time exception. It is becoming an ordinary condition of the classroom. Rising diagnoses also mean more families in the queue for assessment, where [waits already stretch for months or years](/blog/neuropsychiatric-assessment-waiting-times), which is another reason support cannot wait for a formal label.
