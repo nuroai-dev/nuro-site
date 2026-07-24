@@ -57,10 +57,21 @@ function isBlogPost(enPath: string): boolean {
   return /^\/blog\/[^/]+$/.test(enPath);
 }
 
+/**
+ * Individual tag hubs (/blog/tag/<slug>) ship bilingually via the mirrored
+ * sv/blog/tag/[tag].astro route, exactly like blog posts. Matching by shape
+ * lights up the switcher + hreflang for every tag hub automatically, so a
+ * translated tag pair is never left uncross-referenced. (The /blog/tags index
+ * is a static path in TRANSLATED_PATHS above, not matched here.)
+ */
+function isTagPage(enPath: string): boolean {
+  return /^\/blog\/tag\/[^/]+$/.test(enPath);
+}
+
 /** Does this page have a Swedish version yet? */
 export function hasSv(pathname: string): boolean {
   const en = toEnglishPath(pathname);
-  return TRANSLATED_PATHS.has(en) || isBlogPost(en);
+  return TRANSLATED_PATHS.has(en) || isBlogPost(en) || isTagPage(en);
 }
 
 /** The same page in the given language (used by the language switcher). */
@@ -68,7 +79,9 @@ export function switchLangPath(pathname: string, lang: Lang): string {
   const en = toEnglishPath(pathname);
   if (lang === "en") return en; // every page exists in English
   if (en === "/") return "/sv/";
-  return TRANSLATED_PATHS.has(en) || isBlogPost(en) ? "/sv" + en : "/sv/";
+  return TRANSLATED_PATHS.has(en) || isBlogPost(en) || isTagPage(en)
+    ? "/sv" + en
+    : "/sv/";
 }
 
 /**
