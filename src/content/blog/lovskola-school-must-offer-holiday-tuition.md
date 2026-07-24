@@ -3,7 +3,7 @@ title: "Lovskola: the holiday tuition a school must offer when a student risks m
 description: "Swedish schools have a statutory duty to offer lovskola, tuition during school holidays, to students in year 9 and year 10 who risk not qualifying for national programs at gymnasiet. For families of neurodivergent students, knowing this duty exists changes what they can ask for."
 pubDate: 2026-07-18
 author: "The Nuro team"
-tags: ["skollagen", "gymnasiet", "rights"]
+tags: ["skollagen", "gymnasium", "rights"]
 ---
 
 ## The short answer
