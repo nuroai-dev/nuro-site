@@ -511,7 +511,12 @@ const definedTermSet = {
 };
 ---
 
-<Layout title={chrome.title} description={chrome.description}>
+<Layout
+  title={chrome.title}
+  description={chrome.description}
+  ogImage={`https://nuroai.dev/og/pages/${lang === "sv" ? "glossary-sv" : "glossary"}.png`}
+  ogImageAlt={chrome.heading}
+>
   <BreadcrumbSchema name={chrome.eyebrow} pageType="CollectionPage" />
   <Nav />
   <main id="main-content" tabindex="-1">
