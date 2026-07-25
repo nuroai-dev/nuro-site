@@ -1,11 +1,15 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
+import { buildTagIndex, tagIntroEn } from "@/lib/blog-tags";
 
 /**
- * Dynamic llms.txt. A curated site summary followed by an auto-generated list
- * of every published blog post (title + description from frontmatter, newest
- * first), so the file never goes stale as posts are added. Prerendered to
- * /llms.txt. Single source of truth for the blog list = the content collection.
+ * Dynamic llms.txt. A curated site summary, then two auto-generated sections:
+ * the topic hubs (the blog's thematic map, so an answer engine can see what we
+ * cover by subject, not just a flat list) and every published blog post (title
+ * + description from frontmatter, newest first). Neither can go stale as posts
+ * are added. Prerendered to /llms.txt. Single source of truth = the content
+ * collection, and the same buildTagIndex the hub pages themselves are built
+ * from, so the counts here always match the live hubs.
  */
 export const prerender = true;
 
@@ -40,20 +44,33 @@ The site is bilingual: English at the root and Swedish under /sv (for example ht
 - [Press](https://nuroai.dev/press): news and coverage.
 - [Career](https://nuroai.dev/career): join the team.
 - [Blog](https://nuroai.dev/blog): notes on neurodiversity in education, the research, the law, and what helps.
+- [Topics](https://nuroai.dev/blog/tags): every subject the blog covers, each with its own hub page. Swedish: https://nuroai.dev/sv/blog/tags
 - [Glossary](https://nuroai.dev/glossary): plain-language definitions of the Swedish school-support system (ledning och stimulans, extra anpassningar, särskilt stöd, åtgärdsprogram, elevhälsa, NPF, tilläggsbelopp, and more), each linking to a fuller explainer. Swedish: https://nuroai.dev/sv/glossary
 - [Privacy](https://nuroai.dev/privacy) and [Terms](https://nuroai.dev/terms).
-
-## Blog posts
 `;
 
 export const GET: APIRoute = async () => {
   const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
-  const lines = posts.map(
+  // Thematic map first: same index the hub pages are built from, so labels,
+  // membership and counts always agree with what is actually published.
+  const topicLines = buildTagIndex(posts).map(
+    (t) =>
+      `- [${t.label}](${SITE}/blog/tag/${t.slug}) (${t.posts.length} posts): ${tagIntroEn(t.slug, t.label)}`,
+  );
+  const postLines = posts.map(
     (p) => `- [${p.data.title}](${SITE}/blog/${p.id}): ${p.data.description}`,
   );
-  const body = `${HEADER}\n${lines.join("\n")}\n`;
+  const body = [
+    HEADER,
+    "\n## Topics\n",
+    "Each topic below has a hub page listing every post on that subject. Swedish versions live under /sv/blog/tag/<topic>.\n",
+    topicLines.join("\n"),
+    "\n## Blog posts\n",
+    postLines.join("\n"),
+    "",
+  ].join("\n");
   return new Response(body, {
     headers: { "Content-Type": "text/plain; charset=utf-8" },
   });

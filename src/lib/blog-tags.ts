@@ -116,6 +116,12 @@ const TAG_INTRO_EN: Record<string, string> = {
     "The elevhälsa, Sweden's student health team, and its role as the frontline meant to catch struggling students early.",
   "early-support":
     "Why early support matters for neurodivergent students, and how catching difficulties sooner keeps them from hardening into absence.",
+  parents:
+    "Practical guidance for parents of neurodivergent students in Sweden: what your child is entitled to, what to ask the school, and what to do when support does not arrive.",
+  teachers:
+    "For teachers of neurodivergent students: what the law asks of you, what the documentation actually requires, and classroom practice that works within real workloads.",
+  gymnasium:
+    "Support for neurodivergent students at gymnasiet: the rights that carry over from grundskola, what changes at upper secondary, and how to manage the transition.",
 };
 
 const TAG_INTRO_SV: Record<string, string> = {
@@ -156,6 +162,12 @@ const TAG_INTRO_SV: Record<string, string> = {
     "Elevhälsan och dess roll som den första linjen som ska fånga upp elever som kämpar tidigt.",
   "early-support":
     "Varför tidigt stöd är avgörande för neurodivergenta elever, och hur man förebygger att svårigheter hårdnar till frånvaro.",
+  parents:
+    "Praktisk vägledning för föräldrar till neurodivergenta elever: vad ditt barn har rätt till, vad du kan fråga skolan om och vad du gör när stödet uteblir.",
+  teachers:
+    "För dig som undervisar neurodivergenta elever: vad lagen kräver, vad dokumentationen faktiskt innebär och klassrumsarbete som fungerar inom en verklig arbetsbörda.",
+  gymnasium:
+    "Stöd för neurodivergenta elever på gymnasiet: rättigheterna som följer med från grundskolan, vad som förändras och hur övergången kan hanteras.",
 };
 
 /** Intro line for an English topic hub: curated override, else a generic fallback. */
