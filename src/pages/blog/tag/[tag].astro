@@ -50,7 +50,10 @@ const breadcrumb = {
 };
 ---
 
-<Layout title={`Posts tagged ${label} | Nuro`} description={intro}>
+<Layout
+  ogImage={`${SITE_URL}/og/blog/tag/${slug}.png`}
+  ogImageAlt={`Posts tagged ${label}`}
+  title={`Posts tagged ${label} | Nuro`} description={intro}>
   <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>

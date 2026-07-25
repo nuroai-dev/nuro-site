@@ -51,7 +51,10 @@ const breadcrumb = {
 };
 ---
 
-<Layout title={`Inlägg taggade ${label} | Nuro`} description={intro}>
+<Layout
+  ogImage={`${SITE_URL}/og/blog-sv/tag/${slug}.png`}
+  ogImageAlt={`Inlägg taggade ${label}`}
+  title={`Inlägg taggade ${label} | Nuro`} description={intro}>
   <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>
