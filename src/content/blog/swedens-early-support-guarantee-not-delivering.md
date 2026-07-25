@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["skollagen", "sweden", "policy", "rights"]
 ---
 
-Catching a struggling student early is the whole game. A child who falls behind in reading or maths in the first years of school, and is not helped in time, is the child most likely to disengage later. Sweden understood this well enough to write it into law. In 2019 it introduced a guarantee for early support interventions, "Läsa, skriva, räkna, en garanti för tidiga stödinsatser," meant to make sure students who need help with reading, writing and maths are found early and supported in time.
+Catching a struggling student early is the whole game. A child who falls behind in reading or maths in [the first years of school](/blog/starting-school-with-a-neurodivergent-child), and is not helped in time, is the child most likely to disengage later. Sweden understood this well enough to write it into law. In 2019 it introduced a guarantee for early support interventions, "Läsa, skriva, räkna, en garanti för tidiga stödinsatser," meant to make sure students who need help with reading, writing and maths are found early and supported in time.
 
 Then the state checked whether the guarantee worked. The answer was no.
 

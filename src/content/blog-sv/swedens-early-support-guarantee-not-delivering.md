@@ -6,7 +6,7 @@ author: "The Nuro team"
 tags: ["skollagen", "sweden", "policy", "rights"]
 ---
 
-Att fånga en elev som kämpar tidigt är hela poängen. Ett barn som hamnar efter i läsning eller matematik under skolans första år, och inte får hjälp i tid, är det barn som löper störst risk att tappa fotfästet senare. Sverige förstod detta väl nog för att skriva in det i lag. År 2019 infördes en garanti för tidiga stödinsatser, "Läsa, skriva, räkna, en garanti för tidiga stödinsatser," som skulle säkerställa att elever som behöver hjälp med att läsa, skriva och räkna upptäcks tidigt och får stöd i tid.
+Att fånga en elev som kämpar tidigt är hela poängen. Ett barn som hamnar efter i läsning eller matematik under [skolans första år](/sv/blog/starting-school-with-a-neurodivergent-child), och inte får hjälp i tid, är det barn som löper störst risk att tappa fotfästet senare. Sverige förstod detta väl nog för att skriva in det i lag. År 2019 infördes en garanti för tidiga stödinsatser, "Läsa, skriva, räkna, en garanti för tidiga stödinsatser," som skulle säkerställa att elever som behöver hjälp med att läsa, skriva och räkna upptäcks tidigt och får stöd i tid.
 
 Sedan kontrollerade staten om garantin fungerade. Svaret var nej.
 
