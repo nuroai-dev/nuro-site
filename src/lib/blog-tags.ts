@@ -16,16 +16,59 @@ export const tagSlug = (t: string) =>
 /** Only tags used by this many posts (or more) get their own page, to avoid thin pages. */
 export const MIN_TAGGED = 2;
 
-/** Display labels for slugs whose Title Case default would read wrong (acronyms). */
+/**
+ * Display labels for slugs whose Title Case default would read wrong: acronyms,
+ * and Swedish terms whose diacritics the slug cannot carry ("sarskilt-stod"
+ * would otherwise render as "Sarskilt Stod").
+ */
 const TAG_LABELS: Record<string, string> = {
   npf: "NPF",
   ai: "AI",
   adhd: "ADHD",
   asd: "ASD",
+  "sarskilt-stod": "Särskilt stöd",
+  elevhalsa: "Elevhälsa",
 };
 
-/** Human label for a slug: a curated override, else Title Case of the slug. */
-export const tagLabel = (slug: string) =>
+/**
+ * Swedish display labels. Without these the Swedish hubs read "Inlägg taggade
+ * Classroom", since tags are authored as English keys in both collections.
+ * Keyed by slug, so a tag with no entry falls back to the English label.
+ */
+const TAG_LABELS_SV: Record<string, string> = {
+  npf: "NPF",
+  ai: "AI",
+  adhd: "ADHD",
+  asd: "ASD",
+  autism: "Autism",
+  dyslexia: "Dyslexi",
+  sweden: "Sverige",
+  skollagen: "Skollagen",
+  neurodiversity: "Neurodiversitet",
+  policy: "Skolpolitik",
+  classroom: "Klassrummet",
+  rights: "Rättigheter",
+  "sarskilt-stod": "Särskilt stöd",
+  compliance: "Regelefterlevnad",
+  "school-absence": "Skolfrånvaro",
+  inclusion: "Inkludering",
+  "school-funding": "Skolfinansiering",
+  research: "Forskning",
+  diagnosis: "Diagnos",
+  elevhalsa: "Elevhälsa",
+  "early-support": "Tidigt stöd",
+  parents: "Föräldrar",
+  teachers: "Lärare",
+  gymnasium: "Gymnasiet",
+  comorbidity: "Samsjuklighet",
+};
+
+/**
+ * Human label for a slug: a curated override for the requested language, else
+ * the English override, else Title Case of the slug.
+ */
+export const tagLabel = (slug: string, lang: "en" | "sv" = "en") =>
+  (lang === "sv" ? TAG_LABELS_SV[slug] : undefined) ??
   TAG_LABELS[slug] ??
   slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
@@ -65,6 +108,10 @@ const TAG_INTRO_EN: Record<string, string> = {
     "Diagnosis and school support in Sweden: why a student's needs, not a label, decide the right to help.",
   ai: "How AI can help Swedish schools deliver the individual, adapted support that neurodivergent students are legally entitled to.",
   adhd: "Understanding ADHD in the classroom: how it affects learning and the strategies and adaptations that help students focus and thrive.",
+  autism:
+    "Autism in the Swedish classroom: predictability, clear communication and visual support, and the adaptations that let autistic students reach the same goals.",
+  dyslexia:
+    "Dyslexia in the Swedish classroom: the reading and writing barriers it creates, the assistive tools schools must provide, and the adaptations that work.",
   elevhalsa:
     "The elevhälsa, Sweden's student health team, and its role as the frontline meant to catch struggling students early.",
   "early-support":
@@ -101,6 +148,10 @@ const TAG_INTRO_SV: Record<string, string> = {
     "Diagnos och skolstöd i Sverige: varför elevens behov, inte en etikett, avgör rätten till hjälp.",
   ai: "Hur AI kan hjälpa svenska skolor att ge det individuella, anpassade stöd som neurodivergenta elever har rätt till.",
   adhd: "Att förstå adhd i klassrummet: hur det påverkar lärandet och vilka strategier och anpassningar som hjälper eleven att fokusera och lyckas.",
+  autism:
+    "Autism i klassrummet: förutsägbarhet, tydlig kommunikation och bildstöd, och de anpassningar som gör att autistiska elever når samma mål.",
+  dyslexia:
+    "Dyslexi i klassrummet: hindren i läsning och skrivning, de lärverktyg skolan är skyldig att erbjuda, och anpassningarna som fungerar.",
   elevhalsa:
     "Elevhälsan och dess roll som den första linjen som ska fånga upp elever som kämpar tidigt.",
   "early-support":
@@ -130,7 +181,10 @@ export interface TagGroup {
  * pubDate descending, and the groups sorted by post count descending then slug
  * ascending. Pure: pass in the collection entries, no getCollection inside.
  */
-export function buildTagIndex(posts: BlogEntry[]): TagGroup[] {
+export function buildTagIndex(
+  posts: BlogEntry[],
+  lang: "en" | "sv" = "en",
+): TagGroup[] {
   const bySlug = new Map<string, BlogEntry[]>();
 
   for (const post of posts) {
@@ -146,7 +200,7 @@ export function buildTagIndex(posts: BlogEntry[]): TagGroup[] {
     .filter(([, entries]) => entries.length >= MIN_TAGGED)
     .map(([slug, entries]) => ({
       slug,
-      label: tagLabel(slug),
+      label: tagLabel(slug, lang),
       posts: [...entries].sort(
         (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
       ),

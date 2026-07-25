@@ -3,7 +3,7 @@ title: "What is bildstöd and AKK, and how do they help neurodivergent students?
 description: "Bildstöd, visual support, and AKK, augmentative and alternative communication, make information and communication visible instead of leaving them to speech alone. SPSM puts it simply: not everyone can speak, but everyone can communicate somehow. Here is what they are, the common forms, why they help ADHD, autism and dyslexia, and the myth that they delay talking."
 pubDate: 2026-07-22
 author: "The Nuro team"
-tags: ["classroom", "npf", "neurodiversity"]
+tags: ["classroom", "npf", "neurodiversity", "autism"]
 ---
 
 ## The short answer

@@ -3,7 +3,7 @@ title: "Vad är tydliggörande pedagogik, och varför hjälper det elever med ad
 description: "Tydliggörande pedagogik är det svenska sättet att göra skoldagen begriplig och förutsägbar, så att en elev aldrig behöver gissa vad som händer, varför, eller hur länge. Här är vad det är, vilka frågor det besvarar, varför det hjälper neurodivergenta elever långt bortom autism, och hur det blir en konkret, dokumenterbar form av det stöd skollagen kräver."
 pubDate: 2026-07-22
 author: "The Nuro team"
-tags: ["classroom", "npf", "neurodiversity"]
+tags: ["classroom", "npf", "neurodiversity", "autism"]
 ---
 
 ## Det korta svaret

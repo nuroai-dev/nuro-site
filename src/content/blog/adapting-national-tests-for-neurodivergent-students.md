@@ -3,7 +3,7 @@ title: "Can a student with dyslexia or ADHD get adaptations on the national test
 description: "Short answer: yes. In Sweden the principal decides, no diagnosis is required, and a student can use the same aids they use in teaching, as long as the test still measures what the subtest is meant to measure. Here is how the rules actually work, year by year."
 pubDate: 2026-07-14
 author: "The Nuro team"
-tags: ["rights", "npf", "skollagen"]
+tags: ["rights", "npf", "skollagen", "dyslexia"]
 ---
 
 ## The short answer

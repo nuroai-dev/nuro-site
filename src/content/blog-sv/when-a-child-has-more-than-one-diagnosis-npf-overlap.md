@@ -3,7 +3,7 @@ title: "När ett barn har mer än en diagnos: överlappande NPF och varför en e
 description: "För en stor andel elever med en neuropsykiatrisk funktionsnedsättning är diagnosen inte en sak utan två eller tre, överlappande på samma gång. Här är varför kombinationer är regeln, varför de gör skolan svårare snarare än bara annorlunda, och varför stödet måste utgå från eleven, inte från etiketten."
 pubDate: 2026-06-29
 author: "The Nuro team"
-tags: ["comorbidity", "NPF", "neurodiversity", "sweden"]
+tags: ["comorbidity", "NPF", "neurodiversity", "sweden", "autism", "dyslexia"]
 ---
 
 Föräldrar och lärare föreställer sig ofta en diagnos som en enda, prydlig etikett: det här barnet har ADHD, det där är autistiskt, det här har dyslexi. Verkligheten är rörigare, och mycket vanligare än den prydliga versionen. För en stor andel elever med en neuropsykiatrisk funktionsnedsättning är diagnosen inte en sak. Det är två, eller tre, som överlappar på samma gång.

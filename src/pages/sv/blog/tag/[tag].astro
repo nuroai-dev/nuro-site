@@ -18,7 +18,7 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const posts = await getCollection("blogSv", ({ data }) => !data.draft);
-  return buildTagIndex(posts).map((group) => ({
+  return buildTagIndex(posts, "sv").map((group) => ({
     params: { tag: group.slug },
     props: { label: group.label, posts: group.posts },
   }));

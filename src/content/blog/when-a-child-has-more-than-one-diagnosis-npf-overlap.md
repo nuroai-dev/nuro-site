@@ -3,7 +3,7 @@ title: "When a child has more than one diagnosis: overlapping NPF and why a sing
 description: "For a large share of students with a neurodevelopmental condition, the diagnosis is not one thing but two or three, overlapping at once. Here is why combinations are the rule, why they make school harder rather than just different, and why support has to start from the student, not the label."
 pubDate: 2026-06-29
 author: "The Nuro team"
-tags: ["comorbidity", "NPF", "neurodiversity", "sweden"]
+tags: ["comorbidity", "NPF", "neurodiversity", "sweden", "autism", "dyslexia"]
 ---
 
 Parents and teachers often picture a diagnosis as a single, tidy label: this child has ADHD, that one is autistic, this one has dyslexia. Reality is messier, and far more common than the tidy version. For a large share of students with a neurodevelopmental condition, the diagnosis is not one thing. It is two, or three, overlapping at once.

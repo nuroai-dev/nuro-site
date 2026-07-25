@@ -3,7 +3,7 @@ title: "Vad är bildstöd och AKK, och hur hjälper de neurodivergenta elever?"
 description: "Bildstöd och AKK, alternativ och kompletterande kommunikation, gör information och kommunikation synlig i stället för att lämna dem till talet ensamt. SPSM säger det enkelt: alla kan inte tala, men alla kan kommunicera på något sätt. Här är vad de är, de vanliga formerna, varför de hjälper adhd, autism och dyslexi, och myten att de försenar talet."
 pubDate: 2026-07-22
 author: "The Nuro team"
-tags: ["classroom", "npf", "neurodiversity"]
+tags: ["classroom", "npf", "neurodiversity", "autism"]
 ---
 
 ## Det korta svaret
