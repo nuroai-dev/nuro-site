@@ -3,7 +3,7 @@ title: "What is tydliggörande pedagogik, and why does it help students with ADH
 description: "Tydliggörande pedagogik is the Swedish approach of making the school day understandable and predictable, so a student never has to guess what is happening, why, or for how long. Here is what it is, the questions it answers, why it helps neurodivergent students far beyond autism, and how it becomes a concrete, documentable form of the support Skollagen requires."
 pubDate: 2026-07-22
 author: "The Nuro team"
-tags: ["classroom", "npf", "neurodiversity"]
+tags: ["classroom", "npf", "neurodiversity", "autism"]
 ---
 
 ## The short answer

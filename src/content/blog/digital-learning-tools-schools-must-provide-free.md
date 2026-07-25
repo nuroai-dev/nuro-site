@@ -3,7 +3,7 @@ title: "Digital learning tools: what Swedish schools must provide free of charge
 description: "Swedish law gives every student the right to the learning tools, including digital ones, that they need for good knowledge development. For students with ADHD, dyslexia or autism, this right is significant and often under-used."
 pubDate: 2026-07-17
 author: "The Nuro team"
-tags: ["parents", "skollagen", "rights", "digital tools", "sweden"]
+tags: ["parents", "skollagen", "rights", "digital tools", "sweden", "dyslexia"]
 ---
 
 For students with ADHD, dyslexia or autism, the right tool can transform a lesson from impossible to manageable. A text-to-speech app lets a student with dyslexia access a reading assignment. A digital timer helps a student with ADHD structure a working session. A visual schedule makes the day predictable for a student on the spectrum. What many families do not know is that Swedish law makes these tools, when used in teaching, the school's responsibility to provide, at no cost to the family.

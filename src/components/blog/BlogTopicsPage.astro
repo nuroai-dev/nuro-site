@@ -53,7 +53,7 @@ const posts = await getCollection(
   lang === "sv" ? "blogSv" : "blog",
   ({ data }) => !data.draft,
 );
-const topics = buildTagIndex(posts);
+const topics = buildTagIndex(posts, lang);
 
 const SITE_URL = "https://nuroai.dev";
 const url = `${SITE_URL}${blogBase}/tags`;
