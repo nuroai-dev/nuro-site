@@ -2,7 +2,7 @@
 title: "Riksdagen satte siffror på NPF-glappet i skolan. De är svåra att blunda för."
 description: "I mars 2026 publicerade riksdagens utbildningsutskott en uppföljning av hur elever med neuropsykiatriska funktionsnedsättningar (NPF) klarar skolan. Bara 62,4 procent blir behöriga till ett yrkesprogram, mot 87,2 procent av övriga elever. Här är vad rapporten visar, och vad det betyder."
 pubDate: 2026-07-02
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "skollagen", "research"]
 ---
 

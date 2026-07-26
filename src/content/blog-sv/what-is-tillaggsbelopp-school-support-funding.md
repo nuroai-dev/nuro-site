@@ -2,7 +2,7 @@
 title: "Vad är tilläggsbelopp, och varför det sällan betalar det vardagliga NPF-stödet"
 description: "Tilläggsbelopp är det extra bidrag en skola kan ansöka om när en elev behöver extraordinära stödåtgärder. Det är medvetet smalt: de vardagliga anpassningarna och det särskilda stödet ska rymmas i det vanliga grundbeloppet, och det är just där de flesta skolor säger att pengarna tar slut."
 pubDate: 2026-07-13
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["school-funding", "sarskilt-stod", "skollagen", "sweden"]
 ---
 

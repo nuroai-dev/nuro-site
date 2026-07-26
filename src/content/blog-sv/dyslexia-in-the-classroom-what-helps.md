@@ -2,7 +2,7 @@
 title: "Dyslexi i klassrummet: vad som faktiskt hjälper, idag"
 description: "En elev med dyslexi är inte en elev som inte kan lära sig, utan en elev för vilken läsning och skrivning är det svåraste. Här är de anpassningar och hjälpmedel som verkligen hjälper, grundade i vägledning från Specialpedagogiska skolmyndigheten, och varför de är en del av det som lagen redan kräver."
 pubDate: 2026-06-27
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["dyslexia", "classroom", "skollagen", "sweden"]
 ---
 

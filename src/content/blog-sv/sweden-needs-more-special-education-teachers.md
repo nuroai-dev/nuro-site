@@ -2,7 +2,7 @@
 title: "Sverige behöver 80 procent fler speciallärare. Eleverna kan inte vänta på dem."
 description: "Sverige skulle behöva utbilda ungefär 400 fler speciallärare per år fram till 2038 för att möta behovet. Samtidigt lämnar var tredje elev med en neuropsykiatrisk funktionsnedsättning årskurs 9 utan behörighet till gymnasiet. Du kan inte anställa dig ur det här tillräckligt snabbt, så vad får egentligen eleverna som behöver stöd nu?"
 pubDate: 2026-06-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "teacher shortage", "skollagen", "sweden"]
 ---
 

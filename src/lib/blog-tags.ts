@@ -36,6 +36,8 @@ const TAG_LABELS: Record<string, string> = {
  * Keyed by slug, so a tag with no entry falls back to the English label.
  */
 const TAG_LABELS_SV: Record<string, string> = {
+  support: "Stöd",
+  "special-education": "Specialpedagogik",
   npf: "NPF",
   ai: "AI",
   adhd: "ADHD",

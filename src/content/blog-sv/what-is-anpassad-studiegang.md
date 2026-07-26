@@ -2,7 +2,7 @@
 title: "Vad är anpassad studiegång, och varför lagen säger att den ska användas så lite som möjligt"
 description: "Anpassad studiegång låter en svensk skola avvika från timplanen, ämnena och målen för en enskild elev. Det är den mest ingripande formen av särskilt stöd, och skollagen säger att den ska utredas, beslutas av rektorn och hållas så liten och kort som möjligt. Här är hur den fungerar och var det går fel."
 pubDate: 2026-07-14
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "rights"]
 ---
 

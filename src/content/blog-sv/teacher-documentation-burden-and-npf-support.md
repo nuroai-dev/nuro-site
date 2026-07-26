@@ -2,7 +2,7 @@
 title: "Svenska lärare ägnar ungefär en tredjedel av sin arbetstid åt att faktiskt undervisa"
 description: "Skolverkets nationella kartläggning visade att grundskollärare lägger 34 procent av sin arbetstid på själva undervisningen. Mycket av resten är administration, bedömning och dokumentation, och 2025 föreslog en statlig utredning att frigöra den tiden. För neurodivergenta elever är en tung del av det pappersarbetet dokumentationen av det särskilda stöd som skollagen kräver."
 pubDate: 2026-07-12
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["sweden", "skollagen", "teachers", "sarskilt-stod", "compliance", "npf"]
 ---
 

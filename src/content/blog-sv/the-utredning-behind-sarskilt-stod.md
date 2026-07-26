@@ -2,7 +2,7 @@
 title: "Utredningen bakom särskilt stöd: vad en skola måste göra innan stödet börjar"
 description: "Innan en svensk skola kan ge en elev särskilt stöd kräver lagen att den utreder vad eleven faktiskt behöver. Det steget är utredningen, och det är där en vag oro ska bli en konkret plan. Här är vad skollagen kräver, vad utredningen måste innehålla, och varför det ofta är här processen stannar av."
 pubDate: 2026-07-09
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "compliance", "sweden"]
 ---
 

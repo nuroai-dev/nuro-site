@@ -2,7 +2,7 @@
 title: "Extra anpassningar, särskilt stöd, åtgärdsprogram: vad skollagen faktiskt kräver"
 description: "Svensk lag ger varje elev rätt till stöd, men stödet kommer i tre juridiskt skilda nivåer som skolor och föräldrar ständigt blandar ihop. Här är vad extra anpassningar, särskilt stöd och ett åtgärdsprogram var och en betyder, vem som beslutar om dem och vad som går att överklaga."
 pubDate: 2026-06-25
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "neurodiversity", "guide", "sweden"]
 ---
 

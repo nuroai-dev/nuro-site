@@ -2,7 +2,7 @@
 title: "Riktmärket är en skolpsykolog per 500 elever. I Sverige är det 1 269."
 description: "Elevhälsan är den lagstadgade första linjen som ska upptäcka elever som kämpar tidigt. Men de senaste nationella siffrorna visar en skolpsykolog per 1 269 elever, mer än dubbelt så många som professionens eget riktmärke på 500, och regeringen har tillsatt en utredning om varför tillgången är så ojämn."
 pubDate: 2026-07-12
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["elevhalsa", "npf", "skollagen", "early-support", "sweden"]
 ---
 

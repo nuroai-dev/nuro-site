@@ -2,7 +2,7 @@
 title: "SIP: planen som samordnar skola, vård och socialtjänst, och varför skolan inte automatiskt är en part"
 description: "Ett neuropsykiatriskt barn har ofta en skola, en BUP-utredning och ibland socialtjänsten inblandade samtidigt, och familjen blir den enda som håller ihop alltihop. Den samordnade individuella planen (SIP) är det lagstadgade verktyget som ska lösa det. Här är vad den är, vem som har skyldighet att kalla till en, och var skolan faktiskt passar in."
 pubDate: 2026-07-18
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "elevhalsa", "rights"]
 ---
 

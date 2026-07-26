@@ -2,7 +2,7 @@
 title: "Vad är NPF? Neuropsykiatriska funktionsnedsättningar i skolan, förklarat"
 description: "NPF är begreppet du möter i samma stund som ett barn börjar få det svårt i en svensk skola, ofta utan att någon förklarar det. Här är den enkla versionen: vad NPF betyder, vilka tillstånd det omfattar, hur vanligt det är, och vad det faktiskt innebär för en elev i ett klassrum."
 pubDate: 2026-06-28
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["NPF", "neurodiversity", "skollagen", "sweden"]
 ---
 

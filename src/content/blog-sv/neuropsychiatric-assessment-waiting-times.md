@@ -2,7 +2,7 @@
 title: "Runt 70 % av BUP:s läkarbesök går i dag till adhd. Skolans stöd kan inte vänta på utredningen."
 description: "Vårdgarantin säger att ett barn inte ska vänta mer än 30 dagar på en första bedömning inom BUP och 30 dagar till på en fördjupad utredning. I verkligheten är BUP hårt belastat, runt 70 procent av läkarbesöken går i dag till adhd, och en kämpande elevs rätt till stöd i skolan väntar inte, och får enligt lag inte vänta, på diagnosen."
 pubDate: 2026-07-11
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["diagnosis", "rights", "adhd", "npf", "skollagen", "sweden"]
 ---
 

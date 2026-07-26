@@ -2,7 +2,7 @@
 title: "Vad Attentions skolrapport 2025 säger om elever med NPF"
 description: "Sveriges största organisation inom neurodiversitet frågade fler än 2 800 familjer hur skolan fungerar för deras barn med adhd, autism eller en närliggande diagnos. Svaren är en självrapporterad bild, inte officiell statistik, men de skärper samma gap som de officiella siffrorna visar: de flesta av eleverna har frånvaro kopplat till sin diagnos, och stödet kommer sent eller inte alls."
 pubDate: 2026-07-16
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["npf", "school-absence", "sweden"]
 ---
 

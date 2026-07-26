@@ -2,7 +2,7 @@
 title: "Att inte ge en elev med NPF stöd kan vara diskriminering"
 description: "En svensk skolas skyldighet mot en elev med NPF vilar på två rättsliga ben, inte ett. Skollagen kräver stödet. Diskrimineringslagen gör underlåtenheten att ge det till en form av diskriminering, bristande tillgänglighet, som kan innebära ekonomiskt ansvar. I mars 2026 prövades det benet när en kommun betalade 220 000 kronor för en enda elev."
 pubDate: 2026-07-16
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "policy", "sweden"]
 ---
 

@@ -2,7 +2,7 @@
 title: "För skolledare: elevstödet är bristen Skolinspektionen ständigt hittar, och vad det nu kostar"
 description: "År efter år hör stödet till elever som kämpar till de vanligaste och allvarligaste bristerna Skolinspektionen hittar, och det genomsnittliga vitet har ungefär tredubblats. För en huvudman eller rektor är stödglappet nu en risk för regelefterlevnad och ekonomi, inte bara en pedagogisk fråga."
 pubDate: 2026-06-28
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["school leaders", "skollagen", "compliance", "sweden"]
 ---
 

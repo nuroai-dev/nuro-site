@@ -2,7 +2,7 @@
 title: "Kan en elev med dyslexi eller adhd få anpassningar på de nationella proven?"
 description: "Kort svar: ja. I Sverige beslutar rektorn, ingen diagnos krävs, och en elev kan använda samma hjälpmedel som i undervisningen, så länge provet fortfarande mäter det som delprovet är avsett att pröva. Så här fungerar reglerna, årskurs för årskurs."
 pubDate: 2026-07-14
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["rights", "npf", "skollagen", "dyslexia"]
 ---
 

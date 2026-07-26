@@ -2,7 +2,7 @@
 title: "När en funktionsnedsättning blockerar ett betygskriterium, kan läraren ändå sätta betyget?"
 description: "Ja. Skollagen har en särskild regel, undantagsbestämmelsen, ofta kallad pysparagrafen, som låter en lärare bortse från enstaka delar av betygskriterierna som en elev inte når på grund av en varaktig funktionsnedsättning. Här är de tre villkoren, var den gäller och var den inte gäller."
 pubDate: 2026-07-14
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "rights", "npf"]
 ---
 

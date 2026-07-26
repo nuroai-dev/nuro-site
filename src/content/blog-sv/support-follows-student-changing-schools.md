@@ -2,7 +2,7 @@
 title: "När en elev med NPF byter skola ska stödet följa med"
 description: "Ett skolbyte eller en stadieövergång är ett av de mest sårbara ögonblicken för en elev som är beroende av stöd. Skollagen lämnar inte överlämningen åt minnet: skolan eleven lämnar ska föra över de uppgifter den nya skolan behöver för att övergången ska fungera, och för en elev som får stöd ingår vilket stöd hen haft och varför."
 pubDate: 2026-07-16
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "sweden"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Den falska besparingen i att skära ner på specialpedagogiskt stöd"
 description: "Skolfrånvaron i Sverige fortsätter att stiga och den långsiktiga kostnaden räknas i tiotals miljarder. Så varför skär kommuner ner på det specialpedagogiska stöd som förebygger den? En titt på ekonomin i att fånga eleverna innan de försvinner."
 pubDate: 2026-06-26
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["school funding", "school absence", "skollagen", "sweden"]
 ---
 

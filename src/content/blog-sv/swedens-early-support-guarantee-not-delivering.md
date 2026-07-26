@@ -2,7 +2,7 @@
 title: "Sverige garanterade tidigt stöd åt elever som kämpar. Den egna inspektionen säger att garantin inte levererar."
 description: "År 2019 lagstiftade Sverige om en garanti för tidiga stödinsatser. Efter att ha utvärderat den från 2019 till 2024 drog Skolinspektionen slutsatsen att reformens intentioner inte uppnås: garantin ger inte fler elever stöd, och genomförs inte som avsett."
 pubDate: 2026-07-06
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "policy", "rights"]
 ---
 

@@ -34,7 +34,7 @@ const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
 const tag =
   post.data.tags.find((t) => t.toLowerCase() !== "neurodiversity") ??
   post.data.tags[0];
-const fallbackLabel = tag ? tagLabel(tagSlug(tag)) : "Nuro";
+const fallbackLabel = tag ? tagLabel(tagSlug(tag), lang) : "Nuro";
 ---
 
 <a class={styles.card} href={href}>

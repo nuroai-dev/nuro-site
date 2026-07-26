@@ -3,7 +3,7 @@ title: "Sverige har beslutat att göra om hur skolan ger stöd. Det här ändrar
 description: "I mars 2026 lämnade regeringen en proposition, Förbättrat stöd i skolan, för att ändra skollagens regler om stöd, och riksdagen biföll den 3 juni 2026, i kraft 1 juli 2028. Den avskaffar garantin för tidiga stödinsatser och regleringen om extra anpassningar, inför standardiserade tester och tidig stödundervisning, och ändrar reglerna om särskilt stöd. Här är vad den ändrar, och vad det betyder."
 pubDate: 2026-07-03
 updatedDate: 2026-07-14
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "policy", "neurodiversity"]
 ---
 

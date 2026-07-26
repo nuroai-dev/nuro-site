@@ -2,7 +2,7 @@
 title: "Lovskola: undervisningen under lov som skolan är skyldig att erbjuda när en elev riskerar att missa gymnasiebehörigheten"
 description: "Svenska skolor har en lagstadgad skyldighet att erbjuda lovskola till elever i årskurs 9 och 10 som riskerar att inte uppnå behörighet till gymnasieskolans nationella program. För familjer med neuropsykiatriska elever förändrar kunskapen om denna skyldighet vad de kan begära."
 pubDate: 2026-07-18
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "gymnasium", "rights"]
 ---
 

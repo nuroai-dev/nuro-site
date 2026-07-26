@@ -2,7 +2,7 @@
 title: "Ditt barn behöver ingen diagnos för att få stöd i skolan"
 description: "Om du väntar i månader eller år på en neuropsykiatrisk utredning, är det här något varje förälder och lärare bör veta: enligt svensk lag avgörs rätten till stöd av elevens behov, inte av en diagnos. Stödet får inte villkoras av en etikett."
 pubDate: 2026-06-29
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["diagnosis", "rights", "skollagen", "sweden"]
 ---
 

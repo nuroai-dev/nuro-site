@@ -2,7 +2,7 @@
 title: "Så förbereder du dig inför barnets utvecklingssamtal när det har adhd, autism eller dyslexi"
 description: "Terminens utvecklingssamtal är enligt lag ett samtal om hur skolan bäst kan stödja ditt barn och vilket stöd som behövs. Så går du in förberedd så att det blir verklig stödplanering, inte en allmän försäkran, med frågorna att ställa och vad du ska få nedskrivet."
 pubDate: 2026-07-24
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "parents"]
 ---
 

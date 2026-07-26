@@ -2,7 +2,7 @@
 title: "Att börja skolan med ett barn med NPF: stödet som gäller från första året"
 description: "Stöd i svensk skola börjar inte när ett barn hamnar efter, och det väntar inte på en diagnos. Förskoleklass har varit obligatorisk sedan 2018, och hela skollagens stödkedja gäller redan från det allra första året. För ett barn med NPF är skolstarten det tidigaste och billigaste tillfället att göra rätt."
 pubDate: 2026-07-24
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "rights", "npf", "parents", "sweden"]
 ---
 

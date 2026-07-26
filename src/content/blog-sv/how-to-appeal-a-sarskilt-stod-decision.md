@@ -2,7 +2,7 @@
 title: "Skolan beslutade att ditt barn inte behöver särskilt stöd. Det kan du överklaga, så här gör du."
 description: "I Sverige kan en rektors beslut att upprätta ett åtgärdsprogram, eller beslutet att inte upprätta ett, överklagas till Skolväsendets överklagandenämnd (ÖKN) inom tre veckor. Här är vem som får överklaga, vad som kan och inte kan överklagas, och hur en överklagan skiljer sig från en anmälan till Skolinspektionen."
 pubDate: 2026-07-22
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["rights", "skollagen", "sarskilt-stod"]
 ---
 

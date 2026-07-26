@@ -2,7 +2,7 @@
 title: "Rätten till stöd finns. Systemet som ska ge det gör inte det, än."
 description: "Svensk lag garanterar redan varje elev det anpassade stöd den behöver. Så varför faller fortfarande så många neurodivergenta elever mellan stolarna? En titt på glappet mellan lagen och klassrummet, och vad som krävs för att sluta det."
 pubDate: 2026-06-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "skollagen", "inclusion"]
 ---
 

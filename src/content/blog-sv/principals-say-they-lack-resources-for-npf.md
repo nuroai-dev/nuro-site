@@ -2,7 +2,7 @@
 title: "Har svenska skolor det de behöver för att stödja neurodivergenta elever? Två av tre rektorer säger nej."
 description: "En rapport från Skolverket 2025 frågade rektorerna direkt. Två av tre svarade att de inte får tillräckliga resurser från sin huvudman för att möta stödbehoven hos elever med NPF. Här är vad rapporten fann, och varför det är den lucka Nuro är byggt för att sluta."
 pubDate: 2026-07-04
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["npf", "school-funding", "policy"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Sverige ersätter garantin för tidiga stödinsatser med standardiserade prov. Vad det betyder för neurodivergenta elever."
 description: "Från den 1 juli 2028 avskaffas läsa-skriva-räkna-garantin och regleringen om extra anpassningar. I stället kommer standardiserade prov i början av höstterminen för att identifiera elever som behöver stöd, plus tidig stödundervisning. Här är vad som ändras, och vad det betyder för elever med adhd, autism och dyslexi."
 pubDate: 2026-07-09
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "policy", "npf", "sarskilt-stod"]
 ---
 
