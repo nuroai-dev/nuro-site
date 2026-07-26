@@ -25,6 +25,11 @@ const L = {
     career: "Career",
     joinWaitlist: "Join waitlist",
     homeAria: "Nuro, home",
+    navAria: "Main",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    instagramAria: "Nuro on Instagram",
+    linkedinAria: "Nuro on LinkedIn",
   },
   sv: {
     problem: "Problemet",
@@ -38,6 +43,11 @@ const L = {
     career: "Karriär",
     joinWaitlist: "Gå med i väntelistan",
     homeAria: "Nuro, hem",
+    navAria: "Huvudmeny",
+    openMenu: "Öppna menyn",
+    closeMenu: "Stäng menyn",
+    instagramAria: "Nuro på Instagram",
+    linkedinAria: "Nuro på LinkedIn",
   },
 }[lang];
 
@@ -68,15 +78,17 @@ const MENU_ITEMS = [
 ---
 
 <header class={styles.nav} data-nav>
-  <nav class={styles.inner} aria-label="Main">
+  <nav class={styles.inner} aria-label={L.navAria}>
     <div class={styles.left}>
       <button
         type="button"
         class={styles.burger}
-        aria-label="Open menu"
+        aria-label={L.openMenu}
         aria-expanded="false"
         aria-controls="mobile-menu"
         data-burger
+        data-t-open={L.openMenu}
+        data-t-close={L.closeMenu}
       >
         <span class={styles.burgerBox} data-burger-box>
           <span class={styles.burgerLine}></span>
@@ -107,7 +119,7 @@ const MENU_ITEMS = [
         href={INSTAGRAM_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Nuro on Instagram"
+        aria-label={L.instagramAria}
       >
         <svg
           width="18"
@@ -132,7 +144,7 @@ const MENU_ITEMS = [
         href={LINKEDIN_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Nuro on LinkedIn"
+        aria-label={L.linkedinAria}
       >
         <svg
           width="18"
@@ -186,7 +198,7 @@ const MENU_ITEMS = [
         href={INSTAGRAM_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Nuro on Instagram"
+        aria-label={L.instagramAria}
       >
         <svg
           width="18"
@@ -211,7 +223,7 @@ const MENU_ITEMS = [
         href={LINKEDIN_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Nuro on LinkedIn"
+        aria-label={L.linkedinAria}
       >
         <svg
           width="18"
@@ -277,7 +289,11 @@ const MENU_ITEMS = [
     const setOpen = (next: boolean) => {
       open = next;
       burger.setAttribute("aria-expanded", String(open));
-      burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      burger.setAttribute(
+        "aria-label",
+        (open ? burger.dataset.tClose : burger.dataset.tOpen) ??
+          (open ? "Close menu" : "Open menu"),
+      );
       if (open) {
         burgerBox?.setAttribute("data-open", "");
         menu.setAttribute("data-open", "");
