@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 
 import {
   saveWaitlistEntry,
+  waitlistHasEmail,
   type WaitlistEntry,
 } from "@/lib/waitlist/save-waitlist-entry";
 
@@ -9,8 +10,9 @@ import {
  * `POST /api/waitlist` (card N-12 — stub backend).
  *
  * Validates `{ email, role, student_ages: string[], message? }` and returns
- * 400 `{ ok: false, reason: "invalid" }` on bad input, 200 `{ ok: true }`
- * otherwise. Persistence is isolated behind `saveWaitlistEntry()`.
+ * 400 `{ ok: false, reason: "invalid" }` on bad input, 409
+ * `{ ok: false, reason: "duplicate" }` when the address is already on the
+ * list, 200 `{ ok: true }` otherwise. Persistence is isolated behind `saveWaitlistEntry()`.
  */
 
 // This endpoint is dynamic (server-rendered output); never prerender it.
@@ -88,6 +90,17 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   try {
+    // Already on the list: tell the visitor so, and keep one row per person.
+    // If this check itself fails we deliberately fall through and save, since
+    // an extra row costs far less than a dropped signup.
+    try {
+      if (await waitlistHasEmail(entry.email)) {
+        return json({ ok: false, reason: "duplicate" }, 409);
+      }
+    } catch (error) {
+      console.error("[waitlist] duplicate check failed, saving anyway", error);
+    }
+
     await saveWaitlistEntry(entry);
   } catch (error) {
     console.error("[waitlist] saveWaitlistEntry failed", error);
