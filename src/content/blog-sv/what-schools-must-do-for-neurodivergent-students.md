@@ -14,6 +14,8 @@ Leder du en skola eller en huvudmannaorganisation är skyldigheten att stödja e
 
 Den här sidan är kartan. Varje steg länkar till en fylligare genomgång.
 
+
+Är du förälder snarare än ansvarig i skolan finns samma område sett från ditt håll här: [ditt barns rätt till stöd i svensk skola](/sv/blog/your-childs-right-to-support-in-swedish-school).
 ## Trappan är en skyldighet, inte en meny
 
 Stödsystemet är en ordningsföljd, och de tidigare stegen är skyldigheter i sig snarare än hinder att ta sig förbi innan det riktiga stödet börjar.

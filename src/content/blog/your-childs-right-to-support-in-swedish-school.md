@@ -12,6 +12,8 @@ If your child has ADHD, autism or dyslexia, Swedish law is on your side. The rig
 
 This page is the map. Read it top to bottom once, and you will know what the school owes every student, what to ask for and when, and what to do when the support does not come. Every step links to a full explainer.
 
+
+If you work in a school rather than parent a child in one, the same territory from the duty side is here: [what schools must do for neurodivergent students](/blog/what-schools-must-do-for-neurodivergent-students).
 ## First, the ground rules
 
 Two things are worth knowing before anything else. **Support does not wait for a diagnosis**: the right to help is decided by a student's needs, not by a label or a completed assessment ([support without a diagnosis](/blog/support-without-a-diagnosis-school)). And **neurodivergence in school is a spectrum of needs**, not a single category ([what NPF means in a school context](/blog/what-is-npf-neurodevelopmental-conditions-school)). Both shape everything that follows.

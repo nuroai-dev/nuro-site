@@ -14,6 +14,8 @@ If you lead a school or a huvudman organisation, the obligation to support stude
 
 This page is the map. Each step links to a fuller explainer.
 
+
+If you are a parent rather than a duty-holder, the same territory from your side is here: [your child's right to support in Swedish school](/blog/your-childs-right-to-support-in-swedish-school).
 ## The ladder is an obligation, not a menu
 
 The support system is a sequence, and the earlier steps are duties in their own right rather than hoops to clear before the real support starts.
