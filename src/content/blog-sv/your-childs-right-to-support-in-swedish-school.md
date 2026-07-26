@@ -12,6 +12,8 @@ Om ditt barn har adhd, autism eller dyslexi står svensk lag på din sida. Rätt
 
 Den här sidan är kartan. Läs den uppifrån och ner en gång, så vet du vad skolan är skyldig varje elev, vad du ska be om och när, och vad du gör när stödet uteblir. Varje steg länkar till en full förklaring.
 
+
+Arbetar du i skolan i stället för att vara förälder till en elev finns samma område sett från skyldighetssidan här: [vad skolan måste göra för neurodivergenta elever](/sv/blog/what-schools-must-do-for-neurodivergent-students).
 ## Först, grundreglerna
 
 Två saker är värda att veta före allt annat. **Stöd väntar inte på en diagnos**: rätten till hjälp avgörs av en elevs behov, inte av en etikett eller en färdig utredning ([stöd utan diagnos](/sv/blog/support-without-a-diagnosis-school)). Och **neurodivergens i skolan är ett spektrum av behov**, inte en enda kategori ([vad NPF betyder i en skolkontext](/sv/blog/what-is-npf-neurodevelopmental-conditions-school)). Båda formar allt som följer.
