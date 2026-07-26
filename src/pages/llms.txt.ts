@@ -53,21 +53,34 @@ export const GET: APIRoute = async () => {
   const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
     (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
   );
+  // The Swedish half of the site is addressable here too, so a model answering
+  // a Swedish question can cite the Swedish page instead of the English one.
+  // Derived from the blogSv collection rather than assumed, so an English-only
+  // post can never emit a Swedish URL that 404s.
+  const postsSv = await getCollection("blogSv", ({ data }) => !data.draft);
+  const svIds = new Set(postsSv.map((p) => p.id));
+  const svTagSlugs = new Set(buildTagIndex(postsSv).map((t) => t.slug));
   // Thematic map first: same index the hub pages are built from, so labels,
   // membership and counts always agree with what is actually published.
   const topicLines = buildTagIndex(posts).map(
     (t) =>
-      `- [${t.label}](${SITE}/blog/tag/${t.slug}) (${t.posts.length} posts): ${tagIntroEn(t.slug, t.label)}`,
+      `- [${t.label}](${SITE}/blog/tag/${t.slug}) (${t.posts.length} posts): ${tagIntroEn(t.slug, t.label)}${
+        svTagSlugs.has(t.slug) ? ` Swedish: ${SITE}/sv/blog/tag/${t.slug}` : ""
+      }`,
   );
   const postLines = posts.map(
-    (p) => `- [${p.data.title}](${SITE}/blog/${p.id}): ${p.data.description}`,
+    (p) =>
+      `- [${p.data.title}](${SITE}/blog/${p.id}): ${p.data.description}${
+        svIds.has(p.id) ? ` Swedish: ${SITE}/sv/blog/${p.id}` : ""
+      }`,
   );
   const body = [
     HEADER,
     "\n## Topics\n",
-    "Each topic below has a hub page listing every post on that subject. Swedish versions live under /sv/blog/tag/<topic>.\n",
+    "Each topic below has a hub page listing every post on that subject.\n",
     topicLines.join("\n"),
     "\n## Blog posts\n",
+    "Where a Swedish translation exists, its URL follows the English one.\n",
     postLines.join("\n"),
     "",
   ].join("\n");
