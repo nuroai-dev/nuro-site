@@ -2,7 +2,7 @@
 title: "Så anmäler du en skola till Skolinspektionen när ditt barn inte får stöd"
 description: "Om en skola inte ger ditt barn det stöd hen har rätt till, och att prata med lärare och rektor inte har hjälpt, kan du anmäla det. Här är ordningen som Sveriges egna myndigheter rekommenderar, vad Skolinspektionen faktiskt gör med en anmälan, och hur den vägen skiljer sig från att överklaga ett beslut eller anmäla diskriminering."
 pubDate: 2026-07-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["rights", "parents", "skollagen", "sweden"]
 ---
 

@@ -2,7 +2,7 @@
 title: "När ett barn slutar komma till skolan, vad måste skolan göra?"
 description: "När en elev har upprepad eller längre frånvaro, giltig eller ogiltig, kräver skollagen att rektorn ser till att den skyndsamt utreds, tillsammans med eleven, vårdnadshavarna och elevhälsan, och att den anmäls till huvudmannen. Det finns inget fast antal dagar. Här är vad skollagen faktiskt kräver."
 pubDate: 2026-07-14
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["school-absence", "skollagen", "npf"]
 ---
 

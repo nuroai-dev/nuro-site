@@ -2,7 +2,7 @@
 title: "NPF-stöd på gymnasiet: samma lag gäller fortfarande"
 description: "Många familjer oroar sig för att de stödrättigheter ett barn har byggt upp under grundskolan försvinner när de börjar gymnasiet. Det gör de inte. Skollagens stödregler täcker gymnasieskolan uttryckligen, och skolans skyldigheter är desamma."
 pubDate: 2026-07-17
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "rights", "gymnasium", "support", "neurodiversity"]
 ---
 

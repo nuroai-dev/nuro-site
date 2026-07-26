@@ -2,7 +2,7 @@
 title: "Vad är lågaffektivt bemötande, och hur hjälper det neurodivergenta elever?"
 description: "Lågaffektivt bemötande utgår från en enda tanke: människor som kan uppföra sig gör det. När en elev inte kan har situationen överskridit deras förmåga, och den vuxnes uppgift är att sänka trycket, inte höja det. Här är de tre principerna, varför det passar adhd, autism och dyslexi, och varför det är ett bemötande som hör ihop med stöd snarare än ersätter det."
 pubDate: 2026-07-22
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["classroom", "npf", "neurodiversity"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Autism i klassrummet: vad som faktiskt hjälper, idag"
 description: "För en elev inom autismspektrumet är ett klassrum som fungerar framför allt ett förutsägbart klassrum. Här är de anpassningar som verkligen hjälper, grundade i vägledning från Specialpedagogiska skolmyndigheten, varför de vilar på strukturen i tydliggörande pedagogik, och varför de är en del av det som lagen redan kräver."
 pubDate: 2026-06-27
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["autism", "classroom", "skollagen", "sweden"]
 ---
 

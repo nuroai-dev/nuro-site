@@ -2,7 +2,7 @@
 title: "Hur många elever missar stora delar av skolan i Sverige? Officiellt räknar ingen."
 description: "Sverige samlar inte in nationell frånvarostatistik på reguljär basis. Den enda nationella kartläggning som försökte fann tiotusentals elever med omfattande frånvaro. Ett nationellt frånvaroregister är nu på väg, och det pekar särskilt ut neurodivergenta elever. Här är vad siffrorna säger."
 pubDate: 2026-07-04
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["school-absence", "policy", "neurodiversity"]
 ---
 

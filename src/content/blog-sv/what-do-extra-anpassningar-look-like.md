@@ -2,7 +2,7 @@
 title: "Hur ser extra anpassningar faktiskt ut? Nio konkreta exempel från Skolverket"
 description: "Extra anpassningar är den första riktiga stödnivån en svensk skola är skyldig en elev som kämpar, och varje lärare kan ge dem inom den ordinarie undervisningen utan ett formellt beslut. Här är de nio konkreta exempel Skolverket nämner, och vad vart och ett betyder för en elev med adhd, autism eller dyslexi."
 pubDate: 2026-07-15
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "teachers"]
 ---
 

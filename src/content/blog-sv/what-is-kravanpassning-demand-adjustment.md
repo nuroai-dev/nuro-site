@@ -2,7 +2,7 @@
 title: "Vad är kravanpassning, och varför betyder det inte att sänka ribban"
 description: "Kravanpassning betyder att matcha det du kräver av en elev mot vad hen klarar just nu, så att eleven kan komma in i arbetet och nå samma mål. Det är en av de mest missförstådda idéerna i svensk skola, ofta hört som att släppa eleven undan. Här är vad det faktiskt betyder, varför neurodivergenta elever behöver det, och var gränsen går mellan att anpassa kravet och att sänka målet."
 pubDate: 2026-07-22
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["classroom", "npf", "neurodiversity"]
 ---
 

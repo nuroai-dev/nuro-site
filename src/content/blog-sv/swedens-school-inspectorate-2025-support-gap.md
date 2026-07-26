@@ -2,7 +2,7 @@
 title: "Sveriges egen skolinspektion säger att skyldigheten att ge stöd inte alltid uppfylls."
 description: "I sin årsrapport för 2025 skrev Skolinspektionen, den statliga skolmyndigheten, att huvudmannens ansvar är avgörande men inte alltid uppfylls. Under år av inspektioner hittar den samma lucka: eleverna får inte det stöd lagen ger dem rätt till."
 pubDate: 2026-07-05
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "compliance", "rights"]
 ---
 

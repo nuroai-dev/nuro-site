@@ -2,7 +2,7 @@
 title: "Vad SPSM säger om AI, och vad det betyder för stödet till elever med NPF"
 description: "I november 2025 publicerade SPSM, myndigheten för specialpedagogik, vägledning om AI ur ett specialpedagogiskt perspektiv. Den ser verkliga möjligheter att individanpassa stöd, men pekar ut en risk som de flesta missar: en välmenande omsorgskultur som lämnar neurodivergenta elever utanför AI och fördjupar klyftorna. Här är vad SPSM faktiskt säger, och varför inkluderande AI är hela poängen."
 pubDate: 2026-07-11
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["ai", "npf", "inclusion", "sweden"]
 ---
 

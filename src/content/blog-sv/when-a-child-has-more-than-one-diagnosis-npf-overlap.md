@@ -2,7 +2,7 @@
 title: "När ett barn har mer än en diagnos: överlappande NPF och varför en enda etikett inte räcker"
 description: "För en stor andel elever med en neuropsykiatrisk funktionsnedsättning är diagnosen inte en sak utan två eller tre, överlappande på samma gång. Här är varför kombinationer är regeln, varför de gör skolan svårare snarare än bara annorlunda, och varför stödet måste utgå från eleven, inte från etiketten."
 pubDate: 2026-06-29
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["comorbidity", "NPF", "neurodiversity", "sweden", "autism", "dyslexia"]
 ---
 

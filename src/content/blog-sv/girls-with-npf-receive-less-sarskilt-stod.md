@@ -2,7 +2,7 @@
 title: "Flickor med NPF får särskilt stöd mer sällan än pojkar. Sveriges egen rapport visar gapet."
 description: "Sveriges riksdag tittade på vem som faktiskt får särskilt stöd. Bland elever med NPF får pojkar det i 48,4 procent av fallen och flickor i 39,7 procent, ett gap på nästan nio punkter i den grupp skolan historiskt har varit långsammast att upptäcka. Här är vad siffran säger, vad den inte säger, och varför lösningen är tidigare och jämnare upptäckt."
 pubDate: 2026-07-09
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "sarskilt-stod", "sweden", "research"]
 ---
 

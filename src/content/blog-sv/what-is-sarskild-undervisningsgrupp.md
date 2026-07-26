@@ -2,7 +2,7 @@
 title: "Vad är en särskild undervisningsgrupp? En av skolans mest ingripande stödåtgärder, förklarad"
 description: "En särskild undervisningsgrupp, att en elev undervisas i en annan grupp än sin vanliga klass, och enskild undervisning, att eleven undervisas ensam, är verkliga former av särskilt stöd i skollagen. De är också bland de mest ingripande, tänkta först när man på riktigt prövat att låta eleven vara kvar i den ordinarie gruppen. Här är vad lagen säger, vem som beslutar, och hur man överklagar."
 pubDate: 2026-07-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["rights", "skollagen", "sweden", "parents"]
 ---
 

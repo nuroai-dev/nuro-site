@@ -2,7 +2,7 @@
 title: "Det finns en eller två neurodivergenta elever i varje svensk klass. Är lärarna förberedda på dem?"
 description: "Regeringen uppskattar en till två elever med NPF i varje klass, men kunskap om neuropsykiatriska funktionsnedsättningar skrevs inte in i lärarutbildningens examensmål förrän 2020. Och forskningen varnar för att utbilda lärare om diagnoser är fel utgångspunkt: en etikett säger inte läraren vad hen faktiskt ska göra på tisdag morgon."
 pubDate: 2026-07-12
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["sweden", "npf", "teachers", "neurodiversity", "classroom", "diagnosis"]
 ---
 

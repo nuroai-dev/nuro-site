@@ -2,7 +2,7 @@
 title: "Skolinspektionen gick in i 30 skolor. På två av tre utformades undervisningen inte efter elevernas behov."
 description: "I en kvalitetsgranskning från 2023 av tillgängliga lärmiljöer för elever med neuropsykiatriska svårigheter granskade Skolinspektionen 30 grundskolor i årskurs 7 till 9. Den fann att två av tre skolor inte utformar undervisningen efter elevernas behov, att var tredje skola inte identifierar hindren eleverna möter, och att det på flera skolor fanns negativa inställningar mot dessa elever från både personal och andra elever. Granskningen omfattade även elever utan diagnos."
 pubDate: 2026-07-22
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skolinspektionen", "neurodiversity", "skollagen"]
 ---
 

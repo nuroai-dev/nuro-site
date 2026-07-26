@@ -2,7 +2,7 @@
 title: "Sveriges hemmasittare har fördubblats på fyra år. De flesta av dem är neurodivergenta."
 description: "Den kroniska skolfrånvaron i Sverige har ungefär fördubblats på fyra år, och en stor andel av eleverna som försvinner är neurodivergenta. Frånvaro är sällan början på problemet, den är slutet på ett. Här är vad som kommer före, och varför det förändrar allt att fånga det tidigt."
 pubDate: 2026-06-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "school absence", "hemmasittare", "sweden"]
 ---
 

@@ -2,7 +2,7 @@
 title: "Före extra anpassningar kommer ledning och stimulans: det första steget av stöd som varje elev redan har."
 description: "Skolans stödsystem ritas ofta som en trappa med tre steg. Det som de flesta hoppar förbi är det första. Ledning och stimulans är den ledning och stimulans varje elev har rätt till inom den ordinarie undervisningen, före något formellt beslut. Här är vad det betyder, varför det spelar störst roll för neurodivergenta elever, och varför 2028 års reform lutar sig hårdare mot det."
 pubDate: 2026-07-10
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "neurodiversity", "classroom"]
 ---
 

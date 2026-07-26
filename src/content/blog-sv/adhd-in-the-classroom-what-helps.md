@@ -2,7 +2,7 @@
 title: "Adhd i klassrummet: vad som faktiskt hjälper, idag"
 description: "Ungefär en av tio svenska elever har en neuropsykiatrisk funktionsnedsättning, och adhd är en av de vanligaste. Här är de anpassningar i klassrummet som verkligen hjälper, grundade i vägledning från Specialpedagogiska skolmyndigheten, och varför de inte är frivilliga extrasaker utan en del av det som lagen redan kräver."
 pubDate: 2026-06-26
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["classroom", "adhd", "skollagen", "sweden"]
 ---
 

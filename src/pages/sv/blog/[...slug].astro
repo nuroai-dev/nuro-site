@@ -86,7 +86,7 @@ const breadcrumb = {
         {tagSlugs.length > 0 && (
           <div class={styles.tags}>
             {tagSlugs.map((s) => (
-              <a class={styles.tagChip} href={`/sv/blog/tag/${s}`}>{tagLabel(s)}</a>
+              <a class={styles.tagChip} href={`/sv/blog/tag/${s}`}>{tagLabel(s, "sv")}</a>
             ))}
           </div>
         )}

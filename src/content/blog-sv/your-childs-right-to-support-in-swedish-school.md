@@ -2,7 +2,7 @@
 title: "Ditt barns rätt till stöd i svensk skola: den kompletta guiden"
 description: "En neurodivergent elevs rätt till stöd i Sverige är fastslagen i lag, men processen har steg och namn som är lätta att gå vilse i. Det här är kartan: vad skolan är skyldig varje elev, vad du ska be om och när, och vad du gör när stödet uteblir, med varje steg länkat till en full förklaring."
 pubDate: 2026-07-24
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "rights", "sweden", "parents"]
 ---
 

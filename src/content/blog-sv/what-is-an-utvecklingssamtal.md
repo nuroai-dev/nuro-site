@@ -2,7 +2,7 @@
 title: "Vad är ett utvecklingssamtal? Terminens möte där en elev som kämpar ska fångas upp först"
 description: "Två gånger om året garanterar lagen varje elev ett samtal om hur skolan bäst kan stödja den och vilket stöd som behövs. Utvecklingssamtalet är det tidigaste, mest rutinmässiga skyddsnätet för en neurodivergent elev, och det som lättast slösas bort när läraren kommer in med en känsla i stället för en verklig bild av barnet."
 pubDate: 2026-07-23
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "parents", "teachers"]
 ---
 

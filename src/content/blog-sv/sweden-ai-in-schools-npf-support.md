@@ -2,7 +2,7 @@
 title: "Riksdagen debatterar AI i skolan. Den mest brådskande användningen är den som ingen diskuterar."
 description: "I oktober 2025 frågade en riksdagsledamot regeringen hur den ska se till att svenska skolor lär eleverna om AI. Ministern svarade att Sverige redan är mycket digitaliserat och förespråkar ett avvägt förhållningssätt. Här är vad utbytet visar, och varför den mest angelägna användningen av AI i skolan, att hjälpa neurodivergenta elever få det stöd de har laglig rätt till, inte behöver vänta på en nationell strategi."
 pubDate: 2026-07-07
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["ai", "policy", "npf", "sweden"]
 ---
 

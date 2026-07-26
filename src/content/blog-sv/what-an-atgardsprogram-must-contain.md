@@ -2,7 +2,7 @@
 title: "Vad ett åtgärdsprogram faktiskt måste innehålla, och var de oftast brister"
 description: "När en elev behöver särskilt stöd dokumenterar skolan det i ett åtgärdsprogram. Skollagen anger exakt fyra saker det måste innehålla, och Skolinspektionen hittar samma brister om och om igen. Här är vad som hör hemma i dokumentet, vad som inte gör det, och varför det avgör skillnaden mellan stöd på papper och stöd i klassrummet."
 pubDate: 2026-07-07
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "compliance", "sweden"]
 ---
 

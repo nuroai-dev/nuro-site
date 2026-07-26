@@ -2,7 +2,7 @@
 title: "Sverige har tillsatt en nationell utredning om varför adhd och autism ökar bland barn. Skolan finns med i uppdraget."
 description: "Den 2 juli 2026 beslutade regeringen direktiven för en ny utredning, Goda och jämlika livsvillkor för barn och unga med NPF. Den ska analysera varför neuropsykiatriska diagnoser bland barn ökar, särskilt adhd och autism, och konsekvenserna för vård, socialtjänst och skola, och lämna förslag senast i december 2027. Här är vad det betyder för skolan nu."
 pubDate: 2026-07-21
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["policy", "npf", "neurodiversity"]
 ---
 

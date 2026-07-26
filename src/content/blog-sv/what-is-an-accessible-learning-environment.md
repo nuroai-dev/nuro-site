@@ -2,7 +2,7 @@
 title: "Vad är en tillgänglig lärmiljö? Sverige har redan definierat det."
 description: "Sveriges specialpedagogiska skolmyndighet SPSM byggde en modell för vad som gör utbildning tillgänglig för alla elever. Den har fyra områden. Här är vilka de är, och vilket neurodivergenta elever oftast förlorar."
 pubDate: 2026-07-05
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sweden", "classroom", "inclusion"]
 ---
 

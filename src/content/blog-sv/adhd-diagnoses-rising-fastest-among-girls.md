@@ -2,7 +2,7 @@
 title: "ADHD-diagnoserna ökar snabbast bland flickor. Vad betyder det för skolan?"
 description: "Mellan 2019 och 2022 ökade andelen barn i Sverige med en ADHD-diagnos med upp till 50 procent, och ökningen var störst bland flickor, den grupp skolan historiskt har missat. Här är vad siffrorna faktiskt säger, och varför de förändrar vad ett klassrum måste klara av."
 pubDate: 2026-07-09
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["neurodiversity", "npf", "sweden", "classroom", "adhd"]
 ---
 

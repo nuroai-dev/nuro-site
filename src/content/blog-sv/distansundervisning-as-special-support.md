@@ -2,7 +2,7 @@
 title: "Kan en skola undervisa en elev som inte kan komma in alls? Ja, och lagen är tydlig med när"
 description: "Distansundervisning som särskilt stöd låter en svensk grundskola undervisa en elev som inte kan närvara på grund av dokumenterad medicinsk, psykisk eller social problematik. Det är tillåtet bara när allt annat stöd är uttömt, med vårdnadshavarens samtycke, en termin i taget, inom ett åtgärdsprogram. Här är hur det fungerar, och varför det är en brygga och inte en slutstation."
 pubDate: 2026-07-15
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "rights"]
 ---
 

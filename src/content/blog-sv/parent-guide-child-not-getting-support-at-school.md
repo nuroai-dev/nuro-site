@@ -2,7 +2,7 @@
 title: "När ditt barn inte får stöd i skolan: en förälders guide till dina rättigheter"
 description: "Om ditt barn har adhd, autism eller dyslexi och skolan inte ger det stöd som behövs har du verkliga, konkreta verktyg enligt svensk lag. Här är hur processen är tänkt att fungera, vad du kan be om, hur du överklagar och vilken myndighet som hanterar vad."
 pubDate: 2026-06-27
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["parents", "skollagen", "rights", "sweden"]
 ---
 

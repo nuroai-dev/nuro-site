@@ -66,7 +66,7 @@ const SITE_URL = "https://nuroai.dev";
 const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
 // Locale-specific branded OG card for the index (prerendered under /og/pages).
 const ogImage = `${SITE_URL}/og/pages/${lang === "sv" ? "blog-sv" : "blog"}.png`;
-const topics = buildTagIndex(posts);
+const topics = buildTagIndex(posts, lang);
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",

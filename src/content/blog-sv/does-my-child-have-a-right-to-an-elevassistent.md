@@ -2,7 +2,7 @@
 title: "Har mitt barn rätt till en elevassistent?"
 description: "Svenska föräldrar undrar ofta om deras barn har rätt till en elevassistent. Det ärliga juridiska svaret: ett barn har rätt att få sitt behov av stöd tillgodosett, men inte rätt att kräva en viss insats. Här är vad skollagen faktiskt säger, och varför det spelar roll."
 pubDate: 2026-07-19
-author: "The Nuro team"
+author: "Nuro-teamet"
 tags: ["skollagen", "sarskilt-stod", "rights", "parents"]
 ---
 
