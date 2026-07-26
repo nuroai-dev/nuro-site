@@ -49,8 +49,15 @@ function titleFontSize(title: string): number {
 
 /**
  * Render a branded OG card for `title` and return a PNG as a Uint8Array.
+ *
+ * `subtitle` is optional and renders under the title. Omitting it produces
+ * exactly the card this function produced before, so existing cards are
+ * untouched.
  */
-export async function renderOgImage(title: string): Promise<Uint8Array> {
+export async function renderOgImage(
+  title: string,
+  subtitle?: string,
+): Promise<Uint8Array> {
   const tree = {
     type: "div",
     props: {
@@ -105,14 +112,42 @@ export async function renderOgImage(title: string): Promise<Uint8Array> {
                 props: {
                   style: {
                     display: "flex",
-                    fontSize: `${titleFontSize(title)}px`,
-                    fontWeight: 700,
-                    color: INK,
-                    lineHeight: 1.15,
-                    letterSpacing: "-1px",
+                    flexDirection: "column",
                     maxWidth: "1000px",
                   },
-                  children: title,
+                  children: [
+                    {
+                      type: "div",
+                      props: {
+                        style: {
+                          display: "flex",
+                          fontSize: `${titleFontSize(title)}px`,
+                          fontWeight: 700,
+                          color: INK,
+                          lineHeight: 1.15,
+                          letterSpacing: "-1px",
+                        },
+                        children: title,
+                      },
+                    },
+                    ...(subtitle
+                      ? [
+                          {
+                            type: "div",
+                            props: {
+                              style: {
+                                display: "flex",
+                                fontFamily: "Inter",
+                                fontSize: "30px",
+                                color: MUTED,
+                                marginTop: "22px",
+                              },
+                              children: subtitle,
+                            },
+                          },
+                        ]
+                      : []),
+                  ],
                 },
               },
               {
