@@ -30,6 +30,8 @@ Disruptive, restless, or withdrawn behaviour is one of the most common ways an u
 
 That is why the 5 kap. 9 § reflex matters so much. A school that only reaches for the disciplinary tools, removal after removal, warning after warning, is punishing the symptom while the cause goes unexamined. And the endpoint of that path is bleak: repeated exclusion from lessons is one of the threads that leads a student toward [absence and, eventually, becoming a hemmasittare](/blog/school-absence-starts-earlier). The right to support does not depend on a diagnosis, and it [does not wait for one](/blog/support-without-a-diagnosis-school); the trigger is the need the behaviour reveals.
 
+The same tension runs through the [mobile-free school rule that starts on 1 August 2026](/blog/mobile-free-school-2026-assistive-phone-use), where the student who needs the quiet and the student who needs the phone as a support tool are often the same student.
+
 None of this means a neurodivergent student gets a pass on disruptive behaviour, or that studiero does not apply to them. The opposite is true. A calm, predictable classroom is not a constraint imposed on neurodivergent students; it is often the single thing that helps them most. The [concrete extra anpassningar](/blog/what-do-extra-anpassningar-look-like) that help, a clear structure, explicit instructions, listenable material, are the same measures that create studiero in the first place. Support and calm are the same project, not competing ones.
 
 ## Where Nuro fits

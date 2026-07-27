@@ -30,6 +30,8 @@ Störande, rastlöst eller tillbakadraget beteende är ett av de vanligaste sät
 
 Det är därför reflexen i 5 kap. 9 § betyder så mycket. En skola som bara sträcker sig efter de disciplinära verktygen, utvisning efter utvisning, varning efter varning, bestraffar symtomet medan orsaken förblir outredd. Och slutpunkten på den vägen är dyster: upprepad uteslutning från lektioner är en av trådarna som leder en elev mot [frånvaro och, till slut, att bli hemmasittare](/sv/blog/school-absence-starts-earlier). Rätten till stöd beror inte på en diagnos, och den [väntar inte på en](/sv/blog/support-without-a-diagnosis-school); utlösaren är behovet som beteendet avslöjar.
 
+Samma spänning löper genom [regeln om mobilfri skola som börjar gälla 1 augusti 2026](/sv/blog/mobile-free-school-2026-assistive-phone-use), där eleven som behöver lugnet och eleven som behöver mobilen som stödverktyg ofta är samma elev.
+
 Inget av detta betyder att en neuropsykiatrisk elev slipper undan störande beteende, eller att studiero inte gäller den eleven. Tvärtom. Ett lugnt, förutsägbart klassrum är inte en begränsning som läggs på neuropsykiatriska elever; det är ofta det enda som hjälper dem mest. De [konkreta extra anpassningar](/sv/blog/what-do-extra-anpassningar-look-like) som hjälper, en tydlig struktur, explicita instruktioner, lyssningsbart material, är samma åtgärder som skapar studiero från början. Stöd och lugn är samma projekt, inte konkurrerande.
 
 ## Var Nuro passar in

@@ -47,6 +47,10 @@ Om extra anpassningar är så tillgängliga, varför är stödgapet då så stor
 
 Nuro ersätter inte lärarens omdöme om vilken justering som ska göras. Det gör det omdömet lättare att nå, genom att hålla en aktuell, elevnära bild av hur varje barn faktiskt mår och klarar sig, så att rätt extra anpassning erbjuds medan den fortfarande räknas, inte efter en termin av att halka efter. Lagen lägger redan de här verktygen i varje lärares händer. Det som saknas är att se, i tid, vilken elev som behöver vilket.
 
+## Ett konkret fall värt att känna till
+
+Från 1 augusti 2026 samlas mobilerna in vid skoldagens början i grundskolan och fritidshemmet. Användning inom extra anpassningar nämns i själva regeln, och därför spelar det roll att [få stödanvändningen nedskriven som en extra anpassning](/sv/blog/mobile-free-school-2026-assistive-phone-use) före terminsstart i stället för efter.
+
 ## Källor
 
 - [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
