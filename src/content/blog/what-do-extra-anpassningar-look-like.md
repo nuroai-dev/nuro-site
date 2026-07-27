@@ -47,6 +47,10 @@ If extra anpassningar are this available, why is the support gap so wide? Becaus
 
 Nuro does not replace the teacher's judgement about which adjustment to make. It makes that judgement easier to reach, by holding a current, per-student picture of how each child is actually doing, so the right extra anpassning is offered while it still counts, not after a term of falling behind. The law already puts these tools in every teacher's hands. The missing piece is seeing, in time, which student needs which one.
 
+## A concrete case worth knowing
+
+From 1 August 2026, phones are collected at the start of the school day in compulsory school and fritidshem. Use within extra anpassningar is named in the rule itself, which is why [getting an assistive phone use written down as an extra anpassning](/blog/mobile-free-school-2026-assistive-phone-use) matters before term starts rather than after.
+
 ## Sources
 
 - [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
