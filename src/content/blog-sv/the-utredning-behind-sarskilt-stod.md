@@ -33,7 +33,7 @@ När utredningen är klar beslutar rektorn om en av två saker. Antingen behöve
 
 ## Varför utredningen är där stödet vinns eller förloras
 
-En tunn kartläggning ger en tunn plan. Om kartläggningen är en enda eftermiddag av intryck har den pedagogiska bedömningen lite att arbeta med, och åtgärdsprogrammet som följer blir allmänt hållet. Den bästa utredningen vilar på en verklig, samlad bild av hur en specifik elev lär sig och var hen halkar, insamlad över tid snarare än rekonstruerad ur minnet när en kris redan har inträffat.
+En tunn kartläggning ger en tunn plan. Det är också här elevens egen berättelse hör hemma: skollagen kräver att [elevens inställning klarläggs och att eleven får delta](/sv/blog/does-a-student-get-a-say-in-their-own-support), och eleven är den enda som är med på varje lektion som kartläggs. Om kartläggningen är en enda eftermiddag av intryck har den pedagogiska bedömningen lite att arbeta med, och åtgärdsprogrammet som följer blir allmänt hållet. Den bästa utredningen vilar på en verklig, samlad bild av hur en specifik elev lär sig och var hen halkar, insamlad över tid snarare än rekonstruerad ur minnet när en kris redan har inträffat.
 
 Det är den delen Nuro är byggt för att göra enklare. Inte för att ställa diagnos, och inte för att besluta åt skolan, utan för att ge den en löpande bild per elev av hur varje elev faktiskt mår och presterar, så att kartläggningen inte börjar från ett blankt blad och anmälan till rektorn sker på en tidig signal i stället för efter en termin av att halka efter. Lagen kräver redan utredningen. Det svåra är att göra den tidigt, och att göra den väl.
 
