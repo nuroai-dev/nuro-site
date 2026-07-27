@@ -33,7 +33,7 @@ Once the utredning is done, the rektor decides one of two things. Either the stu
 
 ## Why the utredning is where support is won or lost
 
-A thin kartläggning produces a thin plan. If the mapping is a single afternoon of impressions, the pedagogisk bedömning has little to work with, and the åtgärdsprogram that follows is generic. The best utredning rests on a real, accumulated picture of how a specific student learns and where they slip, gathered over time rather than reconstructed from memory once a crisis has already arrived.
+A thin kartläggning produces a thin plan. It is also where the student's own account belongs: Skollagen requires that [the student's view is established and that they take part](/blog/does-a-student-get-a-say-in-their-own-support), and they are the only person present in every lesson being mapped. If the mapping is a single afternoon of impressions, the pedagogisk bedömning has little to work with, and the åtgärdsprogram that follows is generic. The best utredning rests on a real, accumulated picture of how a specific student learns and where they slip, gathered over time rather than reconstructed from memory once a crisis has already arrived.
 
 That is the part Nuro is built to make easier. Not to diagnose, and not to decide for the school, but to give it a continuous, per-student picture of how each student is actually doing, so the mapping is not starting from a blank page and the report to the rektor happens on an early signal rather than after a term of falling behind. The law already requires the utredning. The hard part is doing it early, and doing it well.
 
