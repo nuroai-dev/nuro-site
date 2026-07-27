@@ -41,7 +41,7 @@ The hardest part is when the right is clear and the help still does not arrive. 
 
 ## The highest stakes: absence
 
-When support fails long enough, students stop coming. The school has a legal [duty to investigate absence](/blog/school-duty-to-investigate-absence), and the warning signs [start earlier than most people notice](/blog/school-absence-starts-earlier). Catching a struggling student before that point is the whole reason the ladder above exists.
+When support fails long enough, students stop coming. The school has a legal [duty to investigate absence](/blog/school-duty-to-investigate-absence), and the warning signs [start earlier than most people notice](/blog/school-absence-starts-earlier). Catching a struggling student before that point is the whole reason the ladder above exists. Practical barriers count here too: when the journey itself is what makes school unmanageable, [skolskjuts can be part of the answer](/blog/does-my-child-have-a-right-to-skolskjuts), and the school day a child has to cope with [does not end when the lessons do](/blog/support-in-fritidshem-whole-school-day). And if a student does fall behind, the outcome is not sealed: Swedish follow-up data shows [finishing gymnasiet matters more than being eligible for it at 15](/blog/does-year-9-decide-a-students-future).
 
 ## Where Nuro fits
 

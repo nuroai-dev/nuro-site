@@ -41,7 +41,7 @@ Det svåraste är när rätten är tydlig och hjälpen ändå inte kommer. Det �
 
 ## Det som står mest på spel: frånvaro
 
-När stödet brister länge nog slutar elever att komma. Skolan har en laglig [skyldighet att utreda frånvaro](/sv/blog/school-duty-to-investigate-absence), och varningstecknen [börjar tidigare än de flesta märker](/sv/blog/school-absence-starts-earlier). Att fånga en elev som kämpar före den punkten är hela anledningen till att trappan ovan finns.
+När stödet brister länge nog slutar elever att komma. Skolan har en laglig [skyldighet att utreda frånvaro](/sv/blog/school-duty-to-investigate-absence), och varningstecknen [börjar tidigare än de flesta märker](/sv/blog/school-absence-starts-earlier). Att fånga en elev som kämpar före den punkten är hela anledningen till att trappan ovan finns. Praktiska hinder räknas också: när det är själva resan som gör skolan ohanterlig kan [skolskjuts vara en del av svaret](/sv/blog/does-my-child-have-a-right-to-skolskjuts), och skoldagen barnet ska klara [tar inte slut när lektionerna gör det](/sv/blog/support-in-fritidshem-whole-school-day). Och om en elev hamnar efter är utfallet inte avgjort: svensk uppföljningsdata visar att [det spelar större roll att fullfölja gymnasiet än att vara behörig till det vid 15](/sv/blog/does-year-9-decide-a-students-future).
 
 ## Var Nuro passar in
 
