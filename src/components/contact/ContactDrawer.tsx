@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Drawer } from "vaul";
 import "./contact-drawer.css";
 
@@ -55,6 +55,9 @@ export default function ContactDrawer({
 }) {
   const t = COPY[lang];
   const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  // The element that opened the drawer, so focus can be handed back on close.
+  const triggerRef = useRef<HTMLElement | null>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
 
@@ -62,8 +65,10 @@ export default function ContactDrawer({
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement | null;
-      if (target?.closest("[data-contact-trigger]")) {
+      const trigger = target?.closest<HTMLElement>("[data-contact-trigger]");
+      if (trigger) {
         event.preventDefault();
+        triggerRef.current = trigger;
         setStatus("idle");
         setErrors({});
         setOpen(true);
@@ -107,7 +112,44 @@ export default function ContactDrawer({
     <Drawer.Root open={open} onOpenChange={setOpen}>
       <Drawer.Portal>
         <Drawer.Overlay className="cd-overlay" />
-        <Drawer.Content className="cd-content">
+        <Drawer.Content
+          className="cd-content"
+          ref={contentRef}
+          aria-modal="true"
+          onOpenAutoFocus={(event) => {
+            /*
+             * vaul defaults autoFocus to false and calls preventDefault() on this
+             * event, which leaves focus on the trigger that opened the drawer. The
+             * drawer is modal (overlay, background pointer-events disabled), so a
+             * keyboard user was left tabbing through the page behind it and could
+             * never reach the contact form.
+             *
+             * Move focus onto the drawer itself rather than the first input: that
+             * puts focus inside the focus trap and lets the dialog be announced,
+             * without opening the on-screen keyboard on mobile the way focusing a
+             * text field would.
+             */
+            event.preventDefault();
+            contentRef.current?.focus();
+          }}
+          onCloseAutoFocus={(event) => {
+            /*
+             * Hand focus back to the trigger that opened the drawer. Without this,
+             * focus lands on <body> after closing and a keyboard user loses their
+             * place, having to tab from the top of the page again.
+             */
+            event.preventDefault();
+            const trigger = triggerRef.current;
+            if (trigger?.isConnected && trigger.offsetParent !== null) {
+              trigger.focus();
+            } else {
+              // On mobile the trigger lives in the menu, which closes behind the
+              // drawer. Fall back to the main landmark so focus stays somewhere
+              // meaningful instead of resetting to <body>.
+              document.getElementById("main-content")?.focus();
+            }
+          }}
+        >
           <div className="cd-grabber" aria-hidden="true" />
           <div className="cd-inner">
             {status === "success" ? (
