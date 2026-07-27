@@ -30,7 +30,7 @@ Den politiska riktningen är tydlig. Den statliga utredningen [Bättre förutsä
 
 Det finns ingen version av det här där att göra mindre fungerar. Den enda spaken som sänker både den mänskliga och den ekonomiska kostnaden är densamma: fånga eleverna innan frånvaron sätter sig, ge läraren som redan står i rummet medlen att leverera anpassat stöd utan ett andra heltidsjobb av pappersarbete, och dokumentera det stödet så att det håller. Vissa av dessa mekanismer står redan i lagen och används inte: skolan [är skyldig att erbjuda lovskola](/sv/blog/lovskola-school-must-offer-holiday-tuition) till en elev i årskurs 9 eller 10 som riskerar att inte nå gymnasiebehörighet, vilket är precis det ögonblick då en elev på väg bort är billigast att behålla.
 
-Det är argumentet för förebyggande, och det är också argumentet för Nuro. Att se varje elev tidigt, anpassa materialet till hur de lär sig och lyfta fram varningssignalerna medan det fortfarande finns tid att agera är inte bara det rätta för barnet. För en kommun är det det billigare, mätt över vilken horisont som helst längre än ett enda budgetår.
+Den långsiktiga evidensen pekar åt samma håll: [elever som fullföljer gymnasiet klarar sig bättre på arbetsmarknaden än elever som var behöriga men inte fullföljde](/sv/blog/does-year-9-decide-a-students-future), och det syns fortfarande mer än ett decennium senare. Det är argumentet för förebyggande, och det är också argumentet för Nuro. Att se varje elev tidigt, anpassa materialet till hur de lär sig och lyfta fram varningssignalerna medan det fortfarande finns tid att agera är inte bara det rätta för barnet. För en kommun är det det billigare, mätt över vilken horisont som helst längre än ett enda budgetår.
 
 ## Källor
 

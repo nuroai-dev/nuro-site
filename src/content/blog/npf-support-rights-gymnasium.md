@@ -46,6 +46,8 @@ The legal framework is the same, but the context shifts in ways that matter in p
 
 One of the riskiest moments for a student who needs support is the move from grundskola to gymnasiet. A new school, new teachers, no shared history. The previous school has a legal duty to hand over information that helps the new school get support in place from the start, rather than rediscovering the need months later. That duty is in 3 kap. 12 j § of Skollagen. And for a student in year 9 who sits close to the line, there is a statutory safety net just before the transition: the school [must offer lovskola](/blog/lovskola-school-must-offer-holiday-tuition), holiday tuition, when a student risks not qualifying for a national program.
 
+That transition is also where the long game is won or lost: [what predicts a student's later position is whether they finish gymnasiet, not whether they arrived eligible](/blog/does-year-9-decide-a-students-future).
+
 See [When a neurodivergent student changes school, their support is meant to follow them](/blog/support-follows-student-changing-schools) for what the överlämning should include and what a family can do if it does not happen.
 
 ## If the school says gymnasiet is different
