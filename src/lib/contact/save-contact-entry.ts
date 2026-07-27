@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { storeContactMessage } from "./store-contact-message";
 
 /**
  * Contact-form delivery. Sends each submission as an email to the team via
@@ -24,12 +25,18 @@ const TO = process.env.CONTACT_TO ?? "hello@nuroai.dev";
 const FROM = process.env.CONTACT_FROM ?? "Nuro <hello@nuroai.dev>";
 
 export async function saveContactEntry(entry: ContactEntry): Promise<void> {
+  // Capture first, deliver second. Email is best-effort, storage is not, so a
+  // missing key or a Resend outage can no longer turn an inbound school
+  // enquiry into a log line nobody reads.
+  await storeContactMessage(entry);
+
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey) {
+    // Deliberately no message body here: the submission is safely stored, and
+    // names, addresses and free text do not belong in container logs.
     console.warn(
-      "[contact] RESEND_API_KEY not set — logging submission instead of sending",
-      JSON.stringify(entry),
+      "[contact] RESEND_API_KEY not set, message stored but not emailed",
     );
     return;
   }

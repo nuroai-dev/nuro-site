@@ -12,10 +12,48 @@ import "./contact-drawer.css";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/**
+ * Drawer copy per locale. The drawer is the site's contact channel and it is
+ * portalled open by client JS, so it never appears in server HTML. That is why
+ * the page-level translation work never caught it: it shipped fully English on
+ * Swedish pages.
+ */
+const COPY = {
+  en: {
+    title: "Get in touch",
+    lead: "Questions about Nuro? Send us a note and we\u2019ll reply by email.",
+    nameLabel: "Name", namePlaceholder: "Your name", nameError: "Please enter your name.",
+    emailLabel: "Email", emailPlaceholder: "you@example.com", emailError: "Please enter a valid email.",
+    messageLabel: "Message", messagePlaceholder: "How can we help?", messageError: "Please enter a message.",
+    submit: "Send message", submitting: "Sending\u2026",
+    errorBanner: "Something went wrong. Please try again.",
+    successTitle: "Thanks, we\u2019ll be in touch.",
+    successLead: "We\u2019ve got your message and will reply to your email soon.",
+    close: "Close",
+  },
+  sv: {
+    title: "H\u00f6r av dig",
+    lead: "Fr\u00e5gor om Nuro? Skicka ett meddelande s\u00e5 svarar vi via e-post.",
+    nameLabel: "Namn", namePlaceholder: "Ditt namn", nameError: "Ange ditt namn.",
+    emailLabel: "E-post", emailPlaceholder: "du@exempel.se", emailError: "Ange en giltig e-postadress.",
+    messageLabel: "Meddelande", messagePlaceholder: "Hur kan vi hj\u00e4lpa till?", messageError: "Skriv ett meddelande.",
+    submit: "Skicka meddelande", submitting: "Skickar\u2026",
+    errorBanner: "N\u00e5got gick fel. F\u00f6rs\u00f6k igen.",
+    successTitle: "Tack, vi h\u00f6r av oss.",
+    successLead: "Vi har f\u00e5tt ditt meddelande och svarar till din e-post snart.",
+    close: "St\u00e4ng",
+  },
+} as const;
+
 type Status = "idle" | "submitting" | "success" | "error";
 type Errors = { name?: boolean; email?: boolean; message?: boolean };
 
-export default function ContactDrawer() {
+export default function ContactDrawer({
+  lang = "en",
+}: {
+  lang?: "en" | "sv";
+}) {
+  const t = COPY[lang];
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Errors>({});
@@ -75,31 +113,29 @@ export default function ContactDrawer() {
             {status === "success" ? (
               <div className="cd-success">
                 <Drawer.Title className="cd-title">
-                  Thanks, we&rsquo;ll be in touch.
+                  {t.successTitle}
                 </Drawer.Title>
                 <Drawer.Description className="cd-lead">
-                  We&rsquo;ve got your message and will reply to your email
-                  soon.
+                  {t.successLead}
                 </Drawer.Description>
                 <button
                   type="button"
                   className="cd-submit"
                   onClick={() => setOpen(false)}
                 >
-                  Close
+                  {t.close}
                 </button>
               </div>
             ) : (
               <form className="cd-form" onSubmit={onSubmit} noValidate>
-                <Drawer.Title className="cd-title">Get in touch</Drawer.Title>
+                <Drawer.Title className="cd-title">{t.title}</Drawer.Title>
                 <Drawer.Description className="cd-lead">
-                  Questions about Nuro? Send us a note and we&rsquo;ll reply by
-                  email.
+                  {t.lead}
                 </Drawer.Description>
 
                 <div className="cd-field" data-invalid={errors.name || undefined}>
                   <label className="cd-label" htmlFor="cd-name">
-                    Name
+                    {t.nameLabel}
                   </label>
                   <input
                     id="cd-name"
@@ -107,16 +143,16 @@ export default function ContactDrawer() {
                     type="text"
                     className="cd-input"
                     autoComplete="name"
-                    placeholder="Your name"
+                    placeholder={t.namePlaceholder}
                   />
                   {errors.name && (
-                    <span className="cd-field-error">Please enter your name.</span>
+                    <span className="cd-field-error">{t.nameError}</span>
                   )}
                 </div>
 
                 <div className="cd-field" data-invalid={errors.email || undefined}>
                   <label className="cd-label" htmlFor="cd-email">
-                    Email
+                    {t.emailLabel}
                   </label>
                   <input
                     id="cd-email"
@@ -124,11 +160,11 @@ export default function ContactDrawer() {
                     type="email"
                     className="cd-input"
                     autoComplete="email"
-                    placeholder="you@example.com"
+                    placeholder={t.emailPlaceholder}
                   />
                   {errors.email && (
                     <span className="cd-field-error">
-                      Please enter a valid email.
+                      {t.emailError}
                     </span>
                   )}
                 </div>
@@ -138,18 +174,18 @@ export default function ContactDrawer() {
                   data-invalid={errors.message || undefined}
                 >
                   <label className="cd-label" htmlFor="cd-message">
-                    Message
+                    {t.messageLabel}
                   </label>
                   <textarea
                     id="cd-message"
                     name="message"
                     className="cd-textarea"
-                    placeholder="How can we help?"
+                    placeholder={t.messagePlaceholder}
                     rows={4}
                   />
                   {errors.message && (
                     <span className="cd-field-error">
-                      Please enter a message.
+                      {t.messageError}
                     </span>
                   )}
                 </div>
@@ -159,12 +195,12 @@ export default function ContactDrawer() {
                   className="cd-submit"
                   disabled={status === "submitting"}
                 >
-                  {status === "submitting" ? "Sending…" : "Send message"}
+                  {status === "submitting" ? t.submitting : t.submit}
                 </button>
 
                 {status === "error" && (
                   <p className="cd-error-banner" role="alert">
-                    Something went wrong. Please try again.
+                    {t.errorBanner}
                   </p>
                 )}
               </form>
