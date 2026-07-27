@@ -285,8 +285,32 @@ const MENU_ITEMS = [
   if (burger && menu) {
     let open = false;
     let prevOverflow = "";
+    // Page regions parked behind the open menu, so they can be un-parked later.
+    const inerted: HTMLElement[] = [];
+
+    /*
+     * The open menu covers the whole viewport, but the page behind it stayed in
+     * the tab order: after the last menu item focus moved on to the hero CTA and
+     * the FAQ, which are invisible behind the overlay. Mark every body-level
+     * region except the header (which holds both the burger and the menu) as
+     * inert while the menu is open, so keyboard and screen reader users stay in
+     * the menu they just opened.
+     */
+    const setPageInert = (on: boolean) => {
+      if (on) {
+        for (const el of Array.from(document.body.children)) {
+          if (el.contains(menu) || el.contains(burger)) continue;
+          if (el.hasAttribute("inert")) continue;
+          el.setAttribute("inert", "");
+          inerted.push(el as HTMLElement);
+        }
+      } else {
+        for (const el of inerted.splice(0)) el.removeAttribute("inert");
+      }
+    };
 
     const setOpen = (next: boolean) => {
+      const focusWasInMenu = menu.contains(document.activeElement);
       open = next;
       burger.setAttribute("aria-expanded", String(open));
       burger.setAttribute(
@@ -306,6 +330,13 @@ const MENU_ITEMS = [
         menu.setAttribute("hidden", "");
         document.body.style.overflow = prevOverflow;
       }
+      setPageInert(open);
+      /*
+       * Closing used to drop focus on <body>, so a keyboard user lost their place
+       * and had to tab from the top of the page again. Hand focus back to the
+       * button that opened the menu.
+       */
+      if (!open && focusWasInMenu) burger.focus();
     };
 
     burger.addEventListener("click", () => setOpen(!open));
