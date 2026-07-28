@@ -1,0 +1,394 @@
+---
+/**
+ * FAQ hub, locale-aware (English at /faq, Swedish at /sv/faq; locale read from
+ * the URL). Rendered by both src/pages/faq.astro and src/pages/sv/faq.astro so
+ * there is one source of truth.
+ *
+ * Sibling of the glossary, and deliberately a different job: the glossary
+ * answers "what does this word mean", this page answers "what am I entitled to
+ * and what do I do next". Every answer here is a compressed version of a claim
+ * already made and sourced in the linked post, so the post stays the place
+ * where the primary sources live. Nothing is asserted here that is not
+ * established there.
+ *
+ * Styling is intentionally borrowed from glossary.module.css rather than forked:
+ * both pages are the same shape (grouped list of entries, each with a heading, a
+ * body, and a link into the knowledge base), so they should not drift apart.
+ *
+ * Emits FAQPage + BreadcrumbList so answer engines can lift the answers whole.
+ */
+import Layout from "@/layouts/Layout.astro";
+import Nav from "@/components/nav/Nav.astro";
+import Footer from "@/components/footer/Footer.astro";
+import Reveal from "@/components/motion/Reveal.astro";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
+import styles from "@/components/glossary/glossary.module.css";
+import { getLang } from "@/i18n/ui";
+
+const lang = getLang(Astro.url);
+const SITE_URL = "https://nuroai.dev";
+const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
+const faqUrl = `${SITE_URL}${lang === "sv" ? "/sv/faq" : "/faq"}`;
+
+const chrome = {
+  en: {
+    title: "FAQ: your child's right to support in Swedish school",
+    description:
+      "Straight answers to the questions parents and school staff actually ask about support for neurodivergent students in Sweden: support without a diagnosis, extra anpassningar versus särskilt stöd, appealing a decision, elevassistent, skolskjuts, fritids, gymnasiet, and what changes in 2028.",
+    eyebrow: "FAQ",
+    heading: "Questions parents and schools actually ask",
+    intro:
+      "Short answers to the questions that come up when a student needs support, with a link to the fuller explanation and the primary sources behind each one. If the answer you need is not here, the glossary explains the vocabulary and the blog covers each question in depth.",
+    readMore: "Read the full answer",
+    groups: {
+      rights: "What a student is entitled to",
+      refusal: "When the school says no",
+      everyday: "Everyday school life",
+      changes: "Assessment, and what changes in 2028",
+    },
+  },
+  sv: {
+    title: "Vanliga frågor: ditt barns rätt till stöd i skolan",
+    description:
+      "Raka svar på frågorna föräldrar och skolpersonal faktiskt ställer om stöd till neurodivergenta elever: stöd utan diagnos, extra anpassningar mot särskilt stöd, att överklaga ett beslut, elevassistent, skolskjuts, fritids, gymnasiet och vad som ändras 2028.",
+    eyebrow: "Vanliga frågor",
+    heading: "Frågorna föräldrar och skolor faktiskt ställer",
+    intro:
+      "Korta svar på frågorna som dyker upp när en elev behöver stöd, med länk till den fylligare förklaringen och källorna bakom varje svar. Hittar du inte svaret här förklarar ordlistan orden, och bloggen går igenom varje fråga på djupet.",
+    readMore: "Läs hela svaret",
+    groups: {
+      rights: "Vad eleven har rätt till",
+      refusal: "När skolan säger nej",
+      everyday: "Skolvardagen",
+      changes: "Utredning, och vad som ändras 2028",
+    },
+  },
+}[lang];
+
+type Group = "rights" | "refusal" | "everyday" | "changes";
+
+type Faq = {
+  id: string;
+  group: Group;
+  slug: string;
+  q: { en: string; sv: string };
+  a: { en: string; sv: string };
+};
+
+const FAQS: Faq[] = [
+  {
+    id: "support-without-diagnosis",
+    group: "rights",
+    slug: "support-without-a-diagnosis-school",
+    q: {
+      en: "Can my child get support without a diagnosis?",
+      sv: "Kan mitt barn få stöd utan diagnos?",
+    },
+    a: {
+      en: "Yes. Support in Swedish school is based on need, not on a diagnosis. A school cannot make support wait for a completed neuropsychiatric assessment, which matters because those waiting lists can run for months or years.",
+      sv: "Ja. Stöd i svensk skola utgår från behov, inte från diagnos. Skolan kan inte låta stödet vänta på en avslutad neuropsykiatrisk utredning, vilket spelar roll eftersom de köerna kan vara månader eller år långa.",
+    },
+  },
+  {
+    id: "extra-vs-sarskilt",
+    group: "rights",
+    slug: "what-skollagen-requires-extra-anpassningar-sarskilt-stod",
+    q: {
+      en: "What is the difference between extra anpassningar and särskilt stöd?",
+      sv: "Vad är skillnaden mellan extra anpassningar och särskilt stöd?",
+    },
+    a: {
+      en: "Extra anpassningar are smaller adjustments inside ordinary teaching, such as a checklist, more time, or instructions broken into steps. Särskilt stöd is more extensive, follows an investigation, requires a formal decision by the rektor, and is written down in an åtgärdsprogram.",
+      sv: "Extra anpassningar är mindre anpassningar inom den ordinarie undervisningen, till exempel en checklista, mer tid eller instruktioner uppdelade i steg. Särskilt stöd är mer omfattande, följer på en utredning, kräver ett formellt beslut av rektor och skrivs ner i ett åtgärdsprogram.",
+    },
+  },
+  {
+    id: "atgardsprogram-contents",
+    group: "rights",
+    slug: "what-an-atgardsprogram-must-contain",
+    q: {
+      en: "What must an åtgärdsprogram actually contain?",
+      sv: "Vad måste ett åtgärdsprogram faktiskt innehålla?",
+    },
+    a: {
+      en: "It has to state what the student's needs are, what the school will do about them, who is responsible, and when it will be followed up and evaluated. A plan built on vague goals about the student trying harder is not adapted support.",
+      sv: "Det ska ange vilka behov eleven har, vad skolan ska göra åt dem, vem som är ansvarig, och när det ska följas upp och utvärderas. En plan byggd på vaga mål om att eleven ska anstränga sig mer är inte anpassat stöd.",
+    },
+  },
+  {
+    id: "student-voice",
+    group: "rights",
+    slug: "does-a-student-get-a-say-in-their-own-support",
+    q: {
+      en: "Does the student get a say in their own support?",
+      sv: "Får eleven vara med och tycka till om sitt eget stöd?",
+    },
+    a: {
+      en: "Yes. Skollagen says the child's own view shall as far as possible be established, and that the student is to be given the opportunity to take part when an åtgärdsprogram is drawn up. Taking part is not the same as deciding, though: the school still chooses the measure.",
+      sv: "Ja. Skollagen säger att barnets inställning så långt det är möjligt ska klarläggas, och att eleven ska ges möjlighet att delta när ett åtgärdsprogram utarbetas. Att delta är dock inte samma sak som att bestämma: skolan väljer fortfarande åtgärden.",
+    },
+  },
+  {
+    id: "changing-schools",
+    group: "rights",
+    slug: "support-follows-student-changing-schools",
+    q: {
+      en: "Does support follow my child to a new school?",
+      sv: "Följer stödet med mitt barn till en ny skola?",
+    },
+    a: {
+      en: "The school a student leaves has a legal duty to hand over the information the receiving school needs for the move to work, including which support the student had. The new school still makes its own decisions, so the handover is worth following up on rather than assuming.",
+      sv: "Skolan eleven lämnar har en skyldighet att lämna över den information den mottagande skolan behöver för att övergången ska fungera, inklusive vilket stöd eleven haft. Den nya skolan fattar ändå egna beslut, så överlämningen är värd att följa upp i stället för att förutsätta.",
+    },
+  },
+  {
+    id: "gymnasium",
+    group: "rights",
+    slug: "npf-support-rights-gymnasium",
+    q: {
+      en: "Does the right to support continue in gymnasiet?",
+      sv: "Fortsätter rätten till stöd i gymnasiet?",
+    },
+    a: {
+      en: "The duty to give support applies in upper secondary school too, but the specific arrangements from grundskolan do not carry across automatically. The transition is one of the points where support most often quietly disappears, so it is worth raising before the term starts.",
+      sv: "Skyldigheten att ge stöd gäller även i gymnasiet, men det konkreta upplägget från grundskolan följer inte med automatiskt. Övergången är en av de punkter där stödet oftast tyst försvinner, så den är värd att ta upp före terminsstart.",
+    },
+  },
+  {
+    id: "fritids",
+    group: "rights",
+    slug: "support-in-fritidshem-whole-school-day",
+    q: {
+      en: "Does the right to support apply at fritids?",
+      sv: "Gäller rätten till stöd på fritids?",
+    },
+    a: {
+      en: "Yes. Fritidshem is part of the student's education rather than a separate service that begins when teaching ends, so the right to extra anpassningar and särskilt stöd covers the afternoon as well.",
+      sv: "Ja. Fritidshemmet är en del av elevens utbildning och inte en separat verksamhet som börjar när undervisningen slutar, så rätten till extra anpassningar och särskilt stöd gäller även eftermiddagen.",
+    },
+  },
+  {
+    id: "appeal",
+    group: "refusal",
+    slug: "how-to-appeal-a-sarskilt-stod-decision",
+    q: {
+      en: "The school decided my child does not need särskilt stöd. Can I appeal?",
+      sv: "Skolan beslutade att mitt barn inte behöver särskilt stöd. Kan jag överklaga?",
+    },
+    a: {
+      en: "Yes. A decision to draw up an åtgärdsprogram and a decision that one is not needed can both be appealed to Skolväsendets överklagandenämnd, a court-like body that reviews school support decisions.",
+      sv: "Ja. Både ett beslut om att upprätta ett åtgärdsprogram och ett beslut om att inte göra det kan överklagas till Skolväsendets överklagandenämnd, ett domstolsliknande organ som prövar skolans stödbeslut.",
+    },
+  },
+  {
+    id: "skolinspektionen",
+    group: "refusal",
+    slug: "how-to-report-a-school-to-skolinspektionen",
+    q: {
+      en: "How do I report a school that is not giving support?",
+      sv: "Hur anmäler jag en skola som inte ger stöd?",
+    },
+    a: {
+      en: "Anyone can report a school to Skolinspektionen. There is an order the authorities recommend following first, starting with the school and then the huvudman, and going through it in order makes the report itself stronger.",
+      sv: "Vem som helst kan anmäla en skola till Skolinspektionen. Det finns en ordning myndigheterna rekommenderar att gå igenom först, med skolan och sedan huvudmannen, och att följa den gör anmälan starkare.",
+    },
+  },
+  {
+    id: "discrimination",
+    group: "refusal",
+    slug: "failing-to-support-npf-student-can-be-discrimination",
+    q: {
+      en: "Can failing to support my child count as discrimination?",
+      sv: "Kan utebliven anpassning räknas som diskriminering?",
+    },
+    a: {
+      en: "It can. When a school does not give a student with a disability the reasonable adjustments they need to access their education, that can be unlawful discrimination under Diskrimineringslagen, in the specific form called bristande tillgänglighet, and not only a failure under Skollagen.",
+      sv: "Det kan det. När en skola inte ger en elev med funktionsnedsättning de skäliga anpassningar som behövs för att komma åt utbildningen kan det vara olaglig diskriminering enligt diskrimineringslagen, i den form som kallas bristande tillgänglighet, och inte bara ett brott mot skollagen.",
+    },
+  },
+  {
+    id: "elevassistent",
+    group: "refusal",
+    slug: "does-my-child-have-a-right-to-an-elevassistent",
+    q: {
+      en: "Does my child have a right to an elevassistent?",
+      sv: "Har mitt barn rätt till en elevassistent?",
+    },
+    a: {
+      en: "A student has a right to have their need for support met, but not a right to one specific measure, and that includes an elevassistent. If an investigation shows the student needs särskilt stöd the school must provide it, while the school decides what form it takes.",
+      sv: "Eleven har rätt att få sitt behov av stöd tillgodosett, men inte rätt till en viss åtgärd, och det gäller även elevassistent. Om en utredning visar att eleven behöver särskilt stöd måste skolan ge det, medan skolan avgör vilken form det tar.",
+    },
+  },
+  {
+    id: "skolskjuts",
+    group: "refusal",
+    slug: "does-my-child-have-a-right-to-skolskjuts",
+    q: {
+      en: "Can my child get skolskjuts because of a funktionsnedsättning?",
+      sv: "Kan mitt barn få skolskjuts på grund av en funktionsnedsättning?",
+    },
+    a: {
+      en: "Distance is only one of the grounds. Skolverket lists the student's funktionsnedsättning as an independent ground for free school transport, alongside the length of the journey, traffic conditions, and other special circumstances.",
+      sv: "Avståndet är bara en av grunderna. Skolverket räknar upp elevens funktionsnedsättning som en egen grund för kostnadsfri skolskjuts, vid sidan av färdvägens längd, trafikförhållandena och andra särskilda omständigheter.",
+    },
+  },
+  {
+    id: "digital-tools",
+    group: "everyday",
+    slug: "digital-learning-tools-schools-must-provide-free",
+    q: {
+      en: "Do we have to pay for the digital tools our child needs?",
+      sv: "Måste vi betala för de digitala verktyg vårt barn behöver?",
+    },
+    a: {
+      en: "No. The tools teaching requires, including assistive ones like text-to-speech, are part of the education the school provides, and education in compulsory school is free of charge for families.",
+      sv: "Nej. De verktyg undervisningen kräver, inklusive hjälpmedel som talsyntes, är en del av den utbildning skolan tillhandahåller, och utbildningen i grundskolan är avgiftsfri för familjerna.",
+    },
+  },
+  {
+    id: "mobile-free",
+    group: "everyday",
+    slug: "mobile-free-school-2026-assistive-phone-use",
+    q: {
+      en: "Schools are mobile-free from 1 August 2026. What if the phone is my child's support tool?",
+      sv: "Skolan blir mobilfri 1 augusti 2026. Hur blir det om mobilen är mitt barns stödverktyg?",
+    },
+    a: {
+      en: "Phones are collected at the start of the school day in compulsory school and fritidshem, but use within a student's extra anpassningar or särskilt stöd is named in the rule itself. The practical move is to get the function written down as an adaptation before term starts.",
+      sv: "Mobilerna samlas in vid skoldagens början i grundskolan och fritidshemmet, men användning inom elevens extra anpassningar eller särskilda stöd nämns i själva regeln. Det praktiska draget är att få funktionen nedskriven som en anpassning före terminsstart.",
+    },
+  },
+  {
+    id: "utvecklingssamtal",
+    group: "everyday",
+    slug: "how-to-prepare-for-your-childs-utvecklingssamtal",
+    q: {
+      en: "How do I prepare for my child's utvecklingssamtal?",
+      sv: "Hur förbereder jag mig inför mitt barns utvecklingssamtal?",
+    },
+    a: {
+      en: "Treat it as a working meeting about what the school will do next, not a report card read aloud. Bringing specific situations and dates, and agreeing on what happens before the next meeting, is what turns the conversation into support.",
+      sv: "Se det som ett arbetsmöte om vad skolan ska göra härnäst, inte ett betyg som läses upp. Att ta med konkreta situationer och datum, och komma överens om vad som ska hända före nästa möte, är det som gör samtalet till stöd.",
+    },
+  },
+  {
+    id: "undervisningsgrupp",
+    group: "everyday",
+    slug: "what-is-sarskild-undervisningsgrupp",
+    q: {
+      en: "What is a särskild undervisningsgrupp?",
+      sv: "Vad är en särskild undervisningsgrupp?",
+    },
+    a: {
+      en: "It is a form of särskilt stöd where a student is taught in a group other than the one they normally belong to. It is one of the most intrusive measures available, so it requires a formal decision and should follow an investigation rather than a hunch.",
+      sv: "Det är en form av särskilt stöd där eleven undervisas i en annan grupp än den hen normalt tillhör. Det är en av de mest ingripande åtgärderna som finns, så den kräver ett formellt beslut och ska följa på en utredning, inte på en magkänsla.",
+    },
+  },
+  {
+    id: "absence",
+    group: "everyday",
+    slug: "school-duty-to-investigate-absence",
+    q: {
+      en: "My child is refusing school. What is the school required to do?",
+      sv: "Mitt barn vägrar gå till skolan. Vad är skolan skyldig att göra?",
+    },
+    a: {
+      en: "The school cannot wait and hope. Swedish law requires the rektor to make sure that repeated or extended absence is investigated promptly, because absence is usually the end of a problem rather than the start of one.",
+      sv: "Skolan kan inte vänta och hoppas. Lagen kräver att rektor ser till att upprepad eller längre frånvaro utreds skyndsamt, eftersom frånvaro oftast är slutet på ett problem snarare än början.",
+    },
+  },
+  {
+    id: "assessment-wait",
+    group: "changes",
+    slug: "neuropsychiatric-assessment-waiting-times",
+    q: {
+      en: "We are waiting for an NPF assessment. Does school support have to wait too?",
+      sv: "Vi väntar på en NPF-utredning. Måste skolans stöd vänta också?",
+    },
+    a: {
+      en: "No, and this is the most common misunderstanding of the two systems. The assessment queue sits in healthcare, while the duty to give support sits with the school and is triggered by need, so the school's obligation runs during the wait.",
+      sv: "Nej, och det är den vanligaste sammanblandningen av de två systemen. Utredningskön ligger i vården, medan skyldigheten att ge stöd ligger hos skolan och utlöses av behov, så skolans ansvar löper under väntetiden.",
+    },
+  },
+  {
+    id: "reform-2028",
+    group: "changes",
+    slug: "standardized-tests-replace-early-support-guarantee",
+    q: {
+      en: "What changes when the new support rules take effect in 2028?",
+      sv: "Vad ändras när de nya stödreglerna träder i kraft 2028?",
+    },
+    a: {
+      en: "The Riksdag decided on 3 June 2026 that from 1 July 2028 the early-support guarantee and the extra anpassningar regulation are replaced by standardized testing early in the autumn term and earlier remedial teaching. Until then the current rules apply unchanged.",
+      sv: "Riksdagen beslutade den 3 juni 2026 att garantin för tidiga stödinsatser och regleringen om extra anpassningar från den 1 juli 2028 ersätts av standardiserade tester tidigt på höstterminen och tidigare stödundervisning. Fram till dess gäller nuvarande regler oförändrat.",
+    },
+  },
+];
+
+const groupOrder: Group[] = ["rights", "refusal", "everyday", "changes"];
+const faqsIn = (g: Group) => FAQS.filter((f) => f.group === g);
+
+/** FAQPage for answer engines. Answers are plain text, matching what renders. */
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${faqUrl}#faq`,
+  inLanguage: lang === "sv" ? "sv-SE" : "en",
+  name: chrome.heading,
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q[lang],
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a[lang],
+      url: `${SITE_URL}${blogBase}/${f.slug}`,
+    },
+  })),
+};
+---
+
+<Layout
+  title={chrome.title}
+  description={chrome.description}
+  ogImage={`https://nuroai.dev/og/pages/${lang === "sv" ? "faq-sv" : "faq"}.png`}
+  ogImageAlt={chrome.heading}
+>
+  <BreadcrumbSchema name={chrome.eyebrow} pageType="CollectionPage" />
+  <Nav />
+  <main id="main-content" tabindex="-1">
+    <section class={styles.section}>
+      <div class={styles.container}>
+        <Reveal as="span" eager class={styles.eyebrow}>{chrome.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+          {chrome.heading}
+        </Reveal>
+        <Reveal as="p" eager delay={0.1} class={styles.intro}>
+          {chrome.intro}
+        </Reveal>
+
+        {
+          groupOrder.map((g) => (
+            <>
+              <Reveal as="h2" class={styles.groupHead}>
+                {chrome.groups[g]}
+              </Reveal>
+              <div class={styles.list}>
+                {faqsIn(g).map((f) => (
+                  <div class={styles.item} id={f.id}>
+                    <h3 class={styles.term}>{f.q[lang]}</h3>
+                    <p class={styles.def}>{f.a[lang]}</p>
+                    <a class={styles.readMore} href={`${blogBase}/${f.slug}`}>
+                      {chrome.readMore} →
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</Layout>
