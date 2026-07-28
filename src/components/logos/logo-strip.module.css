@@ -31,6 +31,24 @@
   opacity: 1;
 }
 
+/* SSE Business Lab has no published logo file and sets its own brand as text,
+   so it is a typographic mark here. Tuned to sit at the same optical weight as
+   the image logos beside it, and it takes the same calm opacity treatment. */
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: opacity 0.2s var(--ease);
+}
+
+.wordmark:hover {
+  opacity: 1;
+}
+
 @media (max-width: 920px) {
   .section {
     padding: 40px 0;
@@ -41,10 +59,14 @@
     gap: 28px 36px;
   }
 
-  /* Scale logos down a touch on phones so all three fit comfortably. */
+  /* Scale logos down a touch on phones so all four fit comfortably. */
   .logo {
     height: auto !important;
     max-height: 34px;
     max-width: 42vw;
   }
+
+    .wordmark {
+      font-size: 16px;
+    }
 }
