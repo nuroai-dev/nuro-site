@@ -43,6 +43,7 @@ The site is bilingual: English at the root and Swedish under /sv (for example ht
 - [Team](https://nuroai.dev/team): the people building Nuro.
 - [Press](https://nuroai.dev/press): news and coverage.
 - [Career](https://nuroai.dev/career): join the team.
+- [FAQ](https://nuroai.dev/faq): direct answers to the twenty questions families and schools ask most about Swedish school support, grouped into rights and the law, everyday school life, school refusal, and what is changing in 2026. Each answer cites the rule it rests on and links to a fuller explainer. Swedish: https://nuroai.dev/sv/faq
 - [Blog](https://nuroai.dev/blog): notes on neurodiversity in education, the research, the law, and what helps.
 - [Topics](https://nuroai.dev/blog/tags): every subject the blog covers, each with its own hub page. Swedish: https://nuroai.dev/sv/blog/tags
 - [Glossary](https://nuroai.dev/glossary): plain-language definitions of the Swedish school-support system (ledning och stimulans, extra anpassningar, särskilt stöd, åtgärdsprogram, elevhälsa, NPF, tilläggsbelopp, and more), each linking to a fuller explainer. Swedish: https://nuroai.dev/sv/glossary
