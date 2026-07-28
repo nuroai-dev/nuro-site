@@ -37,6 +37,7 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/about",
   "/team",
   "/press",
+  "/faq",
   "/career",
   "/privacy",
   "/terms",
