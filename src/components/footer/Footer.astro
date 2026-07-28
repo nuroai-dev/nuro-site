@@ -245,5 +245,5 @@ const COLUMNS: Col[] = [
   {/* Vaul contact drawer — opens when the "Contact" link (data-contact-trigger)
       is clicked. The island renders nothing inline (Vaul portals on open), so
       it hydrates on idle rather than on visibility (no box to observe). */}
-  <ContactDrawer client:load lang={lang} />
+  <ContactDrawer client:idle lang={lang} />
 </footer>
