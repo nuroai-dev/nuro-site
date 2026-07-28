@@ -24,11 +24,13 @@ export const ROLE_OPTIONS = [
   "Parent or guardian",
   "Student",
   "Teacher or school staff",
+  "Principal or school leader",
+  "Municipality or school operator",
 ] as const;
 
 export const AGES_LABEL = "What age are your students/children?";
 export const AGES_HELPER =
-  "Select all that apply, pick multiple if you have more than one child.";
+  "Select all that apply.";
 export const AGE_OPTIONS = [
   "6–9 years (F–3)",
   "10–12 years (4–6)",
@@ -91,9 +93,15 @@ export function getCopy(lang: Lang) {
       emailLabel: "E-post *",
       emailPlaceholder: "du@exempel.se",
       roleLabel: "Jag är... *",
-      roleOptions: ["Förälder eller vårdnadshavare", "Elev", "Lärare eller skolpersonal"],
+      roleOptions: [
+        "Förälder eller vårdnadshavare",
+        "Elev",
+        "Lärare eller skolpersonal",
+        "Rektor eller skolledare",
+        "Huvudman eller kommun",
+      ],
       agesLabel: "Hur gamla är dina elever/barn?",
-      agesHelper: "Välj alla som stämmer, kryssa flera om du har mer än ett barn.",
+      agesHelper: "Välj alla som stämmer.",
       ageOptions: [
         "6–9 år (F–3)",
         "10–12 år (4–6)",
