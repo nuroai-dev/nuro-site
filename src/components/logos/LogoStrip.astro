@@ -1,33 +1,65 @@
 ---
 /**
  * Logo strip — partner/credibility logos, shown as the section directly below
- * the hero. The three logos sit space-evenly across the container on the cream
+ * the hero. The marks sit space-evenly across the container on the cream
  * surface, matching the other light sections.
+ *
+ * Most marks are images, but SSE Business Lab publishes no standalone logo
+ * lockup: on its own sites the brand is set as plain text, and the only image
+ * mark in that family is the Stockholm School of Economics crest, which would
+ * imply the school itself endorses Nuro rather than that Nuro is in its
+ * incubator. So it is rendered as a typographic wordmark in the site's own
+ * display face, sized to the same optical weight as the image marks. If SSE
+ * Business Lab supplies a portfolio logo file, drop it in /logos and switch the
+ * entry to an image one; the rendering handles both.
  */
 import Reveal from "@/components/motion/Reveal.astro";
 import styles from "./logo-strip.module.css";
 
-const LOGOS = [
-  { src: "/logos/google-for-startups.png", alt: "Google for Startups", h: 30, iw: 391, ih: 57 },
-  { src: "/logos/microsoft-for-startups.png", alt: "Microsoft for Startups", h: 26, iw: 255, ih: 54 },
-  { src: "/logos/di.png", alt: "Dagens industri", h: 46, iw: 56, ih: 56 },
+type Mark =
+  | { kind: "image"; src: string; alt: string; h: number; iw: number; ih: number }
+  | { kind: "text"; label: string };
+
+const LOGOS: Mark[] = [
+  {
+    kind: "image",
+    src: "/logos/google-for-startups.png",
+    alt: "Google for Startups",
+    h: 30,
+    iw: 391,
+    ih: 57,
+  },
+  {
+    kind: "image",
+    src: "/logos/microsoft-for-startups.png",
+    alt: "Microsoft for Startups",
+    h: 26,
+    iw: 255,
+    ih: 54,
+  },
+  { kind: "text", label: "SSE Business Lab" },
+  { kind: "image", src: "/logos/di.png", alt: "Dagens industri", h: 46, iw: 56, ih: 56 },
 ];
 ---
 
 <section class={styles.section}>
   <Reveal class={styles.row}>
     {
-      LOGOS.map((logo) => (
-        <img
-          class={styles.logo}
-          src={logo.src}
-          alt={logo.alt}
-          width={logo.iw}
-          height={logo.ih}
-          style={`height:${logo.h}px`}
-          loading="lazy"
-        />
-      ))
+      LOGOS.map((logo) =>
+        logo.kind === "image" ? (
+          <img
+            class={styles.logo}
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.iw}
+            height={logo.ih}
+            style={`height:${logo.h}px`}
+            loading="lazy"
+          />
+        ) : (
+          <span class={styles.wordmark}>{logo.label}</span>
+        ),
+      )
     }
   </Reveal>
 </section>
