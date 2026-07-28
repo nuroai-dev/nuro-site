@@ -42,7 +42,7 @@ Den andra halvan förtjänar också ärlighet: för många neurodivergenta eleve
 
 ## Vad du kan göra före terminsstart
 
-Mekanismen lagen ger dig är dokumentation, och augusti är månaden att använda den.
+Mekanismen lagen ger dig är dokumentation, och augusti är månaden att använda den. Det är också månaden då skolan skriver sina egna [skolregler och den konsekvensplan som följer med dem](/sv/blog/skolregler-consequence-plan-neurodivergent-students), som börjar gälla samma dag. Rutinen håller fortfarande på att beslutas snarare än försvaras, vilket är det enklaste läget att få ett undantag inskrivet i den.
 
 1. **Namnge funktionen, inte prylen.** "Han behöver sin mobil" bjuder in till ett nej. "Hon använder talsyntes för att komma åt texter på sin årskursnivå, och den ligger i mobilen" beskriver en anpassning. Skolan kan sedan avgöra om mobilen eller en skoldator levererar den.
 2. **Få in det i de extra anpassningarna,** eller i [åtgärdsprogrammet](/sv/blog/what-an-atgardsprogram-must-contain) om eleven har särskilt stöd. Det är det som flyttar användningen från en tjänst till den ram regeln redan känner igen.

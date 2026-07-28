@@ -42,7 +42,7 @@ It is worth saying the other half honestly: for many neurodivergent students the
 
 ## What to do before the term starts
 
-The mechanism the law gives you is documentation, and August is the month to use it.
+The mechanism the law gives you is documentation, and August is the month to use it. It is also the month in which the school writes its own [skolregler and the consequence plan that comes with them](/blog/skolregler-consequence-plan-neurodivergent-students), which take effect on the same day. The routine is still being decided rather than defended, which is the easiest moment to get an exception written into it.
 
 1. **Name the function, not the device.** "He needs his phone" invites a no. "She uses text-to-speech to access texts at grade level, and it lives on the phone" describes an adaptation. The school can then decide whether the phone or a school device delivers it.
 2. **Get it written into the extra anpassningar,** or into the [åtgärdsprogram](/blog/what-an-atgardsprogram-must-contain) if the student has särskilt stöd. That is what moves the use from a favour into the frame the rule already recognises.
