@@ -54,7 +54,7 @@ De två meningarna beskriver ett system, och det är värt att se varför det fu
 
 ## Varför det här betyder mer än det låter
 
-En elev som inte kan börja misslyckas inte med en läxa. Hen samlar dagliga bevis på att hen är lat, från vuxna vars omdöme hen bryr sig om, samtidigt som hen anstränger sig mer än någon ser. Det är mekanismen som gör ett kapabelt barn till ett barn som slutar försöka, och till slut ett barn som slutar gå dit. Skolfrånvaro börjar sällan med att man ogillar skolan. Den börjar ofta med en uppgift som inte går att starta, upprepad tills eleven drar slutsatsen att felet sitter i hen.
+Samma hinder sitter i andra änden av en uppgift, där [arbete blir färdigt och aldrig inlämnat](/sv/blog/work-done-never-handed-in-gymnasiet). En elev som inte kan börja misslyckas inte med en läxa. Hen samlar dagliga bevis på att hen är lat, från vuxna vars omdöme hen bryr sig om, samtidigt som hen anstränger sig mer än någon ser. Det är mekanismen som gör ett kapabelt barn till ett barn som slutar försöka, och till slut ett barn som slutar gå dit. Skolfrånvaro börjar sällan med att man ogillar skolan. Den börjar ofta med en uppgift som inte går att starta, upprepad tills eleven drar slutsatsen att felet sitter i hen.
 
 ## Var Nuro kommer in
 
