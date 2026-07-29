@@ -72,5 +72,5 @@ Skälet till att vi bygger det står på den här sidan. Skyldigheten är inte o
 
 ## Källor
 
-- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
 - [Skolinspektionen](https://www.skolinspektionen.se/)

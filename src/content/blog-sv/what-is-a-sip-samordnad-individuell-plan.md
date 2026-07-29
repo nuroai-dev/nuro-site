@@ -51,5 +51,5 @@ Den samordning som SIP:en tvingar fram mellan insatser är samma princip som Nur
 ## Källor
 
 - [Sveriges riksdag, Socialtjänstlag (2025:400), 10 kap. 8 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/socialtjanstlag-2025400_sfs-2025-400/)
-- [Sveriges riksdag, Hälso- och sjukvårdslag (2017:30), 16 kap. 4 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/halso--och-sjukvardslag-201730_sfs-2017-30/)
+- [Sveriges riksdag, Hälso- och sjukvårdslag (2017:30), 16 kap. 4 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/halso-och-sjukvardslag-201730_sfs-2017-30/)
 - [Uppdrag Psykisk Hälsa (SKR), "SIP, samordnad individuell plan"](https://www.uppdragpsykiskhalsa.se/sip/)

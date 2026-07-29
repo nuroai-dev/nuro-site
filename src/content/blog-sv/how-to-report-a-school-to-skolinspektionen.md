@@ -53,4 +53,4 @@ Det ärliga målet är att det aldrig går så här långt. De flesta stödmissl
 ## Källor
 
 - [Skolverket, "Kontaktvägar vid brister eller missförhållanden i skolan"](https://www.skolverket.se/om-skolverket/kontakta-skolverket/kontaktvagar-vid-brister-eller-missforhallanden-i-skolan)
-- [Skolinspektionen, "För dig som elev eller vårdnadshavare"](https://www.skolinspektionen.se/rad-och-vagledning/for-dig-som-elev-eller-vardnadshavare/)
+- [Skolinspektionen, "Lämna information till Skolinspektionen och BEO"](https://www.skolinspektionen.se/om-oss/kontakta-oss/lamna-information-till-skolinspektionen/)

@@ -34,4 +34,4 @@ Det är här arbetet Nuro gör spelar roll. När en elevs profil, behoven som id
 
 - [Skolverket, "Överlämning vid skolbyte"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/overlamning-vid-skolbyte)
 - [Skollag (2010:800), 3 kap.](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
-- [Offentlighets- och sekretesslag (2009:400), 10 kap. 28 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/offentlighets--och-sekretesslag-2009400_sfs-2009-400/)
+- [Offentlighets- och sekretesslag (2009:400), 10 kap. 28 §](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/offentlighets-och-sekretesslag-2009400_sfs-2009-400/)
