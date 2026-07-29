@@ -26,7 +26,7 @@ Det är det överlämningsskyldigheten finns till för att förhindra. När den 
 
 ## Den svaga punkten är själva överlämningen
 
-Lagen är sund. Bristen, när den uppstår, är praktisk. En överlämning som lever i en lärares minne, eller i ett dokument som aldrig riktigt hinner läsas innan terminen börjar, är bara så tillförlitlig som överlämningsprocessen runt den. [Rätten till stöd finns](/sv/blog/the-right-exists-the-system-doesnt); om den överlever ett skolbyte beror på om informationen faktiskt följer med eleven.
+Lagen är sund. Bristen, när den uppstår, är praktisk. En överlämning som lever i en lärares minne, eller i ett dokument som aldrig riktigt hinner läsas innan terminen börjar, är bara så tillförlitlig som överlämningsprocessen runt den. [Rätten till stöd finns](/sv/blog/the-right-exists-the-system-doesnt); om den överlever ett skolbyte beror på om informationen faktiskt följer med eleven. Samma svaga punkt återkommer varje augusti inne i en och samma skola, när [nya lärare ärver förra årets stöd](/sv/blog/first-weeks-of-term-support-does-not-reset) eller inte gör det.
 
 Det är här arbetet Nuro gör spelar roll. När en elevs profil, behoven som identifierades från start, anpassningarna som prövades, vad som fungerade och vad som inte gjorde det, hålls som en levande dokumentation i stället för att byggas upp på nytt av varje ny lärare, slutar överlämningen vara en skör manuell händelse. Stödet som lagen säger ska följa eleven kan faktiskt följa eleven. För en förälder vars [barn inte får det stöd det behöver](/sv/blog/parent-guide-child-not-getting-support-at-school) efter ett byte är den skillnaden hela skillnaden.
 

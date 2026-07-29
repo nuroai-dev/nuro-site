@@ -38,7 +38,7 @@ Some students, particularly those with more significant disabilities, may need t
 
 The most practical starting point is a conversation with the teacher or the school health team about which tools the student is currently using or missing, and whether those could be put in place as extra anpassningar. If that conversation does not move forward, a written follow-up to the rektor creates a clear record. If a particular tool is needed and the school is not providing it, an åtgärdsprogram review is the formal route for raising it.
 
-If a school says there is no budget for a particular tool, it is worth asking whether it has contacted the municipality's Skoldatatek function. In many cases tools can be borrowed for evaluation before any purchase decision is made.
+If a school says there is no budget for a particular tool, it is worth asking whether it has contacted the municipality's Skoldatatek function. In many cases tools can be borrowed for evaluation before any purchase decision is made. A tool a student depends on is also worth writing into [the extra anpassningar](/blog/what-do-extra-anpassningar-look-like), particularly now that [phones are collected at the start of the school day](/blog/mobile-free-school-2026-assistive-phone-use).
 
 ## Where Nuro fits
 

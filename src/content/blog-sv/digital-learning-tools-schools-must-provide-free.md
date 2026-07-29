@@ -38,7 +38,7 @@ Vissa elever, särskilt de med mer omfattande funktionsnedsättningar, kan behö
 
 Den mest praktiska utgångspunkten är ett samtal med läraren eller elevhälsoteamet om vilka verktyg eleven för närvarande använder eller saknar, och om dessa kan sättas in som extra anpassningar. Om det samtalet inte leder framåt skapar en skriftlig uppföljning till rektorn ett tydligt underlag. Om ett visst verktyg behövs och skolan inte tillhandahåller det är en genomgång av åtgärdsprogrammet den formella vägen att lyfta det.
 
-Om skolan säger att det inte finns budget för ett visst verktyg är det värt att fråga om den har kontaktat kommunens Skoldatatekfunktion. I många fall kan verktyg lånas för utvärdering innan något inköpsbeslut fattas.
+Om skolan säger att det inte finns budget för ett visst verktyg är det värt att fråga om den har kontaktat kommunens Skoldatatekfunktion. I många fall kan verktyg lånas för utvärdering innan något inköpsbeslut fattas. Ett verktyg som en elev är beroende av är också värt att skriva in i [de extra anpassningarna](/sv/blog/what-do-extra-anpassningar-look-like), särskilt nu när [mobiler samlas in vid skoldagens början](/sv/blog/mobile-free-school-2026-assistive-phone-use).
 
 ## Var Nuro passar in
 

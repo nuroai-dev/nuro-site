@@ -26,7 +26,7 @@ That is what the överlämning duty is there to prevent. When the sending school
 
 ## The weak point is the handover itself
 
-The law is sound. The failure, when it happens, is practical. An överlämning that lives in one teacher's memory, or in a document that never quite gets read before term starts, is only as reliable as the handover process around it. The [right to support exists](/blog/the-right-exists-the-system-doesnt); whether it survives a change of school depends on whether the information actually moves with the student.
+The law is sound. The failure, when it happens, is practical. An överlämning that lives in one teacher's memory, or in a document that never quite gets read before term starts, is only as reliable as the handover process around it. The [right to support exists](/blog/the-right-exists-the-system-doesnt); whether it survives a change of school depends on whether the information actually moves with the student. The same weak point reappears every August inside a single school, when [new teachers inherit last year's support](/blog/first-weeks-of-term-support-does-not-reset) or fail to.
 
 This is where the work Nuro does matters. When a student's profile, the needs identified at the start, the adaptations that were tried, what worked and what did not, is held as a living record rather than reconstructed from scratch by each new teacher, the överlämning stops being a fragile manual event. The support the law says should follow the student can actually follow the student. For a parent whose [child is not getting the support they need](/blog/parent-guide-child-not-getting-support-at-school) after a move, that difference is the whole difference.
 
