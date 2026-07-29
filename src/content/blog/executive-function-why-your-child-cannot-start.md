@@ -54,7 +54,7 @@ Those two sentences describe a system, and it is worth seeing why it works. A vi
 
 ## Why this matters more than it sounds
 
-A student who cannot start is not failing at homework. They are accumulating daily evidence that they are lazy, from adults whose opinion they care about, while working harder than anyone can see. That is the mechanism by which a capable child becomes a child who stops trying, and eventually a child who stops going. School avoidance rarely begins with disliking school. It often begins with a task that will not start, repeated until the student concludes the problem is them.
+The same barrier sits at the other end of a task, where [work gets finished and never handed in](/blog/work-done-never-handed-in-gymnasiet). A student who cannot start is not failing at homework. They are accumulating daily evidence that they are lazy, from adults whose opinion they care about, while working harder than anyone can see. That is the mechanism by which a capable child becomes a child who stops trying, and eventually a child who stops going. School avoidance rarely begins with disliking school. It often begins with a task that will not start, repeated until the student concludes the problem is them.
 
 ## Where Nuro fits
 
