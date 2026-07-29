@@ -38,5 +38,5 @@ Det mesta vardagliga stödet är arbete som måste göras om för varje elev: at
 
 ## Källor
 
-- [Skolverket, "Ansöka om tilläggsbelopp"](https://www.skolverket.se/skolutveckling/leda-och-organisera-skolan/ge-extra-stod-till-elever/ansoka-om-tillaggsbelopp)
+- [Skolverket, "Ansöka om tilläggsbelopp"](https://www.skolverket.se/larande-och-trygghet/elevhalsa-och-stodinsatser/stod-och-tidiga-insatser/ansoka-om-tillaggsbelopp)
 - [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)

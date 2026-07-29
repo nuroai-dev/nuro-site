@@ -71,4 +71,4 @@ Svagheten i de flesta ansökningar är att skoldagen är ihågkommen i stället 
 ## Källor
 
 - [Skolverket, "Skolskjuts"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/skolskjuts)
-- [Skolverket, juridisk vägledning, "Skolskjuts och elevresor"](https://www.skolverket.se/regelverk/juridisk-vagledning/skolskjuts-1.157254)
+- [Skolverket, juridisk vägledning, "Skolskjuts och elevresor"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/skolskjuts)

@@ -53,4 +53,4 @@ The honest goal is that it never gets this far. Most support failures are not de
 ## Sources
 
 - [Skolverket, "Kontaktvägar vid brister eller missförhållanden i skolan"](https://www.skolverket.se/om-skolverket/kontakta-skolverket/kontaktvagar-vid-brister-eller-missforhallanden-i-skolan)
-- [Skolinspektionen, "För dig som elev eller vårdnadshavare"](https://www.skolinspektionen.se/rad-och-vagledning/for-dig-som-elev-eller-vardnadshavare/)
+- [Skolinspektionen, "Lämna information till Skolinspektionen och BEO"](https://www.skolinspektionen.se/om-oss/kontakta-oss/lamna-information-till-skolinspektionen/)

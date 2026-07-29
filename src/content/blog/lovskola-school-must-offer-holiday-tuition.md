@@ -55,4 +55,4 @@ Lovskola is one piece of the larger picture. The [right to support does not stop
 ## Sources
 
 - [Sveriges riksdag, Skollag (2010:800), 10 kap. 23 a, 23 b, 23 c, 23 d, 23 e §§](https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skollag-2010800_sfs-2010-800/)
-- [Skolverket, "Lovskola"](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/lovskola)
+- [Skolverket, "Lovskola"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/lovskola)

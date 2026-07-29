@@ -45,4 +45,4 @@ Det steget längre upp är där Nuro arbetar. När en skola kan se varje elevs b
 
 - [Skolväsendets överklagandenämnd, "Beslut som kan överklagas"](https://www.overklagandenamnden.se/hur-du-overklagar/beslut-som-kan-overklagas/)
 - [Skolväsendets överklagandenämnd, vägledande beslut om åtgärdsprogram](https://www.overklagandenamnden.se/vagledande-beslut/forskoleklassgrundskola/atgardprogram/)
-- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)
+- [Skolverket, "Extra anpassningar, särskilt stöd och åtgärdsprogram"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/extra-anpassningar-sarskilt-stod-och-atgardsprogram)

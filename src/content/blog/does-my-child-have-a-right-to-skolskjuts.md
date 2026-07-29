@@ -71,4 +71,4 @@ The weakness in most applications is that the school day is remembered rather th
 ## Sources
 
 - [Skolverket, "Skolskjuts"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/skolskjuts)
-- [Skolverket, juridisk vägledning, "Skolskjuts och elevresor"](https://www.skolverket.se/regelverk/juridisk-vagledning/skolskjuts-1.157254)
+- [Skolverket, juridisk vägledning, "Skolskjuts och elevresor"](https://www.skolverket.se/styrning-och-ansvar/regler-och-ansvar/ansvar-i-skolfragor/skolskjuts)
