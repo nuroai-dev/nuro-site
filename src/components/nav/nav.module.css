@@ -6,20 +6,35 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 50;
-  background: transparent;
   padding-block: 18px;
   transition:
-    background 0.5s var(--ease),
     padding 0.5s var(--ease),
     box-shadow 0.5s var(--ease);
 }
 
+/* The frosted glass lives on a pseudo-element, never on .nav itself: a
+   backdrop-filter turns its element into the containing block for FIXED
+   descendants, so the open mobile menu (position: fixed; inset: 0) sized
+   itself to the bar's own box once data-scrolled set in — cream background
+   gone below the bar, page showing through (Jonte, 2026-08-20). */
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2; /* under the bar content AND under the open menu (z: -1) */
+  background: transparent;
+  transition: background 0.5s var(--ease);
+}
+
 .nav[data-scrolled] {
+  padding-block: 10px;
+  box-shadow: 0 1px 0 var(--hair);
+}
+
+.nav[data-scrolled]::before {
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  padding-block: 10px;
-  box-shadow: 0 1px 0 var(--hair);
 }
 
 /* Inner row — container width per SPEC §3 (1160px / 40px / 22px mobile).
