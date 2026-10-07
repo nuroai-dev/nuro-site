@@ -40,4 +40,4 @@ Sandra undervisade i AI i ett klassrum när hon fick veta att hon har adhd. Besk
 
 Det är de eleverna det här egentligen tillhör. Svensk lag ger dem redan rätt till anpassat stöd, och [alldeles för många får det fortfarande inte](/sv/blog/the-right-exists-the-system-doesnt). En lista ändrar inte det på egen hand. Men fler i den nordiska startupvärlden känner nu till problemet vid namn, och det hjälper oss att lösa det.
 
-Hela listan finns på [thefounders50.com](https://thefounders50.com/).
+Mer om Founders 50, hur det fungerar och vilka som sitter i panelen: [thefounders50.com](https://thefounders50.com/).

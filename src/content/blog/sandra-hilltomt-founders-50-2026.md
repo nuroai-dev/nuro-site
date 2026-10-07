@@ -38,4 +38,4 @@ Sandra was teaching AI in a classroom when she found out she has ADHD. It came l
 
 Those students are who this belongs to. Swedish law already gives them a right to adapted support, and [too many still do not get it](/blog/the-right-exists-the-system-doesnt). A list does not change that by itself. It does mean more people in the Nordic startup world now know the problem by name, and that helps us fix it.
 
-You can see the whole list at [thefounders50.com](https://thefounders50.com/).
+More about Founders 50, how it works and who is on the panel: [thefounders50.com](https://thefounders50.com/).
