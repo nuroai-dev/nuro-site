@@ -24,7 +24,7 @@ You cannot apply for it. This is how the organizers describe the way in:
 
 The panel includes Anton Osika (Lovable), Sophia Bendz (Cherry Ventures), Mimi Billing (Sifted), Sofia Lindelöw (Norrsken Foundation), Isabel Keulen (SSE Ventures), Anne Lidgard (Vinnova), Lisa Ericsson (KTH Innovation), and Elsa Hyland and Kristina Kockum (Business Sweden).
 
-From there, "the fifty founders with the most nominations are revealed on August 24, opening the public vote." The public then chooses one of the fifty as Founder of the Year, revealed on the final day of Nordic Tech Week, which ran in Stockholm from 7 to 11 September.
+From there, in the organizers' words: "The fifty founders with the most nominations are revealed on August 24, opening the public vote." The public then chooses one of the fifty as Founder of the Year, revealed on the final day of Nordic Tech Week, which ran in Stockholm from 7 to 11 September.
 
 ## Someone else has to say your name
 
