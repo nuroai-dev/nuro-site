@@ -1,12 +1,9 @@
 ---
-/**
- * Press card — one external article. The whole card is a link that opens the
- * source in a new tab. Shows a cover image (or branded fallback), the outlet
- * + date, the TLDR headline, a short summary, and an external-link icon.
- */
+// Press card: the whole card links to the item, external sources in a new tab,
+// our own pages in place and in the reader's language.
 import type { PressItem } from "@/data/press";
 import styles from "./press.module.css";
-import { getLang } from "@/i18n/ui";
+import { getLang, localizePath } from "@/i18n/ui";
 
 interface Props {
   item: PressItem;
@@ -17,7 +14,11 @@ const lang = getLang(Astro.url);
 
 const title = lang === "sv" ? (item.titleSv ?? item.title) : item.title;
 const tldr = lang === "sv" ? (item.tldrSv ?? item.tldr) : item.tldr;
-const readLabel = lang === "sv" ? "Läs artikeln" : "Read article";
+const internal = item.url.startsWith("/");
+const href = internal ? localizePath(item.url, lang) : item.url;
+const readLabel = internal
+  ? lang === "sv" ? "Läs inlägget" : "Read the post"
+  : lang === "sv" ? "Läs artikeln" : "Read article";
 
 const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
   day: "numeric",
@@ -28,9 +29,9 @@ const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
 
 <a
   class={styles.card}
-  href={item.url}
-  target="_blank"
-  rel="noopener noreferrer"
+  href={href}
+  target={internal ? undefined : "_blank"}
+  rel={internal ? undefined : "noopener noreferrer"}
 >
   <div class={styles.media}>
     {
@@ -68,10 +69,15 @@ const dateLabel = new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB", {
         stroke-linejoin="round"
         aria-hidden="true"
       >
-        <path d="M15 3h6v6"></path>
-        <path d="M10 14 21 3"></path>
-        <path
-          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+        {internal ? (
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        ) : (
+          <>
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14 21 3"></path>
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          </>
+        )}
       </svg>
     </span>
   </div>

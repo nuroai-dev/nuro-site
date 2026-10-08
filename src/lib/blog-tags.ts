@@ -1,11 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 
-/**
- * Shared tag helpers for the bilingual blog topic hubs. Tags in post
- * frontmatter are inconsistent in casing and separators ("NPF" vs "npf",
- * "school absence" vs "school-absence"); `tagSlug` normalises them to one key
- * so both spellings collapse to the same tag page.
- */
+// Tag helpers for the bilingual topic hubs. Frontmatter tags vary in case and separators,
+// so `tagSlug` collapses "NPF"/"npf" and "school absence"/"school-absence" to one page.
 
 type BlogEntry = CollectionEntry<"blog"> | CollectionEntry<"blogSv">;
 
@@ -16,11 +12,8 @@ export const tagSlug = (t: string) =>
 /** Only tags used by this many posts (or more) get their own page, to avoid thin pages. */
 export const MIN_TAGGED = 2;
 
-/**
- * Display labels for slugs whose Title Case default would read wrong: acronyms,
- * and Swedish terms whose diacritics the slug cannot carry ("sarskilt-stod"
- * would otherwise render as "Sarskilt Stod").
- */
+// Labels where Title Case reads wrong: acronyms, and Swedish terms whose
+// diacritics the slug cannot carry ("sarskilt-stod" would read "Sarskilt Stod").
 const TAG_LABELS: Record<string, string> = {
   npf: "NPF",
   ai: "AI",
@@ -30,11 +23,8 @@ const TAG_LABELS: Record<string, string> = {
   elevhalsa: "Elevhälsa",
 };
 
-/**
- * Swedish display labels. Without these the Swedish hubs read "Inlägg taggade
- * Classroom", since tags are authored as English keys in both collections.
- * Keyed by slug, so a tag with no entry falls back to the English label.
- */
+// Swedish labels: tags are English keys in both collections, so without these the
+// Swedish hubs read "Inlägg taggade Classroom". Missing slugs fall back to English.
 const TAG_LABELS_SV: Record<string, string> = {
   support: "Stöd",
   "special-education": "Specialpedagogik",
@@ -63,23 +53,17 @@ const TAG_LABELS_SV: Record<string, string> = {
   teachers: "Lärare",
   gymnasium: "Gymnasiet",
   comorbidity: "Samsjuklighet",
+  news: "Nyheter",
 };
 
-/**
- * Human label for a slug: a curated override for the requested language, else
- * the English override, else Title Case of the slug.
- */
+/** Label for a slug: the language's override, else the English override, else Title Case. */
 export const tagLabel = (slug: string, lang: "en" | "sv" = "en") =>
   (lang === "sv" ? TAG_LABELS_SV[slug] : undefined) ??
   TAG_LABELS[slug] ??
   slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
-/**
- * Curated one-sentence intros for the topic hubs. Used as the page's meta
- * description, the visible lede under the H1, and the CollectionPage schema
- * description, so every hub reads distinctly instead of sharing the templated
- * "Nuro blog posts about X." A slug with no entry falls back to a generic line.
- */
+// One-sentence hub intros, used as meta description, visible lede and schema description.
+// A slug with no entry falls back to the generic line in tagIntroEn / tagIntroSv.
 const TAG_INTRO_EN: Record<string, string> = {
   sweden:
     "How Swedish schools support neurodivergent students, or fail to. The law, the research, the funding, and what actually helps in the classroom.",
@@ -124,6 +108,7 @@ const TAG_INTRO_EN: Record<string, string> = {
     "For teachers of neurodivergent students: what the law asks of you, what the documentation actually requires, and classroom practice that works within real workloads.",
   gymnasium:
     "Support for neurodivergent students at gymnasiet: the rights that carry over from grundskola, what changes at upper secondary, and how to manage the transition.",
+  news: "News from Nuro: the company, the team, and the milestones along the way.",
 };
 
 const TAG_INTRO_SV: Record<string, string> = {
@@ -170,6 +155,7 @@ const TAG_INTRO_SV: Record<string, string> = {
     "För dig som undervisar neurodivergenta elever: vad lagen kräver, vad dokumentationen faktiskt innebär och klassrumsarbete som fungerar inom en verklig arbetsbörda.",
   gymnasium:
     "Stöd för neurodivergenta elever på gymnasiet: rättigheterna som följer med från grundskolan, vad som förändras och hur övergången kan hanteras.",
+  news: "Nyheter från Nuro: bolaget, teamet och milstolparna på vägen.",
 };
 
 /** Intro line for an English topic hub: curated override, else a generic fallback. */
@@ -188,13 +174,8 @@ export interface TagGroup {
   posts: BlogEntry[];
 }
 
-/**
- * Build the qualifying tag index for a set of posts. Each post contributes once
- * per unique slug (so casing/separator variants don't double-count). Returns one
- * group per slug used by >= MIN_TAGGED posts, each group's posts sorted by
- * pubDate descending, and the groups sorted by post count descending then slug
- * ascending. Pure: pass in the collection entries, no getCollection inside.
- */
+// One group per slug used by >= MIN_TAGGED posts (each post counted once per slug),
+// posts newest first, groups by size then slug. Pure: takes entries, never fetches.
 export function buildTagIndex(
   posts: BlogEntry[],
   lang: "en" | "sv" = "en",

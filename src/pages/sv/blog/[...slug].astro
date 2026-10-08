@@ -1,6 +1,5 @@
 ---
-// Single Swedish blog post (/sv/blog/<slug>), mirroring src/pages/blog/[...slug].astro;
-// only the collection, locale, date format and back link differ.
+// Swedish twin of src/pages/blog/[...slug].astro; only collection, locale and chrome differ.
 import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
@@ -36,6 +35,11 @@ const tagSlugs = [...new Set(post.data.tags.map(tagSlug))].filter((s) =>
   qualifying.has(s),
 );
 
+const { heroImage, heroImageAlt, heroImageWidth, heroImageHeight } = post.data;
+const hero = heroImage
+  ? { src: heroImage, alt: heroImageAlt!, width: heroImageWidth!, height: heroImageHeight! }
+  : null;
+
 const url = canonicalUrl(Astro.url.pathname);
 const fmt = (d: Date) =>
   d.toLocaleDateString("sv-SE", {
@@ -55,7 +59,10 @@ const schema = {
   author: { "@type": "Organization", name: post.data.author },
   publisher: { "@id": `${SITE_URL}/#organization` },
   mainEntityOfPage: url,
-  image: `${SITE_URL}/og/blog-sv/${post.id}.png`,
+  image: [
+    `${SITE_URL}/og/blog-sv/${post.id}.png`,
+    ...(hero ? [`${SITE_URL}${hero.src}`] : []),
+  ],
 };
 
 const breadcrumb = {
@@ -85,6 +92,17 @@ const breadcrumb = {
               <a class={styles.tagChip} href={`/sv/blog/tag/${s}`}>{tagLabel(s, "sv")}</a>
             ))}
           </div>
+        )}
+        {hero && (
+          <img
+            class={`${styles.heroImage} ${hero.height > hero.width ? styles.heroPortrait : ""}`}
+            src={hero.src}
+            alt={hero.alt}
+            width={hero.width}
+            height={hero.height}
+            fetchpriority="high"
+            decoding="async"
+          />
         )}
         <article class={styles.prose}>
           <Content />

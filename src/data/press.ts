@@ -1,19 +1,5 @@
-/**
- * Press coverage — external articles news outlets write about Nuro.
- *
- * To add an item, paste an object below. Everything except `image` is
- * required. `image` is an absolute URL (the article's OG image) or a local
- * `/press/...` path; omit it and the card falls back to a branded panel.
- *
- *   {
- *     outlet: "TechCrunch",
- *     title: "Nuro raises the bar for inclusive edtech",   // TLDR headline
- *     tldr: "One-to-two sentence summary of what the piece says about Nuro.",
- *     date: "2026-06-15",                                  // ISO, sorts newest-first
- *     url: "https://techcrunch.com/...",
- *     image: "https://techcrunch.com/.../og.jpg",          // optional
- *   },
- */
+// Press coverage and recognitions; add an object to PRESS_ITEMS, `image` optional.
+// A `url` starting with "/" is one of our own pages: localised on /sv, opened in place.
 
 export type PressItem = {
   /** Publication name, e.g. "TechCrunch". */
@@ -27,14 +13,24 @@ export type PressItem = {
   tldrSv?: string;
   /** ISO date (YYYY-MM-DD); used for display and newest-first sorting. */
   date: string;
-  /** External article URL (opens in a new tab). */
+  /** External article URL (new tab), or an internal path like "/blog/<slug>". */
   url: string;
-  /** Optional cover image (absolute URL or local /press path). */
+  /** Optional cover image (absolute URL or a local path under public/). */
   image?: string;
 };
 
 /** Coverage that mentions Nuro. Newest first (the page sorts by `date`). */
 export const PRESS_ITEMS: PressItem[] = [
+  {
+    outlet: "Founders 50",
+    title: "Sandra Hilltomt named to Founders 50 2026",
+    tldr: "Nuro's founder is one of the 50 founders on the first Founders 50, a Nordic list built on peer nominations where nobody can nominate themselves.",
+    titleSv: "Sandra Hilltomt med på Founders 50 2026",
+    tldrSv: "Nuros grundare är en av de 50 grundarna på första Founders 50, en nordisk lista som bygger på nomineringar från andra, där ingen får nominera sig själv.",
+    date: "2026-08-24",
+    url: "/blog/sandra-hilltomt-founders-50-2026",
+    image: "/blog/founders-50-sandra-hilltomt.webp",
+  },
   {
     outlet: "Dagens Industri",
     title: "Nuro among the next wave of Swedish vertical-AI companies",
