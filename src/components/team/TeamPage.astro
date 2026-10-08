@@ -1,10 +1,6 @@
 ---
-/**
- * Team page content — locale-aware (English at /team, Swedish at /sv/team).
- * Rendered by both src/pages/team.astro and src/pages/sv/team.astro. Names,
- * photos and contact details are shared; headings + role titles + chrome are
- * translated.
- */
+// Team page for /team and /sv/team (src/pages/team.astro, src/pages/sv/team.astro).
+// People and contacts are shared; headings and role titles are translated in `t`.
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
 import Footer from "@/components/footer/Footer.astro";
@@ -31,6 +27,7 @@ const t = {
     rCto: "Co-Founder & CTO",
     rDesign: "Head of Design",
     rAssociate: "Founders Associate",
+    rSocial: "Social Media & Community Manager",
     rBoard: "Board Member",
     hiringPre: "We're growing.",
     hiringLink: "See open roles →",
@@ -51,6 +48,7 @@ const t = {
     rCto: "Medgrundare & CTO",
     rDesign: "Designchef",
     rAssociate: "Founders Associate",
+    rSocial: "Social Media & Community Manager",
     rBoard: "Styrelseledamot",
     hiringPre: "Vi växer.",
     hiringLink: "Se lediga roller →",
@@ -102,6 +100,7 @@ const GROUPS: { heading: string; people: Person[] }[] = [
     people: [
       { name: "Jonathan Olsen", role: t.rDesign, email: "jonathan@nuroai.dev" },
       { name: "Isabella Sällfors", role: t.rAssociate, email: "isabella@nuroai.dev" },
+      { name: "Nikita Stense", role: t.rSocial, email: "nikita@nuroai.dev" },
     ],
   },
   {
