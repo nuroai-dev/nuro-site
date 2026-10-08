@@ -1,7 +1,4 @@
-/* ============================================================
-   Blog — index (post list) and single-post prose. Cream surface,
-   same section rhythm as the rest of the site.
-   ============================================================ */
+/* Blog: index (post list) and single-post prose, same section rhythm as the rest of the site. */
 
 .section {
   position: relative;
@@ -357,6 +354,20 @@
 .tagChip:hover {
   color: var(--ink);
   border-color: var(--hair-2);
+}
+
+/* Post hero, shown whole: never cropped, since cards like an award graphic carry text. */
+.heroImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 32px 0 0;
+  border-radius: 16px;
+}
+
+/* Portrait heroes at full column width would push the text a screen down. */
+.heroPortrait {
+  max-width: 480px;
 }
 
 /* Markdown body. */
