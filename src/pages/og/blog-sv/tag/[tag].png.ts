@@ -3,15 +3,13 @@
  * counterpart of /og/blog/tag/<slug>.png.
  */
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
 import { renderOgImage } from "@/lib/og-image";
-import { buildTagIndex } from "@/lib/blog-tags";
+import { tagHubs } from "@/lib/tag-hubs";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blogSv", ({ data }) => !data.draft);
-  return buildTagIndex(posts, "sv").map((group) => ({
+  return (await tagHubs("sv")).map((group) => ({
     params: { tag: group.slug },
     props: { label: group.label },
   }));

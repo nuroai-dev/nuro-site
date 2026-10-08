@@ -4,15 +4,13 @@
  * topic hub previews with its own topic name instead of the generic og.png.
  */
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
 import { renderOgImage } from "@/lib/og-image";
-import { buildTagIndex } from "@/lib/blog-tags";
+import { tagHubs } from "@/lib/tag-hubs";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return buildTagIndex(posts).map((group) => ({
+  return (await tagHubs("en")).map((group) => ({
     params: { tag: group.slug },
     props: { label: group.label },
   }));

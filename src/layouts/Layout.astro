@@ -56,10 +56,11 @@ const OG_IMAGE_ALT =
   (LANG === "sv"
     ? "Nuro. Hjälp skolor att sluta bryta mot lagen."
     : "Nuro. Let's help schools stop breaking the law.");
-const HAS_SV = HREFLANG.sv !== null;
 const OG_LOCALE = LANG === "sv" ? "sv_SE" : "en_US";
 // Only advertise the alternate locale when this page actually exists in it.
-const OG_LOCALE_ALT = HAS_SV ? (LANG === "sv" ? "en_US" : "sv_SE") : null;
+const OG_LOCALE_ALT = HREFLANG.en && HREFLANG.sv ? (LANG === "sv" ? "en_US" : "sv_SE") : null;
+// x-default is the English page, or the Swedish one when there is no English twin.
+const X_DEFAULT = HREFLANG.en ?? HREFLANG.sv;
 
 // Site-wide JSON-LD (Organization + WebSite + SoftwareApplication) so search and
 // answer engines resolve Nuro as an entity.
@@ -134,9 +135,9 @@ const STRUCTURED_DATA = {
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={CANONICAL} />
-    <link rel="alternate" hreflang="en" href={HREFLANG.en} />
+    {HREFLANG.en && <link rel="alternate" hreflang="en" href={HREFLANG.en} />}
     {HREFLANG.sv && <link rel="alternate" hreflang="sv" href={HREFLANG.sv} />}
-    <link rel="alternate" hreflang="x-default" href={HREFLANG.en} />
+    {X_DEFAULT && <link rel="alternate" hreflang="x-default" href={X_DEFAULT} />}
     <link rel="alternate" type="application/rss+xml" title={LANG === "sv" ? "Nuro Blogg" : "Nuro Blog"} href={LANG === "sv" ? `${SITE_URL}/sv/rss.xml` : `${SITE_URL}/rss.xml`} />
 
     {/* Preload the above-the-fold webfonts so the hero never swaps from the

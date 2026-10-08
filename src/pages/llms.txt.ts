@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { buildTagIndex, tagIntroEn } from "@/lib/blog-tags";
+import { tagIntroEn } from "@/lib/blog-tags";
+import { TAG_HUB_SLUGS, tagHubs } from "@/lib/tag-hubs";
 
 /**
  * Dynamic llms.txt. A curated site summary, then two auto-generated sections:
@@ -60,13 +61,12 @@ export const GET: APIRoute = async () => {
   // post can never emit a Swedish URL that 404s.
   const postsSv = await getCollection("blogSv", ({ data }) => !data.draft);
   const svIds = new Set(postsSv.map((p) => p.id));
-  const svTagSlugs = new Set(buildTagIndex(postsSv).map((t) => t.slug));
   // Thematic map first: same index the hub pages are built from, so labels,
   // membership and counts always agree with what is actually published.
-  const topicLines = buildTagIndex(posts).map(
+  const topicLines = (await tagHubs("en")).map(
     (t) =>
       `- [${t.label}](${SITE}/blog/tag/${t.slug}) (${t.posts.length} posts): ${tagIntroEn(t.slug, t.label)}${
-        svTagSlugs.has(t.slug) ? ` Swedish: ${SITE}/sv/blog/tag/${t.slug}` : ""
+        TAG_HUB_SLUGS.sv.has(t.slug) ? ` Swedish: ${SITE}/sv/blog/tag/${t.slug}` : ""
       }`,
   );
   const postLines = posts.map(

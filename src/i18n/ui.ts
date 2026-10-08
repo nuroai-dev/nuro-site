@@ -1,5 +1,7 @@
 // i18n helpers. English lives at the root (/), Swedish under /sv/.
 // (astro.config.mjs: locales en/sv, defaultLocale en, prefixDefaultLocale false.)
+import { TAG_HUB_SLUGS } from "@/lib/tag-hubs";
+
 export type Lang = "en" | "sv";
 
 export const SITE_URL = "https://nuroai.dev";
@@ -34,7 +36,7 @@ function withLang(en: string, lang: Lang): string {
 }
 
 // English static pages that already have a Swedish (/sv) translation. Add a path when its /sv
-// version ships; blog posts and tag hubs match by shape below.
+// version ships; blog posts match by shape below, tag hubs by lib/tag-hubs.ts.
 export const TRANSLATED_PATHS = new Set<string>([
   "/",
   "/about",
@@ -54,22 +56,24 @@ function isBlogPost(enPath: string): boolean {
   return /^\/blog\/[^/]+$/.test(enPath);
 }
 
-// Tag hubs are mirrored by sv/blog/tag/[tag].astro, so /blog/tag/<slug> always has an /sv twin.
-function isTagPage(enPath: string): boolean {
-  return /^\/blog\/tag\/[^/]+$/.test(enPath);
+/** Does this page exist in the given language? A tag hub only where that language's posts
+ *  qualify it (lib/tag-hubs.ts); every other page always exists in English. */
+function existsIn(enPath: string, lang: Lang): boolean {
+  const tag = /^\/blog\/tag\/([^/]+)$/.exec(enPath);
+  if (tag) return TAG_HUB_SLUGS[lang].has(tag[1]);
+  return lang === "en" || TRANSLATED_PATHS.has(enPath) || isBlogPost(enPath);
 }
 
 /** Does this page have a Swedish version yet? */
 export function hasSv(pathname: string): boolean {
-  const en = toEnglishPath(pathname);
-  return TRANSLATED_PATHS.has(en) || isBlogPost(en) || isTagPage(en);
+  return existsIn(toEnglishPath(pathname), "sv");
 }
 
-/** The same page in the given language (used by the language switcher). */
+/** The same page in the given language (used by the language switcher); that language's
+ *  home when the page has no twin there. */
 export function switchLangPath(pathname: string, lang: Lang): string {
-  return lang === "en" || hasSv(pathname)
-    ? withLang(toEnglishPath(pathname), lang)
-    : "/sv/";
+  const en = toEnglishPath(pathname);
+  return withLang(existsIn(en, lang) ? en : "/", lang);
 }
 
 /** This page's own path in the one form canonical, hreflang and the sitemap share:
@@ -82,11 +86,12 @@ export function canonicalUrl(pathname: string): string {
   return SITE_URL + canonicalPath(pathname);
 }
 
-/** hreflang targets for a page; sv is null when the page has no Swedish twin. */
-export function hreflangUrls(pathname: string): { en: string; sv: string | null } {
+/** hreflang targets for a page; a language is null when the page does not exist in it. */
+export function hreflangUrls(pathname: string): { en: string | null; sv: string | null } {
+  const en = toEnglishPath(pathname);
   return {
-    en: canonicalUrl(switchLangPath(pathname, "en")),
-    sv: hasSv(pathname) ? canonicalUrl(switchLangPath(pathname, "sv")) : null,
+    en: existsIn(en, "en") ? canonicalUrl(withLang(en, "en")) : null,
+    sv: existsIn(en, "sv") ? canonicalUrl(withLang(en, "sv")) : null,
   };
 }
 
