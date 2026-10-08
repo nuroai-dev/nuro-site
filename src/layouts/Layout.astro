@@ -1,34 +1,20 @@
 ---
-/**
- * Root layout — the <html> shell (SPEC §4 Meta, ported from the Next
- * layout.tsx). Self-hosts the three font families via @fontsource (IBM Plex
- * Sans for display, Inter for body, JetBrains Mono for eyebrows/meta), imports
- * the global stylesheet once, sets metadata/OG, and loads the motion runtime.
- *
- * The tiny inline head script marks JS as available before paint so the reveal
- * motion can gate its hidden initial state on [data-js]; no-JS users never see
- * the hidden state and content stays sharp and visible.
- */
-// Variable fonts — one woff2 per family per subset (weight axis only) instead
-// of 11 static weight files × 7 subsets. The browser fetches just the latin /
-// latin-ext subsets it needs at runtime via unicode-range.
+// Root layout: the <html> shell (SPEC §4 Meta) with self-hosted fonts, global CSS, metadata/OG
+// and the motion runtime. Variable fonts: one woff2 per family per subset, picked via unicode-range.
 import "@fontsource-variable/ibm-plex-sans/wght.css";
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/jetbrains-mono/wght.css";
 import "@/styles/globals.css";
 
-// Hashed URLs for the two above-the-fold families' latin weight files, so we
-// can <link rel=preload> them — discovered with the HTML instead of only after
-// the CSS parses. Kills the fallback→webfont swap flash on the hero. (Same
-// source files the @font-face rules reference, so Vite dedupes to one asset.)
+// Above-the-fold latin font files, preloaded so the hero never swaps from the fallback font.
+// Same files the @font-face rules reference, so Vite dedupes them to one asset.
 import plexLatinHref from
   "@fontsource-variable/ibm-plex-sans/files/ibm-plex-sans-latin-wght-normal.woff2?url";
 import interLatinHref from
   "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 
-import { getLang, switchLangPath, hasSv } from "@/i18n/ui";
+import { getLang, canonicalUrl, hreflangUrls, SITE_URL } from "@/i18n/ui";
 
-const SITE_URL = "https://nuroai.dev";
 const DEFAULT_TITLE = "Nuro: Inclusive Education for Swedish Schools";
 const DEFAULT_DESCRIPTION =
   "Nuro helps Swedish schools support neurodiverse students with ADHD, Autism, and Dyslexia. AI-powered lesson adaptation that meets Skollagen requirements.";
@@ -54,13 +40,14 @@ const {
 } = Astro.props;
 const TITLE = title;
 const DESCRIPTION = description;
-const CANONICAL = new URL(Astro.url.pathname, SITE_URL).href;
+// canonical, og:url and hreflang come from one helper so they match the sitemap exactly.
+const CANONICAL = canonicalUrl(Astro.url.pathname);
+const HREFLANG = hreflangUrls(Astro.url.pathname);
 
-// Bilingual: active language + hreflang alternates for this exact page.
+// Active language of this page.
 const LANG = getLang(Astro.url);
-// Share card follows the page's language. Without this a Swedish page shared
-// on LinkedIn showed the English card, which is the first thing a Swedish
-// school sees of us.
+// Share card follows the page's language, so a Swedish page shared on LinkedIn
+// shows the Swedish card.
 const OG_IMAGE =
   ogImage ??
   (LANG === "sv" ? `${SITE_URL}/og/pages/home-sv.png` : `${SITE_URL}/og.png`);
@@ -69,16 +56,13 @@ const OG_IMAGE_ALT =
   (LANG === "sv"
     ? "Nuro. Hjälp skolor att sluta bryta mot lagen."
     : "Nuro. Let's help schools stop breaking the law.");
-const HAS_SV = hasSv(Astro.url.pathname);
-const HREF_EN = new URL(switchLangPath(Astro.url.pathname, "en"), SITE_URL).href;
-const HREF_SV = new URL(switchLangPath(Astro.url.pathname, "sv"), SITE_URL).href;
+const HAS_SV = HREFLANG.sv !== null;
 const OG_LOCALE = LANG === "sv" ? "sv_SE" : "en_US";
 // Only advertise the alternate locale when this page actually exists in it.
 const OG_LOCALE_ALT = HAS_SV ? (LANG === "sv" ? "en_US" : "sv_SE") : null;
 
-// Site-wide structured data (JSON-LD) — helps search engines and answer
-// engines (Google AI, ChatGPT, Perplexity) resolve Nuro as an entity. An
-// Organization + WebSite + SoftwareApplication graph, emitted on every page.
+// Site-wide JSON-LD (Organization + WebSite + SoftwareApplication) so search and
+// answer engines resolve Nuro as an entity.
 const SOCIAL = [
   "https://www.linkedin.com/company/nuroaidev/",
   "https://www.instagram.com/nuroai.dev/",
@@ -150,9 +134,9 @@ const STRUCTURED_DATA = {
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="canonical" href={CANONICAL} />
-    <link rel="alternate" hreflang="en" href={HREF_EN} />
-    {HAS_SV && <link rel="alternate" hreflang="sv" href={HREF_SV} />}
-    <link rel="alternate" hreflang="x-default" href={HREF_EN} />
+    <link rel="alternate" hreflang="en" href={HREFLANG.en} />
+    {HREFLANG.sv && <link rel="alternate" hreflang="sv" href={HREFLANG.sv} />}
+    <link rel="alternate" hreflang="x-default" href={HREFLANG.en} />
     <link rel="alternate" type="application/rss+xml" title={LANG === "sv" ? "Nuro Blogg" : "Nuro Blog"} href={LANG === "sv" ? `${SITE_URL}/sv/rss.xml` : `${SITE_URL}/rss.xml`} />
 
     {/* Preload the above-the-fold webfonts so the hero never swaps from the

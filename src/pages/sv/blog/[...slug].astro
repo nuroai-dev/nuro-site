@@ -1,10 +1,6 @@
 ---
-/**
- * Single Swedish blog post (/sv/blog/<slug>) — renders a Markdown post from the
- * blogSv collection with prose styling and BlogPosting JSON-LD. Mirrors
- * src/pages/blog/[...slug].astro; only the collection, locale, date format and
- * back link differ.
- */
+// Single Swedish blog post (/sv/blog/<slug>), mirroring src/pages/blog/[...slug].astro;
+// only the collection, locale, date format and back link differ.
 import { getCollection, render } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
@@ -14,6 +10,7 @@ import RelatedPosts from "@/components/blog/RelatedPosts.astro";
 import PostCta from "@/components/blog/PostCta.astro";
 import styles from "@/components/blog/blog.module.css";
 import { buildTagIndex, tagSlug, tagLabel } from "@/lib/blog-tags";
+import { canonicalUrl, SITE_URL } from "@/i18n/ui";
 
 export const prerender = true;
 
@@ -39,8 +36,7 @@ const tagSlugs = [...new Set(post.data.tags.map(tagSlug))].filter((s) =>
   qualifying.has(s),
 );
 
-const SITE_URL = "https://nuroai.dev";
-const url = `${SITE_URL}/sv/blog/${post.id}`;
+const url = canonicalUrl(Astro.url.pathname);
 const fmt = (d: Date) =>
   d.toLocaleDateString("sv-SE", {
     year: "numeric",
@@ -66,8 +62,8 @@ const breadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Hem", item: `${SITE_URL}/sv/` },
-    { "@type": "ListItem", position: 2, name: "Blogg", item: `${SITE_URL}/sv/blog` },
+    { "@type": "ListItem", position: 1, name: "Hem", item: canonicalUrl("/sv/") },
+    { "@type": "ListItem", position: 2, name: "Blogg", item: canonicalUrl("/sv/blog") },
     { "@type": "ListItem", position: 3, name: post.data.title, item: url },
   ],
 };

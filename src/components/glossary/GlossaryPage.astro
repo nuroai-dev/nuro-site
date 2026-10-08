@@ -1,25 +1,15 @@
 ---
-/**
- * Glossary of the Swedish school-support system, locale-aware (English at
- * /glossary, Swedish at /sv/glossary; locale read from the URL). Rendered by
- * both src/pages/glossary.astro and src/pages/sv/glossary.astro so there is one
- * source of truth.
- *
- * Every definition is plain-language and grounded in the same primary sources
- * the blog posts cite; each term links to the post that tells the full story,
- * so the glossary doubles as an internal-linking hub into the knowledge base.
- * Emits a DefinedTermSet + BreadcrumbList so answer engines can lift the terms.
- */
+// Glossary of the Swedish school-support system, rendered at /glossary and /sv/glossary (locale
+// from the URL). Each term links to its explainer post; emits DefinedTermSet + BreadcrumbList.
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
 import Footer from "@/components/footer/Footer.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 import styles from "@/components/glossary/glossary.module.css";
-import { getLang } from "@/i18n/ui";
+import { getLang, canonicalUrl, SITE_URL } from "@/i18n/ui";
 
 const lang = getLang(Astro.url);
-const SITE_URL = "https://nuroai.dev";
 const blogBase = lang === "sv" ? "/sv/blog" : "/blog";
 
 const chrome = {
@@ -524,7 +514,7 @@ const groupOrder: Array<"staircase" | "actors" | "terms"> = [
 const termsIn = (g: "staircase" | "actors" | "terms") =>
   TERMS.filter((x) => x.group === g);
 
-const glossaryUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const glossaryUrl = canonicalUrl(Astro.url.pathname);
 const definedTermSet = {
   "@context": "https://schema.org",
   "@type": "DefinedTermSet",
