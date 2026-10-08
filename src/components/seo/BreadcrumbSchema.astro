@@ -1,12 +1,7 @@
 ---
-/**
- * BreadcrumbSchema.astro emits BreadcrumbList JSON-LD (plus an optional
- * WebPage-subtype node) for a top-level sub-page, so search and answer engines
- * get a Home to Page trail and a typed page entity. Language-aware via
- * Astro.url: the Home crumb points at / for English and /sv for Swedish, and
- * the current crumb uses this page's own path.
- */
-import { getLang } from "@/i18n/ui";
+// BreadcrumbList JSON-LD (plus an optional WebPage-subtype node) for a top-level sub-page.
+// Both crumbs use canonicalUrl(), so they match the page's canonical and the sitemap.
+import { getLang, canonicalUrl, SITE_URL } from "@/i18n/ui";
 
 interface Props {
   name: string;
@@ -14,12 +9,11 @@ interface Props {
 }
 const { name, pageType } = Astro.props;
 
-const SITE_URL = "https://nuroai.dev";
 const lang = getLang(Astro.url);
 const inLanguage = lang === "sv" ? "sv-SE" : "en-US";
-const homeUrl = lang === "sv" ? `${SITE_URL}/sv` : SITE_URL;
+const homeUrl = canonicalUrl(lang === "sv" ? "/sv/" : "/");
 const homeName = lang === "sv" ? "Hem" : "Home";
-const currentUrl = new URL(Astro.url.pathname, SITE_URL).href;
+const currentUrl = canonicalUrl(Astro.url.pathname);
 const breadcrumbId = `${currentUrl}#breadcrumb`;
 
 const breadcrumb = {

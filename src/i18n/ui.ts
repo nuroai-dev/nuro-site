@@ -1,24 +1,25 @@
-/**
- * i18n helpers. English lives at the root (/), Swedish under /sv/.
- * (astro.config.mjs: locales en/sv, defaultLocale en, prefixDefaultLocale false.)
- */
+// i18n helpers. English lives at the root (/), Swedish under /sv/.
+// (astro.config.mjs: locales en/sv, defaultLocale en, prefixDefaultLocale false.)
 export type Lang = "en" | "sv";
+
+export const SITE_URL = "https://nuroai.dev";
 
 export const LANGUAGES: { code: Lang; label: string }[] = [
   { code: "en", label: "EN" },
   { code: "sv", label: "SV" },
 ];
 
+function langOfPath(pathname: string): Lang {
+  return pathname === "/sv" || pathname.startsWith("/sv/") ? "sv" : "en";
+}
+
 /** Active language from a URL (Swedish iff the path is /sv or /sv/...). */
 export function getLang(url: URL): Lang {
-  return url.pathname === "/sv" || url.pathname.startsWith("/sv/")
-    ? "sv"
-    : "en";
+  return langOfPath(url.pathname);
 }
 
 /** Strip the /sv prefix and any trailing slash → the English-equivalent path
- *  in the same form TRANSLATED_PATHS uses (Astro's pathname has a trailing
- *  slash, e.g. "/about/", so normalize before comparing). */
+ *  in the same form TRANSLATED_PATHS uses ("/about/" at prerender → "/about"). */
 function toEnglishPath(pathname: string): string {
   let p = pathname.replace(/^\/sv(?=\/|$)/, "");
   if (p === "") p = "/";
@@ -26,12 +27,14 @@ function toEnglishPath(pathname: string): string {
   return p;
 }
 
-/**
- * English static pages that already have a Swedish (/sv) translation. Add a
- * path here when its /sv version ships, and the switcher + hreflang light up
- * for it automatically. Blog posts are NOT listed here; they are handled by
- * isBlogPost() below, because every post ships bilingually.
- */
+/** An English path in the given language: "/" → "/sv/", "/about" → "/sv/about". */
+function withLang(en: string, lang: Lang): string {
+  if (lang === "en") return en;
+  return en === "/" ? "/sv/" : "/sv" + en;
+}
+
+// English static pages that already have a Swedish (/sv) translation. Add a path when its /sv
+// version ships; blog posts and tag hubs match by shape below.
 export const TRANSLATED_PATHS = new Set<string>([
   "/",
   "/about",
@@ -46,25 +49,12 @@ export const TRANSLATED_PATHS = new Set<string>([
   "/glossary",
 ]);
 
-/**
- * Every blog post ships bilingually: an English body in src/content/blog and a
- * matching Swedish body in src/content/blog-sv (→ /sv/blog/<slug>). So any
- * /blog/<slug> path always has a Swedish counterpart. Matching by shape keeps
- * the switcher and hreflang correct automatically as posts are added, with no
- * per-post maintenance. (The /blog index itself is a static path above, not a
- * post, so it is intentionally excluded here.)
- */
+// Every post ships bilingually (src/content/blog + blog-sv), so /blog/<slug> always has an /sv twin.
 function isBlogPost(enPath: string): boolean {
   return /^\/blog\/[^/]+$/.test(enPath);
 }
 
-/**
- * Individual tag hubs (/blog/tag/<slug>) ship bilingually via the mirrored
- * sv/blog/tag/[tag].astro route, exactly like blog posts. Matching by shape
- * lights up the switcher + hreflang for every tag hub automatically, so a
- * translated tag pair is never left uncross-referenced. (The /blog/tags index
- * is a static path in TRANSLATED_PATHS above, not matched here.)
- */
+// Tag hubs are mirrored by sv/blog/tag/[tag].astro, so /blog/tag/<slug> always has an /sv twin.
 function isTagPage(enPath: string): boolean {
   return /^\/blog\/tag\/[^/]+$/.test(enPath);
 }
@@ -77,19 +67,31 @@ export function hasSv(pathname: string): boolean {
 
 /** The same page in the given language (used by the language switcher). */
 export function switchLangPath(pathname: string, lang: Lang): string {
-  const en = toEnglishPath(pathname);
-  if (lang === "en") return en; // every page exists in English
-  if (en === "/") return "/sv/";
-  return TRANSLATED_PATHS.has(en) || isBlogPost(en) || isTagPage(en)
-    ? "/sv" + en
+  return lang === "en" || hasSv(pathname)
+    ? withLang(toEnglishPath(pathname), lang)
     : "/sv/";
 }
 
-/**
- * Localize an internal link for the active language. English → unchanged.
- * Swedish → prefixed with /sv. Handles "/" , "/about", root anchors "/#x",
- * and leaves bare anchors ("#contact") and external/mailto/tel links alone.
- */
+/** This page's own path in the one form canonical, hreflang and the sitemap share:
+ *  no trailing slash, roots "/" and "/sv/". */
+export function canonicalPath(pathname: string): string {
+  return withLang(toEnglishPath(pathname), langOfPath(pathname));
+}
+
+export function canonicalUrl(pathname: string): string {
+  return SITE_URL + canonicalPath(pathname);
+}
+
+/** hreflang targets for a page; sv is null when the page has no Swedish twin. */
+export function hreflangUrls(pathname: string): { en: string; sv: string | null } {
+  return {
+    en: canonicalUrl(switchLangPath(pathname, "en")),
+    sv: hasSv(pathname) ? canonicalUrl(switchLangPath(pathname, "sv")) : null,
+  };
+}
+
+/** Localize an internal link: English unchanged, Swedish prefixed with /sv;
+ *  bare anchors and external links are left alone. */
 export function localizePath(path: string, lang: Lang): string {
   if (lang === "en") return path;
   if (/^(https?:|mailto:|tel:|#)/.test(path)) return path;
