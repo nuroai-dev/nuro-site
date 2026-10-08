@@ -4,20 +4,19 @@
  * that carries a given tag. One page is prerendered per tag used by 2+ posts
  * (see buildTagIndex / MIN_TAGGED). Mirrors the single-post chrome.
  */
-import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Nav from "@/components/nav/Nav.astro";
 import Footer from "@/components/footer/Footer.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import BlogCard from "@/components/blog/BlogCard.astro";
 import styles from "@/components/blog/blog.module.css";
-import { buildTagIndex, tagIntroEn } from "@/lib/blog-tags";
+import { tagIntroEn } from "@/lib/blog-tags";
+import { tagHubs } from "@/lib/tag-hubs";
 
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return buildTagIndex(posts).map((group) => ({
+  return (await tagHubs("en")).map((group) => ({
     params: { tag: group.slug },
     props: { label: group.label, posts: group.posts },
   }));
