@@ -11,8 +11,8 @@ import { storeContactMessage } from "./store-contact-message";
  *   CONTACT_FROM    — verified sender (default "Nuro <hello@nuroai.dev>";
  *                     the domain must be verified in Resend).
  *
- * If RESEND_API_KEY is unset, the submission is logged server-side instead of
- * sent — so local dev and a mis-configured deploy never break the form.
+ * If RESEND_API_KEY is unset, the submission is stored without email delivery.
+ * Production startup verifies mail configuration before accepting traffic.
  */
 
 export type ContactEntry = {

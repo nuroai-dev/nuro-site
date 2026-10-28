@@ -1,0 +1,16 @@
+---
+import Arrow from "@/components/site/Arrow.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
+import LandingExperience from "./LandingExperience";
+import { getLang } from "@/i18n/ui";
+const lang=getLang(Astro.url);
+const title=lang === "sv" ? "Nuro | Lärstöd som anpassar sig efter dig" : "Nuro | Learning support that adapts to you";
+const description=lang === "sv" ? "Möt Nuro. Lärstöd som anpassar sig efter hur du lär dig. Gå med på väntelistan." : "Meet Nuro. Learning support that adapts to how you learn. Join the waiting list.";
+---
+<SiteLayout title={title} description={description} home>
+ <main id="main-content" class="landing-main" tabindex="-1">
+  <h1 id="landing-static-title" class="sr-only">{title}</h1>
+  <LandingExperience lang={lang} client:load />
+  <noscript><section class="site-hero site-container"><h2 class="site-title">{title}</h2><p class="site-intro">{description}</p><p>{lang === "sv" ? "Aktivera JavaScript för att använda formuläret, eller kontakta oss via e-post." : "Enable JavaScript to use the form, or contact us by email."}</p><a class="site-button" href="mailto:hello@nuroai.dev">hello@nuroai.dev <Arrow /></a></section></noscript>
+ </main>
+</SiteLayout>

@@ -10,7 +10,6 @@ export const prerender = true;
 const STATIC: { path: string; changefreq: string; priority: string }[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
-  { path: "/team", changefreq: "monthly", priority: "0.6" },
   { path: "/blog", changefreq: "weekly", priority: "0.8" },
   { path: "/blog/tags", changefreq: "weekly", priority: "0.5" },
   { path: "/faq", changefreq: "monthly", priority: "0.7" },

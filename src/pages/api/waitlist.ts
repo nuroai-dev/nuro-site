@@ -1,81 +1,37 @@
 import type { APIRoute } from "astro";
+import { WAITLIST_ROLES, WAITLIST_AGES } from "@/lib/waitlist/options";
+import { ROLE_OPTIONS, getCopy } from "@/components/waitlist/copy";
 
+const legacyRoles = new Set<string>(["Not specified", ...WAITLIST_ROLES, ...ROLE_OPTIONS, ...getCopy("sv").roleOptions]);
 import {
-  saveWaitlistEntry,
-  waitlistHasEmail,
+  joinWaitlistEntry,
+  updateWaitlistEntry,
   type WaitlistEntry,
 } from "@/lib/waitlist/save-waitlist-entry";
-
-/**
- * `POST /api/waitlist` (card N-12 — stub backend).
- *
- * Validates `{ email, role, student_ages: string[], message? }` and returns
- * 400 `{ ok: false, reason: "invalid" }` on bad input, 409
- * `{ ok: false, reason: "duplicate" }` when the address is already on the
- * list, 200 `{ ok: true }` otherwise. Persistence is isolated behind `saveWaitlistEntry()`.
- */
-
-// This endpoint is dynamic (server-rendered output); never prerender it.
 export const prerender = false;
-
-/** Same pragmatic email check the waitlist form uses client-side. */
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-/** Length caps so an unauthenticated endpoint can't flood server logs. */
-const MAX_EMAIL = 254;
-const MAX_ROLE = 100;
-const MAX_MESSAGE = 2000;
-const MAX_AGES = 10;
-const MAX_AGE_ITEM = 50;
-
-function json(body: unknown, status = 200): Response {
-  return new Response(JSON.stringify(body), {
+const json = (body: unknown, status = 200) =>
+  new Response(JSON.stringify(body), {
     status,
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-store",
+    },
   });
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function object(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
 }
-
-function parseEntry(body: unknown): WaitlistEntry | null {
-  if (typeof body !== "object" || body === null || Array.isArray(body)) {
-    return null;
-  }
-  const { email, role, student_ages, message } = body as Record<
-    string,
-    unknown
-  >;
-
-  if (typeof email !== "string") return null;
-  const trimmedEmail = email.trim();
-  if (trimmedEmail.length > MAX_EMAIL || !EMAIL_RE.test(trimmedEmail)) {
-    return null;
-  }
-
-  if (typeof role !== "string") return null;
-  const trimmedRole = role.trim();
-  if (trimmedRole.length === 0 || trimmedRole.length > MAX_ROLE) return null;
-
-  if (!Array.isArray(student_ages) || student_ages.length > MAX_AGES) {
-    return null;
-  }
-  if (
-    !student_ages.every(
-      (age) => typeof age === "string" && age.length <= MAX_AGE_ITEM,
-    )
-  ) {
-    return null;
-  }
-
-  if (message !== undefined && typeof message !== "string") return null;
-  const safeMessage = (message ?? "").slice(0, MAX_MESSAGE);
-
-  return {
-    email: trimmedEmail,
-    role: trimmedRole,
-    student_ages: student_ages as string[],
-    message: safeMessage,
-  };
+function strings(
+  value: unknown,
+  max: number,
+  length: number,
+): value is string[] {
+  return (
+    Array.isArray(value) &&
+    value.length <= max &&
+    value.every((item) => typeof item === "string" && item.length <= length)
+  );
 }
-
 export const POST: APIRoute = async ({ request }) => {
   let body: unknown;
   try {
@@ -83,29 +39,84 @@ export const POST: APIRoute = async ({ request }) => {
   } catch {
     return json({ ok: false, reason: "invalid" }, 400);
   }
-
-  const entry = parseEntry(body);
-  if (entry === null) {
+  if (
+    !object(body) ||
+    typeof body.email !== "string" ||
+    body.email.trim().length > 254 ||
+    !emailPattern.test(body.email.trim())
+  )
     return json({ ok: false, reason: "invalid" }, 400);
-  }
-
+  // Old forms still send role/ages; the new first step only needs an email.
+  const role = body.role === undefined ? "Not specified" : body.role;
+  const ages = body.student_ages ?? [];
+  const message = body.message ?? "";
+  if (
+    typeof role !== "string" ||
+    !legacyRoles.has(role.trim()) ||
+    !strings(ages, 10, 50) ||
+    typeof message !== "string" ||
+    message.length > 2000
+  )
+    return json({ ok: false, reason: "invalid" }, 400);
+  const entry: WaitlistEntry = {
+    email: body.email.trim(),
+    role: role.trim(),
+    student_ages: ages,
+    message,
+  };
   try {
-    // Already on the list: tell the visitor so, and keep one row per person.
-    // If this check itself fails we deliberately fall through and save, since
-    // an extra row costs far less than a dropped signup.
-    try {
-      if (await waitlistHasEmail(entry.email)) {
-        return json({ ok: false, reason: "duplicate" }, 409);
-      }
-    } catch (error) {
-      console.error("[waitlist] duplicate check failed, saving anyway", error);
-    }
-
-    await saveWaitlistEntry(entry);
-  } catch (error) {
-    console.error("[waitlist] saveWaitlistEntry failed", error);
+    const result = await joinWaitlistEntry(entry);
+    if (result.duplicate) return json({ ok: false, reason: "duplicate" }, 409);
+    return json({ ok: true, id: result.id, editToken: result.editToken });
+  } catch {
+    console.error("[waitlist] storage unavailable");
     return json({ ok: false }, 500);
   }
-
-  return json({ ok: true });
+};
+export const PATCH: APIRoute = async ({ request }) => {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ ok: false, reason: "invalid" }, 400);
+  }
+  if (
+    !object(body) ||
+    typeof body.id !== "string" ||
+    !/^[\da-f-]{36}$/i.test(body.id) ||
+    typeof body.editToken !== "string" ||
+    !/^[\da-f]{64}$/i.test(body.editToken)
+  )
+    return json({ ok: false, reason: "invalid" }, 400);
+  const roles = body.roles,
+    ages = body.student_ages,
+    message = body.message ?? "";
+  if (
+    !strings(roles, WAITLIST_ROLES.length, 20) ||
+    !roles.every((r) =>
+      (WAITLIST_ROLES as readonly string[]).includes(r),
+    ) ||
+    !strings(ages, 5, 20) ||
+    !ages.every((a) =>
+      (WAITLIST_AGES as readonly string[]).includes(a),
+    ) ||
+    typeof message !== "string" ||
+    message.length > 1000
+  )
+    return json({ ok: false, reason: "invalid" }, 400);
+  if (ages.includes("not-applicable") && ages.length > 1)
+    return json({ ok: false, reason: "invalid" }, 400);
+  try {
+    const updated = await updateWaitlistEntry(body.id, body.editToken, {
+      roles: [...new Set(roles)],
+      student_ages: [...new Set(ages)],
+      message,
+    });
+    return updated
+      ? json({ ok: true })
+      : json({ ok: false, reason: "unauthorized" }, 403);
+  } catch {
+    console.error("[waitlist] update unavailable");
+    return json({ ok: false }, 500);
+  }
 };

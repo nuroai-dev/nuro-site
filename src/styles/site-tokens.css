@@ -1,0 +1,75 @@
+.site-refreshed {
+  --nuro-sky:#9CC0FF;
+  --nuro-lilac:#BAA4FF;
+  --nuro-rose:#FFB6D9;
+  --nuro-surface:linear-gradient(135deg,color-mix(in srgb,var(--nuro-sky) 20%,white),color-mix(in srgb,var(--nuro-lilac) 22%,white) 52%,color-mix(in srgb,var(--nuro-rose) 24%,white));
+  --nuro-section:linear-gradient(110deg,color-mix(in srgb,var(--nuro-sky) 22%,white),color-mix(in srgb,var(--nuro-lilac) 25%,white) 52%,color-mix(in srgb,var(--nuro-rose) 28%,white));
+}
+.neural-mark,
+.neural-connection {
+  --neural-sky: #9CC0FF;
+  --neural-lilac: #BAA4FF;
+  --neural-rose: #FFB6D9;
+  --neural-ring-start: #D1DAEF;
+  --neural-ring-end: #EFE2C2;
+  --neural-ambient-sky: #8caeff;
+  --neural-ambient-rose: #ef9edb;
+  --neural-ambient-lilac: #ba91ff;
+  --neural-ring: #d7d7d9;
+  --neural-node: #25252a;
+  --neural-signal: #aaaab4;
+  --neural-pulse-rose: #de92d1;
+  --neural-pulse-sky: #8b9ce9;
+  --neural-muted-node: #d9d8dd;
+}
+.brand-motion-page {
+  --motion-line: #24242914;
+  --motion-line-strong: #24242922;
+  --motion-ink: #242429;
+  --motion-muted: #707078;
+  --motion-bg: #fefdfc;
+  --motion-focus: #7860ba;
+  --motion-on-ink: #fff;
+  --motion-ink-hover: #414149;
+  --motion-control-hover: #f0edf5;
+  --motion-track: #e7e5e5;
+  --motion-track-active: #27242d;
+  --motion-card: #f5f3f6;
+  --motion-card-hover: #eeebf3;
+}
+
+/* White opening frame for the temporary landing-page study. */
+.nuro-birth-page {
+  --birth-paper: #fff;
+  --birth-ink: #15151a;
+  --birth-muted: #73737d;
+  --birth-hover: #f0eaff;
+  --birth-focus: #7860ba;
+  --birth-line: #e5e3e9;
+  --birth-line-strong: #d2cddc;
+  --birth-selected: #f4effc;
+  --birth-selected-line: #c5b6df;
+  --birth-error: #a33c51;
+  --footer-paper: #faf7ff;
+  --footer-ink: #16161c;
+  --footer-muted: #6b7177;
+  --footer-line: #16161c14;
+  --footer-credit-line: #0000001a;
+  --footer-sky: #9cc0ff66;
+  --footer-lilac: #baa4ff61;
+  --footer-rose: #ffb6d95c;
+  --footer-peach: #ffd9c252;
+  --footer-flag-blue: #006aa7;
+  --footer-flag-yellow: #fecc02;
+}
+.nuro-edge-blur {
+  --edge-blur-mask: #000;
+}
+
+.nuro-about-page {
+  --birth-muted: #6f6a77;
+  --about-surface: var(--nuro-surface);
+  --about-story-surface: var(--nuro-section);
+  --about-soft-ink: #8a8494;
+  --about-story-ink: #51505a;
+}

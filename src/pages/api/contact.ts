@@ -6,10 +6,10 @@ import {
 } from "@/lib/contact/save-contact-entry";
 
 /**
- * `POST /api/contact` (stub backend, mirrors /api/waitlist).
+ * `POST /api/contact`: persistent capture and Resend delivery.
  *
  * Validates `{ name, email, message }` and returns 400 `{ ok: false }` on bad
- * input, 200 `{ ok: true }` otherwise. Persistence is isolated behind
+ * input, 500 on storage/delivery failure, and 200 `{ ok: true }` on success. Persistence is isolated behind
  * `saveContactEntry()`.
  */
 

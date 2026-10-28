@@ -1,74 +1,30 @@
 ---
-/**
- * Career page content, locale-aware (English at /career, Swedish at
- * /sv/career). Rendered by both src/pages/career.astro and
- * src/pages/sv/career.astro so there is one source of truth.
- *
- * No open roles posted yet — a short, warm "we're growing, get in touch" page
- * with a Contact CTA that opens the shared ContactDrawer (data-contact-trigger).
- * Copy is starter content — edit freely as hiring plans firm up.
- */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import Arrow from "@/components/site/Arrow.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
-import styles from "@/components/page/page.module.css";
-import { getLang } from "@/i18n/ui";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
-
-const lang = getLang(Astro.url);
-const t = {
-  en: {
-    title: "Career | Nuro",
-    description:
-      "Help us build the tool that gives every neurodivergent student the support the law promises them. Join the Nuro team.",
-    eyebrow: "Career",
-    heading: "Build the tool the system was missing",
-    p1: "We’re a small team in Sweden on a big mission: make sure every neurodivergent student gets the adapted support the law already says they’re entitled to, long before they fall through the cracks.",
-    p2: "We don’t have any open positions posted right now, but we grow fast and we’re always glad to meet people who care about education, inclusion, and building things that matter. Engineers, educators, designers, researchers. If that’s you, we’d love to hear from you.",
-    p3: "Tell us who you are and how you’d want to help.",
-    cta: "Get in touch",
-  },
-  sv: {
-    title: "Karriär | Nuro",
-    description:
-      "Hjälp oss bygga verktyget som ger varje neurodivergent elev det stöd som lagen lovar dem. Bli en del av teamet på Nuro.",
-    eyebrow: "Karriär",
-    heading: "Bygg verktyget som systemet saknade",
-    p1: "Vi är ett litet team i Sverige med ett stort uppdrag. Vi vill se till att varje neurodivergent elev får det anpassade stöd som lagen redan säger att de har rätt till, långt innan de faller mellan stolarna.",
-    p2: "Vi har inga lediga tjänster utlysta just nu, men vi växer snabbt och vi träffar alltid gärna människor som bryr sig om utbildning, inkludering och att bygga saker som spelar roll. Ingenjörer, pedagoger, designers, forskare. Om det är du vill vi gärna höra från dig.",
-    p3: "Berätta vem du är och hur du skulle vilja bidra.",
-    cta: "Kontakta oss",
-  },
-}[lang];
-
-export const prerender = true;
+import { getLang,localizePath } from "@/i18n/ui";
+import { team } from "@/components/brand/about/team";
+import founders from "@/components/brand/about/assets/founders-wide.webp?url";
+import "@/styles/editorial.css";
+const lang=getLang(Astro.url);
+const t=lang === "sv" ? {
+ title:"Karriär | Nuro",description:"Hjälp oss skapa lärstöd som fungerar för fler. Lär känna teamet på Nuro och hör av dig.",
+ label:"Karriär",heading:"Plats för",end:"ditt perspektiv.",intro:"Vi bygger en annan väg till lärande. Det börjar med människor som ser saker på olika sätt.",team:"Lär känna teamet",contact:"Presentera dig",
+ mission:"Det vi bygger",story:"Fler sätt att tänka. Fler sätt att lära.",p1:"Vi är ett litet team i Sverige med ett gemensamt uppdrag: att göra anpassat lärstöd tillgängligt för elever som lär sig på olika sätt.",p2:"Det kräver teknik, omtanke och en vilja att lyssna. Vi vill träffa människor som bryr sig om utbildning, inkludering och att bygga något som gör skillnad.",
+ roles:"Möjligheter",rolesTitle:"Inget som passar just nu? Låt oss prata ändå.",rolesText:"Vi har inga lediga tjänster utlysta just nu. Men om du vill bidra till Nuro vill vi gärna lära känna dig. Berätta vem du är och vad du skulle vilja bygga med oss.",disciplines:["Teknik","Design","Pedagogik","Forskning","Gemenskap"],photo:"Sandra Hilltomt och Victor Wallander, medgrundare av Nuro",
+} : {
+ title:"Career | Nuro",description:"Help us build learning support that works for more minds. Meet the Nuro team and introduce yourself.",
+ label:"Career",heading:"Room for",end:"your perspective.",intro:"We’re building a different way to learn. It starts with people who see things differently.",team:"Meet the team",contact:"Introduce yourself",
+ mission:"What we’re building",story:"More ways to think. More ways to learn.",p1:"We’re a small team in Sweden with a shared purpose: making adapted learning support available to students who learn differently.",p2:"That takes technology, care, and a willingness to listen. We want to meet people who care about education, inclusion, and building something that makes a difference.",
+ roles:"Opportunities",rolesTitle:"No perfect opening? Let’s talk anyway.",rolesText:"We don’t have any open positions posted right now. But if you’d like to help build Nuro, we’d love to get to know you. Tell us who you are and what you’d like to build with us.",disciplines:["Engineering","Design","Education","Research","Community"],photo:"Sandra Hilltomt and Victor Wallander, co-founders of Nuro",
+};
 ---
-
-<Layout title={t.title} description={t.description}>
-  <BreadcrumbSchema name={lang === "sv" ? "Karriär" : "Career"} />
-  <Nav />
-  <main id="main-content" tabindex="-1">
-    <section class={styles.section}>
-      <div class={styles.container}>
-        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
-        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
-          {t.heading}
-        </Reveal>
-
-        <div class={styles.body}>
-          <Reveal as="p" delay={0.12}>{t.p1}</Reveal>
-          <Reveal as="p" delay={0.16}>{t.p2}</Reveal>
-          <Reveal as="p" delay={0.2}>{t.p3}</Reveal>
-
-          <Reveal delay={0.24}>
-            <button type="button" class={styles.cta} data-contact-trigger>
-              {t.cta}
-            </button>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  </main>
-  <Footer />
-</Layout>
+<SiteLayout title={t.title} description={t.description}>
+ <BreadcrumbSchema name={t.label} />
+ <main id="main-content" tabindex="-1">
+  <section class="site-hero site-container career-hero"><Reveal eager><p class="site-eyebrow">{t.label}</p></Reveal><Reveal eager delay={0.06}><h1 class="site-title">{t.heading} <br/><span>{t.end}</span></h1></Reveal><Reveal eager delay={0.13}><p class="site-intro">{t.intro}</p></Reveal><Reveal eager delay={0.2}><div class="career-people">{team.map(person=><img src={person.image} alt="" width="48" height="48"/>)}<a href={localizePath("/about#about-team-heading",lang)}>{t.team} <Arrow /></a></div></Reveal></section>
+  <section class="site-container career-story"><Reveal><img src={founders} alt={t.photo} width="1600" height="900" loading="lazy"/></Reveal><div><Reveal><p class="site-eyebrow">{t.mission}</p><h2>{t.story}</h2></Reveal><Reveal delay={0.07}><p>{t.p1}</p></Reveal><Reveal delay={0.14}><p>{t.p2}</p></Reveal></div></section>
+  <section class="site-container career-invite"><Reveal><p class="site-eyebrow">{t.roles}</p><h2>{t.rolesTitle}</h2></Reveal><Reveal delay={0.1}><p>{t.rolesText}</p><div class="career-disciplines">{t.disciplines.map(label=><span>{label}</span>)}</div><button type="button" class="site-button" data-contact-trigger data-contact-topic="career">{t.contact} <Arrow /></button></Reveal></section>
+ </main>
+</SiteLayout>

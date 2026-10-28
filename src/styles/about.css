@@ -1,0 +1,127 @@
+.nuro-about-page {
+  --about-heading-font: var(--font-display);
+  min-height: 100dvh;
+  background: var(--birth-paper);
+  color: var(--birth-ink);
+  color-scheme: light;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.about-container { width: min(1200px, calc(100% - 112px)); margin-inline: auto; }
+.about-page { --about-surface:#f5f4f6; --about-story-surface:#f7f6f8; }
+.nuro-about-page main:focus { outline: none; }
+.nuro-about-page a { text-decoration: none; }
+.nuro-about-page :is(a, button):focus-visible { outline: 2px solid var(--birth-focus); outline-offset: 5px; }
+.about-skip { position: fixed; top: -100px; left: 24px; z-index: 30; padding: 12px 20px; border-radius: 999px; background: var(--birth-ink); color: var(--birth-paper); }
+.about-skip:focus { top: 16px; }
+.about-header { position: fixed; inset: 0 0 auto; height: 96px; z-index: 21; pointer-events: none; }
+.about-header > a { pointer-events: auto; }
+/* Match the front page's animated mark, letting EdgeBlur soften content underneath. */
+.about-brand { position: absolute; top: max(14px, env(safe-area-inset-top)); left: max(18px, env(safe-area-inset-left)); width: 76px; }
+.about-brand .neural-mark { display: block; width: 100%; height: auto; }
+.about-header-cta { position: absolute; top: max(24px, env(safe-area-inset-top)); right: max(30px, env(safe-area-inset-right)); }
+.about-button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 46px; padding: 12px 22px; border-radius: 999px; background: var(--birth-ink); color: var(--birth-paper); font-size: 15px; line-height: 1.5; transition: background-color 160ms, transform 160ms; }
+.about-button svg { flex-shrink: 0; }
+.about-text-link { display: inline-flex; align-items: center; gap: 13px; min-height: 44px; color: var(--birth-ink); font-size: 15px; line-height: 1.5; }
+.about-text-link svg { flex-shrink: 0; }
+@media (hover: hover) {
+  .about-button:hover { background: var(--color-ink-2); }
+}
+.about-eyebrow { margin: 0 0 24px; font-size: 20px; line-height: 1.5; color: var(--birth-muted); font-weight: 400; }
+.about-hero { padding-block: 174px 98px; }
+.about-hero h1 { max-width: 1100px; margin: 0; font-family: var(--about-heading-font); font-size: clamp(48px, 6.25vw, 88px); font-weight: 400; letter-spacing: normal; line-height: 1.05; }
+.about-hero h1 > span { color: var(--about-soft-ink); }
+.about-introduction { max-width: 580px; margin: 30px 0 22px; color: var(--birth-muted); font-size: 22px; line-height: 1.6; text-wrap: pretty; }
+.about-team { padding-bottom: 100px; }
+.about-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 32px; }
+.about-section-heading h2 { max-width: 560px; margin: 0; font-family: var(--about-heading-font); font-size: 34px; font-weight: 400; letter-spacing: normal; line-height: 1.25; text-wrap: balance; }
+.about-section-heading > p { max-width: 340px; margin: 0; color: var(--birth-muted); font-size: 18px; line-height: 1.65; }
+#about-team-heading { scroll-margin-top: 116px; outline: none; }
+#about-team-heading:focus-visible { outline: 2px solid var(--birth-focus); outline-offset: 6px; border-radius: var(--r-xs); }
+.about-team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.about-team-grid > div { min-width: 0; }
+.about-person { height: 100%; padding: 24px; border-radius: var(--r-m); background: var(--about-surface); }
+.about-person img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.about-person-caption { padding: 23px 2px 3px; }
+.about-person h3 { margin: 0 0 5px; font-family: var(--about-heading-font); font-size: 22px; font-weight: 400; line-height: 1.3; letter-spacing: normal; }
+.about-person p { min-height: 42px; margin: 0; color: var(--birth-muted); font-size: 15px; line-height: 1.6; }
+.about-careers { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; height: 100%; min-height: 280px; padding: 38px; border-radius: var(--r-m); border: 1px solid var(--birth-line); }
+.about-careers .about-eyebrow { margin-bottom: 28px; }
+.about-careers h3 { white-space: pre-line; margin: 0; font-family: var(--about-heading-font); font-size: clamp(26px, 2.5vw, 34px); font-weight: 400; letter-spacing: normal; line-height: 1.25; }
+.about-careers > p:not(.about-eyebrow) { margin: 20px 0 24px; font-size: 18px; line-height: 1.65; color: var(--birth-muted); }
+.about-story { padding: 104px 0 92px; background: var(--about-story-surface); }
+.about-story-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 72px; align-items: start; }
+.about-founders { position: sticky; top: 124px; }
+.about-founders figure { margin: 0; padding: 14px; background: var(--birth-paper); border-radius: var(--r-m); }
+.about-founders img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: var(--r-s); }
+.about-founders figcaption { display: flex; flex-direction: column; gap: 5px; padding: 17px 6px 7px; font-size: 15px; line-height: 1.5; }
+.about-founders figcaption > span:last-child { color: var(--birth-muted); font-size: 15px; }
+.about-story-copy .about-eyebrow { margin-bottom: 22px; }
+.about-story-copy h2 { white-space: pre-line; margin: 0 0 30px; font-family: var(--about-heading-font); font-size: clamp(29px, 2.75vw, 39px); font-weight: 400; line-height: 1.25; letter-spacing: normal; }
+.about-story-copy p:not(.about-eyebrow) { margin: 0 0 20px; font-size: 18px; line-height: 1.8; color: var(--about-story-ink); }
+.about-story-copy p.about-story-lead { color: var(--birth-ink); font-size: 22px; line-height: 1.5; letter-spacing: normal; }
+.about-belief { margin-top: 90px; padding-top: 50px; border-top: 1px solid var(--birth-line); }
+.about-belief > p:last-child { max-width: 880px; margin: 0; white-space: pre-line; font-family: var(--about-heading-font); font-size: clamp(30px, 3.6vw, 50px); line-height: 1.25; font-weight: 400; letter-spacing: normal; }
+.about-invitation { padding-block: 116px 124px; text-align: center; }
+.about-invitation .about-eyebrow { margin-bottom: 20px; }
+.about-invitation h2 { margin: 0; font-family: var(--about-heading-font); font-size: clamp(38px, 4.5vw, 64px); line-height: 1.25; letter-spacing: normal; font-weight: 400; }
+.about-invitation-copy { max-width: 480px; margin: 23px auto 30px; color: var(--birth-muted); font-size: 18px; line-height: 1.7; }
+.about-invitation-actions { display: flex; align-items: center; justify-content: center; gap: 25px; }
+.nuro-about-page[data-still="true"] :is(.about-button, .about-text-link svg) { transition: none; transform: none; }
+[data-dyslexic="true"] .nuro-about-page { --about-heading-font: var(--font-dyslexic); }
+@media (max-width: 1000px) {
+  .about-container { width: calc(100% - 64px); }
+  .about-hero { padding-block: 154px 80px; }
+  .about-team-grid { gap: 18px; }
+  .about-person { padding: 18px; }
+  .about-person h3 { font-size: 20px; }
+  .about-careers { padding: 24px; }
+  .about-story-grid { gap: 40px; }
+}
+@media (max-width: 700px) {
+  .about-container { width: calc(100% - 40px); }
+  .about-header-cta { gap: 10px; min-height: 44px; padding: 10px 17px; font-size: 15px; }
+  .about-hero { padding-block: 112px 48px; }
+  .about-eyebrow { font-size: 15px; margin-bottom: 18px; }
+  .about-hero h1 { font-size: clamp(36px, 9.2vw, 56px); line-height: 1.08; }
+  .about-introduction { margin-top: 22px; font-size: 18px; line-height: 1.55; }
+  .about-section-heading { display: block; margin-bottom: 26px; }
+  .about-section-heading h2 { max-width: 450px; font-size: 28px; text-wrap: pretty; }
+  .about-section-heading > p { max-width: 440px; margin-top: 16px; font-size: 16px; }
+  .about-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .about-person { padding: 16px; }
+  .about-person-caption { padding-top: 17px; }
+  .about-person h3 { font-size: 19px; }
+  .about-person p { font-size: 14px; }
+  .about-careers > p:not(.about-eyebrow) { font-size: 16px; }
+  .about-careers { padding: 20px; }
+  .about-careers h3 { font-size: 26px; }
+  .about-team { padding-bottom: 64px; }
+  .about-story { padding-block: 64px; }
+  .about-story-grid { grid-template-columns: 1fr; gap: 38px; }
+  .about-founders { position: static; }
+  .about-story-copy h2 { font-size: 28px; margin-bottom: 22px; }
+  .about-story-copy p:not(.about-eyebrow) { font-size: 16px; line-height: 1.7; }
+  .about-story-copy p.about-story-lead { font-size: 18px; line-height: 1.55; }
+  .about-founders figcaption, .about-founders figcaption > span:last-child { font-size: 14px; }
+  .about-belief { margin-top: 48px; padding-top: 34px; }
+  .about-belief > p:last-child { font-size: 28px; }
+  .about-invitation { padding-block: 64px; }
+  .about-invitation h2 { font-size: 32px; }
+  .about-invitation-copy { font-size: 16px; margin-block: 20px 24px; }
+}
+@media (max-width: 600px) {
+  .about-header { height: 72px; }
+  .about-brand { top: max(10px, env(safe-area-inset-top)); left: max(14px, env(safe-area-inset-left)); width: 64px; }
+  .about-header-cta { top: max(16px, env(safe-area-inset-top)); right: max(14px, env(safe-area-inset-right)); }
+}
+@media (max-width: 440px) {
+  .about-team-grid { grid-template-columns: 1fr; gap: 20px; }
+  .about-person { padding: 24px; }
+  .about-person h3 { font-size: 20px; }
+  .about-person p { font-size: 14px; min-height: 0; }
+  .about-person-caption { padding-bottom: 4px; }
+  .about-careers { min-height: 260px; padding: 24px; }
+  .about-careers h3 { font-size: 28px; }
+  .about-invitation-actions { flex-direction: column; gap: 10px; }
+}

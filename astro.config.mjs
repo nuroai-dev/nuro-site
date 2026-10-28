@@ -5,8 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // Server-rendered output on the standalone Node adapter (deploy contract in
 // gate.json). The built server reads HOST / PORT from the environment, which
-// is how gate's container runs it: node ./dist/server/entry.mjs.
+// is how Gate starts it through the checked npm start entry point.
 export default defineConfig({
+  devToolbar: { enabled: false },
   output: "server",
   adapter: node({ mode: "standalone" }),
   redirects: {
@@ -23,8 +24,8 @@ export default defineConfig({
     defaultLocale: "en",
     routing: { prefixDefaultLocale: false },
   },
-  // React only powers the contact-drawer island (Vaul). It hydrates on
-  // demand (client:visible in the footer) — the rest of the page is static.
+  // React islands power the interactive Nuro character, signup flow, logo and contact drawer.
+  // Editorial pages stay prerendered Astro; the existing Node/API deployment stays unchanged.
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
