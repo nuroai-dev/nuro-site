@@ -1,10 +1,12 @@
 # Nuro temporary site
 
-The refreshed Nuro website, using the existing Astro 5 framework and standalone Node adapter. React islands handle Nuro’s glass character, the animated logo, the waitlist and the Vaul contact drawer. English lives at `/`; Swedish at `/sv/`.
+The refreshed Nuro website, using the existing Astro framework, updated to Astro 7.4.3 and standalone Node adapter. React islands handle Nuro’s glass character, the animated logo, the waitlist and the Vaul contact drawer. English lives at `/`; Swedish at `/sv/`.
 
 Navigation remains About, Press, Career and Contact, alongside the waitlist and legal links. Team is part of About; `/team` redirects there.
 
 ## Local development
+
+Use Node 22.23.4 or newer (`.node-version` / `.nvmrc`). With nvm, run `nvm install` and `nvm use` before installing dependencies.
 
 ```sh
 npm ci
@@ -54,4 +56,8 @@ The repository contains no production credentials or form submissions. Keep `/da
 
 The refreshed build and local integration checks passed on 28 October 2026, including stored registrations surviving a Node restart and mocked Resend delivery/error handling. Live hosting, durable-volume retention and actual inbox delivery still need verification with the site’s deployment credentials.
 
-The inherited Astro 5 dependency tree also needs a security update before public launch. `npm audit --omit=dev` reports a critical Astro advisory and additional high/moderate advisories. The critical [upstream advisory](https://github.com/withastro/astro/security/advisories/GHSA-26w7-cxv4-gfx2) concerns processing untrusted AVIF images with Sharp; it is fixed upstream in Astro 7.2.8. This repository retains the current framework version rather than silently bundling a major framework migration into the design/form changes. Review the full current audit and upgrade Astro, its integrations and affected dependencies together, then rerun the checks above. No claim is made that the production site is currently exploitable or that a build passing clears those advisories.
+The security update is complete: Astro 7.4.3, Node adapter 11.1.9, React integration 7.1.2, Satori 0.63.2, and compatible Tailwind/Vite tooling. The full `npm audit` reports **0 known vulnerabilities** at verification time. The scoped `satori → fflate` override selects patched 0.7.5 for both Satori and its OpenType dependency until upstream updates their pins. Keep the lockfile and run `npm ci` for reproducible installations.
+
+The [Astro 6](https://docs.astro.build/en/guides/upgrade-to/v6/) and [Astro 7](https://docs.astro.build/en/guides/upgrade-to/v7/) migrations were applied together: the content schema uses `astro/zod`, and `compressHTML: true` preserves the existing inline spacing. The site remains on Astro, React and the standalone Node adapter, with the same routes, navigation and storage/email technology.
+
+GitHub Actions checks types, the production build, mocked email delivery, storage across a restart and the dependency audit on each push/PR. Live hosting credentials and a provider project link are still needed to complete the public deployment; the old static Vercel review has not been made live by these code changes.

@@ -7,6 +7,8 @@ import tailwindcss from "@tailwindcss/vite";
 // gate.json). The built server reads HOST / PORT from the environment, which
 // is how Gate starts it through the checked npm start entry point.
 export default defineConfig({
+  // Keep existing inline spacing when moving from Astro 5 to the new compiler.
+  compressHTML: true,
   devToolbar: { enabled: false },
   output: "server",
   adapter: node({ mode: "standalone" }),
