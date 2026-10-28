@@ -1,6 +1,6 @@
 # Nuro temporary site
 
-The refreshed Nuro website, using the existing Astro framework, updated to Astro 7.4.3 and standalone Node adapter. React islands handle Nuro’s glass character, the animated logo, the waitlist and the Vaul contact drawer. English lives at `/`; Swedish at `/sv/`.
+The refreshed Nuro website uses Astro 7.4.3 with the standalone Node adapter. React islands handle Nuro’s glass character, the animated logo, the waitlist and the Vaul contact drawer. English lives at `/`; Swedish at `/sv/`.
 
 Navigation remains About, Press, Career and Contact, alongside the waitlist and legal links. Team is part of About; `/team` redirects there.
 
@@ -60,4 +60,4 @@ The security update is complete: Astro 7.4.3, Node adapter 11.1.9, React integra
 
 The [Astro 6](https://docs.astro.build/en/guides/upgrade-to/v6/) and [Astro 7](https://docs.astro.build/en/guides/upgrade-to/v7/) migrations were applied together: the content schema uses `astro/zod`, and `compressHTML: true` preserves the existing inline spacing. The site remains on Astro, React and the standalone Node adapter, with the same routes, navigation and storage/email technology.
 
-GitHub Actions checks types, the production build, mocked email delivery, storage across a restart and the dependency audit on each push/PR. Live hosting credentials and a provider project link are still needed to complete the public deployment; the old static Vercel review has not been made live by these code changes.
+The GitHub Actions workflow is configured to check types, the production build, mocked email delivery, storage across a restart and the dependency audit on each push/PR. Those commands pass locally. The first hosted run could not start because GitHub reported an account payment/spending-limit issue; an organisation administrator needs to resolve that before hosted CI can run. Live hosting credentials and a provider project link are still needed to complete the public deployment; the old static Vercel review has not been made live by these code changes.
