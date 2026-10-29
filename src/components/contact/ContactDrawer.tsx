@@ -39,6 +39,8 @@ const COPY = {
     close: "Close",
     press: "Press enquiries",
     career: "Let’s build something that matters.",
+    careerLead: "Tell us who you are, with a link to your GitHub or something you’ve built. We’ll reply by email.",
+    careerPlaceholder: "A few lines about you, and a link",
     privacy: "We’ll only use these details to reply to your message.",
   },
   sv: {
@@ -62,6 +64,8 @@ const COPY = {
     close: "St\u00e4ng",
     press: "Presskontakt",
     career: "Låt oss bygga något som gör skillnad.",
+    careerLead: "Berätta vem du är, med en länk till din GitHub eller något du har byggt. Vi svarar via e-post.",
+    careerPlaceholder: "Ett par rader om dig, och en länk",
     privacy: "Vi använder bara uppgifterna för att svara på ditt meddelande.",
   },
 } as const;
@@ -236,7 +240,7 @@ export default function ContactDrawer({ lang = "en" }: { lang?: "en" | "sv" }) {
                   {topic ? t[topic] : t.title}
                 </Drawer.Title>
                 <Drawer.Description className="cd-lead">
-                  {t.lead}
+                  {topic === "career" ? t.careerLead : t.lead}
                 </Drawer.Description>
 
                 <div
@@ -309,7 +313,7 @@ export default function ContactDrawer({ lang = "en" }: { lang?: "en" | "sv" }) {
                     id="cd-message"
                     name="message"
                     className="cd-textarea"
-                    placeholder={t.messagePlaceholder}
+                    placeholder={topic === "career" ? t.careerPlaceholder : t.messagePlaceholder}
                     rows={4}
                     required
                     maxLength={3900}

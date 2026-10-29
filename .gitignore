@@ -13,7 +13,7 @@ dist/
 .vercel
 
 # Private form data stays on the deployment volume, never in Git.
-data/
+/data/
 .vite-review-cache/
 
 # CS runtime artifact — injected into worktrees, never committed
