@@ -20,6 +20,7 @@ const DEFAULT_DESCRIPTION =
   "Nuro helps Swedish schools support neurodiverse students with ADHD, Autism, and Dyslexia. AI-powered lesson adaptation that meets Skollagen requirements.";
 
 interface Props {
+  refreshed?: boolean;
   title?: string;
   description?: string;
   ogType?: string;
@@ -30,6 +31,7 @@ interface Props {
 }
 
 const {
+  refreshed = false,
   title = DEFAULT_TITLE,
   description = DEFAULT_DESCRIPTION,
   ogType = "website",
@@ -93,9 +95,9 @@ const STRUCTURED_DATA = {
       ],
       areaServed: { "@type": "Country", name: "Sweden" },
       founder: [
-        { "@type": "Person", name: "Sandra Hilltomt", jobTitle: "Founder & CEO" },
-        { "@type": "Person", name: "Victor Wallander", jobTitle: "Founder & CTO" },
-        { "@type": "Person", name: "Jonathan Olsen", jobTitle: "Founding Designer" },
+        { "@type": "Person", name: "Sandra Hilltomt", jobTitle: "Co-Founder & CEO" },
+        { "@type": "Person", name: "Victor Wallander", jobTitle: "Co-Founder & CTO" },
+        { "@type": "Person", name: "Jonathan Olsen", jobTitle: "Co-Founder & Designer" },
       ],
       sameAs: SOCIAL,
     },
@@ -144,14 +146,14 @@ const STRUCTURED_DATA = {
         system fallback (which would reflow the H1 mid blur-in). */}
     <link
       rel="preload"
-      href={plexLatinHref}
+      href={refreshed ? "/fonts/geist-latin.woff2" : plexLatinHref}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href={interLatinHref}
+      href={refreshed ? "/fonts/helvetica-now-display-400.woff2" : interLatinHref}
       as="font"
       type="font/woff2"
       crossorigin
@@ -160,7 +162,7 @@ const STRUCTURED_DATA = {
     <title>{TITLE}</title>
     <meta name="description" content={DESCRIPTION} />
 
-    <meta name="theme-color" content="#FAF7F2" />
+    <meta name="theme-color" content={refreshed ? "#ffffff" : "#FAF7F2"} />
 
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content={OG_LOCALE} />
@@ -194,7 +196,7 @@ const STRUCTURED_DATA = {
       document.documentElement.dataset.js = "1";
     </script>
   </head>
-  <body>
+  <body class:list={{ "site-refreshed": refreshed }}>
     <a class="skip-link" href="#main-content">{LANG === "sv" ? "Hoppa till huvudinnehållet" : "Skip to main content"}</a>
     <slot />
     <script>

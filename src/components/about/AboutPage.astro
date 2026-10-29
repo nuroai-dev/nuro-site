@@ -1,71 +1,42 @@
 ---
-/**
- * About page content — Nuro's mission statement, locale-aware (English at
- * /about, Swedish at /sv/about; the locale is read from the URL). Rendered by
- * both src/pages/about.astro and src/pages/sv/about.astro so there is one
- * source of truth. English copy supplied by the team; Swedish is the team's
- * own mission-statement text (Sandra).
- */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import Arrow from "@/components/site/Arrow.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
-import styles from "@/components/about/about.module.css";
-import { getLang } from "@/i18n/ui";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
-
-const lang = getLang(Astro.url);
-const t = {
-  en: {
-    title: "About | Nuro",
-    description:
-      "Nuro's mission: help every school give neurodivergent students the adapted support the law says they're entitled to, before they fall through the cracks.",
-    eyebrow: "About",
-    heading: "Nuro mission statement",
-    p1: "The law says it clearly: every student has the right to adapted support. But that’s also where the system ends.",
-    p2: "Millions of neurodivergent students in schools where there’s no room for them. Where educators don’t have the tools. Where budgets are already exhausted. Where a student with ADHD, autism or dyslexia, who just needed the right support at the right time, so no one is at risk of becoming a school refuser.",
-    lede: "It’s not a design issue. It’s a system failure.",
-    built: "We built Nuro to change that.",
-    p4: "We enable educators to see every individual student, to provide the personalized support that the law says students are entitled to. We catch students at risk of falling between the lines long before they become homeschoolers. We help every student develop their superpowers while supporting them with their challenges.",
-    closer: "The law was right. The system only needed one tool, and now it’s here!",
-  },
-  sv: {
-    title: "Om oss | Nuro",
-    description:
-      "Nuros mission: hjälpa varje skola att ge neurodivergenta elever det anpassade stöd lagen säger att de har rätt till, innan de faller mellan stolarna.",
-    eyebrow: "Om oss",
-    heading: "Nuros mission",
-    p1: "Lagboken säger det tydligt: varje elev har rätt till anpassat stöd. Det står där i svart på vitt. Men det är också där systemet tar slut.",
-    p2: "Hundratusentals neurodivergenta elever i skolor där det inte finns rum för dem. Där pedagogerna inte har verktyget. Där budgeten redan är slut. Där en elev med ADHD, autism eller dyslexi, som bara behövde rätt stöd vid rätt tid, riskerar att bli en hemmasittare.",
-    lede: "Det är inte en designfråga. Det är ett systemfel.",
-    built: "Vi byggde Nuro för att ändra på det.",
-    p4: "Vi gör det möjligt för pedagoger att se varje enskild elev, att ge det anpassade stöd som lagen säger att eleverna förtjänar. Vi fångar upp de elever som riskerar att hamna mellan stolarna långt innan de blir hemmasittare. Vi hjälper varje neurodivergent elev att utveckla sina superkrafter, det unika sättet deras hjärnor fungerar på.",
-    closer: "Lagboken hade rätt. Systemet behövde bara ett verktyg, och nu är det här!",
-  },
-}[lang];
+import { copy } from "@/components/brand/about/i18n";
+import { team } from "@/components/brand/about/team";
+import founders from "@/components/brand/about/assets/founders-wide.webp?url";
+import { getLang, localizePath } from "@/i18n/ui";
+import "@/styles/about.css";
+const lang = getLang(Astro.url), t = copy[lang].nuroAbout;
+const path = (url:string) => localizePath(url,lang);
 ---
-
-<Layout title={t.title} description={t.description}>
-  <BreadcrumbSchema name={lang === "sv" ? "Om oss" : "About"} pageType="AboutPage" />
-  <Nav />
-  <main id="main-content" tabindex="-1">
-    <section class={styles.section}>
-      <div class={styles.container}>
-        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
-        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
-          {t.heading}
-        </Reveal>
-
-        <div class={styles.body}>
-          <Reveal as="p" delay={0.12}>{t.p1}</Reveal>
-          <Reveal as="p" delay={0.16}>{t.p2}</Reveal>
-          <Reveal as="p" delay={0.2} class={styles.lede}>{t.lede}</Reveal>
-          <Reveal as="p" delay={0.24}>{t.built}</Reveal>
-          <Reveal as="p" delay={0.28}>{t.p4}</Reveal>
-          <Reveal as="p" delay={0.32} class={styles.closer}>{t.closer}</Reveal>
-        </div>
+<SiteLayout title={t.pageTitle} description={t.description}>
+  <BreadcrumbSchema name={lang === "sv" ? "Om Nuro" : "About Nuro"} />
+  <main id="main-content" class="about-page" tabindex="-1">
+    <section class="about-hero about-container" aria-labelledby="about-title">
+      <Reveal eager><p class="about-eyebrow">{t.mission}</p></Reveal>
+      <Reveal eager delay={0.06}><h1 id="about-title">{t.headline} <br/><span>{t.headlineEnd}</span></h1></Reveal>
+      <Reveal eager delay={0.13}><p class="about-introduction">{t.introduction}</p></Reveal>
+      <Reveal eager delay={0.2}><a class="about-text-link" href="#about-team-heading">{t.meet}<Arrow direction="down" /></a></Reveal>
+    </section>
+    <section class="about-team about-container" aria-labelledby="about-team-heading">
+      <Reveal class="about-section-heading"><h2 id="about-team-heading" tabindex="-1">{t.teamTitle}</h2><p>{t.teamIntro}</p></Reveal>
+      <div class="about-team-grid">
+        {team.map((person,index) => <Reveal delay={(index%3)*0.07}><article class="about-person" data-person={person.id}>
+          <img src={person.image} alt={person.name} width="500" height="500" loading="lazy" decoding="async" />
+          <div class="about-person-caption"><h3>{person.name}</h3><p>{t.roles[person.id]}</p></div>
+        </article></Reveal>)}
+        <Reveal delay={0.14}><div class="about-careers"><p class="about-eyebrow">{t.growing}</p><h3>{t.growingTitle}</h3><p>{t.growingText}</p><a class="about-text-link" href={path("/career")}>{t.careers} <Arrow /></a></div></Reveal>
       </div>
     </section>
+    <section class="about-story" aria-labelledby="about-story-heading">
+      <div class="about-container about-story-grid">
+        <Reveal class="about-founders"><figure><img src={founders} alt={t.foundersAlt} width="1600" height="900" loading="lazy"/><figcaption><span>{t.foundersCaption}</span><span>{t.foundersRole}</span></figcaption></figure></Reveal>
+        <div class="about-story-copy"><Reveal><p class="about-eyebrow">{t.storyLabel}</p><h2 id="about-story-heading">{t.storyTitle}</h2></Reveal><Reveal delay={0.06}><p class="about-story-lead">{t.storyLead}</p></Reveal>{[t.storyOne,t.storyTwo,t.storyThree].map(text=><Reveal><p>{text}</p></Reveal>)}</div>
+      </div>
+      <Reveal class="about-container about-belief"><p class="about-eyebrow">{t.beliefLabel}</p><p>{t.belief}</p></Reveal>
+    </section>
+    <section class="about-invitation about-container"><Reveal><p class="about-eyebrow">{t.ctaLabel}</p><h2>{t.ctaTitle}</h2><p class="about-invitation-copy">{t.ctaText}</p><div class="about-invitation-actions"><a class="about-button" href={`${path("/")}?join=1`}>{t.join} <Arrow /></a><button type="button" class="about-text-link" data-contact-trigger>{t.contact} <Arrow /></button></div></Reveal></section>
   </main>
-  <Footer />
-</Layout>
+</SiteLayout>

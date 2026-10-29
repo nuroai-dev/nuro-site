@@ -1,75 +1,43 @@
 ---
-/**
- * Press page content, locale-aware (English at /press, Swedish at /sv/press).
- * Rendered by both src/pages/press.astro and src/pages/sv/press.astro. Reads
- * PRESS_ITEMS; each card picks its Swedish title/summary on /sv (PressCard).
- */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import Arrow from "@/components/site/Arrow.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
-import PressCard from "@/components/press/PressCard.astro";
-import { PRESS_ITEMS } from "@/data/press";
-import styles from "@/components/press/press.module.css";
-import { getLang } from "@/i18n/ui";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
-
-const lang = getLang(Astro.url);
-const t = {
-  en: {
-    title: "Press | Nuro",
-    description:
-      "News coverage and press about Nuro, inclusive education for Swedish schools.",
-    eyebrow: "Press",
-    heading: "Nuro in the news",
-    emptyTitle: "No press articles yet",
-    emptyBody:
-      "We're just getting started. When outlets write about Nuro, their articles will appear here.",
-  },
-  sv: {
-    title: "Press | Nuro",
-    description:
-      "Nyheter och press om Nuro, inkluderande utbildning för svenska skolor.",
-    eyebrow: "Press",
-    heading: "Nuro i media",
-    emptyTitle: "Inga pressartiklar än",
-    emptyBody:
-      "Vi har precis börjat. När medier skriver om Nuro dyker deras artiklar upp här.",
-  },
-}[lang];
-
-const items = [...PRESS_ITEMS].sort((a, b) => b.date.localeCompare(a.date));
+import { PRESS_ITEMS } from "@/data/press";
+import { getLang,localizePath } from "@/i18n/ui";
+import "@/styles/editorial.css";
+const lang=getLang(Astro.url);
+const t=lang === "sv" ? {
+ title:"Press | Nuro",description:"Nyheter, artiklar och berättelser om Nuro och ett lärande som fungerar för fler.",
+ heading:"Nuro i",end:"media.",intro:"Berättelserna, människorna och idéerna bakom en annan väg till lärande.",
+ read:"Läs artikeln",label:"För journalister",contactTitle:"Låt oss prata om lärande.",
+ contactText:"Skriver du om Nuro, utbildning eller tillgänglighet? Vi hjälper gärna till med intervjuer, bilder och bakgrundsinformation.",contact:"Presskontakt",empty:"Fler berättelser kommer snart.",
+} : {
+ title:"Press | Nuro",description:"News, coverage and stories about Nuro and learning that works for more minds.",
+ heading:"Nuro in",end:"the news.",intro:"The stories, people, and ideas behind a different way to learn.",
+ read:"Read the story",label:"For the press",contactTitle:"Let’s talk about learning.",
+ contactText:"Writing about Nuro, education, or accessibility? We’re happy to help with interviews, images, and background information.",contact:"Press enquiries",empty:"More stories are on their way.",
+};
+const items=[...PRESS_ITEMS].sort((a,b)=>b.date.localeCompare(a.date));
+const title=(item:typeof items[number])=>lang === "sv" ? item.titleSv ?? item.title : item.title;
+const summary=(item:typeof items[number])=>lang === "sv" ? item.tldrSv ?? item.tldr : item.tldr;
+const href=(item:typeof items[number])=>item.url.startsWith("/") ? localizePath(item.url,lang) : item.url;
+const date=(value:string)=>new Intl.DateTimeFormat(lang === "sv" ? "sv-SE" : "en-GB",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"}).format(new Date(value));
+const lead=items[0];
 ---
-
-<Layout title={t.title} description={t.description}>
-  <BreadcrumbSchema name="Press" pageType="CollectionPage" />
-  <Nav />
-  <main id="main-content" tabindex="-1">
-    <section class={styles.section}>
-      <div class={styles.container}>
-        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
-        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
-          {t.heading}
-        </Reveal>
-
-        {
-          items.length > 0 ? (
-            <div class={styles.grid}>
-              {items.map((item, i) => (
-                <Reveal delay={Math.min(i, 5) * 0.06}>
-                  <PressCard item={item} />
-                </Reveal>
-              ))}
-            </div>
-          ) : (
-            <Reveal class={styles.empty} delay={0.18}>
-              <span class={styles.emptyTitle}>{t.emptyTitle}</span>
-              <p class={styles.emptyBody}>{t.emptyBody}</p>
-            </Reveal>
-          )
-        }
-      </div>
-    </section>
-  </main>
-  <Footer />
-</Layout>
+<SiteLayout title={t.title} description={t.description}>
+ <BreadcrumbSchema name="Press" pageType="CollectionPage" />
+ <main id="main-content" tabindex="-1">
+  <section class="site-hero site-container"><Reveal eager><p class="site-eyebrow">Press</p></Reveal><Reveal eager delay={0.06}><h1 class="site-title">{t.heading} <span>{t.end}</span></h1></Reveal><Reveal eager delay={0.13}><p class="site-intro">{t.intro}</p></Reveal></section>
+  <section class="press-list site-container" aria-label={lang === "sv" ? "Pressartiklar" : "Press coverage"}>
+   {lead ? <>
+    <Reveal><article class="press-feature">
+     <a href={href(lead)} tabindex="-1" aria-hidden="true"><img class="press-feature-image" src={lead.image ?? "/press/nuro-team.jpg"} alt="" width="900" height="563" /></a>
+     <div><p class="press-meta"><span class="press-outlet">{lead.outlet}</span><time datetime={lead.date}>{date(lead.date)}</time></p><a href={href(lead)}><h2>{title(lead)}</h2></a><p class="press-summary">{summary(lead)}</p><a class="site-text-link" href={href(lead)}>{t.read} <Arrow direction={lead.url.startsWith("/") ? "right" : "up-right"} /></a></div>
+    </article></Reveal>
+    {items.slice(1).map(item=><Reveal><article class="press-row"><p class="press-meta"><span class="press-outlet">{item.outlet}</span><time datetime={item.date}>{date(item.date)}</time></p><div><a href={href(item)} target={item.url.startsWith("/") ? undefined : "_blank"} rel="noopener noreferrer"><h2>{title(item)}</h2></a><p class="press-summary">{summary(item)}</p></div><Arrow class="press-arrow" size={24} direction={item.url.startsWith("/") ? "right" : "up-right"} /></article></Reveal>)}
+   </> : <Reveal><p class="press-summary">{t.empty}</p></Reveal>}
+  </section>
+  <section class="site-connect"><Reveal class="site-container site-connect-inner"><div><p class="site-eyebrow">{t.label}</p><h2>{t.contactTitle}</h2><p>{t.contactText}</p></div><button type="button" class="site-button" data-contact-trigger data-contact-topic="press">{t.contact} <Arrow /></button></Reveal></section>
+ </main>
+</SiteLayout>

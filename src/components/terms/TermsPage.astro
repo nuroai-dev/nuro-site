@@ -8,11 +8,9 @@
  * team plans to refine later. Terms for the Nuro product/service are agreed
  * separately with customers.
  */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
-import styles from "@/components/page/page.module.css";
+import "@/styles/legal.css";
 import { getLang } from "@/i18n/ui";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 
@@ -85,22 +83,21 @@ const t = {
 export const prerender = true;
 ---
 
-<Layout title={t.title} description={t.description}>
+<SiteLayout title={t.title} description={t.description}>
   <BreadcrumbSchema name={lang === "sv" ? "Användarvillkor" : "Terms of Use"} />
-  <Nav />
   <main id="main-content" tabindex="-1">
-    <section class={styles.section}>
-      <div class={styles.container}>
-        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
-        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+    <section class="legal-page">
+      <div class="site-container">
+        <Reveal as="span" eager class="site-eyebrow">{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class="site-title">
           {t.heading}
         </Reveal>
-        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+        <Reveal as="p" eager delay={0.1} class="legal-meta">
           {t.updated}
         </Reveal>
 
-        <div class={styles.body}>
-          <Reveal as="p" delay={0.12}>{t.intro}</Reveal>
+        <div class="legal-body">
+          <Reveal as="p" delay={0.12} class="legal-intro">{t.intro}</Reveal>
 
           <h2>{t.usingHeading}</h2>
           <p>{t.usingBody}</p>
@@ -128,5 +125,4 @@ export const prerender = true;
       </div>
     </section>
   </main>
-  <Footer />
-</Layout>
+</SiteLayout>

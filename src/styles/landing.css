@@ -1,0 +1,154 @@
+.nuro-birth-page {
+  position: relative;
+  min-height: 100dvh;
+  background: var(--birth-paper);
+  color: var(--birth-ink);
+  color-scheme: light;
+  --landing-character-height: 220px;
+  font-family: var(--font-sans);
+}
+
+.landing-main {
+  position: relative;
+  min-height: 96vh;
+  min-height: 96dvh;
+}
+.landing-main:focus { outline: none; }
+.birth-stage {
+  position: relative;
+  min-height: 96vh;
+  min-height: 96dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 24px;
+  --birth-shadow: 0;
+}
+.landing-brand {
+  position: absolute;
+  top: max(14px, env(safe-area-inset-top));
+  left: max(18px, env(safe-area-inset-left));
+  width: 76px;
+  z-index: 21;
+  pointer-events: auto;
+  animation: landing-brand-in 420ms ease-out both;
+}
+.landing-brand .neural-mark { display: block; width: 100%; height: auto; }
+@keyframes landing-brand-in { from { opacity: 0; } to { opacity: 1; } }
+
+.landing-composition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Use the onboarding canvas dimensions, including its responsive sizes. */
+.landing-character-wrap {
+  height: var(--landing-character-height);
+  margin-bottom: 24px;
+}
+.landing-copy {
+  width: 100%;
+  display: none;
+}
+[data-introduced="true"] .landing-copy {
+  display: block;
+}
+.landing-shortcut {
+  position: absolute;
+  right: 30px;
+  top: 24px;
+  z-index: 21;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--birth-muted);
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 160ms, background-color 160ms;
+}
+.landing-shortcut:focus-visible { outline: 2px solid var(--birth-focus); outline-offset: 3px; }
+
+.birth-character.nuro-glass-character {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  appearance: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  transform-origin: 50% 60%;
+  transition: none;
+}
+.birth-character:enabled { cursor: pointer; }
+.birth-character:focus-visible { outline: 2px solid var(--birth-focus); outline-offset: 5px; }
+
+.birth-character.nuro-glass-character canvas {
+  opacity: 0;
+  transition: none;
+}
+
+.birth-stage[data-status="ready"] canvas {
+  opacity: 1;
+}
+
+.birth-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.birth-shadow {
+  position: absolute;
+  bottom: 2%;
+  left: 33%;
+  width: 34%;
+  height: 5%;
+  border-radius: 50%;
+  background: var(--color-holo-2);
+  filter: blur(7px);
+  opacity: calc(var(--birth-shadow) * 0.18);
+  z-index: -1;
+}
+
+
+[data-still="true"] .landing-brand { animation: none; }
+@media (max-width: 600px) {
+  .nuro-birth-page { --landing-character-height: 185px; }
+  .birth-stage { padding:88px 20px max(40px,env(safe-area-inset-bottom)); }
+  .landing-character-wrap { margin-bottom: 16px; }
+  .landing-shortcut { top: 16px; right: 14px; }
+  .landing-brand { top: max(10px, env(safe-area-inset-top)); left: max(14px, env(safe-area-inset-left)); width: 64px; }
+}
+@media (max-height: 700px) {
+  .nuro-birth-page { --landing-character-height: 165px; }
+}
+
+/* One hover system for every button on the page.
+   Quiet buttons (text, icon, outlined, unselected chips) fill with --birth-hover and turn ink;
+   solid ink buttons lighten to --color-ink-2. Each base rule carries a 160ms colour transition. */
+@media (hover: hover) {
+  :is(.landing-shortcut, .landing-text-button, .landing-back, .landing-edit,
+    .landing-primary[data-variant="quiet"]):hover:not(:disabled),
+  .landing-chip:not(:has(input:checked, input:disabled)):hover {
+    color: var(--birth-ink);
+    background: var(--birth-hover);
+  }
+  .landing-primary:not([data-variant="quiet"]):hover:not(:disabled) {
+    background: var(--color-ink-2);
+  }
+}
+
+[data-birth-header][data-ready=true] .site-brand { visibility:hidden; }
+.landing-brand { position:fixed; }
+.landing-caption h1 { font-family:var(--font-display); font-weight:400; }

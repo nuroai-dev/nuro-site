@@ -12,5 +12,9 @@ dist/
 .claude-harness/worktrees/
 .vercel
 
+# Private form data stays on the deployment volume, never in Git.
+data/
+.vite-review-cache/
+
 # CS runtime artifact — injected into worktrees, never committed
 CLAUDE.md

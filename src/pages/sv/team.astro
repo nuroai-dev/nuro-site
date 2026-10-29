@@ -1,6 +1,4 @@
 ---
-import TeamPage from "@/components/team/TeamPage.astro";
-export const prerender = true;
+export const prerender = false;
+return Astro.redirect("/sv/about#about-team-heading", 301);
 ---
-
-<TeamPage />

@@ -22,7 +22,6 @@ export const EMAIL_PLACEHOLDER = "you@example.com";
 export const ROLE_LABEL = "I am a... *";
 export const ROLE_OPTIONS = [
   "Parent or guardian",
-  "Student",
   "Teacher or school staff",
   "Principal or school leader",
   "Municipality or school operator",
@@ -47,7 +46,7 @@ export const MESSAGE_MAX_LENGTH = 1000;
 export const SUBMIT_IDLE = "Join waitlist";
 export const SUBMIT_LOADING = "Submitting...";
 export const PRIVACY_NOTE =
-  "We respect your privacy. No spam, just updates about Nuro.";
+  "For adults. No spam, just updates about Nuro. You can leave at any time.";
 
 export const SUCCESS_MESSAGE =
   "You're on the Nuro waiting list! We'll be in touch.";
@@ -95,7 +94,6 @@ export function getCopy(lang: Lang) {
       roleLabel: "Jag är... *",
       roleOptions: [
         "Förälder eller vårdnadshavare",
-        "Elev",
         "Lärare eller skolpersonal",
         "Rektor eller skolledare",
         "Huvudman eller kommun",
@@ -114,7 +112,7 @@ export function getCopy(lang: Lang) {
         "Berätta om din situation, vilka utmaningar du möter, eller vad du skulle vilja se i Nuro...",
       submitIdle: "Gå med i väntelistan",
       submitLoading: "Skickar...",
-      privacyNote: "Vi värnar om din integritet. Ingen spam, bara uppdateringar om Nuro.",
+      privacyNote: "För vuxna. Ingen spam, bara uppdateringar om Nuro. Du kan lämna när du vill.",
       successMessage: "Du är med på Nuros väntelista! Vi hör av oss.",
       duplicateTitle: "Redan med på listan!",
       duplicateBody: "Den här e-posten finns redan på vår väntelista.",

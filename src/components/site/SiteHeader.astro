@@ -1,0 +1,25 @@
+---
+import Arrow from "@/components/site/Arrow.astro";
+import AnimatedLogo from "./AnimatedLogo";
+import { getLang, localizePath } from "@/i18n/ui";
+import "@/styles/edge-blur.css";
+const { home = false } = Astro.props;
+const lang = getLang(Astro.url);
+---
+<span class="nuro-edge-blur-marker" aria-hidden="true"></span>
+<div class="nuro-edge-blur" aria-hidden="true">{Array.from({length:6}, () => <span></span>)}</div>
+<header class="site-header" data-birth-header={home || undefined}>
+  <a class="site-brand" href={localizePath("/", lang)} aria-label={lang === "sv" ? "Nuro, startsida" : "Nuro, home"}>
+    {home ? <img src="/brand/nuro-neurons.svg" alt="" width="76" height="68" /> : <AnimatedLogo client:only="react"><img slot="fallback" src="/brand/nuro-neurons.svg" alt="" width="76" height="68" /></AnimatedLogo>}
+  </a>
+  <a class="site-button site-header-cta" href={`${localizePath("/", lang)}?join=1`} data-join-trigger>
+    {lang === "sv" ? "Gå med på väntelistan" : "Join waitlist"}<Arrow />
+  </a>
+</header>
+<script>
+  const blur = document.querySelector<HTMLElement>(".nuro-edge-blur");
+  const marker = document.querySelector(".nuro-edge-blur-marker");
+  if (marker && blur) new IntersectionObserver(([entry]) => {
+    blur.dataset.active = String(entry.boundingClientRect.top < 0);
+  }).observe(marker);
+</script>

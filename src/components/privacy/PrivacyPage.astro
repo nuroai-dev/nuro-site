@@ -8,11 +8,9 @@
  * reflect what the site actually collects. Starter content the team plans to
  * refine later. The product's handling of student data is governed separately.
  */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
-import styles from "@/components/page/page.module.css";
+import "@/styles/legal.css";
 import { getLang } from "@/i18n/ui";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 
@@ -24,13 +22,13 @@ const t = {
       "How Nuro handles personal data collected through this website, what we collect, why, and the rights you have under the GDPR.",
     eyebrow: "Legal",
     heading: "Privacy Policy",
-    updated: "Last updated June 2026",
+    updated: "Last updated 28 October 2026",
     intro:
       "This policy explains how Nuro handles personal data collected through this website, primarily the waitlist and contact forms. We keep data collection to the minimum we need, and we never sell your personal data.",
     collectHeading: "What we collect",
     collectIntro: "When you use this website, we may collect:",
     collectWaitlist:
-      "your email address, the role you select (parent/guardian, student, or teacher/school staff), the student age ranges you choose, and any optional message you write.",
+      "your email address and any optional details you share: your roles (parent/guardian, teacher/school staff, school leader, or municipality/school operator), the age ranges of your children or students, and any message you write. Please do not include children’s names or other identifying details.",
     collectWaitlistLabel: "Waitlist details",
     collectContact:
       "the name, email, and message you send us through the contact form.",
@@ -70,13 +68,13 @@ const t = {
       "Hur Nuro hanterar personuppgifter som samlas in via den här webbplatsen, vad vi samlar in, varför, och vilka rättigheter du har enligt GDPR.",
     eyebrow: "Juridik",
     heading: "Integritetspolicy",
-    updated: "Senast uppdaterad juni 2026",
+    updated: "Senast uppdaterad 28 oktober 2026",
     intro:
       "Den här policyn förklarar hur Nuro hanterar personuppgifter som samlas in via den här webbplatsen, främst via väntelistan och kontaktformulären. Vi håller insamlingen av uppgifter till ett minimum, och vi säljer aldrig dina personuppgifter.",
     collectHeading: "Vad vi samlar in",
     collectIntro: "När du använder den här webbplatsen kan vi samla in:",
     collectWaitlist:
-      "din e-postadress, den roll du väljer (förälder/vårdnadshavare, elev eller lärare/skolpersonal), de åldersspann för elever du väljer, och eventuella meddelanden du själv skriver.",
+      "din e-postadress och de frivilliga uppgifter du delar: dina roller (förälder/vårdnadshavare, lärare/skolpersonal, skolledare eller kommun/skolhuvudman), åldersgrupper för dina barn eller elever och eventuella meddelanden du skriver. Ange inte barns namn eller andra identifierande uppgifter.",
     collectWaitlistLabel: "Uppgifter från väntelistan",
     collectContact:
       "det namn, den e-postadress och det meddelande du skickar till oss via kontaktformuläret.",
@@ -117,22 +115,21 @@ const t = {
 export const prerender = true;
 ---
 
-<Layout title={t.title} description={t.description}>
+<SiteLayout title={t.title} description={t.description}>
   <BreadcrumbSchema name={lang === "sv" ? "Integritetspolicy" : "Privacy Policy"} />
-  <Nav />
   <main id="main-content" tabindex="-1">
-    <section class={styles.section}>
-      <div class={styles.container}>
-        <Reveal as="span" eager class={styles.eyebrow}>{t.eyebrow}</Reveal>
-        <Reveal as="h1" eager delay={0.06} class={styles.heading}>
+    <section class="legal-page">
+      <div class="site-container">
+        <Reveal as="span" eager class="site-eyebrow">{t.eyebrow}</Reveal>
+        <Reveal as="h1" eager delay={0.06} class="site-title">
           {t.heading}
         </Reveal>
-        <Reveal as="p" eager delay={0.1} class={styles.meta}>
+        <Reveal as="p" eager delay={0.1} class="legal-meta">
           {t.updated}
         </Reveal>
 
-        <div class={styles.body}>
-          <Reveal as="p" delay={0.12}>{t.intro}</Reveal>
+        <div class="legal-body">
+          <Reveal as="p" delay={0.12} class="legal-intro">{t.intro}</Reveal>
 
           <h2>{t.collectHeading}</h2>
           <p>{t.collectIntro}</p>
@@ -179,5 +176,4 @@ export const prerender = true;
       </div>
     </section>
   </main>
-  <Footer />
-</Layout>
+</SiteLayout>

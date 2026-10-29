@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+import SiteHeader from "@/components/site/SiteHeader.astro";
+import SiteFooter from "@/components/site/SiteFooter.astro";
+import ContactDrawer from "@/components/contact/ContactDrawer";
+import { getLang } from "@/i18n/ui";
+import "@/styles/site-fonts.css";
+import "@/styles/site-tokens.css";
+import "@/styles/site.css";
+interface Props { title: string; description: string; home?: boolean; }
+const { title, description, home = false } = Astro.props;
+const lang = getLang(Astro.url);
+---
+<Layout title={title} description={description} refreshed ogImageAlt="Nuro. Learning support that adapts to how you learn.">
+  <div class="nuro-birth-page nuro-about-page" data-theme="light" data-home={home} data-vaul-drawer-wrapper>
+    <SiteHeader home={home} />
+    <slot />
+    <SiteFooter />
+  </div>
+  <ContactDrawer lang={lang} client:load />
+</Layout>

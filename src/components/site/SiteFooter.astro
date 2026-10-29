@@ -1,0 +1,49 @@
+---
+import Arrow from "@/components/site/Arrow.astro";
+import { getLang, localizePath, switchLangPath } from "@/i18n/ui";
+import "@/styles/landing-footer.css";
+const lang = getLang(Astro.url);
+const t = lang === "sv" ? {
+  product:"Produkt", company:"Företaget", social:"Sociala medier", legal:"Juridiskt", waitlist:"Gå med på väntelistan",
+  about:"Om Nuro", press:"Press", career:"Karriär", contact:"Kontakt", privacy:"Integritet", terms:"Villkor",
+  designed:"Designad i Sverige", top:"Till toppen", language:"Byt språk till engelska",
+} : {
+  product:"Product", company:"Company", social:"Social", legal:"Legal", waitlist:"Join waitlist",
+  about:"About", press:"Press", career:"Career", contact:"Contact", privacy:"Privacy", terms:"Terms",
+  designed:"Designed in Sweden", top:"Back to top", language:"Switch language to Swedish",
+};
+const path = (url:string) => localizePath(url,lang);
+---
+<footer class="landing-footer" data-active="false">
+  <div class="landing-footer-container">
+    <div class="landing-footer-grid">
+      <div class="landing-footer-brand"><a href={path("/")} aria-label="Nuro"><img src="/brand/landing/nuro-lockup.svg" alt="Nuro" width="124" height="36" /></a></div>
+      <nav aria-label={t.product}><h2>{t.product}</h2><ul><li><a href={`${path("/")}?join=1`} data-join-trigger>{t.waitlist}</a></li></ul></nav>
+      <nav aria-label={t.company}><h2>{t.company}</h2><ul>
+        <li><a href={path("/about")}>{t.about}</a></li><li><a href={path("/press")}>{t.press}</a></li><li><a href={path("/career")}>{t.career}</a></li>
+        <li><a href="mailto:hello@nuroai.dev" data-contact-trigger>{t.contact}</a></li>
+      </ul></nav>
+      <nav aria-label={t.social}><h2>{t.social}</h2><ul>
+        <li><a href="https://www.linkedin.com/company/nuroaidev/" target="_blank" rel="noopener noreferrer">LinkedIn <Arrow /></a></li>
+        <li><a href="https://www.instagram.com/nuroai.dev/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a></li>
+      </ul></nav>
+      <nav aria-label={t.legal}><h2>{t.legal}</h2><ul><li><a href={path("/privacy")}>{t.privacy}</a></li><li><a href={path("/terms")}>{t.terms}</a></li></ul></nav>
+    </div>
+  </div>
+  <div class="landing-footer-wordmark">
+    <div class="landing-footer-container"><img src="/brand/landing/nuro-outline.svg" alt="" width="1092" height="279" loading="lazy" /></div>
+    <div class="landing-footer-credits">
+      <p>© Nuro, {new Date().getFullYear()}</p>
+      <p class="landing-footer-origin"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="var(--footer-flag-blue)"/><path d="M5 0h2v12H5zM0 5h16v2H0z" fill="var(--footer-flag-yellow)"/></svg>{t.designed}</p>
+      <div class="landing-footer-actions"><a href={switchLangPath(Astro.url.pathname,lang === "en" ? "sv" : "en")} lang={lang === "en" ? "sv" : "en"} aria-label={t.language}>{lang === "en" ? "Svenska" : "English"}</a><a href="#main-content" data-back-to-top>{t.top} <Arrow direction="up" /></a></div>
+    </div>
+  </div>
+</footer>
+<script>
+  const footer = document.querySelector<HTMLElement>(".landing-footer");
+  if (footer) new IntersectionObserver(([entry]) => { footer.dataset.active=String(entry.isIntersecting); }).observe(footer);
+  document.querySelector('[data-back-to-top]')?.addEventListener('click', event => {
+    event.preventDefault(); window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    document.getElementById('main-content')?.focus({preventScroll:true});
+  });
+</script>

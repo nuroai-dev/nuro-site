@@ -1,0 +1,61 @@
+.nuro-edge-blur-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.nuro-edge-blur {
+  position: fixed;
+  inset: 0 0 auto;
+  height: var(--edge-blur-height, 96px);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.nuro-edge-blur > span {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(var(--edge-blur-radius));
+  backdrop-filter: blur(var(--edge-blur-radius));
+  -webkit-mask-image: var(--edge-blur-band);
+  mask-image: var(--edge-blur-band);
+  transition: opacity 180ms ease-out;
+}
+
+.nuro-edge-blur[data-active="true"] > span { opacity: 1; }
+.nuro-edge-blur[data-still="true"] > span { transition: none; }
+
+/* Overlapping masks blend the six blur strengths without horizontal seams. */
+.nuro-edge-blur > span:nth-child(1) {
+  --edge-blur-radius: .01rem;
+  --edge-blur-band: linear-gradient(transparent 66.6667%, var(--edge-blur-mask) 83.3333% 100%, transparent 100%);
+}
+.nuro-edge-blur > span:nth-child(2) {
+  --edge-blur-radius: .06rem;
+  --edge-blur-band: linear-gradient(transparent 50%, var(--edge-blur-mask) 66.6667% 83.3333%, transparent 100%);
+}
+.nuro-edge-blur > span:nth-child(3) {
+  --edge-blur-radius: 0.16rem;
+  --edge-blur-band: linear-gradient(transparent 33.3333%, var(--edge-blur-mask) 50% 66.6667%, transparent 83.3333%);
+}
+.nuro-edge-blur > span:nth-child(4) {
+  --edge-blur-radius: 0.32rem;
+  --edge-blur-band: linear-gradient(transparent 16.6667%, var(--edge-blur-mask) 33.3333% 50%, transparent 66.6667%);
+}
+.nuro-edge-blur > span:nth-child(5) {
+  --edge-blur-radius: 0.64rem;
+  --edge-blur-band: linear-gradient(transparent 0%, var(--edge-blur-mask) 16.6667% 33.3333%, transparent 50%);
+}
+.nuro-edge-blur > span:nth-child(6) {
+  --edge-blur-radius: 1.28rem;
+  --edge-blur-band: linear-gradient(var(--edge-blur-mask) 16.6667%, transparent 33.3333%);
+}
+
+@media (max-width: 600px) {
+  .nuro-edge-blur { --edge-blur-height: 72px; }
+}

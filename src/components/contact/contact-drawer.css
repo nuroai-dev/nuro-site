@@ -1,179 +1,43 @@
-/* Contact drawer (Vaul) — floating bottom sheet, lifted off the bottom edge,
-   max-width 800px, centered. Uses the site's cream/ink tokens. */
-
-.cd-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  background: rgba(22, 22, 28, 0.45);
+/* The existing Vaul drawer, styled to match the new white landing page. */
+.cd-overlay { position:fixed; inset:0; z-index:90; background:rgb(21 21 26 / .24); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+.cd-content { position:fixed; z-index:91; left:16px; right:16px; bottom:16px; margin-inline:auto; max-width:640px; max-height:calc(100dvh - 32px); display:flex; flex-direction:column; overflow:hidden; background:#fff; border:1px solid #e5e3e9; border-radius:28px; box-shadow:0 20px 80px rgb(21 21 26 / .16); outline:none; color:#15151a; font-family:var(--font-sans); }
+/* Keep Vaul’s overflow boundary for dragging on scrolled pages; the panel clips it. */
+.cd-grabber[data-vaul-handle] { flex:none; width:38px; height:4px; margin:12px auto 0; border-radius:999px; background:#d2cddc; opacity:1; cursor:grab; }
+.cd-grabber[data-vaul-handle]:active { cursor:grabbing; }
+.cd-close { position:absolute; top:20px; right:20px; display:grid; place-items:center; width:40px; height:40px; border:0; border-radius:50%; background:#f0eaff; color:#6f6a77; cursor:pointer; }
+.cd-close:hover { background:#e5daff; color:#15151a; }
+.cd-inner { min-height:0; padding:30px 40px 32px; overflow-y:auto; overscroll-behavior:contain; touch-action:pan-y; }
+.cd-title { margin:0; padding-right:32px; font:400 clamp(30px,3.3vw,42px)/1.2 var(--font-display); letter-spacing: normal; }
+.cd-lead { margin:0 0 8px; color:#6f6a77; font-size:22px; line-height:1.6; }
+.cd-form { display:flex; flex-direction:column; gap:18px; }
+.cd-field { display:flex; flex-direction:column; gap:8px; }
+.cd-label { font-size:15px; }
+.cd-input,.cd-textarea { width:100%; font:400 18px/1.5 var(--font-sans); color:#15151a; background:#fff; border:1px solid #e5e3e9; border-radius:14px; padding:13px 16px; transition:border-color 160ms; }
+.cd-input::placeholder,.cd-textarea::placeholder { color:#76717d; }
+.cd-input:focus,.cd-textarea:focus { outline:2px solid #7860ba; outline-offset:2px; }
+.cd-textarea { resize:vertical; min-height:120px; }
+.cd-field[data-invalid] :is(.cd-input,.cd-textarea) { border-color:#a33c51; }
+.cd-field-error,.cd-error-banner { color:#a33c51; font-size:15px; line-height:1.5; margin:0; }
+.cd-submit { display:flex; align-items:center; justify-content:center; gap:18px; min-height:48px; padding:12px 26px; border:0; border-radius:999px; background:#15151a; color:#fff; font:400 15px/1.5 var(--font-sans); cursor:pointer; transition:background-color 160ms; }
+.cd-submit:hover:not(:disabled) { background:#3a3f45; }
+.cd-submit:disabled { opacity:.6; cursor:wait; }
+.cd-privacy { color:#6f6a77; font-size:15px; text-align:center; line-height:1.5; margin:0; }
+.cd-success { display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px; padding:24px 0; }
+.cd-success .cd-title { padding:0; }
+.cd-success-mark { display:grid; place-items:center; width:58px; height:58px; background:#f4effc; color:#7860ba; border-radius:50%; }
+.cd-form>*,.cd-success>* { animation:contact-focus-in 420ms cubic-bezier(.2,.7,.2,1) both; }
+.cd-form>:nth-child(2),.cd-success>:nth-child(2){animation-delay:50ms}.cd-form>:nth-child(3),.cd-success>:nth-child(3){animation-delay:90ms}.cd-form>:nth-child(4){animation-delay:130ms}.cd-form>:nth-child(5){animation-delay:170ms}.cd-form>:nth-child(6){animation-delay:210ms}.cd-form>:nth-child(7){animation-delay:250ms}
+@keyframes contact-focus-in { from{opacity:0;filter:blur(6px);transform:translateY(6px)} to{opacity:1;filter:blur(0);transform:translateY(0)} }
+@media(max-width:600px) {
+ .cd-content { inset:auto 8px 8px; border-radius:24px; max-height:calc(100dvh - 16px); }
+ .cd-inner { padding:26px 20px max(20px,env(safe-area-inset-bottom)); scroll-padding-block:20px; }
+ .cd-close { top:12px; right:12px; width:44px; height:44px; }
+ .cd-form { gap:14px; }
+ .cd-title { font-size:28px; }
+ .cd-lead { font-size:17px; line-height:1.5; margin-bottom:4px; }
+ .cd-label { font-size:14px; }
+ .cd-input, .cd-textarea { font-size:16px; padding:12px 14px; scroll-margin-block:20px; }
+ .cd-textarea { min-height:100px; }
+ .cd-privacy, .cd-field-error, .cd-error-banner { font-size:13px; }
 }
-
-.cd-content {
-  position: fixed;
-  z-index: 91;
-  /* Lifted up from the bottom; inset from the sides on narrow screens, then
-     capped at 800px and centered via auto margins. */
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  margin-inline: auto;
-  max-width: 800px;
-  max-height: 88vh;
-  display: flex;
-  flex-direction: column;
-  background: var(--bg, #faf7f2);
-  border: 1px solid var(--hair, rgba(22, 22, 28, 0.08));
-  border-radius: 24px;
-  box-shadow: 0 -10px 48px rgba(22, 22, 28, 0.2);
-  outline: none;
-}
-
-/* Vaul renders a ::after "fill" below the content to cover overscroll drag;
-   on a floating drawer it shows as a bar under the sheet — hide it. */
-.cd-content::after {
-  opacity: 0;
-}
-
-.cd-grabber {
-  flex: none;
-  width: 44px;
-  height: 5px;
-  margin: 12px auto 0;
-  border-radius: 999px;
-  background: rgba(22, 22, 28, 0.18);
-}
-
-.cd-inner {
-  padding: 14px clamp(20px, 4vw, 40px) clamp(24px, 4vw, 40px);
-  overflow-y: auto;
-}
-
-.cd-title {
-  margin: 8px 0 0;
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 32px);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-
-.cd-lead {
-  margin: 8px 0 24px;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--ink-3);
-}
-
-.cd-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.cd-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.cd-label {
-  font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink-2);
-}
-
-.cd-input,
-.cd-textarea {
-  font: inherit;
-  font-family: var(--font-sans);
-  /* 16px keeps iOS from zooming the field on focus. */
-  font-size: 16px;
-  color: var(--ink);
-  background: #fff;
-  border: 1px solid var(--hair, rgba(22, 22, 28, 0.08));
-  border-radius: 12px;
-  padding: 12px 14px;
-  outline: none;
-  transition: border-color 0.2s var(--ease, ease);
-}
-
-.cd-input::placeholder,
-.cd-textarea::placeholder {
-  color: var(--ink-4, #9b9ba3);
-}
-
-.cd-input:focus,
-.cd-textarea:focus {
-  border-color: var(--ink-3, #6b7177);
-}
-
-.cd-textarea {
-  resize: vertical;
-  min-height: 110px;
-  line-height: 1.5;
-}
-
-.cd-field[data-invalid] .cd-input,
-.cd-field[data-invalid] .cd-textarea {
-  border-color: #c46a8a;
-  background: rgba(196, 106, 138, 0.06);
-}
-
-.cd-field-error {
-  font-size: 12.5px;
-  font-weight: 500;
-  color: #a14e6f;
-}
-
-.cd-submit {
-  margin-top: 4px;
-  height: 48px;
-  border: 0;
-  border-radius: 999px;
-  background: hsl(222 25% 8%);
-  color: hsl(40 33% 96%);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.15s var(--ease, ease);
-}
-
-.cd-submit:hover:not(:disabled) {
-  background: hsl(222 25% 8% / 0.9);
-}
-
-.cd-submit:disabled {
-  opacity: 0.6;
-  cursor: default;
-}
-
-.cd-error-banner {
-  margin: 4px 0 0;
-  font-size: 13px;
-  text-align: center;
-  color: #a14e6f;
-}
-
-.cd-success {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 4px;
-  padding: 16px 0 8px;
-}
-
-.cd-success .cd-submit {
-  margin-top: 20px;
-  padding-inline: 32px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cd-overlay,
-  .cd-content {
-    transition: none !important;
-  }
-}
+@media(prefers-reduced-motion:reduce) { .cd-content,.cd-overlay{transition:none!important}.cd-form>*,.cd-success>*{animation:none} }
