@@ -1,0 +1,43 @@
+---
+// JobPosting JSON-LD for each open role on the career page, in the page's language.
+import type { CareerRole } from "@/data/careers";
+import { getLang, canonicalUrl, SITE_URL } from "@/i18n/ui";
+
+interface Props {
+  roles: CareerRole[];
+}
+const { roles } = Astro.props;
+
+const lang = getLang(Astro.url);
+const pageUrl = canonicalUrl(Astro.url.pathname);
+const escape = (text: string) => text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const list = (items: string[]) => `<ul>${items.map((item) => `<li>${escape(item)}</li>`).join("")}</ul>`;
+
+const postings = roles.map((role) => {
+  const r = role[lang];
+  const description = [
+    ...r.intro.map((p) => `<p>${escape(p)}</p>`),
+    `<p>${escape(r.doLead)}</p>`,
+    list(r.doItems),
+    `<p>${escape(r.youLead)}</p>`,
+    list(r.youItems),
+    `<p>${escape(r.bonus)}</p>`,
+    `<p>${escape(r.apply)} hello@nuroai.dev.</p>`,
+  ].join("");
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: r.title,
+    description,
+    datePosted: role.datePosted,
+    employmentType: role.employmentType,
+    url: `${pageUrl}#${role.id}`,
+    hiringOrganization: { "@type": "Organization", name: "Nuro", legalName: "Nuro AI AB", sameAs: SITE_URL },
+    jobLocation: {
+      "@type": "Place",
+      address: { "@type": "PostalAddress", addressLocality: role.locality, addressCountry: "SE" },
+    },
+  };
+});
+---
+{postings.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}

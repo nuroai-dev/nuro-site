@@ -2,6 +2,7 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { tagIntroEn } from "@/lib/blog-tags";
 import { TAG_HUB_SLUGS, tagHubs } from "@/lib/tag-hubs";
+import { CAREER_ROLES } from "@/data/careers";
 
 /**
  * Dynamic llms.txt. A curated site summary, then two auto-generated sections:
@@ -15,6 +16,8 @@ import { TAG_HUB_SLUGS, tagHubs } from "@/lib/tag-hubs";
 export const prerender = true;
 
 const SITE = "https://nuroai.dev";
+
+const OPEN_ROLES = CAREER_ROLES.map((role) => `${role.en.title} (${role.en.meta.join(", ")})`).join("; ");
 
 const HEADER = `# Nuro
 
@@ -43,7 +46,7 @@ The site is bilingual: English at the root and Swedish under /sv (for example ht
 - [About](https://nuroai.dev/about): Nuro's mission statement.
 - [Team](https://nuroai.dev/team): the people building Nuro.
 - [Press](https://nuroai.dev/press): news and coverage.
-- [Career](https://nuroai.dev/career): join the team.
+- [Career](https://nuroai.dev/career): join the team.${OPEN_ROLES ? ` Open roles: ${OPEN_ROLES}.` : ""}
 - [FAQ](https://nuroai.dev/faq): direct answers to the twenty questions families and schools ask most about Swedish school support, grouped into rights and the law, everyday school life, school refusal, and what is changing in 2026. Each answer cites the rule it rests on and links to a fuller explainer. Swedish: https://nuroai.dev/sv/faq
 - [Blog](https://nuroai.dev/blog): notes on neurodiversity in education, the research, the law, and what helps.
 - [Topics](https://nuroai.dev/blog/tags): every subject the blog covers, each with its own hub page. Swedish: https://nuroai.dev/sv/blog/tags
