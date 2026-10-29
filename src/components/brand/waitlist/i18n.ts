@@ -2,7 +2,7 @@
 const sv = {
   landingWaitlist: {
     greeting: "Hej, jag är Nuro! Kul att träffa dig.",
-    introduction: "Lärstöd som anpassar sig efter hur du lär dig.",
+    introduction: "Jag anpassar ditt skolarbete efter dina styrkor, behov, intressen och mål.",
     email: "Din e-postadress",
     placeholder: "du@exempel.se",
     join: "Gå med på väntelistan",
@@ -47,7 +47,7 @@ const sv = {
 const en: typeof sv = {
   landingWaitlist: {
     greeting: "Hey, I’m Nuro! Nice to meet you.",
-    introduction: "Learning support that adapts to how you learn.",
+    introduction: "I adapt your school work to your strengths, needs, interests and goals.",
     email: "Your email address",
     placeholder: "you@example.com",
     join: "Join the waiting list",
