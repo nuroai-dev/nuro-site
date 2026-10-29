@@ -4,8 +4,8 @@ import SiteLayout from "@/layouts/SiteLayout.astro";
 import LandingExperience from "./LandingExperience";
 import { getLang } from "@/i18n/ui";
 const lang=getLang(Astro.url);
-const title=lang === "sv" ? "Nuro | Lärstöd som anpassar sig efter dig" : "Nuro | Learning support that adapts to you";
-const description=lang === "sv" ? "Möt Nuro. Lärstöd som anpassar sig efter hur du lär dig. Gå med på väntelistan." : "Meet Nuro. Learning support that adapts to how you learn. Join the waiting list.";
+const title=lang === "sv" ? "Nuro | Jag anpassar ditt skolarbete efter dig" : "Nuro | I adapt your school work to you";
+const description=lang === "sv" ? "Möt Nuro. Jag anpassar ditt skolarbete efter dina styrkor, behov, intressen och mål. Gå med på väntelistan." : "Meet Nuro. I adapt your school work to your strengths, needs, interests and goals. Join the waiting list.";
 ---
 <SiteLayout title={title} description={description} home>
  <main id="main-content" class="landing-main" tabindex="-1">
