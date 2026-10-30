@@ -9,9 +9,9 @@
    components reference verbatim.
    ============================================================ */
 @theme {
-  /* Surfaces (light, cream — never pure white page bg) */
-  --color-bg: #faf7f2;
-  --color-bg-2: #f4efe8;
+  /* Surfaces: white page, matching the site refresh */
+  --color-bg: #ffffff;
+  --color-bg-2: #f5f4f6;
   --color-surface: #ffffff;
 
   /* Ink */
@@ -181,7 +181,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: var(--bg); /* #FAF7F2 — cream, never pure white */
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
