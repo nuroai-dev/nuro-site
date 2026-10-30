@@ -13,6 +13,7 @@ const blogSchema = z
     author: z.string().default("The Nuro team"),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    cta: z.boolean().default(true),
     heroImage: z.string().optional(),
     heroImageAlt: z.string().min(1).optional(),
     heroImageWidth: z.number().int().positive().optional(),

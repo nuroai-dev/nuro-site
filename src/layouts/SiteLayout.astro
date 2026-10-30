@@ -7,11 +7,11 @@ import { getLang } from "@/i18n/ui";
 import "@/styles/site-fonts.css";
 import "@/styles/site-tokens.css";
 import "@/styles/site.css";
-interface Props { title: string; description: string; home?: boolean; }
-const { title, description, home = false } = Astro.props;
+interface Props { title: string; description: string; home?: boolean; ogType?: string; publishedTime?: string; author?: string; ogImage?: string; ogImageAlt?: string; }
+const { title, description, home = false, ogImageAlt = "Nuro. Learning support that adapts to how you learn.", ...meta } = Astro.props;
 const lang = getLang(Astro.url);
 ---
-<Layout title={title} description={description} refreshed ogImageAlt="Nuro. Learning support that adapts to how you learn.">
+<Layout title={title} description={description} refreshed ogImageAlt={ogImageAlt} {...meta}>
   <div class="nuro-birth-page nuro-about-page" data-theme="light" data-home={home} data-vaul-drawer-wrapper>
     <SiteHeader home={home} />
     <slot />

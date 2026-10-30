@@ -3,9 +3,7 @@
  * Branded, bilingual 404 page, rendered for any unmatched route.
  * Locale follows the requested path: /sv/... shows Swedish, everything else English.
  */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import { getLang } from "@/i18n/ui";
 
 const lang = getLang(Astro.url);
@@ -35,8 +33,7 @@ const t = {
 }[lang];
 ---
 
-<Layout title={t.title} description={t.description}>
-  <Nav />
+<SiteLayout title={t.title} description={t.description}>
   <main id="main-content" tabindex="-1">
     <section class="nf">
       <span class="nf-eyebrow">{t.eyebrow}</span>
@@ -48,8 +45,7 @@ const t = {
       </div>
     </section>
   </main>
-  <Footer />
-</Layout>
+</SiteLayout>
 
 <style>
   .nf {

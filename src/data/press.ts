@@ -24,9 +24,9 @@ export const PRESS_ITEMS: PressItem[] = [
   {
     outlet: "Founders 50",
     title: "Sandra Hilltomt named to Founders 50 2026",
-    tldr: "Nuro's founder is one of the 50 founders on the first Founders 50, a Nordic list built on peer nominations where nobody can nominate themselves.",
+    tldr: "Nuro's founder Sandra Hilltomt finished in the top 3 on the first Founders 50.",
     titleSv: "Sandra Hilltomt med på Founders 50 2026",
-    tldrSv: "Nuros grundare är en av de 50 grundarna på första Founders 50, en nordisk lista som bygger på nomineringar från andra, där ingen får nominera sig själv.",
+    tldrSv: "Nuros grundare Sandra Hilltomt kom topp 3 på första Founders 50.",
     date: "2026-08-24",
     url: "/blog/sandra-hilltomt-founders-50-2026",
     image: "/blog/founders-50-sandra-hilltomt.webp",

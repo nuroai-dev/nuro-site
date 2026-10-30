@@ -21,7 +21,7 @@ const path = (url:string) => localizePath(url,lang);
       <Reveal eager delay={0.2}><a class="about-text-link" href="#about-team-heading">{t.meet}<Arrow direction="down" /></a></Reveal>
     </section>
     <section class="about-team about-container" aria-labelledby="about-team-heading">
-      <Reveal class="about-section-heading"><h2 id="about-team-heading" tabindex="-1">{t.teamTitle}</h2><p>{t.teamIntro}</p></Reveal>
+      <Reveal class="about-section-heading"><h2 id="about-team-heading" tabindex="-1">{t.teamTitle}</h2></Reveal>
       <div class="about-team-grid">
         {team.map((person,index) => <Reveal delay={(index%3)*0.07}><article class="about-person" data-person={person.id}>
           <img src={person.image} alt={person.name} width="500" height="500" loading="lazy" decoding="async" />
