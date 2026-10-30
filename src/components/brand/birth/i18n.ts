@@ -2,7 +2,7 @@
 const sv = {
   nuroBirth: {
     title: "Nuro vaknar",
-    description: "Nuro tittar sig omkring, blinkar och får sin färgstarka glaskropp.",
+    description: "Nuro öppnar ögonen, blinkar och får sin färgstarka glaskropp.",
     interact: "Lek med Nuro",
     moods: {
       happy: "Nuro är glad.", curious: "Nuro är nyfiken.", thinking: "Nuro funderar.",
@@ -14,7 +14,7 @@ const sv = {
 const en: typeof sv = {
   nuroBirth: {
     title: "Nuro awakens",
-    description: "Nuro looks around, blinks, and comes to life in colourful glass.",
+    description: "Nuro opens its eyes, blinks, and comes to life in colourful glass.",
     interact: "Play with Nuro",
     moods: {
       happy: "Nuro is happy.", curious: "Nuro is curious.", thinking: "Nuro is thinking.",
