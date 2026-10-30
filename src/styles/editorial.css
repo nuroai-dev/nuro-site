@@ -30,6 +30,7 @@
 .career-disciplines { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
 .career-disciplines span,.career-role-meta span { padding:8px 14px; border:1px solid var(--birth-line); border-radius:999px; font-size:15px; color:var(--birth-muted); }
 .career-roles { padding-block:80px 20px; border-top:1px solid var(--birth-line); }
+.career-roles + .career-story { padding-top:80px; border-top:1px solid var(--birth-line); }
 .career-role { display:grid; grid-template-columns:1fr 1fr; gap:72px; padding-bottom:80px; scroll-margin-top:120px; }
 .career-role-head { align-self:start; position:sticky; top:120px; }
 .career-role h2 { margin-bottom:20px; }
@@ -45,7 +46,7 @@
  .career-role-head{position:static} .career-roles{padding-block:56px 8px} .career-role{padding-bottom:56px}
  .press-feature{padding-bottom:38px} .press-list{padding-bottom:64px} .press-row{grid-template-columns:1fr 24px;gap:20px;padding-block:28px}
  .press-row>.press-meta{grid-column:1/-1;flex-direction:row;margin:0} .press-row h2{font-size:24px}
- .site-connect{padding-block:60px} .site-connect-inner{align-items:flex-start;flex-direction:column} .career-story{padding-bottom:56px}
+ .site-connect{padding-block:60px} .site-connect-inner{align-items:flex-start;flex-direction:column} .career-story{padding-bottom:56px} .career-roles + .career-story{padding-top:56px}
  .career-story h2,.career-invite h2,.career-role h2{font-size:28px} .career-invite{padding-block:56px 64px}
  .press-feature h2 { font-size:28px; margin-bottom:16px; }
  .press-meta { font-size:14px; gap:12px; flex-wrap:wrap; margin-bottom:14px; }

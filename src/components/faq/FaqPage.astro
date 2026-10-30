@@ -17,9 +17,7 @@
  *
  * Emits FAQPage + BreadcrumbList so answer engines can lift the answers whole.
  */
-import Layout from "@/layouts/Layout.astro";
-import Nav from "@/components/nav/Nav.astro";
-import Footer from "@/components/footer/Footer.astro";
+import SiteLayout from "@/layouts/SiteLayout.astro";
 import Reveal from "@/components/motion/Reveal.astro";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema.astro";
 import styles from "@/components/glossary/glossary.module.css";
@@ -399,14 +397,13 @@ const faqSchema = {
 };
 ---
 
-<Layout
+<SiteLayout
   title={chrome.title}
   description={chrome.description}
   ogImage={`https://nuroai.dev/og/pages/${lang === "sv" ? "faq-sv" : "faq"}.png`}
   ogImageAlt={chrome.heading}
 >
   <BreadcrumbSchema name={chrome.eyebrow} pageType="CollectionPage" />
-  <Nav />
   <main id="main-content" tabindex="-1">
     <section class={styles.section}>
       <div class={styles.container}>
@@ -441,6 +438,5 @@ const faqSchema = {
       </div>
     </section>
   </main>
-  <Footer />
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-</Layout>
+</SiteLayout>

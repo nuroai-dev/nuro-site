@@ -9,7 +9,6 @@ const sv = {
     introduction: "Vi bygger Nuro för elever som lär sig på olika sätt. Så att fler får stöd att lära, växa och känna att de hör hemma.",
     meet: "Möt människorna bakom Nuro",
     teamTitle: "Olika perspektiv. En gemensam drivkraft.",
-    teamIntro: "Teknik, design, utbildning och gemenskap. Tillsammans vill vi göra plats för fler sätt att lära.",
     roles: {
       sandra: "Co-Founder & CEO", victor: "Co-Founder & CTO", jonathan: "Co-Founder & Designer",
       isabella: "Founder's Associate", nikita: "Social Media & Community Manager",
@@ -38,7 +37,6 @@ const en: typeof sv = {
     introduction: "We’re building Nuro for students who learn differently. So more people get the support to learn, grow, and feel that they belong.",
     meet: "Meet the people behind Nuro",
     teamTitle: "Different perspectives. One shared purpose.",
-    teamIntro: "Technology, design, education, and community. Together, we’re making room for more ways to learn.",
     roles: {
       sandra: "Co-Founder & CEO", victor: "Co-Founder & CTO", jonathan: "Co-Founder & Designer",
       isabella: "Founder's Associate", nikita: "Social Media & Community Manager",

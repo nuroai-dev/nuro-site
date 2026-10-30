@@ -75,6 +75,5 @@ export function EmailForm({ flow, respond }: { flow: WaitlistFlow; respond: Birt
       {t(flow.error === "email" ? "landingWaitlist.invalidEmail" : "landingWaitlist.saveError")}
     </p>}
     <p id="landing-email-promise" className="landing-helper landing-reveal-row">{t("landingWaitlist.promise")}</p>
-    <p className="landing-privacy landing-reveal-row">{t("landingWaitlist.privacy")}</p>
   </form>;
 }

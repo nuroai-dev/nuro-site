@@ -8,7 +8,6 @@ const sv = {
     join: "Gå med på väntelistan",
     joining: "Sparar…",
     promise: "Vi mejlar dig när du kan börja använda Nuro.",
-    privacy: "För vuxna. Du kan lämna listan när du vill.",
     invalidEmail: "Skriv en e-postadress, till exempel du@exempel.se.",
     saveError: "Det gick inte att spara. Dina svar finns kvar — försök igen.",
     joined: "Du är med!",
@@ -47,13 +46,12 @@ const sv = {
 const en: typeof sv = {
   landingWaitlist: {
     greeting: "Hey, I’m Nuro! Nice to meet you.",
-    introduction: "I adapt your school work to your strengths, needs, interests and goals.",
+    introduction: "I adapt your schoolwork to your strengths, needs, interests and goals.",
     email: "Your email address",
     placeholder: "you@example.com",
     join: "Join the waiting list",
     joining: "Saving…",
     promise: "We’ll email you when you can start using Nuro.",
-    privacy: "For adults. Leave the list whenever you like.",
     invalidEmail: "Enter an email address, for example you@example.com.",
     saveError: "We couldn’t save that. Your answers are still here — please try again.",
     joined: "You’re on the list!",

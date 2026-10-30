@@ -28,13 +28,13 @@ const roles=CAREER_ROLES;
  {roles.length > 0 && <JobPostingSchema roles={roles} />}
  <main id="main-content" tabindex="-1">
   <section class="site-hero site-container career-hero"><Reveal eager><p class="site-eyebrow">{t.label}</p></Reveal><Reveal eager delay={0.06}><h1 class="site-title">{t.heading} <br/><span>{t.end}</span></h1></Reveal><Reveal eager delay={0.13}><p class="site-intro">{t.intro}</p></Reveal><Reveal eager delay={0.2}><div class="career-people">{team.map(person=><img src={person.image} alt="" width="48" height="48"/>)}<a href={localizePath("/about#about-team-heading",lang)}>{t.team} <Arrow /></a></div></Reveal></section>
-  <section class="site-container career-story"><Reveal><img src={founders} alt={t.photo} width="1600" height="900" loading="lazy"/></Reveal><div><Reveal><p class="site-eyebrow">{t.mission}</p><h2>{t.story}</h2></Reveal><Reveal delay={0.07}><p>{t.p1}</p></Reveal><Reveal delay={0.14}><p>{t.p2}</p></Reveal></div></section>
   {roles.length > 0 && <section class="site-container career-roles" aria-labelledby="career-roles-label"><Reveal><p class="site-eyebrow" id="career-roles-label">{t.roles}</p></Reveal>
    {roles.map(role=>{const r=role[lang];return <Reveal><article class="career-role" id={role.id}>
     <div class="career-role-head"><h2>{r.title}</h2><p class="career-role-meta">{r.meta.map(fact=><span>{fact}</span>)}</p><a class="site-button" href="mailto:hello@nuroai.dev" data-contact-trigger data-contact-topic="career">{t.apply} <Arrow /></a></div>
     <div class="career-role-body">{r.intro.map(text=><p>{text}</p>)}<p class="career-role-lead">{r.doLead}</p><ul>{r.doItems.map(item=><li>{item}</li>)}</ul><p class="career-role-lead">{r.youLead}</p><ul>{r.youItems.map(item=><li>{item}</li>)}</ul><p>{r.bonus}</p><p>{r.apply} <a class="career-role-mail" href="mailto:hello@nuroai.dev">hello@nuroai.dev</a>. {r.share}</p></div>
    </article></Reveal>})}
   </section>}
+  <section class="site-container career-story"><Reveal><img src={founders} alt={t.photo} width="1600" height="900" loading="lazy"/></Reveal><div><Reveal><p class="site-eyebrow">{t.mission}</p><h2>{t.story}</h2></Reveal><Reveal delay={0.07}><p>{t.p1}</p></Reveal><Reveal delay={0.14}><p>{t.p2}</p></Reveal></div></section>
   <section class="site-container career-invite"><Reveal><p class="site-eyebrow">{roles.length > 0 ? t.open : t.roles}</p><h2>{roles.length > 0 ? t.openTitle : t.rolesTitle}</h2></Reveal><Reveal delay={0.1}><p>{roles.length > 0 ? t.openText : t.rolesText}</p><div class="career-disciplines">{t.disciplines.map(label=><span>{label}</span>)}</div><button type="button" class="site-button" data-contact-trigger data-contact-topic="career">{t.contact} <Arrow /></button></Reveal></section>
  </main>
 </SiteLayout>

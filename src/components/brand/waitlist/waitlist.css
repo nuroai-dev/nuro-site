@@ -33,7 +33,6 @@
 .landing-form-reveal[data-visible="false"] { visibility: hidden; pointer-events: none; }
 .landing-form-reveal[data-visible="true"] .landing-reveal-row { animation: landing-form-in 500ms cubic-bezier(.2,.7,.2,1) both; }
 .landing-form-reveal[data-visible="true"] .landing-helper { animation-delay: 180ms; }
-.landing-form-reveal[data-visible="true"] .landing-privacy { animation-delay: 340ms; }
 .landing-form-reveal[data-instant="true"] .landing-reveal-row { animation: none; }
 .landing-conversation[data-paused="true"] .landing-reveal-row { animation-play-state: paused; }
 .landing-step-reveal { animation: landing-form-in 440ms cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--reveal-delay, 0ms); }
@@ -112,7 +111,6 @@
   outline-offset: 4px;
 }
 .landing-helper { margin: 17px 0 0; font-size: 15px; line-height: 1.6; color: var(--birth-muted); }
-.landing-privacy { margin: 5px 0 0; font-size: 15px; line-height: 1.6; color: var(--birth-muted); }
 .landing-error { margin: 12px 0; color: var(--birth-error); font-size: 15px; line-height: 1.5; animation: landing-form-in 300ms ease-out both; }
 .landing-email-control[data-invalid="true"] { border-color: var(--birth-error); }
 .landing-interests { margin: 0 auto; }
@@ -223,7 +221,7 @@
   .landing-conversation { padding-bottom:0; }
   .landing-caption { min-height:0; }
   .landing-caption h1 { font-size:clamp(28px,7.4vw,36px); line-height:1.16; }
-  .landing-helper, .landing-privacy { font-size:13px; line-height:1.55; }
+  .landing-helper { font-size:13px; line-height:1.55; }
   .landing-step-meta { font-size:14px; }
   .landing-helper { margin-top:16px; }
   .landing-receipt p { font-size:13px; }
