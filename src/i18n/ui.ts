@@ -11,9 +11,6 @@ export const LANGUAGES: { code: Lang; label: string }[] = [
   { code: "sv", label: "SV" },
 ];
 
-// localStorage key the footer language switch writes; the English home reads it before paint.
-export const LANG_CHOICE_KEY = "nuro-lang";
-
 function langOfPath(pathname: string): Lang {
   return pathname === "/sv" || pathname.startsWith("/sv/") ? "sv" : "en";
 }
