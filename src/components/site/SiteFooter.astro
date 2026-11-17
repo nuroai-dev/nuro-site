@@ -40,7 +40,7 @@ const path = (url:string) => localizePath(url,lang);
   </div>
 </footer>
 <script>
-  import { LANG_CHOICE_KEY } from "@/i18n/ui";
+  import { LANG_CHOICE_KEY } from "@/i18n/lang-choice";
   document.querySelector<HTMLAnchorElement>("[data-lang-choice]")?.addEventListener("click", event => {
     // Storage blocked: the link still switches, the choice is just not remembered.
     try { localStorage.setItem(LANG_CHOICE_KEY, (event.currentTarget as HTMLAnchorElement).dataset.langChoice ?? ""); } catch {}
