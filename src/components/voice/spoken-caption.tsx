@@ -33,5 +33,5 @@ export function SpokenCaption({ text, readable = false, replayKey, granularity =
     lastReplay.current = replayKey;
     if (root.current && !reduced && !readable) animator.current?.reveal(root.current);
   }, [replayKey, reduced, readable]);
-  return <span ref={root} className="nuro-spoken-caption" data-readable={readable || reduced} data-granularity={granularity} />;
+  return <span ref={root} className="nuro-spoken-caption" translate="no" data-readable={readable || reduced} data-granularity={granularity} />;
 }

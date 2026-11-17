@@ -19,8 +19,8 @@ export default defineConfig({
       "/sv/blog/sweden-proposes-rewriting-school-support-law",
   },
   site: "https://nuroai.dev",
-  // Bilingual: English at the root (/), Swedish under /sv/. No auto-redirect —
-  // a language switcher in the nav/footer is the only way between them.
+  // Bilingual: English at the root (/), Swedish under /sv/. Only / redirects, in the
+  // browser before paint (layouts/Layout.astro); the footer switch remembers a choice.
   i18n: {
     locales: ["en", "sv"],
     defaultLocale: "en",
