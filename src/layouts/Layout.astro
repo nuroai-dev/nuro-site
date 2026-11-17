@@ -13,7 +13,7 @@ import plexLatinHref from
 import interLatinHref from
   "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 
-import { getLang, canonicalUrl, hreflangUrls, SITE_URL } from "@/i18n/ui";
+import { getLang, canonicalPath, canonicalUrl, hreflangUrls, LANG_CHOICE_KEY, SITE_URL } from "@/i18n/ui";
 
 const DEFAULT_TITLE = "Nuro: Inclusive Education for Swedish Schools";
 const DEFAULT_DESCRIPTION =
@@ -48,6 +48,7 @@ const HREFLANG = hreflangUrls(Astro.url.pathname);
 
 // Active language of this page.
 const LANG = getLang(Astro.url);
+const IS_EN_HOME = canonicalPath(Astro.url.pathname) === "/";
 // Share card follows the page's language, so a Swedish page shared on LinkedIn
 // shows the Swedish card.
 const OG_IMAGE =
@@ -133,6 +134,19 @@ const STRUCTURED_DATA = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/* First thing in head so a Swedish visitor leaves / before any English is painted.
+        A choice made with the footer switch wins over the browser's languages. */}
+    {IS_EN_HOME && (
+      <script is:inline define:vars={{ key: LANG_CHOICE_KEY }}>
+        var chosen = null;
+        try { chosen = localStorage.getItem(key); } catch (e) { /* storage blocked: browser languages decide */ }
+        var preferred = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""])
+          .map(function (tag) { return String(tag).toLowerCase().split("-")[0]; })
+          .find(function (code) { return code === "sv" || code === "en"; });
+        if ((chosen === "sv" || chosen === "en" ? chosen : preferred) === "sv")
+          location.replace("/sv/" + location.search + location.hash);
+      </script>
+    )}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

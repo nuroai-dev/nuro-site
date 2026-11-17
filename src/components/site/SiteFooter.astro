@@ -35,11 +35,16 @@ const path = (url:string) => localizePath(url,lang);
     <div class="landing-footer-credits">
       <p>© Nuro, {new Date().getFullYear()}</p>
       <p class="landing-footer-origin"><svg width="16" height="12" viewBox="0 0 16 12" aria-hidden="true"><rect width="16" height="12" fill="var(--footer-flag-blue)"/><path d="M5 0h2v12H5zM0 5h16v2H0z" fill="var(--footer-flag-yellow)"/></svg>{t.designed}</p>
-      <div class="landing-footer-actions"><a href={switchLangPath(Astro.url.pathname,lang === "en" ? "sv" : "en")} lang={lang === "en" ? "sv" : "en"} aria-label={t.language}>{lang === "en" ? "Svenska" : "English"}</a><a href="#main-content" data-back-to-top>{t.top} <Arrow direction="up" /></a></div>
+      <div class="landing-footer-actions"><a href={switchLangPath(Astro.url.pathname,lang === "en" ? "sv" : "en")} lang={lang === "en" ? "sv" : "en"} aria-label={t.language} data-lang-choice={lang === "en" ? "sv" : "en"}>{lang === "en" ? "Svenska" : "English"}</a><a href="#main-content" data-back-to-top>{t.top} <Arrow direction="up" /></a></div>
     </div>
   </div>
 </footer>
 <script>
+  import { LANG_CHOICE_KEY } from "@/i18n/ui";
+  document.querySelector<HTMLAnchorElement>("[data-lang-choice]")?.addEventListener("click", event => {
+    // Storage blocked: the link still switches, the choice is just not remembered.
+    try { localStorage.setItem(LANG_CHOICE_KEY, (event.currentTarget as HTMLAnchorElement).dataset.langChoice ?? ""); } catch {}
+  });
   const footer = document.querySelector<HTMLElement>(".landing-footer");
   if (footer) new IntersectionObserver(([entry]) => { footer.dataset.active=String(entry.isIntersecting); }).observe(footer);
   document.querySelector('[data-back-to-top]')?.addEventListener('click', event => {
